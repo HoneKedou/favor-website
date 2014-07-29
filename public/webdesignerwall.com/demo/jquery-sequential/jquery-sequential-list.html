@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$("#step li").each(function (i) {
+		i = i+1;
+		$(this).addClass("item"+i);
+   });
+
+	$("#number li").each(function (i) {
+		i = i+1;
+		$(this).addClass("item"+i);
+   });
+
+	$("#commentlist li").each(function (i) {
+		i = i+1;
+		$(this).prepend('<span class="commentnumber"> #'+i+'</span>');
+   });
+
+});
+</script>
+<title>Demo: jQuery Sequential List</title>
+<style type="text/css">body {
+	width: 500px;
+	margin: 20px auto;
+	color: #999;
+	font: 90%/150% Arial, Helvetica, sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #333;
+}
+/* step style */
+#step {
+	margin: 10px 0 40px;
+	padding: 0;
+}
+#step li {
+	padding: 3px 0 6px 110px;
+	margin: 0 0 20px;
+	list-style: none;
+}
+#step h3 {
+	font: bold 200%/100% Arial, Helvetica, sans-serif;
+	margin: 0 0 5px;
+	color: #666;
+}
+#step .item1 {
+	background: url("images/step1.png") no-repeat;
+}
+#step .item2 {
+	background: url("images/step2.png") no-repeat;
+}
+#step .item3 {
+	background: url("images/step3.png") no-repeat;
+}
+#step .item4 {
+	background: url("images/step4.png") no-repeat;
+}
+/* number style */
+#number {
+	margin: 10px 0 40px;
+	padding: 0;
+}
+#number li {
+	padding: 3px 0 6px 55px;
+	margin: 0 0 20px;
+	list-style: none;
+}
+#number h3 {
+	font: bold 170%/110% Arial, Helvetica, sans-serif;
+	margin: 3px 0 5px;
+	color: #666;
+}
+#number .item1 {
+	background: url("images/number1.png") no-repeat;
+}
+#number .item2 {
+	background: url("images/number2.png") no-repeat;
+}
+#number .item3 {
+	background: url("images/number3.png") no-repeat;
+}
+/* number style */
+#commentlist {
+	margin: 10px 0 40px;
+	padding: 0;
+}
+#commentlist li {
+	padding: 10px 0 20px;
+	list-style: none;
+	border-top: solid 1px #ccc;
+	position: relative;
+}
+#commentlist cite {
+	font: bold 140%/110% Arial, Helvetica, sans-serif;
+	color: #666;
+}
+#commentlist .time {
+	color: #ccc;
+	margin: 0 0 10px;
+}
+#commentlist .commentnumber {
+	position: absolute;
+	right: 0;
+	top: 8px;
+	font: normal 200%/100% Georgia, "Times New Roman", Times, serif;
+	color: #ccc;
+}
+</style>
+</head>
+<body>
+<ol id="step">
+	<li>
+		<h3>PhotoShop Part</h3>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+	</li>
+	<li>
+		<h3>jQuery</h3>
+		<p>Cras vitae libero. Duis sed pede id erat laoreet varius. Ut felis est, aliquet ut, dictum at, consectetuer sed, ante. Mauris aliquam leo at pede pharetra condimentum. </p>
+	</li>
+	<li>
+		<h3>CSS Now</h3>
+		<p>Ut arcu mauris, blandit at, porttitor vel, scelerisque vitae, nunc. Vivamus consequat tellus. Vivamus sed magna ut urna dictum ultrices. Curabitur at libero molestie eros imperdiet semper. </p>
+	</li>
+	<li>
+		<h3>Final</h3>
+		<p>Ut arcu mauris, blandit at, porttitor vel, scelerisque vitae, nunc. Vivamus consequat tellus. Vivamus sed magna ut urna dictum ultrices. Curabitur at libero molestie eros imperdiet semper. </p>
+	</li>
+</ol>
+<ol id="number">
+	<li>
+		<h3>Create PNG Graphics</h3>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+	</li>
+	<li>
+		<h3>Write HTML Code</h3>
+		<p>Cras vitae libero. Duis sed pede id erat laoreet varius. Ut felis est, aliquet ut, dictum at, consectetuer sed, ante. Mauris aliquam leo at pede pharetra condimentum. </p>
+	</li>
+	<li>
+		<h3>Implement jQuery Javascript</h3>
+		<p>Ut arcu mauris, blandit at, porttitor vel, scelerisque vitae, nunc. Vivamus consequat tellus. Vivamus sed magna ut urna dictum ultrices. Curabitur at libero molestie eros imperdiet semper. </p>
+	</li>
+</ol>
+<ol id="commentlist">
+	<li>
+		<p><cite>Nick:</cite></p>
+		<p class="time">February 8th, 2009 at 5:38 am</p>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc euismod adipiscing magna. Quisque sollicitudin nisi a nisi feugiat suscipit. Praesent molestie. Curabitur laoreet, augue in pharetra adipiscing, ipsum lectus blandit leo, quis viverra odio purus eget lectus. </p>
+	</li>
+	<li>
+		<p><cite>Jen:</cite></p>
+		<p class="time">February 8th, 2009 at 5:38 am</p>
+		<p>Cras vitae libero. Duis sed pede id erat laoreet varius. Ut felis est, aliquet ut, dictum at, consectetuer sed, ante. Mauris aliquam leo at pede pharetra condimentum. </p>
+	</li>
+	<li>
+		<p><cite>Cassie:</cite></p>
+		<p class="time">February 8th, 2009 at 5:38 am</p>
+		<p>Ut arcu mauris, blandit at, porttitor vel, scelerisque vitae, nunc. Vivamus consequat tellus. Vivamus sed magna ut urna dictum ultrices. Curabitur at libero molestie eros imperdiet semper. </p>
+	</li>
+</ol>
+<p><a href="http://www.webdesignerwall.com/tutorials/jquery-sequential-list/">jQuery Sequential List</a> <em>by</em> <a href="http://www.webdesignerwall.com">Web Designer Wall</a></p>
+</body>
+</html>

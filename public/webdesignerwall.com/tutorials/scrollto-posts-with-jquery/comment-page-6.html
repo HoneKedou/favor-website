@@ -1,0 +1,907 @@
+<!doctype html> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>  ScrollTo Posts With jQuery</title> 
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" type="application/rss+xml" title="Web Designer Wall &#8211; Design Trends and Tutorials RSS Feed" href="http://feeds2.feedburner.com/WebDesignerWall">
+
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Copse' type='text/css'>
+<link rel="stylesheet" href="../../wp-content/themes/wall/style.css" type="text/css">
+<link href="../../wp-content/themes/wall/print.css" rel="stylesheet" type="text/css" media="print">
+
+<!--[if lt IE 9]>
+	<script src="../../wp-content/themes/wall/js/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!-- WP-Polls 2.20 -->
+<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/tw-sack.js?ver=1.6.1"></script>
+<script type="text/javascript" src="http://webdesignerwall.com/wp-content/plugins/polls/polls-js.php?ver=2.20"></script>
+<link rel="stylesheet" href="http://webdesignerwall.com/wp-content/plugins/polls/polls-css.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.js"></script>
+<script type="text/javascript" src="../../wp-content/themes/wall/js/script.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/swfobject.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.fitvids.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			$(".post").fitVids();
+		});
+	</script>
+	
+	<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/comment-reply.js?ver=20090102"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.prettyPhoto.js"></script>
+	<link rel="stylesheet" href="../../wp-content/themes/wall/prettyPhoto.css" type="text/css" media="screen">
+	<script type="text/javascript">
+		$("a[rel^='prettyPhoto'], .gallery a, a.thickbox").prettyPhoto();
+	</script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.validate.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#commentform, .wpcf7-form").validate();
+	});
+	</script>
+
+
+</head> 
+<body class="single">
+<div id="top">
+<div id="overlay-bg">
+	<div id="pagewrap">
+
+		<header id="header">
+			<hgroup> 
+				<h1 id="site-logo"><a href="../../index.html">Web Designer Wall</a></h1> 
+				<h2 id="site-description">A wall of design ideas, web trends, and tutorials</h2> 
+			</hgroup> 
+			<nav>
+				<ul id="social-nav">
+					<li class="twitter">
+						<em>25216 followers</em>
+						<a href="http://twitter.com/nickla">Twitter</a>
+					</li>
+									</ul>
+				<ul id="main-nav" class="clearfix">
+					<li class="home">
+						<a href="../../index.html">Blog</a>
+						<ul>
+							<li>
+								<h4>Categories</h4>
+								<p class="categories"><a href="../../category/tutorials.html">Tutorials</a> &bull; <a href="../../category/trends.html">Trends</a> &bull; <a href="../../category/general.html">General</a></p>
+							</li>
+							<li>
+								<h4>Tags</h4>
+								<p class="tags">
+									<a href='../../tag/coding.html' class='tag-link-35' title='12 topics' style='font-size: 123.489932886%;'>Coding</a>
+<a href='../../tag/css.html' class='tag-link-21' title='50 topics' style='font-size: 155.704697987%;'>CSS</a>
+<a href='../../tag/design.html' class='tag-link-6' title='25 topics' style='font-size: 139.597315436%;'>design</a>
+<a href='../../tag/design-process.html' class='tag-link-10' title='11 topics' style='font-size: 121.879194631%;'>design process</a>
+<a href='../../tag/design-trends.html' class='tag-link-26' title='17 topics' style='font-size: 131.543624161%;'>Design Trends</a>
+<a href='../../tag/downloads.html' class='tag-link-39' title='2 topics' style='font-size: 89.6644295302%;'>Downloads</a>
+<a href='../../tag/event.html' class='tag-link-19' title='31 topics' style='font-size: 144.966442953%;'>event</a>
+<a href='../../tag/flash.html' class='tag-link-25' title='9 topics' style='font-size: 117.583892617%;'>Flash</a>
+<a href='../../tag/free.html' class='tag-link-38' title='1 topic' style='font-size: 80%;'>free</a>
+<a href='../../tag/freebies.html' class='tag-link-16' title='60 topics' style='font-size: 160%;'>freebies</a>
+<a href='../../tag/guest-posts.html' class='tag-link-36' title='13 topics' style='font-size: 125.637583893%;'>Guest Posts</a>
+<a href='../../tag/illustrator.html' class='tag-link-24' title='6 topics' style='font-size: 109.530201342%;'>Illustrator</a>
+<a href='../../tag/inspiration.html' class='tag-link-9' title='30 topics' style='font-size: 143.89261745%;'>inspiration</a>
+<a href='../../tag/interview.html' class='tag-link-37' title='1 topic' style='font-size: 80%;'>interview</a>
+<a href='../../tag/javascript.html' class='tag-link-30' title='18 topics' style='font-size: 132.617449664%;'>Javascript</a>
+<a href='../../tag/jobs.html' class='tag-link-32' title='1 topic' style='font-size: 80%;'>jobs</a>
+<a href='../../tag/photoshop.html' class='tag-link-34' title='1 topic' style='font-size: 80%;'>photoshop</a>
+<a href='../../tag/photoshop-tutorials.html' class='tag-link-23' title='12 topics' style='font-size: 123.489932886%;'>Photoshop tutorials</a>
+<a href='../../tag/responsive-design.html' class='tag-link-40' title='16 topics' style='font-size: 129.932885906%;'>Responsive Design</a>
+<a href='../../tag/review.html' class='tag-link-20' title='8 topics' style='font-size: 114.899328859%;'>review</a>
+<a href='../../tag/seo.html' class='tag-link-29' title='1 topic' style='font-size: 80%;'>SEO</a>
+<a href='../../tag/software.html' class='tag-link-17' title='5 topics' style='font-size: 105.771812081%;'>software</a>
+<a href='../../tag/talented-people.html' class='tag-link-14' title='8 topics' style='font-size: 114.899328859%;'>talented people</a>
+<a href='../../tag/updates.html' class='tag-link-5' title='20 topics' style='font-size: 134.765100671%;'>updates</a>
+<a href='../../tag/wordpress.html' class='tag-link-22' title='17 topics' style='font-size: 131.543624161%;'>WordPress</a>								</p>
+							</li>
+						</ul>
+					</li>
+					<li class="about"><a href="../../about.html">About</a></li>
+					<li class="contact"><a href="../../contact.html">Contact</a></li>
+					<li class="archives"><a href="../../archives.html">Archives</a></li>
+				</ul>
+			</nav>
+
+			<form method="get" id="searchform" action="http://webdesignerwall.com/">
+				<input type="text" name="s" id="s" placeholder="Search">
+			</form>
+
+		</header>
+
+		<div id="body">
+<div id="contentwrap">
+	<div id="content" class="single">
+
+				
+			<article class="post featured">
+	<header>
+		<h1 class="post-title"><a href="../scrollto-posts-with-jquery.html" title="ScrollTo Posts With jQuery">ScrollTo Posts With jQuery</a> <sup><a href="../scrollto-posts-with-jquery.html#comments" class="comments-link"  title="Comment on ScrollTo Posts With jQuery">122</a></sup></h1>
+		<p class="post-meta"><time datetime="2010-06-21" class="post-date" pubdate>Jun 21, 2010</time> &bull; <span class="post-category"><a href="../../category/tutorials.html" title="View all posts in Tutorials" rel="category tag">Tutorials</a></span> &rarr; <span class="post-tag"><a href="../../tag/javascript.html" rel="tag">Javascript</a></span></p>
+	</header>
+	
+
+			<div class="ad square">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243565" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>	
+	<div class="post-content">
+		<p><big>Inspired by the <a href="http://cargocollective.com/#/featuredprojects">CargoCollective</a> and <a href="http://desandro.com/portfolio/">David DeSandro's</a> site, I asked my Twitter followers (<a href="http://twitter.com/nickla">@nickla</a>) on how to do the scrollto posts with jQuery. Within a day, <a href="http://twitter.com/bbodien">Ben Bodien</a> of <a href="http://neutroncreations.com">Neutron Creations</a> sent back a quick demo on how to replicate the similar result with the <a href="http://plugins.jquery.com/project/ScrollTo">ScrollTo</a> plugin. The script finds your current view position and scroll to the next or previous post accordingly. Check out the <a href="http://www.webdesignerwall.com/demo/scrollto-demo/">demo</a> to see what I'm talking about.</big></p>
+<p class="btn preview"><a href="http://www.webdesignerwall.com/demo/scrollto-demo/">View Demo <em>Scrollto Posts</em></a><span id="more-529"></span></p>
+<h3>HTML Code</h3>
+<p>Assume you are using this for your blog and each blog entry has a &quot;post&quot; CSS class.</p>
+<pre><code>&lt;div class="post"&gt;
+	content...
+&lt;/div&gt;
+
+&lt;div class="post"&gt;
+	content...
+&lt;/div&gt;
+
+&lt;div class="post"&gt;
+	content...
+&lt;/div&gt;
+</code></pre>
+<h3>CSS: Navigation Dock</h3>
+<p>Specify <code>position:fixed</code> for the navigation div to prevent it from scrolling.</p>
+<pre><code>#nav-dock {
+	position: fixed;
+	right: 15px;
+	top: 35%;
+}
+</code></pre>
+<h3>Javascript</h3>
+<p>Include the following code in the &lt;head&gt; tag. The first set of function will check which post you are currently viewing. When the next or prev button is clicked, it will scroll to the post accordingly.</p>
+<p>The second  function is to handle anything that's got a class of &quot;scrolltoanchor&quot;. It will scroll to the element with an ID corresponding to that element's href attribute value. In my case, I use it for the Back to top, Comments, and Reply button.</p>
+<pre><code>&lt;script type="text/javascript" src="js/jquery-1.4.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.scrollTo-min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(function() {
+
+    function scroll(direction) {
+
+        var scroll, i,
+                positions = [],
+                here = $(window).scrollTop(),
+                collection = $('.post');
+
+        collection.each(function() {
+            positions.push(parseInt($(this).offset()['top'],10));
+        });
+
+        for(i = 0; i &lt; positions.length; i++) {
+            if (direction == 'next' &#038;& positions[i] &gt; here) { scroll = collection.get(i); break; }
+            if (direction == 'prev' &#038;& i &gt; 0 &#038;& positions[i] &gt;= here) { scroll = collection.get(i-1); break; }
+        }
+
+        if (scroll) {
+            $.scrollTo(scroll, {
+                duration: 750       
+            });
+        }
+
+        return false;
+    }
+
+    $("#next,#prev").click(function() {        
+        return scroll($(this).attr('id'));        
+    });
+
+    $(".scrolltoanchor").click(function() {
+        $.scrollTo($($(this).attr("href")), {
+            duration: 750
+        });
+        return false;
+    });
+
+});
+&lt;/script&gt;
+</code></pre>
+<h3>Credits</h3>
+<p>Thanks to <a href="http://neutroncreations.com">Neutron Creations</a> for the ScrollTo implementation.</p>	</div>
+
+	<footer class="share">
+	<em>Share &rarr;</em> 
+	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://webdesignerwall.com/tutorials/scrollto-posts-with-jquery" data-count="horizontal" data-via="nickla">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script src="http://www.stumbleupon.com/hostedbadge.php?s=2&r=http://webdesignerwall.com/tutorials/scrollto-posts-with-jquery"></script>
+	<iframe src="http://www.facebook.com/plugins/like.php?href=http://webdesignerwall.com/tutorials/scrollto-posts-with-jquery&layout=button_count&show_faces=false&width=90&action=like&font=lucida+grande&colorscheme=light&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+</footer>
+	
+</article>
+
+			<div class="ad horizontal">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243564" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>
+		
+			<nav> 
+				<ul class="post-nav clearfix">
+					<li class="prev"><a href="../../general/cultural-considerations-for-global-websites.html" rel="prev"><span></span> <em>Previous</em> Cultural Considerations for Global Websites</a></li>
+					<li class="next"><a href="../css3-rounded-image-with-jquery.html" rel="next"><span></span> <em>Next</em> CSS3 Rounded Image With jQuery</a></li>
+				</ul>
+			</nav>
+
+				
+		<div class="commentwrap">
+
+
+
+		<h4 id="comments" class="comment-title">122 Comments</h4>
+
+					<nav class="pagenav">
+				<a class="prev page-numbers" href="comment-page-5.html#comments"><em>Prev</em></a>
+<a class='page-numbers' href='comment-page-1.html#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-4.html#comments'>4</a>
+<a class='page-numbers' href='comment-page-5.html#comments'>5</a>
+<span class='page-numbers current'>6</span>			</nav>
+		
+
+		<ol class="commentlist">
+			   <li id="comment-78312" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/9e7670257bc59aae62e6157c2db47b97?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.jeromem.net' rel='external nofollow' class='url'>jeromeM</a></cite><br />
+			<time datetime="2011-7-22T05:07" class="comment-time">Jul 22, 2011 @ 05:07</time>
+		</p>
+
+		<div class="commententry" id="commententry-78312">
+					
+			<p>Thanks for this post.<br />
+Add keyboard control would be great.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-78574" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/8126ac241e456eb3f8c828652e0d23be?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Piotr</cite><br />
+			<time datetime="2011-7-28T19:44" class="comment-time">Jul 28, 2011 @ 19:44</time>
+		</p>
+
+		<div class="commententry" id="commententry-78574">
+					
+			<p>YeP!!!</p>
+<p>Also loooking for this  stuff but with keybord control!!!\\</p>
+<p>any chance????</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-87709" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/a2d1da9dba38b4cfe08fff875fd2f2ca?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Greg Formager</cite><br />
+			<time datetime="2012-3-2T18:09" class="comment-time">Mar 02, 2012 @ 18:09</time>
+		</p>
+
+		<div class="commententry" id="commententry-87709">
+					
+			<p>Same here. Keyboard control would be great!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-94721" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/27edec62b9e52b6170d522d923483ae8?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.colinelliot.com' rel='external nofollow' class='url'>Colin</a></cite><br />
+			<time datetime="2012-6-24T19:33" class="comment-time">Jun 24, 2012 @ 19:33</time>
+		</p>
+
+		<div class="commententry" id="commententry-94721">
+					
+			<p>here&#8217;s how to add keyboard functionality to this.<br />
+<a href="http://colinelliot.posterous.com/scroll-to-posts-using-jquery-keyboard-nav" rel="nofollow">http://colinelliot.posterous.com/scroll-to-posts-using-jquery-keyboard-nav</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-79903" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/c0b719a1bb7f713935531ca4ef5bf7af?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.complex41.net' rel='external nofollow' class='url'>complex41</a></cite><br />
+			<time datetime="2011-8-23T11:50" class="comment-time">Aug 23, 2011 @ 11:50</time>
+		</p>
+
+		<div class="commententry" id="commententry-79903">
+					
+			<p>And then he handed you the thirty-five 45</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-80159" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/a0fc276f3ca86522dd0e9f8ccf08998d?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.iappleworld.webs.com/' rel='external nofollow' class='url'>raza</a></cite><br />
+			<time datetime="2011-8-29T05:56" class="comment-time">Aug 29, 2011 @ 05:56</time>
+		</p>
+
+		<div class="commententry" id="commententry-80159">
+					
+			<p>hey guys can you email me some html codes for background that you think will suit my website best. thanks<br />
+my website :<a href="http://www.iappleworld.webs.com/" rel="nofollow">http://www.iappleworld.webs.com/</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-80276" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/104d831948493c38a27d3dd0f5b82851?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.youtube.com/watch?v=LJk5hS_Z0rg' rel='external nofollow' class='url'>Sidney Voelkerding</a></cite><br />
+			<time datetime="2011-9-1T19:06" class="comment-time">Sep 01, 2011 @ 19:06</time>
+		</p>
+
+		<div class="commententry" id="commententry-80276">
+					
+			<p>Thank you a lot for giving everyone an exceptionally nice possiblity to check tips from this blog.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-80538" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/88eca63be500238b48b743cdc8f9c0dd?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.baidu.com/' rel='external nofollow' class='url'>jingxiamnh</a></cite><br />
+			<time datetime="2011-9-8T06:54" class="comment-time">Sep 08, 2011 @ 06:54</time>
+		</p>
+
+		<div class="commententry" id="commententry-80538">
+					
+			<p>After all, what a nice web website and informative posts, I will add backlink  bookmark this web site?</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-80784" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/d9a130d56fee2f959875eb2c12efdac9?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www' rel='external nofollow' class='url'>www</a></cite><br />
+			<time datetime="2011-9-12T09:30" class="comment-time">Sep 12, 2011 @ 09:30</time>
+		</p>
+
+		<div class="commententry" id="commententry-80784">
+					
+			<p>www</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-86406" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/79f5d1b0306e57921ba9ab4d705f80da?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.technologygarden.biz' rel='external nofollow' class='url'>web design</a></cite><br />
+			<time datetime="2012-1-27T06:01" class="comment-time">Jan 27, 2012 @ 06:01</time>
+		</p>
+
+		<div class="commententry" id="commententry-86406">
+					
+			<p>Hah!!!<br />
+Awesome&#8230;<br />
+Many many thanx for sharing those.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-86690" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/5a2966cc65c9aa38d5b81598b312f87a?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.daviddiez.com' rel='external nofollow' class='url'>David Díez</a></cite><br />
+			<time datetime="2012-2-3T06:48" class="comment-time">Feb 03, 2012 @ 06:48</time>
+		</p>
+
+		<div class="commententry" id="commententry-86690">
+					
+			<p>Ey!<br />
+I&#8217;m new on jQuery.<br />
+Two newbie questions:</p>
+<p>1.- Where do I get the two js files?<br />
+2.- Where do I paste the function code?</p>
+<p>Thanks</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-86702" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/5a2966cc65c9aa38d5b81598b312f87a?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.daviddiez.com' rel='external nofollow' class='url'>David Díez</a></cite><br />
+			<time datetime="2012-2-3T07:16" class="comment-time">Feb 03, 2012 @ 07:16</time>
+		</p>
+
+		<div class="commententry" id="commententry-86702">
+					
+			<p>Ok, I&#8217;ve got the first solved</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-87350" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/428b5509e9f0854ccfbfa9469ec185c6?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.jtroll.com' rel='external nofollow' class='url'>J.T.</a></cite><br />
+			<time datetime="2012-2-22T14:22" class="comment-time">Feb 22, 2012 @ 14:22</time>
+		</p>
+
+		<div class="commententry" id="commententry-87350">
+					
+			<p>This is the first tutorial I&#8217;ve found that&#8217;s actually explained quite well how to implement a next/previous post button with easing effects. However, in trying to implement it on a page of my own, I haven&#8217;t been able to get it to work. I&#8217;m sure I&#8217;m doing something wrong that&#8217;s bone-simple&#8230; could you perhaps point out to me what&#8217;s wrong on this page? Any help is appreciated:</p>
+<p><a href="http://www.jtroll.com/projects" rel="nofollow">http://www.jtroll.com/projects</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-87354" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/428b5509e9f0854ccfbfa9469ec185c6?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.jtroll.com' rel='external nofollow' class='url'>J.T.</a></cite><br />
+			<time datetime="2012-2-22T16:56" class="comment-time">Feb 22, 2012 @ 16:56</time>
+		</p>
+
+		<div class="commententry" id="commententry-87354">
+					
+			<p>Whoops, never mind — the mistake was making &#8220;post&#8221; an id instead of a class. It works marvelously now. Thanks again for the post!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-87517" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/49cff90a8a1069c39c9881d81d2dc3a6?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Josenildo Alves</cite><br />
+			<time datetime="2012-2-26T19:45" class="comment-time">Feb 26, 2012 @ 19:45</time>
+		</p>
+
+		<div class="commententry" id="commententry-87517">
+					
+			<p>Nossa cara é demais essa funcionalidade procurei por isso muito tempo&#8230; e funciona mais que perfeito. Deus te abençoe.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-87871" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/76f6176beb22cbd61dac9d6270c39d11?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Eiirp</cite><br />
+			<time datetime="2012-3-7T04:27" class="comment-time">Mar 07, 2012 @ 04:27</time>
+		</p>
+
+		<div class="commententry" id="commententry-87871">
+					
+			<p>Thanks for the nice script.</p>
+<p>Is it possible to get rid of the next/prev buttons and make the script scrollt to the next post by clicking on the current post. Let&#8217;s say I&#8217;m at post 5, just click on the post itself and the script scrolls to post 6?</p>
+<p>Thanks a lot!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-88135" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/e8b426dc59a8cbebb892eb023d7bc9e3?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.fourtoseven.net' rel='external nofollow' class='url'>Daniel</a></cite><br />
+			<time datetime="2012-3-15T11:47" class="comment-time">Mar 15, 2012 @ 11:47</time>
+		</p>
+
+		<div class="commententry" id="commententry-88135">
+					
+			<p>Very Good Tutorial :D</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-89392" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/46e107983b436efe5cb57167d813a1cf?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Hiba</cite><br />
+			<time datetime="2012-4-30T05:27" class="comment-time">Apr 30, 2012 @ 05:27</time>
+		</p>
+
+		<div class="commententry" id="commententry-89392">
+					
+			<p>how can I edit the above code to make it scroll horizontally instead???</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-90102" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/d16594f80722f76713dbc371205d6dd0?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://diegoprates.com.br' rel='external nofollow' class='url'>Diego Prates</a></cite><br />
+			<time datetime="2012-5-18T09:23" class="comment-time">May 18, 2012 @ 09:23</time>
+		</p>
+
+		<div class="commententry" id="commententry-90102">
+					
+			<p>Hi, I&#8217;m trying to wrap posts with a div with overflow:hidden, to hide the next posts, but the script doesn&#8217;t work. Someone can help me ?</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-98231" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/114f98585fce036ffe0714d6103130d4?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Eve</cite><br />
+			<time datetime="2012-10-26T08:40" class="comment-time">Oct 26, 2012 @ 08:40</time>
+		</p>
+
+		<div class="commententry" id="commententry-98231">
+					
+			<p>Hi, I know you postet this quite some time ago, but if anybody is still searching for sth like that: try the &#8220;jquery.serialScroll&#8221; from Ariel Flesler. Didn&#8217;t work for me to scroll the whole website but it&#8217;s doing exactly what you want with the hidden overflow and works for horizontal and vertical scroll. ;)</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-90532" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/f6923ec0617fb95ce27aea50b57d5e32?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://s' rel='external nofollow' class='url'>s1</a></cite><br />
+			<time datetime="2012-5-23T09:07" class="comment-time">May 23, 2012 @ 09:07</time>
+		</p>
+
+		<div class="commententry" id="commententry-90532">
+					
+			<p>sd sd</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-91428" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/2c7f88a7501bfe5b6f29947476b37ac7?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>R</cite><br />
+			<time datetime="2012-5-29T02:52" class="comment-time">May 29, 2012 @ 02:52</time>
+		</p>
+
+		<div class="commententry" id="commententry-91428">
+					
+			<p>Hello!<br />
+Nice tutorial! It&#8217;s the first scrollTo I did work. But it only works wit jquery 1.4.2, if I change it to last version 1.7.1 it doesn&#8217;t work! Anyone knows how to fix it?<br />
+Thank you!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+		</ol>
+		
+					<nav class="pagenav right">
+				<a class="prev page-numbers" href="comment-page-5.html#comments"><em>Prev</em></a>
+<a class='page-numbers' href='comment-page-1.html#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-4.html#comments'>4</a>
+<a class='page-numbers' href='comment-page-5.html#comments'>5</a>
+<span class='page-numbers current'>6</span>			</nav>
+		
+
+	<div id="respond">
+	
+		<h4 class="comment-title">Leave a Reply</h4>
+		
+		<p class="cancel-comment-reply">
+			<a rel="nofollow" id="cancel-comment-reply-link" href="comment-page-6.html#respond" style="display:none;">Cancel</a>		</p>
+		
+				
+		<form action="http://webdesignerwall.com/wp-comments-post.php" method="post" id="commentform">
+		
+				
+		<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' class="required">
+		<label for="author">Name <small>(required)</small></label></p>
+		
+		<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' class="required email">
+		<label for="email">Mail <small>(required)</small></label></p>
+		
+		<p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+		<label for="url">Website</label></p>
+		
+				
+		<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+		
+		<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" class="required"></textarea></p>
+		
+		<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+		<input type='hidden' name='comment_post_ID' value='529' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+		</p>
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="2a3a8b3d56" /></p><script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/akismet/_inc/form-ver=3.0.0.js'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="199"/></p>		
+		</form>
+		
+			</div><!--/respond -->
+
+	<div class="btn-comment collapse-all"><span>Collapse all</span></div> <div class="btn-comment expand-all"><span>Expand all</span></div>
+</div><!-- /commentwrap -->		
+	</div>
+	<!--/content -->
+</div>
+<!--/contentwrap -->
+
+<aside id="sidebar">
+
+	<section class="ad banners clearfix">
+
+
+		<a href="https://www.psd2html.com/order-now.html?utm_source=webdesignerwall.com&utm_medium=banner&utm_campaign=responsive"><img src="../../wp-content/uploads/2014/05/258x125.jpg" alt="PSD 2 HTML" /></a>
+
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+		(function(){
+		  var bsa = document.createElement('script');
+			  bsa.type = 'text/javascript';
+			  bsa.async = true;
+			  bsa.src = '//s3.buysellads.com/ac/bsa.js';
+		  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+		})();
+		</script>
+
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1243563" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		
+	</section>
+
+
+	
+	<section class="network">
+		<ul>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-themify.png" alt="WordPress Themes">
+				</figure>
+				<h4><a href="http://themify.me/themes">WP Themes</a></h4>
+				<p>Check out the WordPress themes that I've designed at Themify. Use 'WDW' Themify coupon code to save 20%.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-prints.png" alt="Art Prints">
+				</figure>
+				<h4><a href="http://society6.com/nickla">Art Prints</a></h4>
+				<p>Buy my art prints on Society6. Available in canvases, posters, tshirts, hoodies, and laptop skins and iPhone cases.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-icondock.png" alt="Stock Icons">
+				</figure>
+				<h4><a href="http://icondock.com/icons">Stock Icons</a></h4>
+				<p>My vector icons are also available for sale at IconDock. Use 'WDW' coupon code to save 20%.</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="ad">
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1265759" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		<!-- End BuySellAds.com Zone Code -->
+	</section>
+
+</aside>
+			<footer id="footer">
+				<section class="recent-posts">
+					<h4>Recent Posts</h4>
+
+					<ol>
+																<li>
+
+																			<figure>
+								<a href="../../general/icondock-is-redesigned.html"><img src="../../wp-content/uploads/2014/06/icondock-redesigned.png" alt="IconDock is Redesigned" /></a>
+							</figure>
+												<h5><a href="../../general/icondock-is-redesigned.html">IconDock is Redesigned</a></h5>
+						<p class="post-meta"><time datetime="2014-06-10" pubdate class="post-date">Jun 10, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../../general/themify-icons-ios7-inspired-icon-set.html"><img src="../../wp-content/uploads/2014/05/themify-icons.png" alt="Themify Icons: iOS7 Inspired Icon Set" /></a>
+							</figure>
+												<h5><a href="../../general/themify-icons-ios7-inspired-icon-set.html">Themify Icons: iOS7 Inspired Icon Set</a></h5>
+						<p class="post-meta"><time datetime="2014-05-20" pubdate class="post-date">May 20, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../animating-background-colors.html"><img src="../../wp-content/uploads/2014/05/animating-bg-colors.jpg" alt="Animating Background Colors" /></a>
+							</figure>
+												<h5><a href="../animating-background-colors.html">Animating Background Colors</a></h5>
+						<p class="post-meta"><time datetime="2014-05-02" pubdate class="post-date">May 2, 2014</time></p>
+						</li>
+										</ol>
+
+				</section>
+				<section class="recent-comments">
+					<h4>Recent Comments</h4>
+					<ol>
+												
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><img alt='' src='http://0.gravatar.com/avatar/016f5bd491295bc71da60680f5340952?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><cite>Teelah</cite></a>: Wow, these are so great! Of course its even better that the &hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><img alt='' src='http://0.gravatar.com/avatar/4b75fd327928554c8e47b4b86a3b0234?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><cite>Ashlee Havatone</cite></a>: Simple and looks great icons. This gonna be like with icon l&hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><img alt='' src='http://1.gravatar.com/avatar/94bd7e2ebae10fc2ed94f5da1968b6e3?s=40&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><cite>Ray John</cite></a>: Very beautiful design, I love it so much because purple is m&hellip;
+							
+						</li> 
+						
+												
+																	</ol>
+				</section>
+
+				<section class="credits">
+					<h4>About</h4>
+					<p>Web Designer Wall is all about design, ideas, web trends, and tutorials. It is designed and maintained by Nick La, who also runs <a href="http://www.ndesign-studio.com">N.Design Studio</a>, <a href="http://themify.me">Themify</a>, <a href="http://icondock.com">IconDock</a>, and <a href="http://bestwebgallery.com">Best Web Gallery</a>.</p>
+					<p class="copyright">
+						&copy; <a href="../../index.html">Web Designer Wall</a> 2014					</p>
+				</section>
+				<p id="back-top"><a href="comment-page-6.html#top"><span></span><em>Back to top</em> </a></p>
+			</footer>
+
+		</div>
+		<!--/body -->
+	</div>
+	<!--/pagewrap -->
+</div>
+<!--/overlay -->
+</div>
+<!--/top -->
+
+
+	<style type="text/css">
+.promo-bar {
+	background: #fc0000;
+	text-align: center;
+	font: italic 16px/120% "Times New Roman", Times, serif;
+	color: #FFC;
+	padding: 8px 1%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 99%;
+	z-index: 1000;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	border-bottom: solid 1px #900;
+}
+.promo-bar a {
+	color: #fff;
+	text-decoration: underline;
+}
+body {
+	margin-top: 32px;
+}
+@media screen and (max-width: 800px) {
+	body {
+		margin-top: 50px;
+	}
+}
+	</style>
+	<div class="promo-bar">TWEET &amp; SAVE: tweet a message to receive a 15% <a href="http://themify.me">Themify discount</a> code instantly. <a href="javascript:void(0);" onclick="window.open('http://twtqpon.com/themify-coupon/tweet', '_blank', 'width=800,height=700,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0,left=380,top=100');">Tweet it now!</a></div>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-253188-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html><!-- hyper cache: 97aeb82ef8b7c902409bddcfe603d1bc 14-07-29 12:49:17 -->

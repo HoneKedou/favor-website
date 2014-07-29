@@ -1,0 +1,1027 @@
+<!doctype html> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>  CSS3 Rounded Image With jQuery</title> 
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" type="application/rss+xml" title="Web Designer Wall &#8211; Design Trends and Tutorials RSS Feed" href="http://feeds2.feedburner.com/WebDesignerWall">
+
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Copse' type='text/css'>
+<link rel="stylesheet" href="../../wp-content/themes/wall/style.css" type="text/css">
+<link href="../../wp-content/themes/wall/print.css" rel="stylesheet" type="text/css" media="print">
+
+<!--[if lt IE 9]>
+	<script src="../../wp-content/themes/wall/js/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!-- WP-Polls 2.20 -->
+<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/tw-sack.js?ver=1.6.1"></script>
+<script type="text/javascript" src="http://webdesignerwall.com/wp-content/plugins/polls/polls-js.php?ver=2.20"></script>
+<link rel="stylesheet" href="http://webdesignerwall.com/wp-content/plugins/polls/polls-css.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.js"></script>
+<script type="text/javascript" src="../../wp-content/themes/wall/js/script.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/swfobject.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.fitvids.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			$(".post").fitVids();
+		});
+	</script>
+	
+	<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/comment-reply.js?ver=20090102"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.prettyPhoto.js"></script>
+	<link rel="stylesheet" href="../../wp-content/themes/wall/prettyPhoto.css" type="text/css" media="screen">
+	<script type="text/javascript">
+		$("a[rel^='prettyPhoto'], .gallery a, a.thickbox").prettyPhoto();
+	</script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.validate.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#commentform, .wpcf7-form").validate();
+	});
+	</script>
+
+
+</head> 
+<body class="single">
+<div id="top">
+<div id="overlay-bg">
+	<div id="pagewrap">
+
+		<header id="header">
+			<hgroup> 
+				<h1 id="site-logo"><a href="../../index.html">Web Designer Wall</a></h1> 
+				<h2 id="site-description">A wall of design ideas, web trends, and tutorials</h2> 
+			</hgroup> 
+			<nav>
+				<ul id="social-nav">
+					<li class="twitter">
+						<em>25216 followers</em>
+						<a href="http://twitter.com/nickla">Twitter</a>
+					</li>
+									</ul>
+				<ul id="main-nav" class="clearfix">
+					<li class="home">
+						<a href="../../index.html">Blog</a>
+						<ul>
+							<li>
+								<h4>Categories</h4>
+								<p class="categories"><a href="../../category/tutorials.html">Tutorials</a> &bull; <a href="../../category/trends.html">Trends</a> &bull; <a href="../../category/general.html">General</a></p>
+							</li>
+							<li>
+								<h4>Tags</h4>
+								<p class="tags">
+									<a href='../../tag/coding.html' class='tag-link-35' title='12 topics' style='font-size: 123.489932886%;'>Coding</a>
+<a href='../../tag/css.html' class='tag-link-21' title='50 topics' style='font-size: 155.704697987%;'>CSS</a>
+<a href='../../tag/design.html' class='tag-link-6' title='25 topics' style='font-size: 139.597315436%;'>design</a>
+<a href='../../tag/design-process.html' class='tag-link-10' title='11 topics' style='font-size: 121.879194631%;'>design process</a>
+<a href='../../tag/design-trends.html' class='tag-link-26' title='17 topics' style='font-size: 131.543624161%;'>Design Trends</a>
+<a href='../../tag/downloads.html' class='tag-link-39' title='2 topics' style='font-size: 89.6644295302%;'>Downloads</a>
+<a href='../../tag/event.html' class='tag-link-19' title='31 topics' style='font-size: 144.966442953%;'>event</a>
+<a href='../../tag/flash.html' class='tag-link-25' title='9 topics' style='font-size: 117.583892617%;'>Flash</a>
+<a href='../../tag/free.html' class='tag-link-38' title='1 topic' style='font-size: 80%;'>free</a>
+<a href='../../tag/freebies.html' class='tag-link-16' title='60 topics' style='font-size: 160%;'>freebies</a>
+<a href='../../tag/guest-posts.html' class='tag-link-36' title='13 topics' style='font-size: 125.637583893%;'>Guest Posts</a>
+<a href='../../tag/illustrator.html' class='tag-link-24' title='6 topics' style='font-size: 109.530201342%;'>Illustrator</a>
+<a href='../../tag/inspiration.html' class='tag-link-9' title='30 topics' style='font-size: 143.89261745%;'>inspiration</a>
+<a href='../../tag/interview.html' class='tag-link-37' title='1 topic' style='font-size: 80%;'>interview</a>
+<a href='../../tag/javascript.html' class='tag-link-30' title='18 topics' style='font-size: 132.617449664%;'>Javascript</a>
+<a href='../../tag/jobs.html' class='tag-link-32' title='1 topic' style='font-size: 80%;'>jobs</a>
+<a href='../../tag/photoshop.html' class='tag-link-34' title='1 topic' style='font-size: 80%;'>photoshop</a>
+<a href='../../tag/photoshop-tutorials.html' class='tag-link-23' title='12 topics' style='font-size: 123.489932886%;'>Photoshop tutorials</a>
+<a href='../../tag/responsive-design.html' class='tag-link-40' title='16 topics' style='font-size: 129.932885906%;'>Responsive Design</a>
+<a href='../../tag/review.html' class='tag-link-20' title='8 topics' style='font-size: 114.899328859%;'>review</a>
+<a href='../../tag/seo.html' class='tag-link-29' title='1 topic' style='font-size: 80%;'>SEO</a>
+<a href='../../tag/software.html' class='tag-link-17' title='5 topics' style='font-size: 105.771812081%;'>software</a>
+<a href='../../tag/talented-people.html' class='tag-link-14' title='8 topics' style='font-size: 114.899328859%;'>talented people</a>
+<a href='../../tag/updates.html' class='tag-link-5' title='20 topics' style='font-size: 134.765100671%;'>updates</a>
+<a href='../../tag/wordpress.html' class='tag-link-22' title='17 topics' style='font-size: 131.543624161%;'>WordPress</a>								</p>
+							</li>
+						</ul>
+					</li>
+					<li class="about"><a href="../../about.html">About</a></li>
+					<li class="contact"><a href="../../contact.html">Contact</a></li>
+					<li class="archives"><a href="../../archives.html">Archives</a></li>
+				</ul>
+			</nav>
+
+			<form method="get" id="searchform" action="http://webdesignerwall.com/">
+				<input type="text" name="s" id="s" placeholder="Search">
+			</form>
+
+		</header>
+
+		<div id="body">
+<div id="contentwrap">
+	<div id="content" class="single">
+
+				
+			<article class="post featured">
+	<header>
+		<h1 class="post-title"><a href="../css3-rounded-image-with-jquery.html" title="CSS3 Rounded Image With jQuery">CSS3 Rounded Image With jQuery</a> <sup><a href="../css3-rounded-image-with-jquery.html#comments" class="comments-link"  title="Comment on CSS3 Rounded Image With jQuery">215</a></sup></h1>
+		<p class="post-meta"><time datetime="2010-06-30" class="post-date" pubdate>Jun 30, 2010</time> &bull; <span class="post-category"><a href="../../category/tutorials.html" title="View all posts in Tutorials" rel="category tag">Tutorials</a></span> &rarr; <span class="post-tag"><a href="../../tag/css.html" rel="tag">CSS</a>, <a href="../../tag/javascript.html" rel="tag">Javascript</a></span></p>
+	</header>
+	
+
+			<div class="ad square">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243565" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>	
+	<div class="post-content">
+		<p><big>The other day I was trying to style CSS3 border-radius to image element and I realized that Firefox doesn't display border-radius on images. Then I figured a way to work around it &#8212; wrap a span tag around with the original image as a background-image. Thanks to <a href="http://clarke78.com">Darcy Clarke</a> for the jQuery code which does the magic tag wrapping automatically.</big></p>
+<p class="btn preview"><a href="http://www.webdesignerwall.com/demo/jquery-css3-rounded-img/">View Demo <em>Rounded Images</em></a><span id="more-531"></span></p>
+<h3>Goal</h3>
+<p>My goal to use the CSS3 border-radius and box-shadow feature to make the image element look like the screenshot below.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2010/06/sample-rounded-images.gif" alt="sample image" /></p>
+<h3>Problem</h3>
+<p>The problem is none of the modern browsers display rounded corners image the way I want it. Webkit does display the rounded corners, but the inset box shadow is not supported. In Firefox, the border-radius doesn't even display  at all.</p>
+<p class="image"><a href="http://www.webdesignerwall.com/demo/jquery-css3-rounded-img/"><img src="http://www.webdesignerwall.com/wp-content/uploads/2010/06/display-problems.gif" alt="rendering problems" /></a></p>
+<h3>The CSS Trick</h3>
+<p>The trick is very simple: wrap a span tag around the image element. Specify the original image as background-image. To hide the original image, specify opacity:0 or display:none. I find using the opacity method is a better approach because the image will remain available for copy or download.</p>
+<p class="image"><a href="http://www.webdesignerwall.com/demo/jquery-css3-rounded-img/"><img src="http://www.webdesignerwall.com/wp-content/uploads/2010/06/css-background-img-trick.gif" alt="rendering problems" /></a></p>
+<h3>Final Solution With jQuery</h3>
+<p>To make things easier, we can use jQuery to automatically wrap a span tag around the image.</p>
+<p>The jQuery code below will find any element with &quot;.rounded-img&quot; or &quot;rounded-img2&quot; (in my case, it is the image element) and wrap it with a span tag. The script finds the src, width, height, and CSS class attribute of the original image and apply them as inline styling in the span tag. Then it specifies the opacity of the image to 0 to hide it.</p>
+<p>It works with any image dimension (with or without the width and height attribute). It can also be combined with other CSS classes. No additional markup is required.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2010/06/jquery-wrap.gif" alt="jquery wrap" /></p>
+<pre><code>&lt;script type="text/javascript" src="jquery-1.4.2.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+$(document).ready(function(){
+
+  $(".rounded-img, .rounded-img2").load(function() {
+    $(this).wrap(function(){
+      return '&lt;span class="' + $(this).attr('class') + '" style="background:url(' + $(this).attr('src') + ') no-repeat center center; width: ' + $(this).width() + 'px; height: ' + $(this).height() + 'px;" /&gt;';
+    });
+    $(this).css("opacity","0");
+  });
+
+});
+&lt;/script&gt;
+</code></pre>
+<h3>Sample Usage</h3>
+<p>I hope you will find this trick useful. For example, you can use it to style your blog's avatar or profile photos.</p>
+<p class="image"><a href="http://www.webdesignerwall.com/demo/jquery-css3-rounded-img/"><img src="http://www.webdesignerwall.com/wp-content/uploads/2010/06/sample-usages.gif" alt="sample usages" /></a></p>
+<h3>Credits</h3>
+<p>Thanks to <a href="http://clarke78.com">Darcy Clarke</a> for the jQuery code.</p>	</div>
+
+	<footer class="share">
+	<em>Share &rarr;</em> 
+	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://webdesignerwall.com/tutorials/css3-rounded-image-with-jquery" data-count="horizontal" data-via="nickla">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script src="http://www.stumbleupon.com/hostedbadge.php?s=2&r=http://webdesignerwall.com/tutorials/css3-rounded-image-with-jquery"></script>
+	<iframe src="http://www.facebook.com/plugins/like.php?href=http://webdesignerwall.com/tutorials/css3-rounded-image-with-jquery&layout=button_count&show_faces=false&width=90&action=like&font=lucida+grande&colorscheme=light&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+</footer>
+	
+</article>
+
+			<div class="ad horizontal">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243564" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>
+		
+			<nav> 
+				<ul class="post-nav clearfix">
+					<li class="prev"><a href="../scrollto-posts-with-jquery.html" rel="prev"><span></span> <em>Previous</em> ScrollTo Posts With jQuery</a></li>
+					<li class="next"><a href="../../general/what-do-you-think-about-flash-now-comment-and-win.html" rel="next"><span></span> <em>Next</em> What Do You Think About Flash Now? Comment and Win</a></li>
+				</ul>
+			</nav>
+
+				
+		<div class="commentwrap">
+
+
+
+		<h4 id="comments" class="comment-title">215 Comments</h4>
+
+					<nav class="pagenav">
+				<a class="prev page-numbers" href="comment-page-9.html#comments"><em>Prev</em></a>
+<a class='page-numbers' href='comment-page-1.html#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-8.html#comments'>8</a>
+<a class='page-numbers' href='comment-page-9.html#comments'>9</a>
+<span class='page-numbers current'>10</span>
+<a class='page-numbers' href='comment-page-11.html#comments'>11</a>
+<a class="next page-numbers" href="comment-page-11.html#comments"><em>Next</em></a>			</nav>
+		
+
+		<ol class="commentlist">
+			   <li id="comment-80807" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/06706feee10bcf4f6f1f2882862701c9?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://livingforestfarm.com' rel='external nofollow' class='url'>Durga</a></cite><br />
+			<time datetime="2011-9-13T02:04" class="comment-time">Sep 13, 2011 @ 02:04</time>
+		</p>
+
+		<div class="commententry" id="commententry-80807">
+					
+			<p>I found the issue&#8230; problem resolved! Some CSS code was adding padding to that a particular div. Thx again :)</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-80942" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/c403beeb0ca6ff1cfdae761df734de28?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Alfonso</cite><br />
+			<time datetime="2011-9-16T02:43" class="comment-time">Sep 16, 2011 @ 02:43</time>
+		</p>
+
+		<div class="commententry" id="commententry-80942">
+					
+			<p>Don&#8217;t run OK in IE 8. Sorry</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-81244" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/59e66ecd6764d242b03d88fb0b2548f8?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Mamouneyya</cite><br />
+			<time datetime="2011-9-23T22:23" class="comment-time">Sep 23, 2011 @ 22:23</time>
+		</p>
+
+		<div class="commententry" id="commententry-81244">
+					
+			<p>That is because IE8 doesn&#8217;t support border-radius at all. It has nothing to do with the JS code.</p>
+<p>Do yourself a favor trashing this crap and find a REAL browser. That is the only real solution, if you&#8217;re searching for a one!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-97432" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/66da2686cce5db512d12514074e1664c?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://texxsmith.com' rel='external nofollow' class='url'>texxs</a></cite><br />
+			<time datetime="2012-9-15T00:11" class="comment-time">Sep 15, 2012 @ 00:11</time>
+		</p>
+
+		<div class="commententry" id="commententry-97432">
+					
+			<p>IT&#8217;s not about us, it needs to work right in IE 8 Because so many of our clients website visitors are using it still.  Around 40%.  So ya, much as I don&#8217;t want to, I have to make sure the design works in IE6, 7, 8 and 9.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-82510" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/55e57925a99ca7e09d2e6e0d232e6734?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>YerMaw</cite><br />
+			<time datetime="2011-10-26T05:40" class="comment-time">Oct 26, 2011 @ 05:40</time>
+		</p>
+
+		<div class="commententry" id="commententry-82510">
+					
+			<p>Not the best of advice, @Mamouneyya and switching browser is not the only solution.  You could try CSS3PIE for support in IE8, I think it even goes down to IE6.   So the IE users visiting your site will get to see your rounded corners.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-85848" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7c8db844445265f1964686b84ab168d2?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>rachaelov</cite><br />
+			<time datetime="2012-1-6T08:42" class="comment-time">Jan 06, 2012 @ 08:42</time>
+		</p>
+
+		<div class="commententry" id="commententry-85848">
+					
+			<p>Yes, @Mamouneyya, I wish people would stop saying &#8220;oh, just abandon ie, its crap&#8221; &#8211; in the real world, I just can&#8217;t tell my clients that, and expect to be paid.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-94334" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/d7c778468820a680444e8210774297a7?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.sonetinc.com/' rel='external nofollow' class='url'>Sonet SEO</a></cite><br />
+			<time datetime="2012-6-13T14:56" class="comment-time">Jun 13, 2012 @ 14:56</time>
+		</p>
+
+		<div class="commententry" id="commententry-94334">
+					
+			<p>@Rachaelov just put fixing IE as an extra on your estimates. This way you get to see how many clients are really interested in supporting it. You won&#8217;t waste time on each project and if the client goes for it you get paid.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-96976" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/ac72c11cc819b5ade50ddcd9e5437327?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Dave Burrows</cite><br />
+			<time datetime="2012-9-5T17:55" class="comment-time">Sep 05, 2012 @ 17:55</time>
+		</p>
+
+		<div class="commententry" id="commententry-96976">
+					
+			<p>There&#8217;s nothing wrong with holding onto the past, not until one tries to make others do the same.  If you like IE, that&#8217;s great, but it&#8217;s not, and never has been, part of the wave of the future.  The choice is up to the user to stick with a sewing machine that isn&#8217;t capable of making a zig-zag stitch, or acquiring one that is.  It&#8217;s just not reasonable to expect for developers to find fixes for a straight stitch machine, and more and more developers are refusing to.  Microsoft certainly has the resources to keep up with technology.  That they refuse to is their black eye.  I have no intention of allowing that to blacken mine.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-81168" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b1a4f800f2e33e8843ccf66f5270278a?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://quedeenmono.blogspot.com' rel='external nofollow' class='url'>gilgalo</a></cite><br />
+			<time datetime="2011-9-22T10:30" class="comment-time">Sep 22, 2011 @ 10:30</time>
+		</p>
+
+		<div class="commententry" id="commententry-81168">
+					
+			<p>esoy probando el alojamiento de</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-81246" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/59e66ecd6764d242b03d88fb0b2548f8?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Mamouneyya</cite><br />
+			<time datetime="2011-9-23T22:28" class="comment-time">Sep 23, 2011 @ 22:28</time>
+		</p>
+
+		<div class="commententry" id="commententry-81246">
+					
+			<p>Thank you very much! While I cannot say it is THE perfect solution, since it won&#8217;t work with JS-disabled browsers, it&#8217;s still perfect when you cannot modify the HTML layout.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-81913" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/c205ab14f5ea7026612c76577b73b938?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.parisforaweekend.com' rel='external nofollow' class='url'>Geert-Jan Brits</a></cite><br />
+			<time datetime="2011-10-13T05:04" class="comment-time">Oct 13, 2011 @ 05:04</time>
+		</p>
+
+		<div class="commententry" id="commententry-81913">
+					
+			<p>Without having tried this: would the above JS + Pie css (<a href="http://css3pie.com/" rel="nofollow">http://css3pie.com/</a>)  make this work on IE as well?</p>
+<p>Brilliant effect!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-83850" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/881d31a4f3d8d8b7ff0f0fbbbfbd05d0?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.iamperfectlyaverage.com/blog' rel='external nofollow' class='url'>Erica Redfield</a></cite><br />
+			<time datetime="2011-12-1T08:39" class="comment-time">Dec 01, 2011 @ 08:39</time>
+		</p>
+
+		<div class="commententry" id="commententry-83850">
+					
+			<p>I tried to implement this on my wordpress blog&#8217;s theme (<a href="http://www.iamperfectlyaverage.com/blog" rel="nofollow">http://www.iamperfectlyaverage.com/blog</a>) and added the .js file to my /js folder in the theme folder and then added the jQuery code to my header.php file and changed the div class name to match the one I was trying to change: .avatar—the comment avatars, but it did not work. Any idea what I&#8217;m doing wrong? Is there some extra step I need to take in order for it to get to work on a WordPress theme? Any help would be greatly appreciated.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-84492" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/a94552f1b9dd8bcbdf1c5b5a02780cb1?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.manicmoddin.co.uk' rel='external nofollow' class='url'>jimmy</a></cite><br />
+			<time datetime="2011-12-13T18:15" class="comment-time">Dec 13, 2011 @ 18:15</time>
+		</p>
+
+		<div class="commententry" id="commententry-84492">
+					
+			<p>Hi,</p>
+<p>I stumbled across this site and have to thank you alot for bringing this idea to my mind, I have used the &#8220;background trick&#8221; in the past, but this jquery really makes it easier to add extras in the future and will become a staple part of my designs now.</p>
+<p>Many thanks</p>
+<p>Jimmy</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-85597" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/12ee22510d9de9871e457b7ab7cbb1b5?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Peter W</cite><br />
+			<time datetime="2011-12-30T21:16" class="comment-time">Dec 30, 2011 @ 21:16</time>
+		</p>
+
+		<div class="commententry" id="commententry-85597">
+					
+			<p>Tricky!  Thanks!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-86143" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/dfc9a6ea23605ec642257ca36d044b24?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Angela</cite><br />
+			<time datetime="2012-1-16T10:45" class="comment-time">Jan 16, 2012 @ 10:45</time>
+		</p>
+
+		<div class="commententry" id="commententry-86143">
+					
+			<p>Hi! :)<br />
+(sorry for my bad english)<br />
+How can I put some text on the right of the images?<br />
+I tried with align=left on the image, but the text is always on the back.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-86309" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/025fa6660ae39e3f6a55ce20b772ecc1?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.globalwebfx.com' rel='external nofollow' class='url'>Wordpress Fanboy</a></cite><br />
+			<time datetime="2012-1-21T22:39" class="comment-time">Jan 21, 2012 @ 22:39</time>
+		</p>
+
+		<div class="commententry" id="commententry-86309">
+					
+			<p>It&#8217;s amazing looking back at this post and realizing how far advanced this post was in regards to CSS3 and browser support. Now most browsers support rounded corners on elements using the border-radius css attribute.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-86847" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/d18d351cabe8e92e3c2807d88178b954?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Miguel</cite><br />
+			<time datetime="2012-2-7T13:38" class="comment-time">Feb 07, 2012 @ 13:38</time>
+		</p>
+
+		<div class="commententry" id="commententry-86847">
+					
+			<p>Instead of all that</p>
+<p>its faster and easier to do it in simple css3 without having to change pictures to background or adding javascripts, the trick is to use overflow: hidden; and works on most browsers have not test it on opera but every other browser works; example</p>
+<p>border-radius: 10px;<br />
+-moz-border-radius: 10px;<br />
+-webkit-border-radius: 10px;<br />
+-moz-box-shadow: 2px 2px 5px 0px #ccc,0px 1px 0px rgba(204,204,204,.3) inset;<br />
+-webkit-box-shadow: 2px 2px 5px 0px #ccc, 0px 1px 0px rgba(204,204,204,.3) inset;<br />
+box-shadow: 2px 2px 5px 0px #ccc,0px 1px 0px rgba(204,204,204,.3) inset;<br />
+margin:0px 5px 0px 0px;<br />
+overflow: hidden;</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-93278" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/73f30009db65b1aade1265ea7eadbc3d?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>doug</cite><br />
+			<time datetime="2012-6-7T10:18" class="comment-time">Jun 07, 2012 @ 10:18</time>
+		</p>
+
+		<div class="commententry" id="commententry-93278">
+					
+			<p>I just confirmed, Miguel, your method works on FF11, chrome, ie8 and (via ie tester) ie6,7.  So does the jquery, but the css is probly better and wont have a flash of corners while the js loads.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-93279" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/73f30009db65b1aade1265ea7eadbc3d?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>doug</cite><br />
+			<time datetime="2012-6-7T10:20" class="comment-time">Jun 07, 2012 @ 10:20</time>
+		</p>
+
+		<div class="commententry" id="commententry-93279">
+					
+			<p>oh, forgot to mention that ie only works with cssPie <a href="http://css3pie.com/documentation/getting-started/" rel="nofollow">http://css3pie.com/documentation/getting-started/</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-94715" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/55f03c394d8e5af4dba618f145c77952?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://Perfektech.com' rel='external nofollow' class='url'>Anthony</a></cite><br />
+			<time datetime="2012-6-24T14:05" class="comment-time">Jun 24, 2012 @ 14:05</time>
+		</p>
+
+		<div class="commententry" id="commententry-94715">
+					
+			<p>Just wanted to mention that this worked beautifully and is the much simpler solution. Thanks!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-86970" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/720bbaaf2456bc1eb32723b2494e36c5?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.tech-magneta.com' rel='external nofollow' class='url'>Aniket - Freelance Web Designer</a></cite><br />
+			<time datetime="2012-2-10T11:14" class="comment-time">Feb 10, 2012 @ 11:14</time>
+		</p>
+
+		<div class="commententry" id="commententry-86970">
+					
+			<p>Useful trick. Very useful indeed.<br />
+I use drupal &amp; this can be achieved by using a module called Imagecache actions.<br />
+but this tutorial is helpful in lot of ways. :)<br />
+Thanks.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-87391" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>carrie</cite><br />
+			<time datetime="2012-2-23T11:39" class="comment-time">Feb 23, 2012 @ 11:39</time>
+		</p>
+
+		<div class="commententry" id="commententry-87391">
+					
+			<p>awesome little tutorial. thanks for sharing</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-87914" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/227f8c7b5e3edb4191533380ed8857fe?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.platinmedikal.com' rel='external nofollow' class='url'>hasta karyolası</a></cite><br />
+			<time datetime="2012-3-8T10:51" class="comment-time">Mar 08, 2012 @ 10:51</time>
+		</p>
+
+		<div class="commententry" id="commententry-87914">
+					
+			<p>thanks, i will share..</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-87949" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/135f415977abea2d65223bb13d01e060?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.tekerleklisandalye.com.tr' rel='external nofollow' class='url'>Tekerlekli Sandalye</a></cite><br />
+			<time datetime="2012-3-9T10:50" class="comment-time">Mar 09, 2012 @ 10:50</time>
+		</p>
+
+		<div class="commententry" id="commententry-87949">
+					
+			<p>Thnks for share&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-88845" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/e269517e4ca1bf00d6d17794388e92c3?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://blogbelajar2.blogspot.com/' rel='external nofollow' class='url'>Belajar blog</a></cite><br />
+			<time datetime="2012-4-10T10:44" class="comment-time">Apr 10, 2012 @ 10:44</time>
+		</p>
+
+		<div class="commententry" id="commententry-88845">
+					
+			<p>your wellcome</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-88707" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/3f1ef8c81ddbc59beb7d2bdbf7557248?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.jasonbaileydesign.com' rel='external nofollow' class='url'>Jason Bailey</a></cite><br />
+			<time datetime="2012-4-6T16:25" class="comment-time">Apr 06, 2012 @ 16:25</time>
+		</p>
+
+		<div class="commententry" id="commententry-88707">
+					
+			<p>Thanks for this article!<br />
+I started with your example, but I didn&#8217;t need the shadows. Plus,  I also wanted to see if I could do this without creating a background image. </p>
+<p>I ended up with a similar technique, but instead of wrapping a span around the image, I am putting the span before the image. The span contains a rounded edge box with a thick border that matches the page background color. Like your example, the span grabs the original images width and height. </p>
+<p>At the end of the function (where the opacity setting was) it adds a border class to the image to match the span above (I found it didn&#8217;t look right if I didn&#8217;t do this). It seems to work in Firefox, Safari, Chrome, and IE9. I&#8217;m more of a visual designer and HTML/CSS guy, but hey, it worked for me.</p>
+<p>Here&#8217;s my tweaked code:</p>
+<p>$(document).ready(function(){</p>
+<p>  $(&#8220;.rounded-img&#8221;).load(function() {<br />
+    $(this).before(function(){<br />
+      return &#8221;;<br />
+    });<br />
+	$(this).css({ border:&#8221;3px solid #FFF&#8221; });<br />
+  });</p>
+<p>});</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-88708" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/3f1ef8c81ddbc59beb7d2bdbf7557248?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.jasonbaileydesign.com' rel='external nofollow' class='url'>Jason Bailey</a></cite><br />
+			<time datetime="2012-4-6T16:40" class="comment-time">Apr 06, 2012 @ 16:40</time>
+		</p>
+
+		<div class="commententry" id="commententry-88708">
+					
+			<p>Crap. The pasted code didn&#8217;t past correctly. Sorry about that.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-88848" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/d83fb944f27328a092c1eff572db661c?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://isipay.net' rel='external nofollow' class='url'>ısı pay ölçer</a></cite><br />
+			<time datetime="2012-4-10T13:54" class="comment-time">Apr 10, 2012 @ 13:54</time>
+		</p>
+
+		<div class="commententry" id="commententry-88848">
+					
+			<p>thank you for share.. Good Joob!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-90463" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/6349aab8adc6e087b80682cbff4e3d15?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>testtoabc</cite><br />
+			<time datetime="2012-5-22T23:05" class="comment-time">May 22, 2012 @ 23:05</time>
+		</p>
+
+		<div class="commententry" id="commententry-90463">
+					
+			<p>I am trying to do something on round border with css property which link <a href="http://www.webinbangla.com/2012/05/css-round-shape/" rel="nofollow">http://www.webinbangla.com/2012/05/css-round-shape/</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-94948" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/d3232221d74d6e4b849e66e68d64226d?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>HackBert</cite><br />
+			<time datetime="2012-7-6T11:24" class="comment-time">Jul 06, 2012 @ 11:24</time>
+		</p>
+
+		<div class="commententry" id="commententry-94948">
+					
+			<p>Great tutorial there, But I want to know how to create something smiler to the images that appears on the commented post, Having people image in the circle box on the comment section.</p>
+<p>Thanks</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+		</ol>
+		
+					<nav class="pagenav right">
+				<a class="prev page-numbers" href="comment-page-9.html#comments"><em>Prev</em></a>
+<a class='page-numbers' href='comment-page-1.html#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-8.html#comments'>8</a>
+<a class='page-numbers' href='comment-page-9.html#comments'>9</a>
+<span class='page-numbers current'>10</span>
+<a class='page-numbers' href='comment-page-11.html#comments'>11</a>
+<a class="next page-numbers" href="comment-page-11.html#comments"><em>Next</em></a>			</nav>
+		
+
+	<div id="respond">
+	
+		<h4 class="comment-title">Leave a Reply</h4>
+		
+		<p class="cancel-comment-reply">
+			<a rel="nofollow" id="cancel-comment-reply-link" href="comment-page-10.html#respond" style="display:none;">Cancel</a>		</p>
+		
+				
+		<form action="http://webdesignerwall.com/wp-comments-post.php" method="post" id="commentform">
+		
+				
+		<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' class="required">
+		<label for="author">Name <small>(required)</small></label></p>
+		
+		<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' class="required email">
+		<label for="email">Mail <small>(required)</small></label></p>
+		
+		<p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+		<label for="url">Website</label></p>
+		
+				
+		<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+		
+		<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" class="required"></textarea></p>
+		
+		<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+		<input type='hidden' name='comment_post_ID' value='531' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+		</p>
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="890dac5863" /></p><script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/akismet/_inc/form-ver=3.0.0.js'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="130"/></p>		
+		</form>
+		
+			</div><!--/respond -->
+
+	<div class="btn-comment collapse-all"><span>Collapse all</span></div> <div class="btn-comment expand-all"><span>Expand all</span></div>
+</div><!-- /commentwrap -->		
+	</div>
+	<!--/content -->
+</div>
+<!--/contentwrap -->
+
+<aside id="sidebar">
+
+	<section class="ad banners clearfix">
+
+
+		<a href="https://www.psd2html.com/order-now.html?utm_source=webdesignerwall.com&utm_medium=banner&utm_campaign=responsive"><img src="../../wp-content/uploads/2014/05/258x125.jpg" alt="PSD 2 HTML" /></a>
+
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+		(function(){
+		  var bsa = document.createElement('script');
+			  bsa.type = 'text/javascript';
+			  bsa.async = true;
+			  bsa.src = '//s3.buysellads.com/ac/bsa.js';
+		  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+		})();
+		</script>
+
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1243563" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		
+	</section>
+
+
+	
+	<section class="network">
+		<ul>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-themify.png" alt="WordPress Themes">
+				</figure>
+				<h4><a href="http://themify.me/themes">WP Themes</a></h4>
+				<p>Check out the WordPress themes that I've designed at Themify. Use 'WDW' Themify coupon code to save 20%.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-prints.png" alt="Art Prints">
+				</figure>
+				<h4><a href="http://society6.com/nickla">Art Prints</a></h4>
+				<p>Buy my art prints on Society6. Available in canvases, posters, tshirts, hoodies, and laptop skins and iPhone cases.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-icondock.png" alt="Stock Icons">
+				</figure>
+				<h4><a href="http://icondock.com/icons">Stock Icons</a></h4>
+				<p>My vector icons are also available for sale at IconDock. Use 'WDW' coupon code to save 20%.</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="ad">
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1265759" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		<!-- End BuySellAds.com Zone Code -->
+	</section>
+
+</aside>
+			<footer id="footer">
+				<section class="recent-posts">
+					<h4>Recent Posts</h4>
+
+					<ol>
+																<li>
+
+																			<figure>
+								<a href="../../general/icondock-is-redesigned.html"><img src="../../wp-content/uploads/2014/06/icondock-redesigned.png" alt="IconDock is Redesigned" /></a>
+							</figure>
+												<h5><a href="../../general/icondock-is-redesigned.html">IconDock is Redesigned</a></h5>
+						<p class="post-meta"><time datetime="2014-06-10" pubdate class="post-date">Jun 10, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../../general/themify-icons-ios7-inspired-icon-set.html"><img src="../../wp-content/uploads/2014/05/themify-icons.png" alt="Themify Icons: iOS7 Inspired Icon Set" /></a>
+							</figure>
+												<h5><a href="../../general/themify-icons-ios7-inspired-icon-set.html">Themify Icons: iOS7 Inspired Icon Set</a></h5>
+						<p class="post-meta"><time datetime="2014-05-20" pubdate class="post-date">May 20, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../animating-background-colors.html"><img src="../../wp-content/uploads/2014/05/animating-bg-colors.jpg" alt="Animating Background Colors" /></a>
+							</figure>
+												<h5><a href="../animating-background-colors.html">Animating Background Colors</a></h5>
+						<p class="post-meta"><time datetime="2014-05-02" pubdate class="post-date">May 2, 2014</time></p>
+						</li>
+										</ol>
+
+				</section>
+				<section class="recent-comments">
+					<h4>Recent Comments</h4>
+					<ol>
+												
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><img alt='' src='http://0.gravatar.com/avatar/016f5bd491295bc71da60680f5340952?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><cite>Teelah</cite></a>: Wow, these are so great! Of course its even better that the &hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><img alt='' src='http://0.gravatar.com/avatar/4b75fd327928554c8e47b4b86a3b0234?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><cite>Ashlee Havatone</cite></a>: Simple and looks great icons. This gonna be like with icon l&hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><img alt='' src='http://1.gravatar.com/avatar/94bd7e2ebae10fc2ed94f5da1968b6e3?s=40&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><cite>Ray John</cite></a>: Very beautiful design, I love it so much because purple is m&hellip;
+							
+						</li> 
+						
+												
+																	</ol>
+				</section>
+
+				<section class="credits">
+					<h4>About</h4>
+					<p>Web Designer Wall is all about design, ideas, web trends, and tutorials. It is designed and maintained by Nick La, who also runs <a href="http://www.ndesign-studio.com">N.Design Studio</a>, <a href="http://themify.me">Themify</a>, <a href="http://icondock.com">IconDock</a>, and <a href="http://bestwebgallery.com">Best Web Gallery</a>.</p>
+					<p class="copyright">
+						&copy; <a href="../../index.html">Web Designer Wall</a> 2014					</p>
+				</section>
+				<p id="back-top"><a href="comment-page-10.html#top"><span></span><em>Back to top</em> </a></p>
+			</footer>
+
+		</div>
+		<!--/body -->
+	</div>
+	<!--/pagewrap -->
+</div>
+<!--/overlay -->
+</div>
+<!--/top -->
+
+
+	<style type="text/css">
+.promo-bar {
+	background: #fc0000;
+	text-align: center;
+	font: italic 16px/120% "Times New Roman", Times, serif;
+	color: #FFC;
+	padding: 8px 1%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 99%;
+	z-index: 1000;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	border-bottom: solid 1px #900;
+}
+.promo-bar a {
+	color: #fff;
+	text-decoration: underline;
+}
+body {
+	margin-top: 32px;
+}
+@media screen and (max-width: 800px) {
+	body {
+		margin-top: 50px;
+	}
+}
+	</style>
+	<div class="promo-bar">TWEET &amp; SAVE: tweet a message to receive a 15% <a href="http://themify.me">Themify discount</a> code instantly. <a href="javascript:void(0);" onclick="window.open('http://twtqpon.com/themify-coupon/tweet', '_blank', 'width=800,height=700,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0,left=380,top=100');">Tweet it now!</a></div>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-253188-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html><!-- hyper cache: 532bc767cf8d850a03176950b278ab7c 14-07-28 06:07:00 -->

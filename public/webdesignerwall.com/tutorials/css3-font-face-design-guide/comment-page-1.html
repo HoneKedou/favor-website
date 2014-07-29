@@ -1,0 +1,952 @@
+<!doctype html> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>  CSS3 @font-face Design Guide</title> 
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" type="application/rss+xml" title="Web Designer Wall &#8211; Design Trends and Tutorials RSS Feed" href="http://feeds2.feedburner.com/WebDesignerWall">
+
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Copse' type='text/css'>
+<link rel="stylesheet" href="../../wp-content/themes/wall/style.css" type="text/css">
+<link href="../../wp-content/themes/wall/print.css" rel="stylesheet" type="text/css" media="print">
+
+<!--[if lt IE 9]>
+	<script src="../../wp-content/themes/wall/js/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!-- WP-Polls 2.20 -->
+<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/tw-sack.js?ver=1.6.1"></script>
+<script type="text/javascript" src="http://webdesignerwall.com/wp-content/plugins/polls/polls-js.php?ver=2.20"></script>
+<link rel="stylesheet" href="http://webdesignerwall.com/wp-content/plugins/polls/polls-css.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.js"></script>
+<script type="text/javascript" src="../../wp-content/themes/wall/js/script.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/swfobject.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.fitvids.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			$(".post").fitVids();
+		});
+	</script>
+	
+	<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/comment-reply.js?ver=20090102"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.prettyPhoto.js"></script>
+	<link rel="stylesheet" href="../../wp-content/themes/wall/prettyPhoto.css" type="text/css" media="screen">
+	<script type="text/javascript">
+		$("a[rel^='prettyPhoto'], .gallery a, a.thickbox").prettyPhoto();
+	</script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.validate.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#commentform, .wpcf7-form").validate();
+	});
+	</script>
+
+
+</head> 
+<body class="single">
+<div id="top">
+<div id="overlay-bg">
+	<div id="pagewrap">
+
+		<header id="header">
+			<hgroup> 
+				<h1 id="site-logo"><a href="../../index.html">Web Designer Wall</a></h1> 
+				<h2 id="site-description">A wall of design ideas, web trends, and tutorials</h2> 
+			</hgroup> 
+			<nav>
+				<ul id="social-nav">
+					<li class="twitter">
+						<em>25216 followers</em>
+						<a href="http://twitter.com/nickla">Twitter</a>
+					</li>
+									</ul>
+				<ul id="main-nav" class="clearfix">
+					<li class="home">
+						<a href="../../index.html">Blog</a>
+						<ul>
+							<li>
+								<h4>Categories</h4>
+								<p class="categories"><a href="../../category/tutorials.html">Tutorials</a> &bull; <a href="../../category/trends.html">Trends</a> &bull; <a href="../../category/general.html">General</a></p>
+							</li>
+							<li>
+								<h4>Tags</h4>
+								<p class="tags">
+									<a href='../../tag/coding.html' class='tag-link-35' title='12 topics' style='font-size: 123.489932886%;'>Coding</a>
+<a href='../../tag/css.html' class='tag-link-21' title='50 topics' style='font-size: 155.704697987%;'>CSS</a>
+<a href='../../tag/design.html' class='tag-link-6' title='25 topics' style='font-size: 139.597315436%;'>design</a>
+<a href='../../tag/design-process.html' class='tag-link-10' title='11 topics' style='font-size: 121.879194631%;'>design process</a>
+<a href='../../tag/design-trends.html' class='tag-link-26' title='17 topics' style='font-size: 131.543624161%;'>Design Trends</a>
+<a href='../../tag/downloads.html' class='tag-link-39' title='2 topics' style='font-size: 89.6644295302%;'>Downloads</a>
+<a href='../../tag/event.html' class='tag-link-19' title='31 topics' style='font-size: 144.966442953%;'>event</a>
+<a href='../../tag/flash.html' class='tag-link-25' title='9 topics' style='font-size: 117.583892617%;'>Flash</a>
+<a href='../../tag/free.html' class='tag-link-38' title='1 topic' style='font-size: 80%;'>free</a>
+<a href='../../tag/freebies.html' class='tag-link-16' title='60 topics' style='font-size: 160%;'>freebies</a>
+<a href='../../tag/guest-posts.html' class='tag-link-36' title='13 topics' style='font-size: 125.637583893%;'>Guest Posts</a>
+<a href='../../tag/illustrator.html' class='tag-link-24' title='6 topics' style='font-size: 109.530201342%;'>Illustrator</a>
+<a href='../../tag/inspiration.html' class='tag-link-9' title='30 topics' style='font-size: 143.89261745%;'>inspiration</a>
+<a href='../../tag/interview.html' class='tag-link-37' title='1 topic' style='font-size: 80%;'>interview</a>
+<a href='../../tag/javascript.html' class='tag-link-30' title='18 topics' style='font-size: 132.617449664%;'>Javascript</a>
+<a href='../../tag/jobs.html' class='tag-link-32' title='1 topic' style='font-size: 80%;'>jobs</a>
+<a href='../../tag/photoshop.html' class='tag-link-34' title='1 topic' style='font-size: 80%;'>photoshop</a>
+<a href='../../tag/photoshop-tutorials.html' class='tag-link-23' title='12 topics' style='font-size: 123.489932886%;'>Photoshop tutorials</a>
+<a href='../../tag/responsive-design.html' class='tag-link-40' title='16 topics' style='font-size: 129.932885906%;'>Responsive Design</a>
+<a href='../../tag/review.html' class='tag-link-20' title='8 topics' style='font-size: 114.899328859%;'>review</a>
+<a href='../../tag/seo.html' class='tag-link-29' title='1 topic' style='font-size: 80%;'>SEO</a>
+<a href='../../tag/software.html' class='tag-link-17' title='5 topics' style='font-size: 105.771812081%;'>software</a>
+<a href='../../tag/talented-people.html' class='tag-link-14' title='8 topics' style='font-size: 114.899328859%;'>talented people</a>
+<a href='../../tag/updates.html' class='tag-link-5' title='20 topics' style='font-size: 134.765100671%;'>updates</a>
+<a href='../../tag/wordpress.html' class='tag-link-22' title='17 topics' style='font-size: 131.543624161%;'>WordPress</a>								</p>
+							</li>
+						</ul>
+					</li>
+					<li class="about"><a href="../../about.html">About</a></li>
+					<li class="contact"><a href="../../contact.html">Contact</a></li>
+					<li class="archives"><a href="../../archives.html">Archives</a></li>
+				</ul>
+			</nav>
+
+			<form method="get" id="searchform" action="http://webdesignerwall.com/">
+				<input type="text" name="s" id="s" placeholder="Search">
+			</form>
+
+		</header>
+
+		<div id="body">
+<div id="contentwrap">
+	<div id="content" class="single">
+
+				
+			<article class="post featured">
+	<header>
+		<h1 class="post-title"><a href="../css3-font-face-design-guide.html" title="CSS3 @font-face Design Guide">CSS3 @font-face Design Guide</a> <sup><a href="../css3-font-face-design-guide.html#comments" class="comments-link"  title="Comment on CSS3 @font-face Design Guide">100</a></sup></h1>
+		<p class="post-meta"><time datetime="2011-07-14" class="post-date" pubdate>Jul 14, 2011</time> &bull; <span class="post-category"><a href="../../category/tutorials.html" title="View all posts in Tutorials" rel="category tag">Tutorials</a></span> &rarr; <span class="post-tag"><a href="../../tag/css.html" rel="tag">CSS</a>, <a href="../../tag/design.html" rel="tag">design</a>, <a href="../../tag/javascript.html" rel="tag">Javascript</a></span></p>
+	</header>
+	
+
+			<div class="ad square">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243565" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>	
+	<div class="post-content">
+		<p>Although CSS3 @font-face is supported by most major browsers (IE, Firefox, Chrome, and Safari), but not all. When it doesn't, your custom fonts might break the layout or come out with undesired results. In this article, I will explain the common issues with using custom fonts,  picking the matching fallback web safe fonts, and how to create a perfect fallback  font style with <a href="http://modernizr.com">Modernizr</a>.<span id="more-773"></span></p>
+<h3>Common Mistake</h3>
+<p>One common mistake that most people make when implementing custom fonts is not specifying the fallback fonts or picking the wrong fallback fonts.</p>
+<figure class="image"><img src="../../wp-content/uploads/2011/07/fallback-fonts.png" alt="common mistake"></figure>
+<h3>Web Safe Fallback Fonts</h3>
+<p>When using custom fonts, it is important to include the <a href="http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html">web safe fonts</a> as fallback. The fallback font helps to keep your design looking consistent when @font-face is not supported or available. The key point for selecting fallback fonts is to pick the web safe fonts that best match the custom font. For example, if the custom font is Clarendon, then the best web safe fallback font is Georgia because they both are in serif classification and they have similar  font width.</p>
+<figure class="image"><img src="../../wp-content/uploads/2011/07/fallback-font-comparison.png" alt="websafe fallback fonts"></figure>
+<h3>Layout Issues</h3>
+<p>Because every font face has its own width, height, weight, kerning (letter-spacing), etc., some fonts are not substitutable with the web safe fonts. Take a look at the example below. It is a comparison between <a href="http://www.google.com/webfonts/specimen/Wire+One">Wire One</a> (custom font) and Arial (web safe font) at 36pt uppercase. As you can see, the Arial text takes more than double the space compare to Wire One text because Arial has a wider width and kerning.</p>
+<figure class="image"><img src="../../wp-content/uploads/2011/07/wire-one-and-arial.png" alt="wire one + arial"></figure>
+<p>This might causes layout issues as shown in the image below where the fallback font extends off the boundary. </p>
+<figure class="image"><img src="../../wp-content/uploads/2011/07/font-width-problem.png" alt="layout issues" /></figure>
+<h3>Modernizr</h3>
+<p>Fortunately, there is a Javascript called <a href="http://modernizr.com">Modernizr</a> that can help to fix the issue as mentioned above. Modernizr is a Javascript that detects what  CSS3 features are supported by the browser. It will then add a CSS class in the &lt;html&gt; element to indicate whether the features are supported. For example, if @font-face is not supported, it will add no-fontface class in the &lt;html&gt; element (eg. &lt;html class=&quot;no-fontface&quot;&gt;). These CSS classes are added with Javascript and they are not visible in the source code. In order to see them, you need to inspect the page element or view the generated source.</p>
+<figure class="image"><img src="../../wp-content/uploads/2011/07/modernizr-html-tag.png" alt="modernizr" /></figure>
+<h3>Fallback Font Styles With Modernizr (<a href="../../demo/font-face/index.html">demo</a>)</h3>
+<p>So we can use Modernizr to detect if @font-face is supported and then provide matching fallback font styles. For instance, you can adjust the styles for the fallback font (size, letter-space, weight, text-transform, etc.) to best match the custom font.</p>
+<figure class="image"><img src="../../wp-content/uploads/2011/07/no-fontface-style.png" alt="no-fontface style"></figure>
+<h4>Including Modernizr</h4>
+<p>To implement Modernizr,  you need to download a copy of <a href="http://www.modernizr.com/download">Modernizr</a> and include it in the html document.</p>
+<pre><code>
+&lt;script src=&quot;js/modernizr.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h4>.no-fontface CSS</h4>
+<p>Then you will need an additional rule for specifying the .no-fontface. Check out this <a href="../../demo/font-face/index.html">demo</a> to see the final result.</p>
+<pre><code>
+/* wire one font */
+h1 {
+	font-family: 'Wire One', arial, serif;
+	font-weight: bold;
+	font-size: 48px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/* no-faceface fallback */
+.no-fontface h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+	letter-spacing: 0;
+	text-transform: none;
+}
+</code></pre>	</div>
+
+	<footer class="share">
+	<em>Share &rarr;</em> 
+	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://webdesignerwall.com/tutorials/css3-font-face-design-guide" data-count="horizontal" data-via="nickla">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script src="http://www.stumbleupon.com/hostedbadge.php?s=2&r=http://webdesignerwall.com/tutorials/css3-font-face-design-guide"></script>
+	<iframe src="http://www.facebook.com/plugins/like.php?href=http://webdesignerwall.com/tutorials/css3-font-face-design-guide&layout=button_count&show_faces=false&width=90&action=like&font=lucida+grande&colorscheme=light&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+</footer>
+	
+</article>
+
+			<div class="ad horizontal">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243564" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>
+		
+			<nav> 
+				<ul class="post-nav clearfix">
+					<li class="prev"><a href="../../general/illustration-prints-available-for-sale.html" rel="prev"><span></span> <em>Previous</em> Illustration Prints Available for Sale</a></li>
+					<li class="next"><a href="../../general/font-face-solutions-suggestions.html" rel="next"><span></span> <em>Next</em> @font-face Solutions &#038; Suggestions</a></li>
+				</ul>
+			</nav>
+
+				
+		<div class="commentwrap">
+
+
+
+		<h4 id="comments" class="comment-title">100 Comments</h4>
+
+					<nav class="pagenav">
+				<span class='page-numbers current'>1</span>
+<a class='page-numbers' href='comment-page-2.html#comments'>2</a>
+<a class='page-numbers' href='comment-page-3.html#comments'>3</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-5.html#comments'>5</a>
+<a class="next page-numbers" href="comment-page-2.html#comments"><em>Next</em></a>			</nav>
+		
+
+		<ol class="commentlist">
+			   <li id="comment-77900" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/0c7f780eeda5f95c8f827603b11290c7?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.oldworldcreative.com' rel='external nofollow' class='url'>Evan Skuthorpe</a></cite><br />
+			<time datetime="2011-7-14T09:39" class="comment-time">Jul 14, 2011 @ 09:39</time>
+		</p>
+
+		<div class="commententry" id="commententry-77900">
+					
+			<p>this article is very timely for me, just implementing @font-face on a project now ;)</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77901" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/3e0120e97ebedde5fbd579549f7009a5?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.bartwortel.nl' rel='external nofollow' class='url'>acbo</a></cite><br />
+			<time datetime="2011-7-14T09:45" class="comment-time">Jul 14, 2011 @ 09:45</time>
+		</p>
+
+		<div class="commententry" id="commententry-77901">
+					
+			<p>Nice Guide, but the demo&#8217;s are not working getting a 404 keep up the good work</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-77908" class="author">
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7bd7bf801cb30d1b9d9d145f8474e311?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.webdesignerwall.com' rel='external nofollow' class='url'>Nick La</a></cite><br />
+			<time datetime="2011-7-14T10:10" class="comment-time">Jul 14, 2011 @ 10:10</time>
+		</p>
+
+		<div class="commententry" id="commententry-77908">
+					
+			<p>The demo url is fixed now.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-77902" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/2d361033b20cb411037b927ef5e8839a?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://chandanv.wordpress.com' rel='external nofollow' class='url'>Chandan</a></cite><br />
+			<time datetime="2011-7-14T09:53" class="comment-time">Jul 14, 2011 @ 09:53</time>
+		</p>
+
+		<div class="commententry" id="commententry-77902">
+					
+			<p>Handy for me! I was actually searching for some information on webfonts and @font-face &amp; this guide just perfect for it :) TY</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77903" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/c468591628406e84390ff4d2485c468a?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.web2feel.com/' rel='external nofollow' class='url'>Jinson Abraham</a></cite><br />
+			<time datetime="2011-7-14T09:55" class="comment-time">Jul 14, 2011 @ 09:55</time>
+		</p>
+
+		<div class="commententry" id="commententry-77903">
+					
+			<p>Nicely put article, and it will help me. I did not know about Modernizer up until now.<br />
+Thanks</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77905" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/c9c84325edf12f029b48d08060abbdf5?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.gendoria.pl' rel='external nofollow' class='url'>TiS</a></cite><br />
+			<time datetime="2011-7-14T10:03" class="comment-time">Jul 14, 2011 @ 10:03</time>
+		</p>
+
+		<div class="commententry" id="commententry-77905">
+					
+			<p>Yeah, a very helpful text, thanks! I&#8217;ve been thinking about using @font-face and this article gave me clues (and solutions) about possible problems.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77910" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/c37062401de192328b6f46df2a77cac9?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://investing.businessweek.com/research/stocks/private/snapshot.asp?privcapId=45244460' rel='external nofollow' class='url'>crowd SPRING</a></cite><br />
+			<time datetime="2011-7-14T10:22" class="comment-time">Jul 14, 2011 @ 10:22</time>
+		</p>
+
+		<div class="commententry" id="commententry-77910">
+					
+			<p>This post explains very nicely about custom fonts, picking the matching fallback web safe fonts, and how to create a perfect fallback font style with Modernizer&#8230;.REALLY A GOOD WORK!keep it up! and keep updating us!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77914" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/fc53b0ac04936407cd71bf6ea6e1889e?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.pro-logix.net/' rel='external nofollow' class='url'>Bill</a></cite><br />
+			<time datetime="2011-7-14T10:44" class="comment-time">Jul 14, 2011 @ 10:44</time>
+		</p>
+
+		<div class="commententry" id="commententry-77914">
+					
+			<p>Nice job. Very well put together article and full of useful info.</p>
+<p>It&#8217;s starting to get crazy with all of the scripts we need to include these days. jQuery, Modernizr, etc. I can&#8217;t wait until we can get some more uniform browser support. But, it seems like this type of request hasn&#8217;t really changed since the dawn of the browser wars. [sigh]</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77916" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7aeee34a6bd86a85d1f7cd199695d0ce?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://design.wendellers.com' rel='external nofollow' class='url'>wendelle</a></cite><br />
+			<time datetime="2011-7-14T10:56" class="comment-time">Jul 14, 2011 @ 10:56</time>
+		</p>
+
+		<div class="commententry" id="commententry-77916">
+					
+			<p>I must say, thank you for the article, I&#8217;m a big fan of @font-face and this is a big help for me, for my future projects :D thanks</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77917" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/4c706c0a4017f69d37b71004cf7a92f3?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://debitversuscredit.com' rel='external nofollow' class='url'>Joseph</a></cite><br />
+			<time datetime="2011-7-14T10:57" class="comment-time">Jul 14, 2011 @ 10:57</time>
+		</p>
+
+		<div class="commententry" id="commententry-77917">
+					
+			<p>What&#8217;s the benefit to using Modernizr for matching font styles rather than just adding them in the CSS for the class you are targeting? In your example:</p>
+<p>h1 {<br />
+       font-family: &#8220;Times New Roman&#8221;, Palatino, Georgia, serif;<br />
+}</p>
+<p>I am not really getting why Modernizr does this better, especially when it&#8217;s adding more load time to your page and does (as far as I can tell from this tutorial) exactly the same thing as backup fonts in CSS.</p>
+<p>Can anyone clarify if I&#8217;m missing something?</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-77927" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/f688fc76f04dba123beca8c856915f2e?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Kenny Landes</cite><br />
+			<time datetime="2011-7-14T12:03" class="comment-time">Jul 14, 2011 @ 12:03</time>
+		</p>
+
+		<div class="commententry" id="commententry-77927">
+					
+			<p>If you observe the examples, using the no-fontface class, you are not only changing the font, but also changing other characteristics such as size, weight, etc. Example shows Wire One 48pt upper case, with a no-fontface fallback of Arial 26 normal. Simply adding Arial to the font stack would result in Arial 48 upper case. So, basically, you can style your no-fontface font to fit the space provided in your layout. It&#8217;s a complete alternate style fallback that results in a similar-enough experience for all users.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-77977" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/4c706c0a4017f69d37b71004cf7a92f3?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://debitversuscredit.com' rel='external nofollow' class='url'>Joseph</a></cite><br />
+			<time datetime="2011-7-15T11:59" class="comment-time">Jul 15, 2011 @ 11:59</time>
+		</p>
+
+		<div class="commententry" id="commententry-77977">
+					
+			<p>I see now. Sorry I&#8217;m a bit new to advanced CSS/etc and didn&#8217;t pick up on that. Thanks for the clarification!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-77918" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/9d355163016055252d05042a488452fc?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.angrymonkeydesigns.ca' rel='external nofollow' class='url'>Adam</a></cite><br />
+			<time datetime="2011-7-14T10:57" class="comment-time">Jul 14, 2011 @ 10:57</time>
+		</p>
+
+		<div class="commententry" id="commententry-77918">
+					
+			<p>Great article.   I&#8217;m planning on using modernizr on my next project!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77925" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/6f501cfc748d74a94687a9c30545599e?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.tedgoas.com' rel='external nofollow' class='url'>Ted Goas</a></cite><br />
+			<time datetime="2011-7-14T11:44" class="comment-time">Jul 14, 2011 @ 11:44</time>
+		</p>
+
+		<div class="commententry" id="commententry-77925">
+					
+			<p>Thanks for pointing out the importance of fallback fonts, Nick. I&#8217;m with ya!</p>
+<p>In addition to @font-face, this idea can also be applied to various font-embedding services. In my experience with Typekit, the default font stack I copy from the kit looks something like this:<br />
+<code>font: 'tk-sans-1', 'tk-sans-2', serif</code><br />
+Obviously not ready for production. <a href="http://blog.typekit.com/2010/10/18/more-control-with-typekits-font-events/" rel="nofollow">Typekit also provides some control</a> that looks like it does some of what Modernizr is doing above.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77928" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/6046976ca420fe60eb912676bcd4a482?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Juan</cite><br />
+			<time datetime="2011-7-14T13:27" class="comment-time">Jul 14, 2011 @ 13:27</time>
+		</p>
+
+		<div class="commententry" id="commententry-77928">
+					
+			<p>Nice article.</p>
+<p>But what happens if the browser supports @font-face but the font is not found (&#8216;Wire One&#8217; in your example)? Will we still see the fallback font out of boundary? </p>
+<p>Back to the example, if the browser supports @font-face but the font &#8216;Wire One&#8217; is not found we will see Arial 48px instead of Arial 30px, correct?</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-77938" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/2a8a3060c7773b45c39fc7300acd35eb?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>maLakai</cite><br />
+			<time datetime="2011-7-14T20:03" class="comment-time">Jul 14, 2011 @ 20:03</time>
+		</p>
+
+		<div class="commententry" id="commententry-77938">
+					
+			<p>The browser downloads the font from the server and loads it. If the font not found on the server due to error, or the browser can&#8217;t load the font then you are right, the original 48px arial will be displayed.</p>
+<p>There is another css3 property &#8211; I hope will be implemented in browsers &#8211; is the font-size-adjust, which basicly sets the font size by the x-height, not the capital letter height. This is also useful for font fallbacks. Unfortunately it is only implemented by Mozilla right now (who proposed the property and in Firefox since 1.0).</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-77930" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/e0f41acd4ef35a1289c735445dbe8248?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.markwong.co.uk' rel='external nofollow' class='url'>Mark Wong</a></cite><br />
+			<time datetime="2011-7-14T14:06" class="comment-time">Jul 14, 2011 @ 14:06</time>
+		</p>
+
+		<div class="commententry" id="commententry-77930">
+					
+			<p>Thanks for the article and info on Modernizr. I&#8217;ll be giving it a shot :D</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77931" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/ffd2135d472febeee962e65e2001979f?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.unknowninkdesign.com' rel='external nofollow' class='url'>Dale</a></cite><br />
+			<time datetime="2011-7-14T14:09" class="comment-time">Jul 14, 2011 @ 14:09</time>
+		</p>
+
+		<div class="commententry" id="commententry-77931">
+					
+			<p>Nick,<br />
+Thanks much for clarifying some things. I have been &#8220;playing&#8221; around with @font face a bit and have run into snags.<br />
+Always a pleasure reading your posts.<br />
+Dale</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77941" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/a9091868cbe4e8b8774b732bbc885dac?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://quieste.com/' rel='external nofollow' class='url'>Pascal</a></cite><br />
+			<time datetime="2011-7-14T23:59" class="comment-time">Jul 14, 2011 @ 23:59</time>
+		</p>
+
+		<div class="commententry" id="commententry-77941">
+					
+			<p>Very nice of course, but I would suggest a slight tweak that would handle rare, edge cases: what if JavaScript isn&#8217;t enabled on the browser AND the browser is not compatible with @font-face? Solution is quite simple: instead of using the no-fontface class generated by Modernizr, it would be best to first write the fallback CSS rule for fonts, that will be processed by every browser, no matter if there are JavaScript or not, and then write a CSS rule applying only to the &#8220;fontface&#8221; class generated by Modernizr. Since Modernizr generates both possibilities (&#8220;with or without the feature&#8221;), that allows the feature to degrade even more gracefully for non-Javascript enabled browsers. Only downside: if a browser has JavaScript disabled BUT @font-face&#8230; it will only display the fallback layout. Then we have to decide what is worst: for someone that has @font-face enabled but no JavaScript to see a perfectly suitable, though not-as-cool-as-it-could-be fallback layout, or for users without JavaScript AND without @font-face to see a bizarre layout, due to the rules based on a no-fontface class that won&#8217;t apply because there is no JavaScript&#8230; Hard choice, all depends on the targeted users, but that &#8220;inverse&#8221; option is pretty neat too, I think!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-78181" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7b2dee5279a1e46479859eeff64b3bd3?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Tom</cite><br />
+			<time datetime="2011-7-19T07:26" class="comment-time">Jul 19, 2011 @ 07:26</time>
+		</p>
+
+		<div class="commententry" id="commententry-78181">
+					
+			<p>I had the same remark&#8230;</p>
+<p>I guess it&#8217;s ok to give people who turned JavaScript off a less visual experience ans just use a web safe font for them.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-77942" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7aeed9bd1bf0e0943e5c57ab0e087d27?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://gauravmishra.com' rel='external nofollow' class='url'>Gaurav Mishra</a></cite><br />
+			<time datetime="2011-7-15T00:54" class="comment-time">Jul 15, 2011 @ 00:54</time>
+		</p>
+
+		<div class="commententry" id="commententry-77942">
+					
+			<p>Hello, WebdesignerWall</p>
+<p>May you cover a tutorial on modernizer and how to use this library effectively?</p>
+<p>thank you!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77947" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/f372f3c8b2b99804358cad4c0fa2a91a?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.squareonemd.co.uk' rel='external nofollow' class='url'>Elliott the web design guy</a></cite><br />
+			<time datetime="2011-7-15T02:46" class="comment-time">Jul 15, 2011 @ 02:46</time>
+		</p>
+
+		<div class="commententry" id="commententry-77947">
+					
+			<p>Nice resource I have many website that could use this fallback thanks!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77951" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b7c3375e3a5b2dc60cf405af4f6d5ad9?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://christophzillgens.com' rel='external nofollow' class='url'>Christoph Zillgens</a></cite><br />
+			<time datetime="2011-7-15T02:58" class="comment-time">Jul 15, 2011 @ 02:58</time>
+		</p>
+
+		<div class="commententry" id="commententry-77951">
+					
+			<p>Nice article on web fonts!</p>
+<p>There&#8217;s one thing I miss. In my opinion the biggest problem with web fonts are not the browsers that don&#8217;t support @font-face, but those that do support it but don&#8217;t render most of web fonts correctly. I&#8217;m looking at IE on Windows XP. Even with clear type activated, the masses of web fonts look bad. I don&#8217;t see any other solution than UA sniffing here, but maybe there&#8217;s something else?</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-78141" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7170ab4b0adaaddbd65d2685825ebbcb?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.apie.cl' rel='external nofollow' class='url'>Pablo</a></cite><br />
+			<time datetime="2011-7-18T10:06" class="comment-time">Jul 18, 2011 @ 10:06</time>
+		</p>
+
+		<div class="commententry" id="commententry-78141">
+					
+			<p>Yes, I missed that too in the article, the problem is with the lack of proper font smoothing in Windows XP, I found a script that can solve that issue detecting if the OS is having some kind of font-smoothing via the canvas element, check it out: </p>
+<p><a href="http://www.useragentman.com/blog/2009/11/29/how-to-detect-font-smoothing-using-javascript/" rel="nofollow">http://www.useragentman.com/blog/2009/11/29/how-to-detect-font-smoothing-using-javascript/</a></p>
+<p>The script adds a conditional statement that you can use to add a custom class and switch between different fonts. In my testing I&#8217;ve discovered that some fonts do look OK in XP.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-77965" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/0187f647e53623a5d16f57cc09286788?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http:www.ethanhackett.com' rel='external nofollow' class='url'>Ethan Hackett</a></cite><br />
+			<time datetime="2011-7-15T08:16" class="comment-time">Jul 15, 2011 @ 08:16</time>
+		</p>
+
+		<div class="commententry" id="commententry-77965">
+					
+			<p>Great post. I&#8217;ve heard of modernizer but never really looked into it. In my mind it was the same as PIE for ie CSS3 support. Thanks for the clarification and clear presentation of graceful degradation.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-77974" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/16229ed8dcee5de2ac5901e6d9f0ab82?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.alt.com.my/' rel='external nofollow' class='url'>patrick</a></cite><br />
+			<time datetime="2011-7-15T10:43" class="comment-time">Jul 15, 2011 @ 10:43</time>
+		</p>
+
+		<div class="commententry" id="commententry-77974">
+					
+			<p>I learn a new thing, it save my time to edit those styling text. Previously I am so painful to create such text in images format. The best is, you covered web safe fonts part for unsupported web browser.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+		</ol>
+		
+					<nav class="pagenav right">
+				<span class='page-numbers current'>1</span>
+<a class='page-numbers' href='comment-page-2.html#comments'>2</a>
+<a class='page-numbers' href='comment-page-3.html#comments'>3</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-5.html#comments'>5</a>
+<a class="next page-numbers" href="comment-page-2.html#comments"><em>Next</em></a>			</nav>
+		
+
+	<div id="respond">
+	
+		<h4 class="comment-title">Leave a Reply</h4>
+		
+		<p class="cancel-comment-reply">
+			<a rel="nofollow" id="cancel-comment-reply-link" href="comment-page-1.html#respond" style="display:none;">Cancel</a>		</p>
+		
+				
+		<form action="http://webdesignerwall.com/wp-comments-post.php" method="post" id="commentform">
+		
+				
+		<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' class="required">
+		<label for="author">Name <small>(required)</small></label></p>
+		
+		<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' class="required email">
+		<label for="email">Mail <small>(required)</small></label></p>
+		
+		<p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+		<label for="url">Website</label></p>
+		
+				
+		<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+		
+		<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" class="required"></textarea></p>
+		
+		<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+		<input type='hidden' name='comment_post_ID' value='773' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+		</p>
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="fb0d38703e" /></p><script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/akismet/_inc/form-ver=3.0.0.js'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="12"/></p>		
+		</form>
+		
+			</div><!--/respond -->
+
+	<div class="btn-comment collapse-all"><span>Collapse all</span></div> <div class="btn-comment expand-all"><span>Expand all</span></div>
+</div><!-- /commentwrap -->		
+	</div>
+	<!--/content -->
+</div>
+<!--/contentwrap -->
+
+<aside id="sidebar">
+
+	<section class="ad banners clearfix">
+
+
+		<a href="https://www.psd2html.com/order-now.html?utm_source=webdesignerwall.com&utm_medium=banner&utm_campaign=responsive"><img src="../../wp-content/uploads/2014/05/258x125.jpg" alt="PSD 2 HTML" /></a>
+
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+		(function(){
+		  var bsa = document.createElement('script');
+			  bsa.type = 'text/javascript';
+			  bsa.async = true;
+			  bsa.src = '//s3.buysellads.com/ac/bsa.js';
+		  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+		})();
+		</script>
+
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1243563" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		
+	</section>
+
+
+	
+	<section class="network">
+		<ul>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-themify.png" alt="WordPress Themes">
+				</figure>
+				<h4><a href="http://themify.me/themes">WP Themes</a></h4>
+				<p>Check out the WordPress themes that I've designed at Themify. Use 'WDW' Themify coupon code to save 20%.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-prints.png" alt="Art Prints">
+				</figure>
+				<h4><a href="http://society6.com/nickla">Art Prints</a></h4>
+				<p>Buy my art prints on Society6. Available in canvases, posters, tshirts, hoodies, and laptop skins and iPhone cases.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-icondock.png" alt="Stock Icons">
+				</figure>
+				<h4><a href="http://icondock.com/icons">Stock Icons</a></h4>
+				<p>My vector icons are also available for sale at IconDock. Use 'WDW' coupon code to save 20%.</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="ad">
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1265759" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		<!-- End BuySellAds.com Zone Code -->
+	</section>
+
+</aside>
+			<footer id="footer">
+				<section class="recent-posts">
+					<h4>Recent Posts</h4>
+
+					<ol>
+																<li>
+
+																			<figure>
+								<a href="../../general/icondock-is-redesigned.html"><img src="../../wp-content/uploads/2014/06/icondock-redesigned.png" alt="IconDock is Redesigned" /></a>
+							</figure>
+												<h5><a href="../../general/icondock-is-redesigned.html">IconDock is Redesigned</a></h5>
+						<p class="post-meta"><time datetime="2014-06-10" pubdate class="post-date">Jun 10, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../../general/themify-icons-ios7-inspired-icon-set.html"><img src="../../wp-content/uploads/2014/05/themify-icons.png" alt="Themify Icons: iOS7 Inspired Icon Set" /></a>
+							</figure>
+												<h5><a href="../../general/themify-icons-ios7-inspired-icon-set.html">Themify Icons: iOS7 Inspired Icon Set</a></h5>
+						<p class="post-meta"><time datetime="2014-05-20" pubdate class="post-date">May 20, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../animating-background-colors.html"><img src="../../wp-content/uploads/2014/05/animating-bg-colors.jpg" alt="Animating Background Colors" /></a>
+							</figure>
+												<h5><a href="../animating-background-colors.html">Animating Background Colors</a></h5>
+						<p class="post-meta"><time datetime="2014-05-02" pubdate class="post-date">May 2, 2014</time></p>
+						</li>
+										</ol>
+
+				</section>
+				<section class="recent-comments">
+					<h4>Recent Comments</h4>
+					<ol>
+												
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><img alt='' src='http://0.gravatar.com/avatar/016f5bd491295bc71da60680f5340952?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><cite>Teelah</cite></a>: Wow, these are so great! Of course its even better that the &hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><img alt='' src='http://0.gravatar.com/avatar/4b75fd327928554c8e47b4b86a3b0234?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><cite>Ashlee Havatone</cite></a>: Simple and looks great icons. This gonna be like with icon l&hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><img alt='' src='http://1.gravatar.com/avatar/94bd7e2ebae10fc2ed94f5da1968b6e3?s=40&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><cite>Ray John</cite></a>: Very beautiful design, I love it so much because purple is m&hellip;
+							
+						</li> 
+						
+												
+																	</ol>
+				</section>
+
+				<section class="credits">
+					<h4>About</h4>
+					<p>Web Designer Wall is all about design, ideas, web trends, and tutorials. It is designed and maintained by Nick La, who also runs <a href="http://www.ndesign-studio.com">N.Design Studio</a>, <a href="http://themify.me">Themify</a>, <a href="http://icondock.com">IconDock</a>, and <a href="http://bestwebgallery.com">Best Web Gallery</a>.</p>
+					<p class="copyright">
+						&copy; <a href="../../index.html">Web Designer Wall</a> 2014					</p>
+				</section>
+				<p id="back-top"><a href="comment-page-1.html#top"><span></span><em>Back to top</em> </a></p>
+			</footer>
+
+		</div>
+		<!--/body -->
+	</div>
+	<!--/pagewrap -->
+</div>
+<!--/overlay -->
+</div>
+<!--/top -->
+
+
+	<style type="text/css">
+.promo-bar {
+	background: #fc0000;
+	text-align: center;
+	font: italic 16px/120% "Times New Roman", Times, serif;
+	color: #FFC;
+	padding: 8px 1%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 99%;
+	z-index: 1000;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	border-bottom: solid 1px #900;
+}
+.promo-bar a {
+	color: #fff;
+	text-decoration: underline;
+}
+body {
+	margin-top: 32px;
+}
+@media screen and (max-width: 800px) {
+	body {
+		margin-top: 50px;
+	}
+}
+	</style>
+	<div class="promo-bar">TWEET &amp; SAVE: tweet a message to receive a 15% <a href="http://themify.me">Themify discount</a> code instantly. <a href="javascript:void(0);" onclick="window.open('http://twtqpon.com/themify-coupon/tweet', '_blank', 'width=800,height=700,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0,left=380,top=100');">Tweet it now!</a></div>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-253188-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html><!-- hyper cache: 5df0688ae2905de403a298529c29591f 14-07-28 10:52:15 -->

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CSS: Clear Float Demo</title>
+
+<style type="text/css">
+body {
+	font: .9em/150% Arial, Helvetica, sans-serif;
+	margin: 30px auto;
+	width: 960px;
+	word-wrap: break-word
+}
+p {
+	margin: 0 0 1em;
+}
+a {
+	color: #F60;
+	text-decoration: none;
+}
+h2 {
+	font: bold 22px/110% Arial, Helvetica, sans-serif;
+	margin: 20px 0 0;
+	padding: 20px 0;
+	border-top: double 3px #ccc;
+}
+h3 {
+	font: bold 18px/120% Arial, Helvetica, sans-serif;
+	margin: 0 0 5px;
+}
+
+.image {
+	margin-right: 20px;
+	float: left;
+}
+
+/* without overflow */
+.box-without-overflow {
+	background: #e6eef2;
+	width: 400px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+	padding: 10px 20px;
+	clear: both;
+}
+
+.box {
+	background: #e6eef2;
+	width: 400px;
+	margin-right: 10px;
+	margin-bottom: 30px;
+	padding: 10px 20px;
+	clear: both;
+}
+
+/* with overflow */
+.box .text {
+	overflow: auto;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Clear Float Demo</h1>
+<p class="credits">Tutorial by <a href="http://www.webdesignerwall.com">Web Designer Wall</a> (<a href="http://www.webdesignerwall.com/tutorials/css-clearing-floats-with-overflow/">read article</a>). </p>
+<h2>Without Overflow</h2>
+<div class="box-without-overflow">
+	<div class="image">
+		<img src="images/image.jpg" alt="image" />
+	</div>
+	<div class="text">
+		<h3>This div doesn't have overflow:hidden (text is wrapping around the floated image)</h3>
+		<p>Curabitur venenatis vehicula mattis. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi.</p>
+	</div>
+</div>
+
+<h2>With Overflow Trick</h2>
+<div class="box">
+	<div class="image">
+		<img src="images/image.jpg" alt="image" />
+	</div>
+	<div class="text">
+		<h3>Overflow:hidden applied to this div (text doesn't wrap)</h3>
+		<p>Curabitur venenatis vehicula mattis. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi.</p>
+	</div>
+</div>
+
+<div class="box">
+	<div class="image">
+		<img src="images/image.jpg" width="50" alt="image" />
+	</div>
+	<p class="text"> <strong>Overflow:hidden applied this &lt;p&gt; tag</strong>. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. </p>
+</div>
+</body>
+</html>

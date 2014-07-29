@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!-- disable iPhone inital scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<title>Demo: Elastic HTML5 Video</title>
+
+<style>
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+body {
+	background: #e6e6e6;
+	font: .81em/150% Arial, Helvetica, sans-serif;
+	color: #444;
+	padding: 10px 0 30px;
+}
+a {
+	color: #026acb;
+	text-decoration: none;
+}
+a:hover {
+	color: #F60;
+}
+p {
+	margin: 0 0 1.2em;
+	padding: 0;
+}
+pre code {
+	background: #FFC;
+	display: block;
+	padding: 5px 15px;
+}
+h1, h2, h3 {
+	line-height: 120%;
+}
+h1 {
+	font-size: 2em;
+	margin: 0 0 5px;
+}
+h2 {
+	font-size: 1.6em;
+	margin: 0 0 10px;
+}
+h3 {
+	font-size: 1.3em;
+	margin: 30px 0 10px;
+}
+
+/************************************************************************************
+PAGEWRAP
+*************************************************************************************/
+#pagewrap {
+	width: 700px;
+	max-width: 70%;
+	background: #fff;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+/************************************************************************************
+VIDEO
+*************************************************************************************/
+
+/* make HTML5 video element elastic */
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="pagewrap">
+
+	<h1><a href="../../tutorials/css-elastic-videos.html">Elastic Videos</a></h1>
+	<p>Tutorial by <a href="../../index.html">Web Designer Wall</a></p>
+
+	<h2>Resize your browser window to see the elastic video.</h2>
+	
+	<h3>HTML5 Video</h3>
+	<video id="player1" width="700" height="390" controls="control" preload="none"> 
+		<source src="http://mediaelementjs.com/media/echo-hereweare.mp4" type="video/mp4" /> 
+		<source src="http://mediaelementjs.com/media/echo-hereweare.webm" type="video/webm" /> 
+		<source src="http://mediaelementjs.com/media/echo-hereweare.ogv" type="video/ogg" /> 
+	</video>
+	
+<h3>CSS Code</h3>
+<pre><code>
+video {
+	max-width: 100%;
+	height: auto;
+}
+</code></pre>
+
+</div>
+<!-- /#pagewrap -->
+
+</body>
+</html>

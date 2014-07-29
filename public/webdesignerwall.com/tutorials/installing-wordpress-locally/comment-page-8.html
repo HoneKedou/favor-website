@@ -1,0 +1,846 @@
+<!doctype html> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>  Installing WordPress Locally</title> 
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" type="application/rss+xml" title="Web Designer Wall &#8211; Design Trends and Tutorials RSS Feed" href="http://feeds2.feedburner.com/WebDesignerWall">
+
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Copse' type='text/css'>
+<link rel="stylesheet" href="../../wp-content/themes/wall/style.css" type="text/css">
+<link href="../../wp-content/themes/wall/print.css" rel="stylesheet" type="text/css" media="print">
+
+<!--[if lt IE 9]>
+	<script src="../../wp-content/themes/wall/js/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!-- WP-Polls 2.20 -->
+<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/tw-sack.js?ver=1.6.1"></script>
+<script type="text/javascript" src="http://webdesignerwall.com/wp-content/plugins/polls/polls-js.php?ver=2.20"></script>
+<link rel="stylesheet" href="http://webdesignerwall.com/wp-content/plugins/polls/polls-css.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.js"></script>
+<script type="text/javascript" src="../../wp-content/themes/wall/js/script.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/swfobject.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.fitvids.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			$(".post").fitVids();
+		});
+	</script>
+	
+	<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/comment-reply.js?ver=20090102"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.prettyPhoto.js"></script>
+	<link rel="stylesheet" href="../../wp-content/themes/wall/prettyPhoto.css" type="text/css" media="screen">
+	<script type="text/javascript">
+		$("a[rel^='prettyPhoto'], .gallery a, a.thickbox").prettyPhoto();
+	</script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.validate.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#commentform, .wpcf7-form").validate();
+	});
+	</script>
+
+
+</head> 
+<body class="single">
+<div id="top">
+<div id="overlay-bg">
+	<div id="pagewrap">
+
+		<header id="header">
+			<hgroup> 
+				<h1 id="site-logo"><a href="../../index.html">Web Designer Wall</a></h1> 
+				<h2 id="site-description">A wall of design ideas, web trends, and tutorials</h2> 
+			</hgroup> 
+			<nav>
+				<ul id="social-nav">
+					<li class="twitter">
+						<em>25216 followers</em>
+						<a href="http://twitter.com/nickla">Twitter</a>
+					</li>
+									</ul>
+				<ul id="main-nav" class="clearfix">
+					<li class="home">
+						<a href="../../index.html">Blog</a>
+						<ul>
+							<li>
+								<h4>Categories</h4>
+								<p class="categories"><a href="../../category/tutorials.html">Tutorials</a> &bull; <a href="../../category/trends.html">Trends</a> &bull; <a href="../../category/general.html">General</a></p>
+							</li>
+							<li>
+								<h4>Tags</h4>
+								<p class="tags">
+									<a href='../../tag/coding.html' class='tag-link-35' title='12 topics' style='font-size: 123.489932886%;'>Coding</a>
+<a href='../../tag/css.html' class='tag-link-21' title='50 topics' style='font-size: 155.704697987%;'>CSS</a>
+<a href='../../tag/design.html' class='tag-link-6' title='25 topics' style='font-size: 139.597315436%;'>design</a>
+<a href='../../tag/design-process.html' class='tag-link-10' title='11 topics' style='font-size: 121.879194631%;'>design process</a>
+<a href='../../tag/design-trends.html' class='tag-link-26' title='17 topics' style='font-size: 131.543624161%;'>Design Trends</a>
+<a href='../../tag/downloads.html' class='tag-link-39' title='2 topics' style='font-size: 89.6644295302%;'>Downloads</a>
+<a href='../../tag/event.html' class='tag-link-19' title='31 topics' style='font-size: 144.966442953%;'>event</a>
+<a href='../../tag/flash.html' class='tag-link-25' title='9 topics' style='font-size: 117.583892617%;'>Flash</a>
+<a href='../../tag/free.html' class='tag-link-38' title='1 topic' style='font-size: 80%;'>free</a>
+<a href='../../tag/freebies.html' class='tag-link-16' title='60 topics' style='font-size: 160%;'>freebies</a>
+<a href='../../tag/guest-posts.html' class='tag-link-36' title='13 topics' style='font-size: 125.637583893%;'>Guest Posts</a>
+<a href='../../tag/illustrator.html' class='tag-link-24' title='6 topics' style='font-size: 109.530201342%;'>Illustrator</a>
+<a href='../../tag/inspiration.html' class='tag-link-9' title='30 topics' style='font-size: 143.89261745%;'>inspiration</a>
+<a href='../../tag/interview.html' class='tag-link-37' title='1 topic' style='font-size: 80%;'>interview</a>
+<a href='../../tag/javascript.html' class='tag-link-30' title='18 topics' style='font-size: 132.617449664%;'>Javascript</a>
+<a href='../../tag/jobs.html' class='tag-link-32' title='1 topic' style='font-size: 80%;'>jobs</a>
+<a href='../../tag/photoshop.html' class='tag-link-34' title='1 topic' style='font-size: 80%;'>photoshop</a>
+<a href='../../tag/photoshop-tutorials.html' class='tag-link-23' title='12 topics' style='font-size: 123.489932886%;'>Photoshop tutorials</a>
+<a href='../../tag/responsive-design.html' class='tag-link-40' title='16 topics' style='font-size: 129.932885906%;'>Responsive Design</a>
+<a href='../../tag/review.html' class='tag-link-20' title='8 topics' style='font-size: 114.899328859%;'>review</a>
+<a href='../../tag/seo.html' class='tag-link-29' title='1 topic' style='font-size: 80%;'>SEO</a>
+<a href='../../tag/software.html' class='tag-link-17' title='5 topics' style='font-size: 105.771812081%;'>software</a>
+<a href='../../tag/talented-people.html' class='tag-link-14' title='8 topics' style='font-size: 114.899328859%;'>talented people</a>
+<a href='../../tag/updates.html' class='tag-link-5' title='20 topics' style='font-size: 134.765100671%;'>updates</a>
+<a href='../../tag/wordpress.html' class='tag-link-22' title='17 topics' style='font-size: 131.543624161%;'>WordPress</a>								</p>
+							</li>
+						</ul>
+					</li>
+					<li class="about"><a href="../../about.html">About</a></li>
+					<li class="contact"><a href="../../contact.html">Contact</a></li>
+					<li class="archives"><a href="../../archives.html">Archives</a></li>
+				</ul>
+			</nav>
+
+			<form method="get" id="searchform" action="http://webdesignerwall.com/">
+				<input type="text" name="s" id="s" placeholder="Search">
+			</form>
+
+		</header>
+
+		<div id="body">
+<div id="contentwrap">
+	<div id="content" class="single">
+
+				
+			<article class="post featured">
+	<header>
+		<h1 class="post-title"><a href="../installing-wordpress-locally.html" title="Installing WordPress Locally">Installing WordPress Locally</a> <sup><a href="../installing-wordpress-locally.html#comments" class="comments-link"  title="Comment on Installing WordPress Locally">304</a></sup></h1>
+		<p class="post-meta"><time datetime="2008-11-13" class="post-date" pubdate>Nov 13, 2008</time> &bull; <span class="post-category"><a href="../../category/tutorials.html" title="View all posts in Tutorials" rel="category tag">Tutorials</a></span> &rarr; <span class="post-tag"><a href="../../tag/wordpress.html" rel="tag">WordPress</a></span></p>
+	</header>
+	
+
+			<div class="ad square">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243565" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>	
+	<div class="post-content">
+		<p class="intro">This is the first chapter of the <a href="http://www.webdesignerwall.com/tutorials/complete-wordpress-theme-guide/">Complete WordPress Theme Guide</a> series. In this chapter,  you will learn how to install WordPress on a local computer. By doing so, it will save you time from updating and previewing files (so, you don't have to frequently upload files on every change). You can also use the local version to test new plugins, themes, and upgrades. This tutorial is intended for beginners who want to learn how to run WordPress locally.<span id="more-192"></span></p>
+<h3>Quick Summary</h3>
+<p>If you have some technical background, you can skip the detailed steps in this tutorial. Here are the simplified steps on how to install WordPress on a local computer:</p>
+<ol>
+	<li>
+		<p>Install a local server (<strong>Mac:</strong> <a href="http://www.mamp.info">MAMP</a>, <strong>PC:</strong><a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a> or <a href="http://www.wampserver.com/en/">WAMP</a>).</p>
+	</li>
+	<li>
+		<p>Create a new database.</p>
+	</li>
+	<li>
+		<p>Download WordPress from <a href="http://wordpress.org/download/">wordpress.org</a> and extract the files to a new folder  under the <em>htdocs</em> folder.</p>
+	</li>
+	<li>
+		<p>Rename the <em>wp-config-sample.php</em> file to <em>wp-config.php</em> and update the database details according to your local server.</p>
+	</li>
+	<li>
+		<p>Run <em>wp-admin/install.php</em> and follow the instructions to install WordPress.</p>
+	</li>
+	<li>
+		<p>Done! </p>
+	</li>
+</ol>
+<h3>Let's Begin...</h3>
+<p>Before you start, let's look at the requirements to run WordPress:</p>
+<ul>
+	<li><strong>PHP</strong> 4.3+</li>
+	<li><strong>MySQL</strong> 4+ Database Server</li>
+</ul>
+<h3><em>1.</em> Install a Local Server</h3>
+<p class="right"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/local-servers.gif" alt="local servers" /></p>
+<p>In order to run any PHP/database application on a local computer, you need a local host (ie. Apache + MySQL). For Mac, use <a href="http://www.mamp.info">MAMP</a>. For PC, use <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a> or <a href="http://www.wampserver.com/en/">WAMP</a>.</p>
+<p>I'm using Mac here, so I'm going to install MAMP. Go to <a href="http://www.mamp.info/en/download.html">mamp.info</a>, download and install MAMP.</p>
+<h3><em>2.</em> Create a New Database</h3>
+<p>After you've installed MAMP, run it and it should take you to the start page. Now click on phpMyAdmin. In the phpMyAdmin page, create a new database (eg. <em>wordpress</em>).</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/phpmyadmin.gif" alt="phpMyAdmin" /></p>
+<h3><em>3.</em> Download WordPress</h3>
+<p>Go to <a href="http://wordpress.org/download/">wordpress.org</a> and download the latest build of WordPress. Go to the <em>htdocs</em> folder (where you installed the MAMP), extract the wordpress.zip to a new folder (eg. <em>mysite</em>).</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/extract-wp.gif" alt="Extract WordPress Zip" /></p>
+<h3><em>4.</em> Update wp-config.php File</h3>
+<p>In the folder, rename the <em>wp-config-sample.php</em> to <em>wp-config.php</em>. Open <em>wp-config.php</em> and update the database details (db_name, user, password, host) according to your local server.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/wp-config.gif" alt="Update wp-config.php" /></p>
+<h3><em>5.</em> Run install.php</h3>
+<p>With your browser, go to <em>http://localhost:8888/mysite/wp-admin/install.php</em> and follow the instructions to install WordPress.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/install-wp.gif" alt="Install WordPress" /></p>
+<h3><em>What's Next...</em></h3>
+<p>In the next chapter, I'm going to show you how to create a custom WordPress theme in designer way (no PHP skill is required).</p>	</div>
+
+	<footer class="share">
+	<em>Share &rarr;</em> 
+	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://webdesignerwall.com/tutorials/installing-wordpress-locally" data-count="horizontal" data-via="nickla">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script src="http://www.stumbleupon.com/hostedbadge.php?s=2&r=http://webdesignerwall.com/tutorials/installing-wordpress-locally"></script>
+	<iframe src="http://www.facebook.com/plugins/like.php?href=http://webdesignerwall.com/tutorials/installing-wordpress-locally&layout=button_count&show_faces=false&width=90&action=like&font=lucida+grande&colorscheme=light&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+</footer>
+	
+</article>
+
+			<div class="ad horizontal">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243564" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>
+		
+			<nav> 
+				<ul class="post-nav clearfix">
+					<li class="prev"><a href="../complete-wordpress-theme-guide.html" rel="prev"><span></span> <em>Previous</em> Complete WordPress Theme Guide</a></li>
+					<li class="next"><a href="../building-custom-wordpress-theme.html" rel="next"><span></span> <em>Next</em> Building Custom WordPress Theme</a></li>
+				</ul>
+			</nav>
+
+				
+		<div class="commentwrap">
+
+
+
+		<h4 id="comments" class="comment-title">304 Comments</h4>
+
+					<nav class="pagenav">
+				<a class="prev page-numbers" href="comment-page-7.html#comments"><em>Prev</em></a>
+<a class='page-numbers' href='comment-page-1.html#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-6.html#comments'>6</a>
+<a class='page-numbers' href='comment-page-7.html#comments'>7</a>
+<span class='page-numbers current'>8</span>
+<a class='page-numbers' href='comment-page-9.html#comments'>9</a>
+<a class='page-numbers' href='comment-page-10.html#comments'>10</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-15.html#comments'>15</a>
+<a class="next page-numbers" href="comment-page-9.html#comments"><em>Next</em></a>			</nav>
+		
+
+		<ol class="commentlist">
+			   <li id="comment-45058" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b96da2fccd6241347c87a9d3869822da?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.funkandsoul.f2s.com' rel='external nofollow' class='url'>James P</a></cite><br />
+			<time datetime="2009-7-7T09:14" class="comment-time">Jul 07, 2009 @ 09:14</time>
+		</p>
+
+		<div class="commententry" id="commententry-45058">
+					
+			<p>Following along with the WordPress tutorial here I&#8217;m running xampp 1.7.1 on vista sp1 but since I tried to start mysql with it I just get the 1067 error code every time I try to launch phpMyAddmin with it. Thing is I used to be able to run phpmyadmin just fine in previous releases but not anymore.</p>
+<p>I&#8217;ve Googled the error on a few sites now and I&#8217;m not getting any solution yet. Please help as I &#8216;m banging my head against the wall here!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-45065" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b96da2fccd6241347c87a9d3869822da?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>James P</cite><br />
+			<time datetime="2009-7-7T16:05" class="comment-time">Jul 07, 2009 @ 16:05</time>
+		</p>
+
+		<div class="commententry" id="commententry-45065">
+					
+			<p>Solved my problem by switching to my home PC setup :grin: works a charm.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-45144" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/e6cc0646022638636b3da3166fd90505?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Lish</cite><br />
+			<time datetime="2009-7-10T09:20" class="comment-time">Jul 10, 2009 @ 09:20</time>
+		</p>
+
+		<div class="commententry" id="commententry-45144">
+					
+			<p>Hi, My wordpress installation stalls at the last stage after I key in my blog title and email. I am not getting the &#8220;Success&#8221; page with the generated login and password. Which step am I missing?</p>
+<p>Please help! Thanks in advance!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-45206" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7cb1346a6cfa966ba9ad7dee209ec3a5?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://sac.ekimi.net' rel='external nofollow' class='url'>saç ekimi</a></cite><br />
+			<time datetime="2009-7-14T11:04" class="comment-time">Jul 14, 2009 @ 11:04</time>
+		</p>
+
+		<div class="commententry" id="commententry-45206">
+					
+			<p>Thank you very clear</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-46170" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/5314e7fe8c3c8681ad2d5ac18445b579?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>jez stevens</cite><br />
+			<time datetime="2009-7-23T10:11" class="comment-time">Jul 23, 2009 @ 10:11</time>
+		</p>
+
+		<div class="commententry" id="commententry-46170">
+					
+			<p>hi love the tutorial so far &#8211; very clear, but when I try to run the wp-install php file I get some gobbldygook and &#8220;bad handshake&#8221; can you help please.</p>
+<p>I&#8217;m running os x10.4.11 with the latest version of wordpress and mamp.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47052" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/54f887ef318af58fff48242e090bbc72?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.cennetevi.gen.tr' rel='external nofollow' class='url'>cennetevi</a></cite><br />
+			<time datetime="2009-8-8T06:12" class="comment-time">Aug 08, 2009 @ 06:12</time>
+		</p>
+
+		<div class="commententry" id="commententry-47052">
+					
+			<p>these are awesome!<br />
+thanks for putting in the effort to get this list together <a href="http://www.cennet.gen.tr" rel="nofollow">http://www.cennet.gen.tr</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47091" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/e59280745b3f6f86a4cc6fad485647e9?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Kathy</cite><br />
+			<time datetime="2009-8-8T08:47" class="comment-time">Aug 08, 2009 @ 08:47</time>
+		</p>
+
+		<div class="commententry" id="commententry-47091">
+					
+			<p>Great Info!  Had to tweak a few things for Windows Xammp, but very easy process.  I love your site.  Its one of the most beautiful I have come across and it is full of useful info for an aspiring designer.  Thank you for all your work.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47096" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/f7467bfd67839d53ad12f47f3f117810?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.subcorpus.net/blog/' rel='external nofollow' class='url'>subcorpus</a></cite><br />
+			<time datetime="2009-8-8T20:03" class="comment-time">Aug 08, 2009 @ 20:03</time>
+		</p>
+
+		<div class="commententry" id="commententry-47096">
+					
+			<p>helpful article &#8230;<br />
+was looking for something like this &#8230;<br />
+thanks for sharing &#8230;<br />
+am gonna try local wordpress intallation now &#8230;</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47466" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/a8852f637dd5cd420d098c1aa598916f?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>nathan</cite><br />
+			<time datetime="2009-8-26T06:04" class="comment-time">Aug 26, 2009 @ 06:04</time>
+		</p>
+
+		<div class="commententry" id="commententry-47466">
+					
+			<p>Mac people, can&#8217;t get to the install bit?</p>
+<p>You need to move the wordpress folder (that you unstuffed) into the htdocs folder found in the MAMP directory (should be installed in your applications folder).</p>
+<p>Than go to the localhost URL described in step 5.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47665" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/489a30528f6f59b4d4f72c2d04f08dc8?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://fashionow.net' rel='external nofollow' class='url'>Aoobi</a></cite><br />
+			<time datetime="2009-9-4T19:23" class="comment-time">Sep 04, 2009 @ 19:23</time>
+		</p>
+
+		<div class="commententry" id="commententry-47665">
+					
+			<p>Great Info! Had to tweak a few things for Windows Xammp, but very easy process. I love your site.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47740" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/00f630a226499caea68909afa5d5deb5?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://harga-emas.com/' rel='external nofollow' class='url'>harga emas</a></cite><br />
+			<time datetime="2009-9-7T11:30" class="comment-time">Sep 07, 2009 @ 11:30</time>
+		</p>
+
+		<div class="commententry" id="commententry-47740">
+					
+			<p>I like this post and the lesson, thanks for making it.</p>
+<p>Great..</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47805" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7a598f727a4662cd883316ac2d996098?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://synergyindesign.com' rel='external nofollow' class='url'>Keya Lea</a></cite><br />
+			<time datetime="2009-9-10T16:09" class="comment-time">Sep 10, 2009 @ 16:09</time>
+		</p>
+
+		<div class="commententry" id="commententry-47805">
+					
+			<p>Hey Jez,  I got the same thing, but when go you to install, take out the /mysite and it will take you to the install page &#8211; assuming all other things have been done.</p>
+<p>Thank you to the writer of this post!  It walked me through and got me up and running.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47862" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/489a30528f6f59b4d4f72c2d04f08dc8?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://handbagsurf.com' rel='external nofollow' class='url'>bagsin</a></cite><br />
+			<time datetime="2009-9-10T19:54" class="comment-time">Sep 10, 2009 @ 19:54</time>
+		</p>
+
+		<div class="commententry" id="commententry-47862">
+					
+			<p>Thank you very clear steps</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-47960" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/65776bb6a29a912c8ba05a61799038c4?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.goynukoren.com' rel='external nofollow' class='url'>serhan</a></cite><br />
+			<time datetime="2009-9-13T10:51" class="comment-time">Sep 13, 2009 @ 10:51</time>
+		</p>
+
+		<div class="commententry" id="commententry-47960">
+					
+			<p>thank you very much ..</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-48074" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/163dae22854be566e296f07b9b6cd1de?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.daysgrowshort.com' rel='external nofollow' class='url'>DGS</a></cite><br />
+			<time datetime="2009-9-20T07:11" class="comment-time">Sep 20, 2009 @ 07:11</time>
+		</p>
+
+		<div class="commententry" id="commententry-48074">
+					
+			<p>nice and clear &#8211; thank you!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-48084" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/55e00f708f100b509df6bedae945e2eb?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Learning WP</cite><br />
+			<time datetime="2009-9-21T00:33" class="comment-time">Sep 21, 2009 @ 00:33</time>
+		</p>
+
+		<div class="commententry" id="commententry-48084">
+					
+			<p>In case anyone (Mac users)  is having problems with all graphics and pics showing up I figured out why. Another popular tutorial said that you can install wp in any folder on your computer inside a htdocs and I did under my username. But I looked for weeks why the themes and WP icons wouldn&#8217;t show up. After reading here I read that wp needs to be installed into the &#8220;htdocs&#8221; folder inside of MAMP, inside of the apps folder. I also changed my Preferences inside of MAMP to &#8220;Reset MAMP ports&#8221; and it changed the Apache Port to 80 and they MySQL Port to 3306 and in my browser I put in &#8220;http://localhost/wordpress&#8221; and everything works perfect. I am new at this so don&#8217;t know if it&#8217;s the right way but it works to work locally.<br />
+I love the design of this site! Thanks for all the great info here.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-48108" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/fc6ed7c495ccee30670a961cc91e5133?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Cyrus</cite><br />
+			<time datetime="2009-9-21T09:36" class="comment-time">Sep 21, 2009 @ 09:36</time>
+		</p>
+
+		<div class="commententry" id="commententry-48108">
+					
+			<p>Great , Installing WordPress Locally<br />
+Great article. CSS saved web design<br />
+Cyrus<br />
+Visit <a href="http://www.psdtoxhtmlcoder.com" rel="nofollow">http://www.psdtoxhtmlcoder.com</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-48232" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/3c9566cb47c09e87a392c97e142a27dc?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Chetan</cite><br />
+			<time datetime="2009-9-25T23:44" class="comment-time">Sep 25, 2009 @ 23:44</time>
+		</p>
+
+		<div class="commententry" id="commententry-48232">
+					
+			<p>Hi, Thanks! this is very helpful article.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-48625" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/513e411c8534915be2ce5cd2e18ba604?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Stuart</cite><br />
+			<time datetime="2009-10-15T12:41" class="comment-time">Oct 15, 2009 @ 12:41</time>
+		</p>
+
+		<div class="commententry" id="commententry-48625">
+					
+			<p>Thanks for the article and I&#8217;ve managed to install MAMP with no problems, along with getting a WP install up and running.</p>
+<p>However, I cannot get my local install to see any new themes I copy into teh theme directory &#8211; any ideas?</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-49188" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b611e5287f6d47d5b132847053f7f65e?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://ctrl1337.blogspot.com' rel='external nofollow' class='url'>Jave</a></cite><br />
+			<time datetime="2009-10-27T04:48" class="comment-time">Oct 27, 2009 @ 04:48</time>
+		</p>
+
+		<div class="commententry" id="commententry-49188">
+					
+			<p>Hi ^^<br />
+The information is pretty clear, but i think im doing something wrong and i need help to solve it. When i go to the link you mention to install.php i get this error that says the page was unable to reach&#8230; im pretty sure i did something wrong on my wp-config.php doc and actually i dont know the actual account and password for MySql, so please someone contact me and help me i need this thing up o.o I know im missunderstanding some information but i need you to guide me on this ^^ </p>
+<p>Tnx for all the tutorials and information ^^</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+		</ol>
+		
+					<nav class="pagenav right">
+				<a class="prev page-numbers" href="comment-page-7.html#comments"><em>Prev</em></a>
+<a class='page-numbers' href='comment-page-1.html#comments'>1</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-6.html#comments'>6</a>
+<a class='page-numbers' href='comment-page-7.html#comments'>7</a>
+<span class='page-numbers current'>8</span>
+<a class='page-numbers' href='comment-page-9.html#comments'>9</a>
+<a class='page-numbers' href='comment-page-10.html#comments'>10</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-15.html#comments'>15</a>
+<a class="next page-numbers" href="comment-page-9.html#comments"><em>Next</em></a>			</nav>
+		
+
+	<div id="respond">
+	
+		<h4 class="comment-title">Leave a Reply</h4>
+		
+		<p class="cancel-comment-reply">
+			<a rel="nofollow" id="cancel-comment-reply-link" href="comment-page-8.html#respond" style="display:none;">Cancel</a>		</p>
+		
+				
+		<form action="http://webdesignerwall.com/wp-comments-post.php" method="post" id="commentform">
+		
+				
+		<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' class="required">
+		<label for="author">Name <small>(required)</small></label></p>
+		
+		<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' class="required email">
+		<label for="email">Mail <small>(required)</small></label></p>
+		
+		<p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+		<label for="url">Website</label></p>
+		
+				
+		<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+		
+		<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" class="required"></textarea></p>
+		
+		<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+		<input type='hidden' name='comment_post_ID' value='192' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+		</p>
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="bf725ad3cf" /></p><script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/akismet/_inc/form-ver=3.0.0.js'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="130"/></p>		
+		</form>
+		
+			</div><!--/respond -->
+
+	<div class="btn-comment collapse-all"><span>Collapse all</span></div> <div class="btn-comment expand-all"><span>Expand all</span></div>
+</div><!-- /commentwrap -->		
+	</div>
+	<!--/content -->
+</div>
+<!--/contentwrap -->
+
+<aside id="sidebar">
+
+	<section class="ad banners clearfix">
+
+
+		<a href="https://www.psd2html.com/order-now.html?utm_source=webdesignerwall.com&utm_medium=banner&utm_campaign=responsive"><img src="../../wp-content/uploads/2014/05/258x125.jpg" alt="PSD 2 HTML" /></a>
+
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+		(function(){
+		  var bsa = document.createElement('script');
+			  bsa.type = 'text/javascript';
+			  bsa.async = true;
+			  bsa.src = '//s3.buysellads.com/ac/bsa.js';
+		  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+		})();
+		</script>
+
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1243563" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		
+	</section>
+
+
+	
+	<section class="network">
+		<ul>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-themify.png" alt="WordPress Themes">
+				</figure>
+				<h4><a href="http://themify.me/themes">WP Themes</a></h4>
+				<p>Check out the WordPress themes that I've designed at Themify. Use 'WDW' Themify coupon code to save 20%.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-prints.png" alt="Art Prints">
+				</figure>
+				<h4><a href="http://society6.com/nickla">Art Prints</a></h4>
+				<p>Buy my art prints on Society6. Available in canvases, posters, tshirts, hoodies, and laptop skins and iPhone cases.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-icondock.png" alt="Stock Icons">
+				</figure>
+				<h4><a href="http://icondock.com/icons">Stock Icons</a></h4>
+				<p>My vector icons are also available for sale at IconDock. Use 'WDW' coupon code to save 20%.</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="ad">
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1265759" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		<!-- End BuySellAds.com Zone Code -->
+	</section>
+
+</aside>
+			<footer id="footer">
+				<section class="recent-posts">
+					<h4>Recent Posts</h4>
+
+					<ol>
+																<li>
+
+																			<figure>
+								<a href="../../general/icondock-is-redesigned.html"><img src="../../wp-content/uploads/2014/06/icondock-redesigned.png" alt="IconDock is Redesigned" /></a>
+							</figure>
+												<h5><a href="../../general/icondock-is-redesigned.html">IconDock is Redesigned</a></h5>
+						<p class="post-meta"><time datetime="2014-06-10" pubdate class="post-date">Jun 10, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../../general/themify-icons-ios7-inspired-icon-set.html"><img src="../../wp-content/uploads/2014/05/themify-icons.png" alt="Themify Icons: iOS7 Inspired Icon Set" /></a>
+							</figure>
+												<h5><a href="../../general/themify-icons-ios7-inspired-icon-set.html">Themify Icons: iOS7 Inspired Icon Set</a></h5>
+						<p class="post-meta"><time datetime="2014-05-20" pubdate class="post-date">May 20, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../animating-background-colors.html"><img src="../../wp-content/uploads/2014/05/animating-bg-colors.jpg" alt="Animating Background Colors" /></a>
+							</figure>
+												<h5><a href="../animating-background-colors.html">Animating Background Colors</a></h5>
+						<p class="post-meta"><time datetime="2014-05-02" pubdate class="post-date">May 2, 2014</time></p>
+						</li>
+										</ol>
+
+				</section>
+				<section class="recent-comments">
+					<h4>Recent Comments</h4>
+					<ol>
+												
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><img alt='' src='http://0.gravatar.com/avatar/016f5bd491295bc71da60680f5340952?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><cite>Teelah</cite></a>: Wow, these are so great! Of course its even better that the &hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><img alt='' src='http://0.gravatar.com/avatar/4b75fd327928554c8e47b4b86a3b0234?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><cite>Ashlee Havatone</cite></a>: Simple and looks great icons. This gonna be like with icon l&hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><img alt='' src='http://1.gravatar.com/avatar/94bd7e2ebae10fc2ed94f5da1968b6e3?s=40&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><cite>Ray John</cite></a>: Very beautiful design, I love it so much because purple is m&hellip;
+							
+						</li> 
+						
+												
+																	</ol>
+				</section>
+
+				<section class="credits">
+					<h4>About</h4>
+					<p>Web Designer Wall is all about design, ideas, web trends, and tutorials. It is designed and maintained by Nick La, who also runs <a href="http://www.ndesign-studio.com">N.Design Studio</a>, <a href="http://themify.me">Themify</a>, <a href="http://icondock.com">IconDock</a>, and <a href="http://bestwebgallery.com">Best Web Gallery</a>.</p>
+					<p class="copyright">
+						&copy; <a href="../../index.html">Web Designer Wall</a> 2014					</p>
+				</section>
+				<p id="back-top"><a href="comment-page-8.html#top"><span></span><em>Back to top</em> </a></p>
+			</footer>
+
+		</div>
+		<!--/body -->
+	</div>
+	<!--/pagewrap -->
+</div>
+<!--/overlay -->
+</div>
+<!--/top -->
+
+
+	<style type="text/css">
+.promo-bar {
+	background: #fc0000;
+	text-align: center;
+	font: italic 16px/120% "Times New Roman", Times, serif;
+	color: #FFC;
+	padding: 8px 1%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 99%;
+	z-index: 1000;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	border-bottom: solid 1px #900;
+}
+.promo-bar a {
+	color: #fff;
+	text-decoration: underline;
+}
+body {
+	margin-top: 32px;
+}
+@media screen and (max-width: 800px) {
+	body {
+		margin-top: 50px;
+	}
+}
+	</style>
+	<div class="promo-bar">TWEET &amp; SAVE: tweet a message to receive a 15% <a href="http://themify.me">Themify discount</a> code instantly. <a href="javascript:void(0);" onclick="window.open('http://twtqpon.com/themify-coupon/tweet', '_blank', 'width=800,height=700,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0,left=380,top=100');">Tweet it now!</a></div>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-253188-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html><!-- hyper cache: 16d08eeead39e14b8dd1952ec13b0821 14-07-29 12:53:55 -->

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]> <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]> <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Demo: Targeting IE with Conditional Comments HTML Class</title>
+
+<style type="text/css">
+body {
+	background: #efefef;
+	font: 1em/1.5em Arial, Helvetica, sans-serif;
+	color: #666;
+	width: 80%;
+	margin: 20px auto;
+}
+a {
+	color: #F60;
+}
+.box {
+	color: #fff;
+	padding: 5px 20px;
+	background: gray; 
+}
+.ie8 .box {
+	background: pink;
+}
+.ie7 .box {
+	background: green;
+}
+.ie6 .box {
+	background: blue;
+}
+</style>
+
+</head>
+<body>
+<div class="box">
+	<h2>Targeting IE	using conditional comments html class (test with IE)</h2>
+	<p>This html checks if the browser is IE, then add a CSS class with the IE version to the &lt;html&gt; tag.</p>
+	<ul>
+		<li><strong>Standard browsers</strong>: will display this box as gray background</li>
+		<li><strong>IE8</strong>: pink background</li>
+		<li><strong>IE7 or IE 8 with Compatibility View</strong>: green background</li>
+		<li><strong>IE6</strong>: blue background</li>
+	</ul>
+</div>
+<p>Tutorial by <a href="http://www.webdesignerwall.com">Web Designer Wall</a>. Read <a href="http://www.webdesignerwall.com/tutorials/css-specific-for-internet-explorer/">related article</a>. </p>
+</body>
+</html>

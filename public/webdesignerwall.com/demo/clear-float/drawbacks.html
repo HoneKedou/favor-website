@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CSS: Clear Float Drawbacks</title>
+
+<style type="text/css">
+body {
+	font: .9em/150% Arial, Helvetica, sans-serif;
+	margin: 30px auto;
+	width: 960px;
+}
+p {
+	margin: 0 0 1em;
+}
+a {
+	color: #99F;
+	text-decoration: none;
+}
+h2 {
+	font: bold 22px/110% Arial, Helvetica, sans-serif;
+	margin: 20px 0 0;
+	padding: 20px 0;
+	clear: both;
+}
+h3 {
+	font: bold 16px/120% Arial, Helvetica, sans-serif;
+	margin: 0 0 5px;
+}
+.credits {	
+	border-bottom: solid 2px #000;
+	padding-bottom: 10px;
+}
+
+/* with overflow */
+.container {
+	background: #e6eef2;
+	border: solid 1px #999;
+	padding: 10px;
+	overflow: auto;
+}
+.box {
+	background: #cbd4d9;
+	width: 400px;
+	margin-right: 10px;
+	padding: 10px 20px;
+	float: left;
+}
+
+/* fixed scrollbar */
+.container.fixed {
+	word-wrap: break-word;
+}
+.container.fixed img {
+	max-width: 100%;
+	height: auto;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Clear Float Demo</h1>
+<p class="credits">Tutorial by <a href="http://www.webdesignerwall.com">Web Designer Wall</a> (<a href="http://www.webdesignerwall.com/tutorials/css-clearing-floats-with-overflow/">read article</a>). </p>
+<h2>Drawbacks: scrollbar</h2>
+<div class="container">
+	<div class="box">
+		<p>Curabitur venenatis vehicula mattis. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui.</p>
+	</div>
+	<div class="box">
+		<p>Nunc eleifend consectetur odio sit amet viverra. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Ut euismod ligula eu tellus interdum mattis ac eu nulla. <img src="images/sample.jpg" alt="image" /></p>
+		<p>http://www.webdesignerwall.com/sample/tutorials/css_clearing_floats_with_overflow</p>
+	</div>
+</div>
+
+<h2>Solution: add max-width:100% to img and word-wrap:break-word to container</h2>
+<div class="container fixed">
+	<div class="box">
+		<p>Curabitur venenatis vehicula mattis. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui.</p>
+	</div>
+	<div class="box">
+		<p>Nunc eleifend consectetur odio sit amet viverra. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Ut euismod ligula eu tellus interdum mattis ac eu nulla. <img src="images/sample.jpg" alt="image" /></p>
+		<p>http://www.webdesignerwall.com/sample/tutorials/css_clearing_floats_with_overflow</p>
+	</div>
+</div>
+</body>
+</html>

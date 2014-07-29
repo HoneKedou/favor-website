@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>CSS: Clear Float Demo</title>
+
+<style type="text/css">
+body {
+	font: .8em/150% Arial, Helvetica, sans-serif;
+	margin: 30px auto;
+	width: 960px;
+	word-wrap: break-word
+}
+p {
+	margin: 0 0 1em;
+}
+a {
+	color: #F60;
+	text-decoration: none;
+}
+h2 {
+	font: bold 22px/110% Arial, Helvetica, sans-serif;
+	margin: 20px 0 0;
+	padding: 20px 0;
+	clear: both;
+}
+h3 {
+	font: bold 16px/120% Arial, Helvetica, sans-serif;
+	margin: 0 0 5px;
+}
+.credits {
+	border-bottom: solid 2px #000;
+	padding-bottom: 10px;
+}
+
+/* without overflow */
+.container-without-overflow {
+	background: #e6eef2;
+	border: solid 1px #999;
+	padding: 10px;
+}
+
+/* with overflow */
+.container {
+	background: #e6eef2;
+	border: solid 1px #999;
+	padding: 10px;
+	overflow: auto;
+}
+.box {
+	background: #cbd4d9;
+	width: 400px;
+	margin-right: 10px;
+	padding: 10px 20px;
+	float: left;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Clear Float Demo</h1>
+<p class="credits">Tutorial by <a href="http://www.webdesignerwall.com">Web Designer Wall</a> (<a href="http://www.webdesignerwall.com/tutorials/css-clearing-floats-with-overflow/">read article</a>). </p>
+<h2>Problem: container doesn't expand</h2>
+<div class="container-without-overflow">
+	<div class="box">
+		<p>Curabitur venenatis vehicula mattis. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui.</p>
+	</div>
+	<div class="box">
+		<p>Nunc eleifend consectetur odio sit amet viverra. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Ut euismod ligula eu tellus interdum mattis ac eu nulla.</p>
+	</div>
+</div>
+
+<h2>Extra div tag added to clear float</h2>
+<div class="container-without-overflow">
+	<div class="box">
+		<p>Curabitur venenatis vehicula mattis. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui.</p>
+	</div>
+	<div class="box">
+		<p>Nunc eleifend consectetur odio sit amet viverra. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Ut euismod ligula eu tellus interdum mattis ac eu nulla.</p>
+	</div>
+	<div style="clear:both">&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;</div>
+</div>
+
+<h2>Overflow:auto trick (auto clear floats)</h2>
+<div class="container">
+	<div class="box">
+		<p>Curabitur venenatis vehicula mattis. Nunc eleifend consectetur odio sit amet viverra. Ut euismod ligula eu tellus interdum mattis ac eu nulla. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui.</p>
+	</div>
+	<div class="box">
+		<p>Nunc eleifend consectetur odio sit amet viverra. Phasellus cursus, lacus quis convallis aliquet, dolor urna ullamcorper mi, eget dapibus velit est vitae nisi. Aliquam erat nulla, sodales at imperdiet vitae, convallis vel dui. Ut euismod ligula eu tellus interdum mattis ac eu nulla.</p>
+	</div>
+</div>
+</body>
+</html>

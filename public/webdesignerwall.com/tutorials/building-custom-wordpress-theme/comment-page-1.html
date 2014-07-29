@@ -1,0 +1,886 @@
+<!doctype html> 
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>  Building Custom WordPress Theme</title> 
+ 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="alternate" type="application/rss+xml" title="Web Designer Wall &#8211; Design Trends and Tutorials RSS Feed" href="http://feeds2.feedburner.com/WebDesignerWall">
+
+<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Copse' type='text/css'>
+<link rel="stylesheet" href="../../wp-content/themes/wall/style.css" type="text/css">
+<link href="../../wp-content/themes/wall/print.css" rel="stylesheet" type="text/css" media="print">
+
+<!--[if lt IE 9]>
+	<script src="../../wp-content/themes/wall/js/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<!-- WP-Polls 2.20 -->
+<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/tw-sack.js?ver=1.6.1"></script>
+<script type="text/javascript" src="http://webdesignerwall.com/wp-content/plugins/polls/polls-js.php?ver=2.20"></script>
+<link rel="stylesheet" href="http://webdesignerwall.com/wp-content/plugins/polls/polls-css.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.js"></script>
+<script type="text/javascript" src="../../wp-content/themes/wall/js/script.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/swfobject.js"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.fitvids.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			$(".post").fitVids();
+		});
+	</script>
+	
+	<script type="text/javascript" src="http://webdesignerwall.com/wp-includes/js/comment-reply.js?ver=20090102"></script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.prettyPhoto.js"></script>
+	<link rel="stylesheet" href="../../wp-content/themes/wall/prettyPhoto.css" type="text/css" media="screen">
+	<script type="text/javascript">
+		$("a[rel^='prettyPhoto'], .gallery a, a.thickbox").prettyPhoto();
+	</script>
+
+	<script type="text/javascript" src="../../wp-content/themes/wall/js/jquery.validate.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#commentform, .wpcf7-form").validate();
+	});
+	</script>
+
+
+</head> 
+<body class="single">
+<div id="top">
+<div id="overlay-bg">
+	<div id="pagewrap">
+
+		<header id="header">
+			<hgroup> 
+				<h1 id="site-logo"><a href="../../index.html">Web Designer Wall</a></h1> 
+				<h2 id="site-description">A wall of design ideas, web trends, and tutorials</h2> 
+			</hgroup> 
+			<nav>
+				<ul id="social-nav">
+					<li class="twitter">
+						<em>25216 followers</em>
+						<a href="http://twitter.com/nickla">Twitter</a>
+					</li>
+									</ul>
+				<ul id="main-nav" class="clearfix">
+					<li class="home">
+						<a href="../../index.html">Blog</a>
+						<ul>
+							<li>
+								<h4>Categories</h4>
+								<p class="categories"><a href="../../category/tutorials.html">Tutorials</a> &bull; <a href="../../category/trends.html">Trends</a> &bull; <a href="../../category/general.html">General</a></p>
+							</li>
+							<li>
+								<h4>Tags</h4>
+								<p class="tags">
+									<a href='../../tag/coding.html' class='tag-link-35' title='12 topics' style='font-size: 123.489932886%;'>Coding</a>
+<a href='../../tag/css.html' class='tag-link-21' title='50 topics' style='font-size: 155.704697987%;'>CSS</a>
+<a href='../../tag/design.html' class='tag-link-6' title='25 topics' style='font-size: 139.597315436%;'>design</a>
+<a href='../../tag/design-process.html' class='tag-link-10' title='11 topics' style='font-size: 121.879194631%;'>design process</a>
+<a href='../../tag/design-trends.html' class='tag-link-26' title='17 topics' style='font-size: 131.543624161%;'>Design Trends</a>
+<a href='../../tag/downloads.html' class='tag-link-39' title='2 topics' style='font-size: 89.6644295302%;'>Downloads</a>
+<a href='../../tag/event.html' class='tag-link-19' title='31 topics' style='font-size: 144.966442953%;'>event</a>
+<a href='../../tag/flash.html' class='tag-link-25' title='9 topics' style='font-size: 117.583892617%;'>Flash</a>
+<a href='../../tag/free.html' class='tag-link-38' title='1 topic' style='font-size: 80%;'>free</a>
+<a href='../../tag/freebies.html' class='tag-link-16' title='60 topics' style='font-size: 160%;'>freebies</a>
+<a href='../../tag/guest-posts.html' class='tag-link-36' title='13 topics' style='font-size: 125.637583893%;'>Guest Posts</a>
+<a href='../../tag/illustrator.html' class='tag-link-24' title='6 topics' style='font-size: 109.530201342%;'>Illustrator</a>
+<a href='../../tag/inspiration.html' class='tag-link-9' title='30 topics' style='font-size: 143.89261745%;'>inspiration</a>
+<a href='../../tag/interview.html' class='tag-link-37' title='1 topic' style='font-size: 80%;'>interview</a>
+<a href='../../tag/javascript.html' class='tag-link-30' title='18 topics' style='font-size: 132.617449664%;'>Javascript</a>
+<a href='../../tag/jobs.html' class='tag-link-32' title='1 topic' style='font-size: 80%;'>jobs</a>
+<a href='../../tag/photoshop.html' class='tag-link-34' title='1 topic' style='font-size: 80%;'>photoshop</a>
+<a href='../../tag/photoshop-tutorials.html' class='tag-link-23' title='12 topics' style='font-size: 123.489932886%;'>Photoshop tutorials</a>
+<a href='../../tag/responsive-design.html' class='tag-link-40' title='16 topics' style='font-size: 129.932885906%;'>Responsive Design</a>
+<a href='../../tag/review.html' class='tag-link-20' title='8 topics' style='font-size: 114.899328859%;'>review</a>
+<a href='../../tag/seo.html' class='tag-link-29' title='1 topic' style='font-size: 80%;'>SEO</a>
+<a href='../../tag/software.html' class='tag-link-17' title='5 topics' style='font-size: 105.771812081%;'>software</a>
+<a href='../../tag/talented-people.html' class='tag-link-14' title='8 topics' style='font-size: 114.899328859%;'>talented people</a>
+<a href='../../tag/updates.html' class='tag-link-5' title='20 topics' style='font-size: 134.765100671%;'>updates</a>
+<a href='../../tag/wordpress.html' class='tag-link-22' title='17 topics' style='font-size: 131.543624161%;'>WordPress</a>								</p>
+							</li>
+						</ul>
+					</li>
+					<li class="about"><a href="../../about.html">About</a></li>
+					<li class="contact"><a href="../../contact.html">Contact</a></li>
+					<li class="archives"><a href="../../archives.html">Archives</a></li>
+				</ul>
+			</nav>
+
+			<form method="get" id="searchform" action="http://webdesignerwall.com/">
+				<input type="text" name="s" id="s" placeholder="Search">
+			</form>
+
+		</header>
+
+		<div id="body">
+<div id="contentwrap">
+	<div id="content" class="single">
+
+				
+			<article class="post featured">
+	<header>
+		<h1 class="post-title"><a href="../building-custom-wordpress-theme.html" title="Building Custom WordPress Theme">Building Custom WordPress Theme</a> <sup><a href="../building-custom-wordpress-theme.html#comments" class="comments-link"  title="Comment on Building Custom WordPress Theme">818</a></sup></h1>
+		<p class="post-meta"><time datetime="2008-11-17" class="post-date" pubdate>Nov 17, 2008</time> &bull; <span class="post-category"><a href="../../category/tutorials.html" title="View all posts in Tutorials" rel="category tag">Tutorials</a></span> &rarr; <span class="post-tag"><a href="../../tag/wordpress.html" rel="tag">WordPress</a></span></p>
+	</header>
+	
+
+			<div class="ad square">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243565" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>	
+	<div class="post-content">
+		<p class="intro">This is the Chapter II of the <a href="http://www.webdesignerwall.com/tutorials/complete-wordpress-theme-guide/">Complete WordPress Theme Guide</a> series. This chapter will show you how to build a custom WordPress theme. Although  the <a href="http://codex.wordpress.org/Main_Page">Codex</a> site provides very good documentations on how to create a theme, but I find it too complicated for a beginner. In this tutorial, I will explain the basics  of how WordPress theme works and show you how to convert a static HTML template into a theme. No PHP skill is required, but you need Photoshop and CSS skills to create your own design.<span id="more-194"></span></p>
+<h3><em>1.</em> The Blog Frontend</h3>
+<p>Before you start, let's take a look at the WordPress default theme and see how it is structured. Take note of the elements (header, post title, search form, navigation, footer, etc.).</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/default-homepage.gif" alt="default homepage" /> <em>Default Frontpage (index.php)</em></p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/default-single.gif" alt="default homepage" /> <em>Default Single (single.php)</em></p>
+<h3><em>2.</em> Photoshop Mockups</h3>
+<p>Based on the information gathered from the default theme, design a Photoshop mockup of your blog. Here I'm using <a href="http://www.ndesign-studio.com/resources/wp-themes/glossyblue/">GlossyBlue</a>, one of my free <a href="http://www.ndesign-studio.com/resources/wp-themes/">WordPress themes</a>, as an example. Download the <a href="http://www.webdesignerwall.com/file/wordpress-theme-demo.zip">demo.zip</a> to see the Photoshop file.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/photoshop-mockup.gif" alt="default homepage" /></p>
+<h3><em>3.</em> HTML + CSS</h3>
+<p>After the PSD design is done, create a static HTML+CSS template of each page. You can use my GlossyBlue HTML files in the <a href="http://www.webdesignerwall.com/file/wordpress-theme-demo.zip">demo.zip</a> to follow this tutorial. Extract the zip and take a look at the <em>index.html</em>, <em>single.html</em>, and <em>page.html</em>. Later in the tutorial, I will use these HTML files and convert them into a theme.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/html-css-template.gif" alt="default homepage" /></p>
+<h4>Why Create a Static HTML File First?</h4>
+<p>Mainly because it will make the development process a lot easier. I usually create a HTML file for every template that I need, test it across all browsers, validate both HTML and CSS markups, then all I have to do is cut &amp; paste the WordPress code. By doing so, I don't have to worry about HTML or CSS bugs during my theme making process.</p>
+<h3><em>4.</em> How WordPress Theme Works</h3>
+<p>If you go the default theme folder (<em>wp-content/themes/default</em>), you should see  many PHP files (called template file) and one <em>style.css</em> file. When you are viewing the front page, WordPress actually uses several template files to generate the page (<em>index.php</em> &lt;&lt; <em>header.php</em>, <em>sidebar.php</em>, and <em>footer.php</em>).</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/how-theme-works.gif" alt="how theme works" /></p>
+<p>For more details, check out <a href="http://codex.wordpress.org/Site_Architecture_1.5">Site Architecture</a> and <a href="http://codex.wordpress.org/Template_Hierarchy">Template Hierarchy</a> at Codex.</p>
+<h3><em>5.</em> Duplicate The Template Files</h3>
+<p>Copy the GlossyBlue HTML folder into the <em>wp-content/themes</em> folder. Then, go to the <em>default</em> theme folder, copy the <em>comments.php</em> and <em>searchform.php</em> file to the <em>glossyblue</em> folder.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/copy-files.gif" alt="copy files" /></p>
+<h3><em>6.</em> Style.css</h3>
+<p>Go to the WordPress <em>default</em> theme folder, open the <em>style.css</em> file. Copy the commented code at the top and paste it to the GlossyBlue <em>style.css</em> file. Change the theme name and the author information as you desire.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/css-commented-code.gif" alt="theme name and author's information" /></p>
+<h3><em>7.</em> Splitting The Files</h3>
+<p>Now you need to understand where to split the file into several files: <em>header.php</em>, <em>sidebar.php</em>, and <em>footer.php</em>. The image below shows a simplified version of my <em>index</em> file and how the markups should split.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/splitting-files.gif" alt="splitting files" /></p>
+<h3><em>8.</em> Header.php</h3>
+<p>Open the <em>index.html</em> file. Cut from the top to where the <code>&lt;!--/header --&gt;</code> ends, paste it in a new PHP file, and save the file as <em>header.php</em>.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/header-code.gif" alt="header code" /></p>
+<p>Go to the <em>default</em> theme folder, open the <em>header.php</em>. Copy and replace the tags where it requires PHP code (Template Tag): <code>&lt;title&gt;</code>, <code>&lt;link&gt;</code> stylesheet, <code>&lt;h1&gt;,</code> and <code>&lt;div class=description&gt;</code>.</p>
+<p class="image"><a href="http://www.webdesignerwall.com/wp-content/uploads/2008/11/header-zoom.gif" class="thickbox"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/header.gif" alt="replace code" /></a></p>
+<h4>Navigation Menu (wp_list_pages)</h4>
+<p>Replace the <code>&lt;li&gt;</code> tags in the <code>&lt;ul id=nav&gt;</code> with <code>&lt;?php wp_list_pages('sort_column=menu_order&amp;depth=1&amp;title_li=');?&gt;</code></p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/navigation-menu.gif" alt="replace code" /></p>
+<p>Reference: <a href="http://codex.wordpress.org/Template_Tags/wp_list_pages">wp_list_pages</a>.</p>
+<h3><em>9.</em> Sidebar.php</h3>
+<p>Back to  the <em>index.html</em> file, cut from where the <code>&lt;form id=searchform&gt;</code> start to the closing tag of <code>&lt;div id=sidebar&gt;</code> and paste it in a new PHP file, save it as <em>sidebar.php</em>.</p>
+<ul>
+	<li>Replace the <code>&lt;form id=searchform&gt;</code> wrap with <code>&lt;?php include (TEMPLATEPATH . '/searchform.php'); ?&gt;</code>.</li>
+	<li>Replace the category <code>&lt;li&gt;</code> tags with <code>&lt;?php wp_list_categories('show_count=1&amp;title_li='); ?&gt;</code></li>
+	<li>Replace the archive  <code>&lt;li&gt;</code> tags with <code>&lt;?php wp_get_archives('type=monthly'); ?&gt;</code></li>
+</ul>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/sidebar-code.gif" alt="sidebar" /></p>
+<p>References: <a href="http://codex.wordpress.org/Template_Tags/wp_list_categories">wp_list_categories</a> and <a href="http://codex.wordpress.org/Template_Tags/wp_get_archives">wp_get_archives</a>.</p>
+<h3><em>10.</em> Footer.php</h3>
+<p>Back to  the <em>index.html</em> file, cut from the <code>&lt;div id=footer&gt;</code> tag to the end of <code>&lt;/html&gt;</code> and paste it in a new PHP file, save it as <em>footer.php</em>.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/footer.gif" alt="footer" /></p>
+<h4>Recent Posts</h4>
+<p>Here I  used the <a href="http://codex.wordpress.org/Template_Tags/query_posts">query_post</a> to display the 5 latest posts.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/recent-posts.gif" alt="recent posts" /></p>
+<h4>Recent Comments</h4>
+<p>Recent comments are generated by a plugin (included in the theme folder).</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/recent-comments.gif" alt="recent comments" /></p>
+<h3><em>11.</em> Index.php</h3>
+<p>Now in your <em>index.html</em> file, you should only have the <code>&lt;div id=content&gt;</code> wrap. Save the file as <em>index.php</em>. Insert the line:<code>get_header</code>, <code>get_sidebar</code>, and <code>get_footer</code> in the same order as your layout structure.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/index.gif" alt="index" /></p>
+<h3><em>12.</em> Understanding The Loop</h3>
+<p>The image below illustrates how The Loop works.  The Loop is used to display  blog posts and it also lets you  control what to display. Basically, The Loop checks if there are posts in your blog, while there are posts, display it, if no post found, say &quot;Not Found&quot;.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/the-loop-explain.gif" alt="the loop" /></p>
+<h3><em>13.</em> Copy The Loop</h3>
+<p>Go to the <em>default</em> theme folder, open the <em>index.php</em> file. Copy The Loop from the default <em>index.php</em> and paste it in between the <code>&lt;div id=content&gt;..&lt;/div&gt;</code>. Then, replace the static text with the WordPress Template Tags: post date, title, category, comments, next and previous link.</p>
+<p class="image"><a href="http://www.webdesignerwall.com/wp-content/uploads/2008/11/the-loop-zoom.gif" class="thickbox"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/the-loop.gif" alt="the Loop" /></a></p>
+<h3><em>14.</em> Preview The Theme</h3>
+<p>Congrats! You've done the front page (the main part of the theme). Now, login to your admin panel, go to the Design tab, you should see the GlossyBlue theme, activate it and go to the front page to preview the theme.</p>
+<h3><em>15.</em> Single.php</h3>
+<p>Now, it is time to do the <em>single.php</em> template. If you want, you can go through the same process &#8212; cut &amp; paste from the <em>default</em> theme. But, I find it easier to use the <em>index.php</em> that you just created and save it as <em>single.php</em>. Open the <em>default</em> theme <em>single.php</em> file and copy the Template Tags over. Then include the <code>comments_template</code>. The image below highlights what I've changed:</p>
+<p class="image"><a href="http://www.webdesignerwall.com/wp-content/uploads/2008/11/single-zoom.gif" class="thickbox"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/single.gif" alt="single.php" /></a></p>
+<h3><em>16.</em> Page.php</h3>
+<p>With the <em>single.php</em> template you just created, save it as <em>page.php</em>. Remove the post date, comment form, next/previous link... and that's it.. there goes your <em>page.php</em> template.</p>
+<h3><em>17.</em> Delete The HTML Files</h3>
+<p>Delete all the HTML files in the <em>glossyblue</em> folder (we don't need them anymore). Technically, that is enough for a basic WordPress theme. You may notice there are more PHP files in the <em>default</em> theme. Well, you don't really need those files if you just want a basic theme. For example, if the <em>search.php</em> or <em>404.php</em> is not present in the theme folder, WordPress will automatically use the <em>index.php</em> to render the page. Read the <a href="http://codex.wordpress.org/Template_Hierarchy">Template Hierarchy</a> for more details.</p>
+<h3><em>18.</em> WordPress Page Template</h3>
+<p>Ok, final example. I will show you how to use <a href="http://codex.wordpress.org/Pages">Page Template</a> to create an archive page that will list all posts on your blog (good for sitemap). Copy the  <em>archives.php</em> file from the <em>default</em> theme folder. Delete the unwanted code and you should have something like this:</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/archives-template.gif" alt="Archives template" /></p>
+<p>Here I'm using  the <a href="http://codex.wordpress.org/Template_Tags/query_posts">query_post</a> (<code>showposts=-1</code> means display all posts) to display a list of all posts.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/archives-queryposts.gif" alt="Archives query posts" /></p>
+<p>Now, login to your admin panel, write a new page, title it Archives. On the Page Template dropdown, select Archives.</p>
+<p class="image"><img src="http://www.webdesignerwall.com/wp-content/uploads/2008/11/archives-page.gif" alt="Archives page" /></p>
+<h3>More Reading:</h3>
+<p>Check out a list of <a href="http://www.webdesignerwall.com/general/useful-wordpress-plugins/">WordPress Plugins</a> that you may find useful. For more advance theme coding, read my <a href="http://www.webdesignerwall.com/tutorials/wordpress-theme-hacks/">WordPress Theme Hacks</a>.</p>
+<h3><em>What's Next...</em></h3>
+<p>In the next chapter, I will show you how to export your local WordPress to a web host and keep the local version for backup purpose.</p>	</div>
+
+	<footer class="share">
+	<em>Share &rarr;</em> 
+	<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://webdesignerwall.com/tutorials/building-custom-wordpress-theme" data-count="horizontal" data-via="nickla">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<script src="http://www.stumbleupon.com/hostedbadge.php?s=2&r=http://webdesignerwall.com/tutorials/building-custom-wordpress-theme"></script>
+	<iframe src="http://www.facebook.com/plugins/like.php?href=http://webdesignerwall.com/tutorials/building-custom-wordpress-theme&layout=button_count&show_faces=false&width=90&action=like&font=lucida+grande&colorscheme=light&height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+</footer>
+	
+</article>
+
+			<div class="ad horizontal">
+	<!-- BuySellAds.com Zone Code -->
+	<div id="bsap_1243564" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+</div>
+		
+			<nav> 
+				<ul class="post-nav clearfix">
+					<li class="prev"><a href="../installing-wordpress-locally.html" rel="prev"><span></span> <em>Previous</em> Installing WordPress Locally</a></li>
+					<li class="next"><a href="../exporting-and-importing-wordpress.html" rel="next"><span></span> <em>Next</em> Exporting and Importing WordPress</a></li>
+				</ul>
+			</nav>
+
+				
+		<div class="commentwrap">
+
+
+
+		<h4 id="comments" class="comment-title">818 Comments</h4>
+
+					<nav class="pagenav">
+				<span class='page-numbers current'>1</span>
+<a class='page-numbers' href='comment-page-2.html#comments'>2</a>
+<a class='page-numbers' href='comment-page-3.html#comments'>3</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-41.html#comments'>41</a>
+<a class="next page-numbers" href="comment-page-2.html#comments"><em>Next</em></a>			</nav>
+		
+
+		<ol class="commentlist">
+			   <li id="comment-27681" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/f9f8454e66fe996c24c639292615ac12?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.afreshnewlife.com' rel='external nofollow' class='url'>Josh</a></cite><br />
+			<time datetime="2008-11-17T01:39" class="comment-time">Nov 17, 2008 @ 01:39</time>
+		</p>
+
+		<div class="commententry" id="commententry-27681">
+					
+			<p>Great work Nick! Thanks for making life a little bit easier :)</p>
+<p>-Josh<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+<a href="http://www.afreshnewlife.com" rel="nofollow">http://www.afreshnewlife.com</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27682" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/4ba3a95bafdf39f560d6098c0b075349?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://teraom.com' rel='external nofollow' class='url'>teraom</a></cite><br />
+			<time datetime="2008-11-17T01:40" class="comment-time">Nov 17, 2008 @ 01:40</time>
+		</p>
+
+		<div class="commententry" id="commententry-27682">
+					
+			<p>That was really in detail. I however am looking for a few more resources that would make things easier.<br />
+1. a skeleton theme from which i can start<br />
+2. good editors and other tools<br />
+3. Is there a tool where i can draw and edit divs for wordpress?<br />
+4. psd to xhtml conversion.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27683" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/de01bd9c49f5e50633f9feae3cad4468?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>pascalv</cite><br />
+			<time datetime="2008-11-17T01:44" class="comment-time">Nov 17, 2008 @ 01:44</time>
+		</p>
+
+		<div class="commententry" id="commententry-27683">
+					
+			<p>very useful and good timing looking at what other blogs have been posting lately.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27686" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/5c65fecb4e4179a59ebecb18034dcb64?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.permanaj.com' rel='external nofollow' class='url'>Permana Jayanta</a></cite><br />
+			<time datetime="2008-11-17T02:11" class="comment-time">Nov 17, 2008 @ 02:11</time>
+		</p>
+
+		<div class="commententry" id="commententry-27686">
+					
+			<p>This is what I&#8217;m looking for</p>
+<p>I agree to save the HTML + CSS version, so you can convert the template to another CMS (Blogger, Drupal).</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27687" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b3a7e69f15b7bd7124de6883286efda0?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://acomment.net' rel='external nofollow' class='url'>Mohsen</a></cite><br />
+			<time datetime="2008-11-17T02:43" class="comment-time">Nov 17, 2008 @ 02:43</time>
+		</p>
+
+		<div class="commententry" id="commententry-27687">
+					
+			<p>Great Article!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27688" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7c151f73189ca366bd643ba3bbcdd4a7?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Antony_256</cite><br />
+			<time datetime="2008-11-17T02:54" class="comment-time">Nov 17, 2008 @ 02:54</time>
+		</p>
+
+		<div class="commententry" id="commententry-27688">
+					
+			<p>@teraom: About No. 1: <a href="http://www.plaintxt.org/themes/sandbox/" rel="nofollow">http://www.plaintxt.org/themes/sandbox/</a></p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27689" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/39e452b045fcb08623234ca4759eb76c?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://taotsu-pro.jp' rel='external nofollow' class='url'>taotsu-pro.jp</a></cite><br />
+			<time datetime="2008-11-17T03:37" class="comment-time">Nov 17, 2008 @ 03:37</time>
+		</p>
+
+		<div class="commententry" id="commententry-27689">
+					
+			<p>a good naked theme comes from  elliot jay stocks. <a href="http://elliotjaystocks.com/blog/archive/2008/starkers-for-wordpress-262/" rel="nofollow"> starkers</a> is basically the default theme stripped.<br />
+and thanx for the Guide, it helps ^.^</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27691" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b6adfad73905857ca45c09a872f80842?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.redcell.eu/nokill/' rel='external nofollow' class='url'>nokill</a></cite><br />
+			<time datetime="2008-11-17T04:00" class="comment-time">Nov 17, 2008 @ 04:00</time>
+		</p>
+
+		<div class="commententry" id="commententry-27691">
+					
+			<p>great tutorial when i get time ill surely try this out<br />
+by the looks of it even I can do this ^_^</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27692" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/7b29bcb351febee695ce42db8ea5abed?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>Tobi</cite><br />
+			<time datetime="2008-11-17T04:02" class="comment-time">Nov 17, 2008 @ 04:02</time>
+		</p>
+
+		<div class="commententry" id="commententry-27692">
+					
+			<p>THX for this great Tut. I love wordpress and because of your tut i can make my WP-pages better. Thank u very much!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27693" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/855cedd7a823b703dc5c95017d3f49a5?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>pluto</cite><br />
+			<time datetime="2008-11-17T04:20" class="comment-time">Nov 17, 2008 @ 04:20</time>
+		</p>
+
+		<div class="commententry" id="commententry-27693">
+					
+			<p>good job! I agree to save the html+css version, maybe someday you will update your theme very easily</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27695" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/57b4852b8bc6e8084c1592aabf199f70?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://ianpurton.com' rel='external nofollow' class='url'>Ian Purton</a></cite><br />
+			<time datetime="2008-11-17T04:41" class="comment-time">Nov 17, 2008 @ 04:41</time>
+		</p>
+
+		<div class="commententry" id="commententry-27695">
+					
+			<p>I&#8217;ve wriiten a bare <a href="http://ianpurton.com/seo-wordpress-sandbox-theme/" rel="nofollow">SEO WordPress Sandbox Theme</a> that is SEO&#8217;d and ready for styling with css alone. </p>
+<p>It uses the yahoo css framework.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27696" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/b1ce4b780974a997343b1d7d44ce386b?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.designshard.com' rel='external nofollow' class='url'>Max</a></cite><br />
+			<time datetime="2008-11-17T04:45" class="comment-time">Nov 17, 2008 @ 04:45</time>
+		</p>
+
+		<div class="commententry" id="commententry-27696">
+					
+			<p>Great walkthrough, this will be alot of help for the theme creation process.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27697" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/9cac7773b6c61d81ad00cd61863971c2?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite>abdulaziz</cite><br />
+			<time datetime="2008-11-17T05:31" class="comment-time">Nov 17, 2008 @ 05:31</time>
+		</p>
+
+		<div class="commententry" id="commententry-27697">
+					
+			<p>THANK YOU MAN YOU ARE CREATIVE :)</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+<ul class="children">
+   <li id="comment-88429" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/2a3e96c8d4d982d6dd4e7ebdb33915d6?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.conversestockez.com/' rel='external nofollow' class='url'>converse basket</a></cite><br />
+			<time datetime="2012-3-27T05:17" class="comment-time">Mar 27, 2012 @ 05:17</time>
+		</p>
+
+		<div class="commententry" id="commententry-88429">
+					
+			<p>Your kids look so cute! We used to do so much for Halloween (yes my husband and I would dress up too) but them it all got to be too much since my husband loves to decorate for Christmas. He loves lights! So now we don&#8217;t really do anything for Halloween because we start the stringing of the lights in early Novembe3!</p>
+<p>As always you have such fun and informative posts!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+   <li id="comment-27698" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/ca9f7992877f43d41a0b82c4427e42a1?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.achtereekte.nl' rel='external nofollow' class='url'>Henk</a></cite><br />
+			<time datetime="2008-11-17T05:54" class="comment-time">Nov 17, 2008 @ 05:54</time>
+		</p>
+
+		<div class="commententry" id="commententry-27698">
+					
+			<p>Very useful. Thank you for sharing!</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27699" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/a2f09a0bdd7dabec530b4ca617e10ca3?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.etereopop.com/studio' rel='external nofollow' class='url'>Patris</a></cite><br />
+			<time datetime="2008-11-17T05:55" class="comment-time">Nov 17, 2008 @ 05:55</time>
+		</p>
+
+		<div class="commententry" id="commententry-27699">
+					
+			<p>Thank you, it comes in a good moment for me, very clear and helpful! ^^</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27700" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/3cd68ccf3b84a53d6199798e7e44f23a?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.davidhellmann.com' rel='external nofollow' class='url'>David</a></cite><br />
+			<time datetime="2008-11-17T06:00" class="comment-time">Nov 17, 2008 @ 06:00</time>
+		</p>
+
+		<div class="commententry" id="commententry-27700">
+					
+			<p>good job nick. perfect for the first experiments with wordpress.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27701" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/d7ca35bd1425b6243d78d1819cabacad?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.RedesignYourBiz.com' rel='external nofollow' class='url'>Designer</a></cite><br />
+			<time datetime="2008-11-17T06:06" class="comment-time">Nov 17, 2008 @ 06:06</time>
+		</p>
+
+		<div class="commententry" id="commententry-27701">
+					
+			<p>wow&#8230;..thanks for the article</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27702" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/de3b0d6fe047ed1f814436f06893e2e4?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://www.modula.fi' rel='external nofollow' class='url'>eeallo</a></cite><br />
+			<time datetime="2008-11-17T06:10" class="comment-time">Nov 17, 2008 @ 06:10</time>
+		</p>
+
+		<div class="commententry" id="commententry-27702">
+					
+			<p>Child themes are an easy way to get started. Use a theme framework (<a href="http://www.plaintxt.org/themes/sandbox/" rel="nofollow">Sandbox</a> or <a href="http://themeshaper.com/thematic-for-wordpress/" rel="nofollow">Thematic</a>) as a starting point. <a href="http://getfirebug.com/" rel="nofollow">Firebug</a> plugin tells you everything you need to know about the styles in your themes.</p>
+<p><a href="http://www.modula.fi/2008/wordpress-theme-modula-white-dwarf/" rel="nofollow">Modula White Dwarf</a> is a clean and minimalistic Sandbox child theme. Check it out too.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27704" >
+		<p class="comment-author">
+			<img alt='' src='http://1.gravatar.com/avatar/50c285fa5b3e879126ed7e5848b405b1?s=60&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://blog.insicdesigns.com' rel='external nofollow' class='url'>insicdesigns</a></cite><br />
+			<time datetime="2008-11-17T06:29" class="comment-time">Nov 17, 2008 @ 06:29</time>
+		</p>
+
+		<div class="commententry" id="commententry-27704">
+					
+			<p>wow. this tutorials kicks as*s! lol. very detailed and informative. thanks for posting.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+   <li id="comment-27706" >
+		<p class="comment-author">
+			<img alt='' src='http://0.gravatar.com/avatar/c294909049262497a051eb85c84c7af2?s=60&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=60&r=G' class='avatar avatar-60 photo' height='60' width='60' />			<cite><a href='http://marksayers.com' rel='external nofollow' class='url'>mark</a></cite><br />
+			<time datetime="2008-11-17T06:56" class="comment-time">Nov 17, 2008 @ 06:56</time>
+		</p>
+
+		<div class="commententry" id="commententry-27706">
+					
+			<p>Nice one! Clear and concise as always.</p>
+<p>Great job.</p>
+
+			<p class="reply">
+						</p>
+		</div>
+
+		<div class="btn-comment expand"></div><div class="btn-comment collapse"></div>
+		
+</li><!-- #comment-## -->
+		</ol>
+		
+					<nav class="pagenav right">
+				<span class='page-numbers current'>1</span>
+<a class='page-numbers' href='comment-page-2.html#comments'>2</a>
+<a class='page-numbers' href='comment-page-3.html#comments'>3</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='comment-page-41.html#comments'>41</a>
+<a class="next page-numbers" href="comment-page-2.html#comments"><em>Next</em></a>			</nav>
+		
+
+	<div id="respond">
+	
+		<h4 class="comment-title">Leave a Reply</h4>
+		
+		<p class="cancel-comment-reply">
+			<a rel="nofollow" id="cancel-comment-reply-link" href="comment-page-1.html#respond" style="display:none;">Cancel</a>		</p>
+		
+				
+		<form action="http://webdesignerwall.com/wp-comments-post.php" method="post" id="commentform">
+		
+				
+		<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required='true' class="required">
+		<label for="author">Name <small>(required)</small></label></p>
+		
+		<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required='true' class="required email">
+		<label for="email">Mail <small>(required)</small></label></p>
+		
+		<p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+		<label for="url">Website</label></p>
+		
+				
+		<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+		
+		<p><textarea name="comment" id="comment" cols="58" rows="10" tabindex="4" class="required"></textarea></p>
+		
+		<p><input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+		<input type='hidden' name='comment_post_ID' value='194' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+		</p>
+		<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="c2b3d7bfb3" /></p><script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://webdesignerwall.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='../../wp-content/plugins/akismet/_inc/form-ver=3.0.0.js'></script>
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="218"/></p>		
+		</form>
+		
+			</div><!--/respond -->
+
+	<div class="btn-comment collapse-all"><span>Collapse all</span></div> <div class="btn-comment expand-all"><span>Expand all</span></div>
+</div><!-- /commentwrap -->		
+	</div>
+	<!--/content -->
+</div>
+<!--/contentwrap -->
+
+<aside id="sidebar">
+
+	<section class="ad banners clearfix">
+
+
+		<a href="https://www.psd2html.com/order-now.html?utm_source=webdesignerwall.com&utm_medium=banner&utm_campaign=responsive"><img src="../../wp-content/uploads/2014/05/258x125.jpg" alt="PSD 2 HTML" /></a>
+
+		<!-- BuySellAds.com Ad Code -->
+		<script type="text/javascript">
+		(function(){
+		  var bsa = document.createElement('script');
+			  bsa.type = 'text/javascript';
+			  bsa.async = true;
+			  bsa.src = '//s3.buysellads.com/ac/bsa.js';
+		  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+		})();
+		</script>
+
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1243563" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		
+	</section>
+
+
+	
+	<section class="network">
+		<ul>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-themify.png" alt="WordPress Themes">
+				</figure>
+				<h4><a href="http://themify.me/themes">WP Themes</a></h4>
+				<p>Check out the WordPress themes that I've designed at Themify. Use 'WDW' Themify coupon code to save 20%.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-prints.png" alt="Art Prints">
+				</figure>
+				<h4><a href="http://society6.com/nickla">Art Prints</a></h4>
+				<p>Buy my art prints on Society6. Available in canvases, posters, tshirts, hoodies, and laptop skins and iPhone cases.</p>
+			</li>
+			<li>
+				<figure>
+					<img src="../../wp-content/themes/wall/images/sidebar-icondock.png" alt="Stock Icons">
+				</figure>
+				<h4><a href="http://icondock.com/icons">Stock Icons</a></h4>
+				<p>My vector icons are also available for sale at IconDock. Use 'WDW' coupon code to save 20%.</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="ad">
+		<!-- BuySellAds.com Zone Code -->
+		<div id="bsap_1265759" class="bsarocks bsap_637bdb73f2c62367ac9cd02bf120f027"></div>
+		<!-- End BuySellAds.com Zone Code -->
+	</section>
+
+</aside>
+			<footer id="footer">
+				<section class="recent-posts">
+					<h4>Recent Posts</h4>
+
+					<ol>
+																<li>
+
+																			<figure>
+								<a href="../../general/icondock-is-redesigned.html"><img src="../../wp-content/uploads/2014/06/icondock-redesigned.png" alt="IconDock is Redesigned" /></a>
+							</figure>
+												<h5><a href="../../general/icondock-is-redesigned.html">IconDock is Redesigned</a></h5>
+						<p class="post-meta"><time datetime="2014-06-10" pubdate class="post-date">Jun 10, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../../general/themify-icons-ios7-inspired-icon-set.html"><img src="../../wp-content/uploads/2014/05/themify-icons.png" alt="Themify Icons: iOS7 Inspired Icon Set" /></a>
+							</figure>
+												<h5><a href="../../general/themify-icons-ios7-inspired-icon-set.html">Themify Icons: iOS7 Inspired Icon Set</a></h5>
+						<p class="post-meta"><time datetime="2014-05-20" pubdate class="post-date">May 20, 2014</time></p>
+						</li>
+											<li>
+
+																			<figure>
+								<a href="../animating-background-colors.html"><img src="../../wp-content/uploads/2014/05/animating-bg-colors.jpg" alt="Animating Background Colors" /></a>
+							</figure>
+												<h5><a href="../animating-background-colors.html">Animating Background Colors</a></h5>
+						<p class="post-meta"><time datetime="2014-05-02" pubdate class="post-date">May 2, 2014</time></p>
+						</li>
+										</ol>
+
+				</section>
+				<section class="recent-comments">
+					<h4>Recent Comments</h4>
+					<ol>
+												
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><img alt='' src='http://0.gravatar.com/avatar/016f5bd491295bc71da60680f5340952?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/themify-icons-ios7-inspired-icon-set/comment-page-1.html#comment-106252"><cite>Teelah</cite></a>: Wow, these are so great! Of course its even better that the &hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><img alt='' src='http://0.gravatar.com/avatar/4b75fd327928554c8e47b4b86a3b0234?s=40&d=http://0.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106155"><cite>Ashlee Havatone</cite></a>: Simple and looks great icons. This gonna be like with icon l&hellip;
+							
+						</li> 
+						
+												
+																		
+																		
+												
+																	
+						<li>
+							<figure><a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><img alt='' src='http://1.gravatar.com/avatar/94bd7e2ebae10fc2ed94f5da1968b6e3?s=40&d=http://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=40&r=G' class='avatar avatar-40 photo' height='40' width='40' /></a></figure>
+							<a href="../../general/icondock-is-redesigned/comment-page-1.html#comment-106148"><cite>Ray John</cite></a>: Very beautiful design, I love it so much because purple is m&hellip;
+							
+						</li> 
+						
+												
+																	</ol>
+				</section>
+
+				<section class="credits">
+					<h4>About</h4>
+					<p>Web Designer Wall is all about design, ideas, web trends, and tutorials. It is designed and maintained by Nick La, who also runs <a href="http://www.ndesign-studio.com">N.Design Studio</a>, <a href="http://themify.me">Themify</a>, <a href="http://icondock.com">IconDock</a>, and <a href="http://bestwebgallery.com">Best Web Gallery</a>.</p>
+					<p class="copyright">
+						&copy; <a href="../../index.html">Web Designer Wall</a> 2014					</p>
+				</section>
+				<p id="back-top"><a href="comment-page-1.html#top"><span></span><em>Back to top</em> </a></p>
+			</footer>
+
+		</div>
+		<!--/body -->
+	</div>
+	<!--/pagewrap -->
+</div>
+<!--/overlay -->
+</div>
+<!--/top -->
+
+
+	<style type="text/css">
+.promo-bar {
+	background: #fc0000;
+	text-align: center;
+	font: italic 16px/120% "Times New Roman", Times, serif;
+	color: #FFC;
+	padding: 8px 1%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 99%;
+	z-index: 1000;
+	text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+	border-bottom: solid 1px #900;
+}
+.promo-bar a {
+	color: #fff;
+	text-decoration: underline;
+}
+body {
+	margin-top: 32px;
+}
+@media screen and (max-width: 800px) {
+	body {
+		margin-top: 50px;
+	}
+}
+	</style>
+	<div class="promo-bar">TWEET &amp; SAVE: tweet a message to receive a 15% <a href="http://themify.me">Themify discount</a> code instantly. <a href="javascript:void(0);" onclick="window.open('http://twtqpon.com/themify-coupon/tweet', '_blank', 'width=800,height=700,scrollbars=yes,status=yes,resizable=yes,screenx=0,screeny=0,left=380,top=100');">Tweet it now!</a></div>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-253188-3");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</body>
+</html><!-- hyper cache: 88e58fef3dd891fa6b2b545caa60fe01 14-07-28 02:05:32 -->

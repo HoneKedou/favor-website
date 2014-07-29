@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- set viewport initial scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+
+<title>Demo: iPhone Safari's Viewport Scaling Bug</title>
+
+<style>
+body {
+	background: #eee;
+	font: 80%/160% Arial, Helvetica, sans-serif;
+	color: #999;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+h1 {
+	font: bold 80% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	margin: 0 0 5px;
+	color: #999;
+}
+h2 {
+	margin: 0 0 10px;
+	font-size: 180%;
+	line-height: 110%;
+}
+#pagewrap {
+	max-width: 80%;
+	margin: 20px auto;
+	background: #fff;
+	padding: 5%;
+	border: solid 1px #bbb;
+	-webkit-box-shadow: 0 1px 5px rgba(0,0,0,.2);
+	box-shadow: 0 1px 5px rgba(0,0,0,.2);
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+</style>
+
+</head>
+
+<body>
+<div id="pagewrap">
+	<h1>Demo</h1>
+	<h2><a href="../../tutorials/iphone-safari-viewport-scaling-bug.html">iPhone Safari Viewport Scaling Bug</a></h2>
+	<p>View this page with an iPhone. Rotate the phone from portrait to landscape. Notice the page being scaled up on landscape view.</p>
+	<p>This version fixed with  maximum-scale=1 in the viewport meta tag. Downside = the page is not scalable.</p>
+</div>
+</body>
+</html>

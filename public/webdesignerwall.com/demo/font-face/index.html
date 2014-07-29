@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>@font-face + Modernizr</title>
+
+<script src="js/modernizr-all-css3.js"></script>
+
+<!-- Wire One Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Wire+One&v2' rel='stylesheet' type='text/css'>
+
+<style>
+body {
+	width: 600px;
+	margin: 30px auto;
+}
+a {
+	color: #666;
+}
+p {
+	margin: 0 0 10px;
+	color: #666;
+}
+.note {
+	background: #eee;
+	padding: 20px;
+	border: solid 1px #ccc;
+}
+
+/* wire one font */
+h1 {
+	font-family: 'Wire One', arial, serif;
+	font-weight: bold;
+	font-size: 48px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+/* no-faceface fallback */
+.no-fontface h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 30px;
+	letter-spacing: 0;
+	text-transform: none;
+}
+</style>
+</head>
+
+<body>
+<h1>Web Designer Wall (h1)</h1>
+
+<div class="note">
+	<p>If CSS3 @font-face is supported, the &lt;h1&gt; tag above should be displayed in <a href="http://www.google.com/webfonts/specimen/Wire+One">Wire One</a> font, else Arial. Read related article on <a href="../../tutorials/css3-font-face-design-guide.html">Web Designer Wall</a>.</p>
+</div>
+</body>
+</html>

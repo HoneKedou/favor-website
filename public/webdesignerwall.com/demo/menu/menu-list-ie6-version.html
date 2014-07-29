@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Demo: CSS Menu Design (IE6)</title>
+<style type="text/css">body {
+	background: #fff;
+	font: 80%/160% Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 20px 40px;
+}
+a {
+	color: #999;
+}
+h2 {
+	font: bold 320%/100% Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+	padding: 0;
+}
+.menu {
+	list-style: none;
+	width: 500px;
+	font: 150%/100% Arial, Helvetica, sans-serif;
+	margin: 0 0 2em;
+	padding: 0;
+}
+.menu li {
+	clear: both;
+	margin: 0;
+	padding: 0 0 1.8em 0;
+	position: relative;
+	border-bottom: dotted 2px #ccc;
+}
+.menu strong {
+	background: #fff;
+	padding: 0 10px 0 0;
+	font-weight: normal;
+	position: absolute;
+	bottom: -.3em;
+	left: 0;
+}
+.menu em {
+	background: #fff;
+	padding: 0 0 0 5px;
+	font: 110%/100% Georgia, "Times New Roman", Times, serif;
+	position: absolute;
+	bottom: -.2em;
+	right: 0;
+}
+
+.menu sup {
+	font-size: 60%;
+	color: #666;
+	margin-left: 3px;
+}
+
+/* clearfix */
+.menu li:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+.menu li {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .menu li {height: 1%;}
+.menu li {display: block;}
+/* End hide from IE-mac */
+
+
+
+/* style 2 *************/
+.style2 li {
+	background: url("images/diagonal.gif") repeat-x 0 30px;
+	border: none;
+}
+
+
+
+.credits {
+	color: #999;
+	font: 100% Georgia, "Times New Roman", Times, serif;
+}
+</style>
+</head>
+
+<body>
+<h2>Rates</h2>
+<ul class="menu">
+	<li><strong>WordPress Coding</strong> <em>100<sup>95</sup></em></li>
+	<li><strong>CSS Design</strong> <em>250<sup>95</sup></em></li>
+	<li><strong>Support IE6 (extra)</strong> <em>500<sup>95</sup></em></li>
+</ul>
+
+<h2>Sashimi</h2>
+<ul class="menu style2">
+	<li><strong>Spicy Hot Roll</strong> <em>29<sup>99</sup></em></li>
+	<li><strong>Salmon Roll</strong> <em>20<sup>95</sup></em></li>
+	<li><strong>Boat Sashimi</strong> <em>69<sup>95</sup></em></li>
+</ul>
+
+<p class="credits">Tutorial by: <a href="http://www.webdesignerwall.com">Web Designer Wall</a> (read the <a href="http://www.webdesignerwall.com/tutorials/css-menu-list-design">CSS tutorial</a>)</p>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<!-- disable iPhone inital scale -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+<title>Demo: Elastic Videos</title>
+
+<style>
+/************************************************************************************
+GENERAL STYLING
+*************************************************************************************/
+body {
+	background: #e6e6e6;
+	font: .81em/150% Arial, Helvetica, sans-serif;
+	color: #444;
+	padding: 10px 0 30px;
+}
+a {
+	color: #026acb;
+	text-decoration: none;
+}
+a:hover {
+	color: #F60;
+}
+p {
+	margin: 0 0 1.2em;
+	padding: 0;
+}
+pre code {
+	background: #FFC;
+	display: block;
+	padding: 5px 15px;
+}
+h1, h2, h3 {
+	line-height: 120%;
+}
+h1 {
+	font-size: 2em;
+	margin: 0 0 5px;
+}
+h2 {
+	font-size: 1.6em;
+	margin: 0 0 10px;
+}
+h3 {
+	font-size: 1.3em;
+	margin: 30px 0 10px;
+}
+
+/************************************************************************************
+PAGEWRAP
+*************************************************************************************/
+#pagewrap {
+	width: 700px;
+	max-width: 70%;
+	background: #fff;
+	padding: 30px;
+	margin: 0 auto;
+}
+
+/************************************************************************************
+VIDEO
+*************************************************************************************/
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* video fixed width wrappers */
+.video-wrapper {
+	width: 600px;
+	max-width: 100%;
+}
+.video-wrapper2 {
+	width: 500px;
+	max-width: 100%;
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<div id="pagewrap">
+
+	<h1>Demo: <a href="../../tutorials/css-elastic-videos.html">Elastic Videos</a></h1>
+	
+	<h2>Resize your browser window to see the elastic videos.</h2>
+
+	<h3>New YouTube Code (iframe)</h3>
+	<div class="video-container">
+		<iframe width="853" height="510" src="http://www.youtube.com/embed/3R2cnxz27LI" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<!-- /video -->
+	
+	<h3>Old YouTube Code (embed)</h3>
+	<div class="video-container">
+		<object width="500" height="400">
+			<param name="movie" value="http://www.youtube.com/v/NmRTreaCJXs?version=3">
+			</param>
+			<param name="allowFullScreen" value="true">
+			</param>
+			<param name="allowscriptaccess" value="always">
+			</param>
+			<param name="wmode" value="transparent">
+			</param>
+			<embed wmode="transparent"  src="http://www.youtube.com/v/NmRTreaCJXs?version=3" type="application/x-shockwave-flash" width="600" height="420" allowscriptaccess="always" allowfullscreen="true"></embed>
+		</object>
+	</div>
+	<!-- /video -->
+
+	<h3>With fixed 600px wide wrapper</h3>
+	<div class="video-wrapper">
+		<div class="video-container">
+			<iframe src="http://player.vimeo.com/video/6284199?title=0&byline=0&portrait=0" width="800" height="450" frameborder="0"></iframe>
+		</div>
+		<!-- /video -->
+	</div>
+	<!-- /video-wrapper -->	
+
+	<h3>With fixed 500px wide wrapper</h3>
+	<div class="video-wrapper2">
+		<div class="video-container">
+			<object width="500" height="400">
+				<param name="movie" value="http://www.youtube.com/v/NmRTreaCJXs?version=3">
+				</param>
+				<param name="allowFullScreen" value="true">
+				</param>
+				<param name="allowscriptaccess" value="always">
+				</param>
+				<param name="wmode" value="transparent">
+				</param>
+				<embed wmode="transparent"  src="http://www.youtube.com/v/NmRTreaCJXs?version=3" type="application/x-shockwave-flash" width="600" height="420" allowscriptaccess="always" allowfullscreen="true"></embed>
+			</object>
+		</div>
+		<!-- /video -->
+	</div>
+	<!-- /video-wrapper -->	
+		
+<h3>CSS Code</h3>
+<p>CSS trick by <a href="http://www.tjkdesign.com/articles/how-to-resize-videos-on-the-fly.asp">tjkdesign.com</a>.</p>
+<pre><code>
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,  
+.video-container object,  
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+</code></pre>
+
+</div>
+<!-- /#pagewrap -->
+
+</body>
+</html>

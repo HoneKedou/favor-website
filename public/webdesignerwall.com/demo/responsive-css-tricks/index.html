@@ -1,0 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Demo: CSS Tricks for Responsive Design</title>
+
+<style>
+body {
+	font: .8em/150% Arial, Helvetica, sans-serif;
+	color: #666;
+	width: 850px;
+	margin: 20px auto;
+	max-width: 90%;
+}
+a {
+	color: #66C;
+}
+p {
+	margin: 0 0 1em;
+}
+h1, h2, h3, h4 {
+	color: #000;
+}
+h1 {
+	font: 1.7em;
+	line-height: 110%;
+}
+h3 {
+	font-size: 1.5em;
+	line-height: 120%;
+	margin: 30px 0 20px;
+	padding-top: 20px;
+	border-top: double 3px #eee;
+}
+h4 {
+	font-size: 1.2em;
+	line-height: 120%;
+	margin: 30px 0 10px;
+	text-transform: uppercase;
+}
+
+figure {
+	margin: 0;
+}
+
+
+/* html5 elements */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+
+/************************************************************************************
+RESPONSIVE VIDEO
+*************************************************************************************/
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+.video iframe,  
+.video object,  
+.video embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/************************************************************************************
+MIN & MAX WIDTH
+*************************************************************************************/
+/* max width container */
+.container {
+	width: 700px;
+	max-width: 90%;
+
+	margin: 0 auto;
+	background: #eee;
+	border: solid 1px #ddd;
+	height: 200px;
+}
+
+/* responsive image */
+img {
+	max-width: 100%;
+	height: auto;
+}
+@media \0screen {
+  img { 
+  	width: auto; /* for ie 8 */
+  }
+}
+
+/* form */
+input[type="text"], textarea {
+	background: #eee;
+	border: solid 1px #ddd;
+	padding: 8px 5px;	
+}
+input[type="text"] {
+	width: 400px;
+	min-width: 140px;
+	max-width: 40%;
+	margin-right: 10px;
+}
+textarea {
+	width: 96%;
+	height: 180px;
+}
+
+/************************************************************************************
+RELATIVE VALUE
+*************************************************************************************/
+/* commentlist */
+.commentlist {
+	margin: 0;
+	padding: 0;
+}
+.commentlist li {
+	margin: 0 0 10px;
+	list-style: none;
+	overflow: hidden;
+	clear: both;
+}
+.commentlist ul {
+	padding: 0;
+	margin-top: 20px;
+	margin-left: 11%; /* relative value */
+}
+.commentlist .comment-text {
+	overflow: hidden;
+}
+.commentlist img {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.commentlist cite {
+	font-size: 140%;
+	font-weight: bold;
+}
+
+/* font size */
+.fontsize-demo .box {
+	margin: 30px 0;
+	line-height: 140%;
+}
+.fontsize-demo h1 {
+	font-size: 2em;
+	line-height: 140%;
+	color: #666;
+	margin: 0 0 .3em;
+}
+.fontsize-demo .smaller {
+	font-size: 80%;
+	line-height: 130%;
+}
+.fontsize-demo .bigger {
+	font-size: 120%;
+}
+
+/* relative padding */
+.relative-padding {
+	background: #eee;
+	border: solid 1px #ddd;
+	padding: 3% 5%;
+}
+
+/************************************************************************************
+OVERFLOW:HIDDEN TRICK
+*************************************************************************************/
+.overflow-demo {
+	overflow: hidden; /* this will clear the float from .item */
+}
+.overflow-demo .item {
+	width: 45%;
+	margin-right: 5%;
+	float: left;
+}
+.overflow-demo .item img {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.overflow-demo .item .content {
+	overflow: hidden; /* this will clear the float from .item img */
+	min-width: 130px;
+}
+.overflow-demo h4 {
+	font-size: 1.4em;
+	margin: 0 0 5px;
+	padding: 0;
+	color: #666;
+}
+
+/************************************************************************************
+WORD-WRAP
+*************************************************************************************/
+.break-word {
+		word-wrap: break-word;
+}
+</style>
+</head>
+
+<body>
+	
+<h1>Demo: CSS Tricks for Responsive Design</h1>
+<p>Tutorial by <a href="http://twitter.com/nickla">Nick La</a>, <a href="../../index.html">Web Designer Wall</a> (<a href="../../tutorials/5-useful-css-tricks-for-responsive-design.html">related article</a>)</p>
+
+<h3>Responsive Video</h3>
+<div class="video">
+	<iframe src="http://player.vimeo.com/video/6929537" width="978" height="550" frameborder="0"></iframe>
+</div>
+
+<h3>Min &amp; Max Width</h3>
+
+<h4>Max Width Container</h4>
+<div class="container">
+	.container { <br>
+		width:700px;<br> 
+		max-width:90%;<br>
+	}
+</div>
+
+<h4>Responsive Image</h4>
+<figure>
+	<img src="images/koi.jpg" alt="koi">
+</figure>
+
+<h4>Min-Width</h4>
+<form>
+	<p><input type="text"><label>Input</label></p>
+	<p><textarea></textarea></p>
+</form>
+
+<h3>Relative Value</h3>
+	
+<h4>Relative Margin</h4>
+<ul class="commentlist">
+	<li>
+		<img src="images/1.jpg" alt="1">
+		<div class="comment-text">
+			<cite>Comment</cite>
+			<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque.</p>
+		</div>
+
+		<ul>
+			<li>
+				<img src="images/2.jpg" alt="2">
+				<div class="comment-text">
+					<cite>Comment</cite>
+					<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque.</p>
+				</div>
+				
+				<ul>
+					<li>
+						<img src="images/3.jpg" alt="3">
+						<div class="comment-text">
+							<cite>Comment</cite>
+							<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque.</p>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<img src="images/4.jpg" alt="4">
+		<div class="comment-text">
+			<cite>Comment</cite>
+			<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque.</p>
+		</div>
+	</li>
+</ul>
+
+<h4>Font Size &amp; Relative Padding</h4>
+<div class="fontsize-demo">
+	<div class="box">
+		<h1>Heading (normal)</h1>
+		<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. </p>
+	</div>
+	<div class="box smaller">
+		<h1>Heading (smaller)</h1>
+		<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. </p>
+	</div>
+	<div class="box bigger">
+		<h1>Heading (bigger)</h1>
+		<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. </p>
+	</div>
+</div>
+
+<h4>Relative Padding</h4>
+<div class="relative-padding">
+	<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesqu. Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. </p>
+</div>
+
+<h3>Overflow</h3>
+<div class="overflow-demo">
+	<div class="item">
+		<img src="images/1.jpg" alt="1">
+		<div class="content">
+			<h4>Sample Content</h4>
+			<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque. Pellentesque vestibulum elit at metus venenatis non faucibus massa egestas.</p>
+		</div>
+	</div>
+	<!-- /item -->
+
+	<div class="item">
+		<img src="images/2.jpg" alt="2">
+		<div class="content">
+			<h4>Sample Content</h4>
+			<p>Cras ultricies cursus nisl, eget congue tellus consequat nec. Cras id nibh neque, eu dignissim orci. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque. Aenean at adipiscing urna. Suspendisse potenti. Suspendisse vitae tellus a neque commodo rutrum. Praesent ac neque vitae massa pharetra pellentesque. Pellentesque vestibulum elit at metus venenatis non faucibus massa egestas.</p>
+		</div>
+	</div>
+	<!-- /item -->
+
+</div>
+<!-- /overflow demo -->
+
+<h3>Word-break</h3>
+<div class="break-word">
+	<p>http://www.webdesignerwall.com_this_is_a_demo_text_:_you_can_force_unbreaking_text_such_as_url_link_into_new_lines_by_using_word_wrap_break_word_css_property</p>
+</div>
+
+</body>
+</html>
