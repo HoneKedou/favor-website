@@ -1,0 +1,366 @@
+<!doctype html>
+<!--[if IE 7 ]>		 <html class="no-js ie ie7 lte7 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>		 <html class="no-js ie ie8 lte8 lte9" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>		 <html class="no-js ie ie9 lte9>" lang="en-US"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head data-live-domain="jquery.com">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>jQuery Core 1.9 Upgrade Guide | jQuery</title>
+
+	<meta name="author" content="jQuery Foundation - jquery.org">
+	<meta name="description" content="jQuery: The Write Less, Do More, JavaScript Library">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="shortcut icon" href="../../jquery-wp-content/themes/jquery.com/i/favicon.ico">
+
+	<link rel="stylesheet" href="../../jquery-wp-content/themes/jquery/css/base-v=1.css">
+	<link rel="stylesheet" href="../../jquery-wp-content/themes/jquery.com/style.css">
+	<!--[if lt IE 7]><link rel="stylesheet" href="http://jquery.com/upgrade-guide/1.9/css/font-awesome-ie7.min.css"><![endif]-->
+
+	<script src="../../jquery-wp-content/themes/jquery/js/modernizr.custom.2.6.2.min.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write(unescape('%3Cscript src="//jquery.com/jquery-wp-content/themes/jquery/js/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+	<script src="../../jquery-wp-content/themes/jquery/js/plugins.js"></script>
+	<script src="../../jquery-wp-content/themes/jquery/js/main.js"></script>
+
+	<script src="http://use.typekit.net/wde1aof.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+
+<script type='text/javascript' src='//jquery.com/wp-includes/js/comment-reply.min.js?ver=3.8'></script>
+<meta name="generator" content="WordPress 3.8" />
+
+</head>
+<body class="jquery page page-id-34 page-child parent-pageid-32 page-template page-template-page-contentfull-php page-slug-19 single-author singular">
+
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+
+<header>
+	<section id="global-nav">
+		<nav>
+			<div class="constrain">
+				<ul class="projects">
+					<li class="project jquery"><a href="../../index.html" title="jQuery">jQuery</a></li>
+					<li class="project jquery-ui"><a href="http://jqueryui.com/" title="jQuery UI">jQuery UI</a></li>
+					<li class="project jquery-mobile"><a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a></li>
+					<li class="project sizzlejs"><a href="http://sizzlejs.com/" title="Sizzle">Sizzle</a></li>
+					<li class="project qunitjs"><a href="http://qunitjs.com/" title="QUnit">QUnit</a></li>
+				</ul>
+				<ul class="links">
+					<li><a href="http://plugins.jquery.com/">Plugins</a></li>
+					<li class="dropdown"><a href="http://contribute.jquery.org/">Contribute</a>
+						<ul>
+							<li><a href="http://contribute.jquery.org/cla/">CLA</a></li>
+							<li><a href="http://contribute.jquery.org/style-guide/">Style Guides</a></li>
+							<li><a href="http://contribute.jquery.org/triage/">Bug Triage</a></li>
+							<li><a href="http://contribute.jquery.org/code/">Code</a></li>
+							<li><a href="http://contribute.jquery.org/documentation/">Documentation</a></li>
+							<li><a href="http://contribute.jquery.org/web-sites/">Web Sites</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="http://events.jquery.org/">Events</a>
+						<ul class="wide">
+							<li><a href="http://appendto.com/what-we-do/training/schedule/jquery-virtual-training-june-2014/">Jun 17-19 | jQuery Virtual Training</a></li>
+							<li><a href="http://events.jquery.org/2014/chicago/">Sep 12-13 | jQuery Chicago</a></li>
+							<li><a href="http://2014.cssdevconf.com/">Oct 13-15 | CSS Dev Conf 2014</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/support/">Support</a>
+						<ul>
+							<li><a href="http://learn.jquery.com/">Learning Center</a></li>
+							<li><a href="http://try.jquery.com/">Try jQuery</a></li>
+							<li><a href="http://irc.jquery.org/">IRC/Chat</a></li>
+							<li><a href="http://forum.jquery.com/">Forums</a></li>
+							<li><a href="http://stackoverflow.com/tags/jquery/info">Stack Overflow</a></li>
+							<li><a href="https://jquery.org/support/">Commercial Support</a></li>
+						</ul>
+					</li>
+					<li class="dropdown"><a href="https://jquery.org/">jQuery Foundation</a>
+						<ul>
+							<li><a href="https://jquery.org/join/">Join</a></li>
+							<li><a href="https://jquery.org/members/">Members</a></li>
+							<li><a href="https://jquery.org/team/">Team</a></li>
+							<li><a href="http://brand.jquery.org/">Brand Guide</a></li>
+							<li><a href="https://jquery.org/donate/">Donate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</section>
+</header>
+
+<div id="container">
+	<div id="logo-events" class="constrain clearfix">
+		<h2 class="logo"><a href="../../index.html" title="jQuery">jQuery</a></h2>
+
+		<aside><div id="broadcast"></div></aside>
+	</div>
+
+	<nav id="main" class="constrain clearfix">
+		<div class="menu-top-container">
+	<ul id="menu-top" class="menu">
+<li class="menu-item"><a href="../../download/index.html">Download</a></li>
+<li class="menu-item"><a href="http://api.jquery.com/">API Documentation</a></li>
+<li class="menu-item"><a href="http://blog.jquery.com/">Blog</a></li>
+<li class="menu-item"><a href="http://plugins.jquery.com/">Plugins</a></li>
+<li class="menu-item"><a href="../../browser-support/index.html">Browser Support</a></li>
+	</ul>
+</div>
+
+		<form method="get" class="searchform" action="//jquery.com/">
+	<button type="submit" class="icon-search"><span class="visuallyhidden">search</span></button>
+	<label>
+		<span class="visuallyhidden">Search jQuery</span>
+		<input type="text" name="s" value=""
+			placeholder="Search">
+	</label>
+</form>
+	</nav>
+
+	<div id="content-wrapper" class="clearfix row">
+
+
+<div class="content-full twelve columns">
+	<div id="content">
+				<h1 class="entry-title">jQuery Core 1.9 Upgrade Guide</h1>
+		<hr>
+		
+		
+<ul>
+<li><a href="index.html#overview">Overview</a></li>
+<li><a href="index.html#jquery-migrate-plugin">jQuery Migrate Plugin</a></li>
+<li><a href="index.html#changes-of-note-in-jquery-1-9">Changes of Note in jQuery 1.9</a><ul>
+<li><a href="index.html#toggle-function-function-removed">.toggle(function, function, ... ) removed</a></li>
+<li><a href="index.html#jquery-browser-removed">jQuery.browser() removed</a></li>
+<li><a href="index.html#live-removed">.live() removed</a></li>
+<li><a href="index.html#die-removed">.die() removed</a></li>
+<li><a href="index.html#jquery-sub-removed">jQuery.sub() removed</a></li>
+<li><a href="index.html#add-">.add()</a></li>
+<li><a href="index.html#addback-selector-replaces-andself-">.addBack( selector ) replaces .andSelf()</a></li>
+<li><a href="index.html#after-before-and-replacewith-with-disconnected-nodes">.after(), .before(), and .replaceWith() with disconnected nodes</a></li>
+<li><a href="index.html#appendto-insertbefore-insertafter-and-replaceall">.appendTo, .insertBefore, .insertAfter, and .replaceAll</a></li>
+<li><a href="index.html#ajax-events-should-be-attached-to-document">Ajax events should be attached to document</a></li>
+<li><a href="index.html#checkbox-radio-state-in-a-trigger-ed-quot-click-quot-event">Checkbox/radio state in a .trigger()ed &quot;click&quot; event</a></li>
+<li><a href="index.html#order-of-triggered-quot-focus-quot-events">Order of triggered &quot;focus&quot; events</a></li>
+<li><a href="index.html#jquery-htmlstring-versus-jquery-selectorstring">jQuery(htmlString) versus jQuery(selectorString)</a></li>
+<li><a href="index.html#events-not-fired-by-the-data-method-names-with-periods">Events not fired by the .data() method; names with periods</a></li>
+<li><a href="index.html#ordering-of-disconnected-nodes-within-a-jquery-set">Ordering of disconnected nodes within a jQuery set</a></li>
+<li><a href="index.html#loading-and-running-scripts-inside-html-content">Loading and running scripts inside HTML content</a></li>
+<li><a href="index.html#attr-versus-prop-">.attr() versus .prop()</a></li>
+<li><a href="index.html#quot-input-quot-attr-quot-type-quot-newvalue-in-oldie">$(&quot;input&quot;).attr(&quot;type&quot;, newValue) in oldIE</a></li>
+<li><a href="index.html#quot-hover-quot-pseudo-event">&quot;hover&quot; pseudo-event</a></li>
+<li><a href="index.html#selector-property-on-jquery-objects">.selector property on jQuery objects</a></li>
+<li><a href="index.html#jquery-attr">jQuery.attr()</a></li>
+<li><a href="index.html#jquery-ajax-returning-a-json-result-of-an-empty-string">jQuery.ajax returning a JSON result of an empty string</a></li>
+<li><a href="index.html#jquery-proxy-context">jQuery.proxy() context</a></li>
+<li><a href="index.html#data-quot-events-quot-">.data(&quot;events&quot;)</a></li>
+<li><a href="index.html#removed-properties-of-the-event-object">Removed properties of the Event object</a></li>
+<li><a href="index.html#undocumented-arguments-of-api-methods">Undocumented arguments of API methods</a></li>
+<li><a href="index.html#other-undocumented-properties-and-methods">Other undocumented properties and methods</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="toc-linked"><a href="index.html#overview" id="overview" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Overview</h2><p>jQuery 1.9 removes or modifies several APIs that behaved inconsistently or inefficiently in the past. The majority of these changes have been foreshadowed by their <a href="http://api.jquery.com/category/deprecated/">deprecation</a> in previous versions of jQuery, particularly 1.7 and 1.8.</p>
+<p>In making these changes, the team&#39;s goal was to fix behavior that makes jQuery inconsistent or hard to use, and in the process improve both file size and overall performance.</p>
+<p>This list is deceptively foreboding. Most of these changes address special situations and edge cases, and a few are changes that have been widely requested where jQuery&#39;s historical behavior has been problematic. As a first step, the best way to see if your code works is to try it with both jQuery 1.9 and the Migrate Plugin as described below.</p>
+<p>For now, this guide serves as an appendix to the standard jQuery API documentation, and those pages may not describe the behavior of version 1.9. Please be patient while we update the documentation for the individual pages at api.jquery.com to reflect the changes in 1.9.</p>
+<h2 class="toc-linked"><a href="index.html#jquery-migrate-plugin" id="jquery-migrate-plugin" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> jQuery Migrate Plugin</h2><p>We realize that existing sites and plugins may be affected by these changes, and are providing the <a href="https://github.com/jquery/jquery-migrate">jQuery Migrate</a> plugin for a transitional upgrade path. Individual descriptions below indicate if the behavior changed in 1.9 can be restored by using the jQuery Migrate plugin. Note that all of the changes in jQuery 1.9 will also apply to jQuery 2.0, and the jQuery Migrate plugin will be usable there as well.</p>
+<p>The uncompressed development version of the jQuery Migrate plugin includes console log output to warn when specific deprecated and/or removed features are being used. This makes it valuable as a migration debugging tool for finding and remediating issues in existing jQuery code and plugins. It can be used for its diagnostics with versions of jQuery core all the way back to 1.6.4.</p>
+<p>The compressed version of the plugin does not generate any log output, and can be used on production sites when jQuery 1.9 or higher is desired but older incompatible jQuery code or plugins must also be used. Ideally this would only be used as a short-term solution, but that&#39;s a decision for you to make.</p>
+<p>For more information see the <a href="https://github.com/jquery/jquery-migrate/">jQuery Migrate plugin</a>.</p>
+<h2 class="toc-linked"><a href="index.html#changes-of-note-in-jquery-1-9" id="changes-of-note-in-jquery-1-9" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Changes of Note in jQuery 1.9</h2><p>The list below does not represent all changes made for jQuery 1.9, just the changes that we anticipate may affect behavior in a way that could break existing code. For a complete and detailed list of changes, see the changelogs in the release announcements on the <a href="http://blog.jquery.com">jQuery blog</a> or visit <a href="http://bugs.jquery.com">bugs.jquery.com</a>.</p>
+<h3 class="toc-linked"><a href="index.html#toggle-function-function-removed" id="toggle-function-function-removed" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .toggle(function, function, ... ) removed</h3><p>This is the &quot;click an element to run the specified functions&quot; signature of <code>.toggle()</code>. It should not be confused with the &quot;change the visibility of an element&quot; of <code>.toggle()</code> which is not deprecated. The former is being removed to reduce confusion and improve the potential for modularity in the library. The jQuery Migrate plugin can be used to restore the functionality.</p>
+<h3 class="toc-linked"><a href="index.html#jquery-browser-removed" id="jquery-browser-removed" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> jQuery.browser() removed</h3><p>The <code>jQuery.browser()</code> method has been deprecated since jQuery 1.3 and is removed in 1.9. If needed, it is available as part of the jQuery Migrate plugin. We recommend using feature detection with a library such as <a href="http://modernizr.com">Modernizr</a>.</p>
+<h3 class="toc-linked"><a href="index.html#live-removed" id="live-removed" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .live() removed</h3><p>The <code>.live()</code> method has been deprecated since jQuery 1.7 and has been removed in 1.9. We recommend upgrading code to use the <code>.on()</code> method instead. To exactly match <code>$(&quot;a.foo&quot;).live(&quot;click&quot;, fn)</code>, for example, you can write <code>$(document).on(&quot;click&quot;, &quot;a.foo&quot;, fn)</code>. For more information, see the <a href="http://api.jquery.com/on/">.on() documentation</a>. In the meantime, the jQuery Migrate plugin can be used to restore the <code>.live()</code> functionality.</p>
+<h3 class="toc-linked"><a href="index.html#die-removed" id="die-removed" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .die() removed</h3><p>The <code>.die()</code> method has been deprecated since jQuery 1.7 and has been removed in 1.9. We recommend upgrading code to use the <code>.off()</code> method instead. To exactly match <code>$(&quot;a.foo&quot;).die(&quot;click&quot;)</code>, for example, you can write <code>$(document).off(&quot;click&quot;, &quot;a.foo&quot;)</code>. For more information, see the <a href="http://api.jquery.com/off/">.off() documentation</a>. In the meantime, the jQuery Migrate plugin can be used to restore the <code>.die()</code> functionality.</p>
+<h3 class="toc-linked"><a href="index.html#jquery-sub-removed" id="jquery-sub-removed" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> jQuery.sub() removed</h3><p>The <code>jQuery.sub()</code> method has been moved to the jQuery Migrate plugin. The number of use cases where it proved valuable were not enough to justify keeping it in core. The jQuery Migrate plugin adds back this functionality.</p>
+<h3 class="toc-linked"><a href="index.html#add-" id="add-" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .add()</h3><p>The <code>.add()</code> method is always supposed to return its results in document order. Prior to 1.9, .add() would not sort nodes in document order if either the context or the input set started with a disconnected node (not in a document). Now, nodes are always returned in document order and disconnected nodes are placed at the end of the set.</p>
+<h3 class="toc-linked"><a href="index.html#addback-selector-replaces-andself-" id="addback-selector-replaces-andself-" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .addBack( selector ) replaces .andSelf()</h3><p>As of jQuery 1.8, the <code>.andSelf()</code> method was deprecated in favor of the <code>.addBack()</code> method, which we feel is a better name for what this method does--&quot;add back&quot; the previous set of results. The new method accepts an optional selector that can be used to filter the previous set before adding it to the current set. So, <code>$(&quot;section, aside&quot;).children(&quot;ul&quot;).addBack(&quot;aside&quot;)</code> results in a set that includes all <code>aside</code> nodes plus the <code>ul</code> children of both <code>section</code> and <code>aside</code> nodes, in document order. Although the <code>.andSelf()</code> method still works in 1.9, we recommend switching names as soon as possible. The jQuery Migrate plugin will warn about the use of <code>.andSelf()</code>.</p>
+<h3 class="toc-linked"><a href="index.html#after-before-and-replacewith-with-disconnected-nodes" id="after-before-and-replacewith-with-disconnected-nodes" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .after(), .before(), and .replaceWith() with disconnected nodes</h3><p>Prior to 1.9, <code>.after()</code>, <code>.before()</code>, and <code>.replaceWith()</code> would attempt to add or change nodes in the current jQuery set if the first node in the set was not connected to a document, and in those cases return a new jQuery set rather than the original set. This created several inconsistencies and outright bugs--the method might or might not return a new result depending on its arguments! As of 1.9, these methods always return the original unmodified set and attempting to use <code>.after()</code>, <code>.before()</code>, or <code>.replaceWith()</code> on a node without a parent has no effect--that is, neither the set or the nodes it contains are changed.</p>
+<h3 class="toc-linked"><a href="index.html#appendto-insertbefore-insertafter-and-replaceall" id="appendto-insertbefore-insertafter-and-replaceall" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .appendTo, .insertBefore, .insertAfter, and .replaceAll</h3><p>As of 1.9, these methods <em>always</em> return a new set, making them consistently usable with chaining and the <code>.end()</code> method. Prior to 1.9, they would return the old set only if there was a single target element. Note that these methods have always returned the aggregate set of all elements appended to the target elements. If no elements are selected by the target selector (e.g., <code>$(elements).appendTo(&quot;#not_found&quot;)</code>) the resulting set will be empty.</p>
+<h3 class="toc-linked"><a href="index.html#ajax-events-should-be-attached-to-document" id="ajax-events-should-be-attached-to-document" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Ajax events should be attached to document</h3><p>As of jQuery 1.9, the global Ajax events (ajaxStart, ajaxStop, ajaxSend, ajaxComplete, ajaxError, and ajaxSuccess) are only triggered on the <code>document</code> element. Change the program to listen for the Ajax events on the document. For example, if the code currently looks like this:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$(<span class="string">"#status"</span>).ajaxStart(<span class="keyword">function</span>(){ $(<span class="keyword">this</span>).text(<span class="string">"Ajax started"</span>); });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>Change it to this:</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code>$(document).ajaxStart(<span class="keyword">function</span>(){ $(<span class="string">"#status"</span>).text(<span class="string">"Ajax started"</span>); });</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<h3 class="toc-linked"><a href="index.html#checkbox-radio-state-in-a-trigger-ed-quot-click-quot-event" id="checkbox-radio-state-in-a-trigger-ed-quot-click-quot-event" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Checkbox/radio state in a .trigger()ed &quot;click&quot; event</h3><p>When the <em>user</em> clicks on a checkbox or radio button, the event handler sees the node in the state it will be in if <code>event.preventDefault()</code> is not called on the node--in essence, its new state. So for example, if the user clicks on an unchecked checkbox, the event handler will see a <em>checked</em> box. Before 1.9, a synthetic event triggered by either <code>.trigger(&quot;click&quot;)</code> or <code>.click()</code> would see the checkbox in the opposite state than that of a user action. This has been fixed in 1.9 to reflect the same checked state as a user-initiated action.</p>
+<h3 class="toc-linked"><a href="index.html#order-of-triggered-quot-focus-quot-events" id="order-of-triggered-quot-focus-quot-events" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Order of triggered &quot;focus&quot; events</h3><p>When the user clicks or tabs into a form element to bring it into focus, the browser first fires a blur event for the previously focused element and then a focus event for the new element. Prior to 1.9, a trigger()ed focus event using either <code>.trigger(&quot;focus&quot;)</code> or <code>.focus()</code> would fire a focus event for the new element and then the blur event for the previous element before finally actually focusing the element. In 1.9 this behavior has been changed to reflect the same order as if the user had caused the focus change.</p>
+<p>With native DOM focus events, the browser only calls a focus event handler if the target element is not already focused and can also successfully be focused. jQuery has always ensured that a call to <code>.trigger(&quot;focus&quot;)</code> or <code>.focus()</code> consistently runs any attached event handlers, even if the element cannot be focused, and jQuery 1.9 continues to do that. This is different behavior than the DOM <code>.focus()</code> method, which will not call event handlers in many cases including where the element is already focused or the element is disabled.</p>
+<p>Unfortunately, all versions of Internet Explorer (6 through 10) fire focus events asynchronously. When you <code>.trigger(&quot;focus&quot;)</code> in IE, jQuery won&#39;t &quot;see&quot; the async focus event which will occur later, so it fires one of its own to ensure that a focus event always occurs as described above. This causes two calls to the event handler. To avoid this double-call--but risk that the event handler is not called at all--use the DOM focus method directly, e.g., <code>$(&quot;selector&quot;).get(0).focus()</code>.</p>
+<h3 class="toc-linked"><a href="index.html#jquery-htmlstring-versus-jquery-selectorstring" id="jquery-htmlstring-versus-jquery-selectorstring" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> jQuery(htmlString) versus jQuery(selectorString)</h3><p>Prior to 1.9, a string would be considered to be an HTML string if it had HTML tags anywhere within the string. This has the potential to cause inadvertent execution of code and reject valid selector strings. As of 1.9, a string is only considered to be HTML if it starts with a less-than (&quot;<code>&lt;</code>&quot;) character. The Migrate plugin can be used to restore the pre-1.9 behavior.</p>
+<p>If a string is known to be HTML but may start with arbitrary text that is not an HTML tag, pass it to <code>jQuery.parseHTML()</code> which will return an array of DOM nodes representing the  markup. A jQuery collection can be created from this, for example: <code>$($.parseHTML(htmlString))</code>. This would be considered best practice when processing HTML templates for example. Simple uses of literal strings such as <code>$(&quot;&lt;p&gt;Testing&lt;/p&gt;&quot;).appendTo(&quot;body&quot;)</code> are unaffected by this change.</p>
+<p>Bottom line: HTML strings passed to <code>jQuery()</code> that start with something other than a less-than character will be interpreted as a selector. Since the string usually cannot be interpreted as a selector, the most likely result will be an &quot;invalid selector syntax&quot; error thrown by the Sizzle selector engine. Use <code>jQuery.parseHTML()</code> to parse arbitrary HTML.</p>
+<p>When the jQuery Migrate plugin is used, it will use the old rules for determining if the string passed to <code>$()</code> &quot;looks like HTML&quot;.</p>
+<h3 class="toc-linked"><a href="index.html#events-not-fired-by-the-data-method-names-with-periods" id="events-not-fired-by-the-data-method-names-with-periods" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Events not fired by the .data() method; names with periods</h3><p>The <code>.data()</code> method had an undocumented and incredibly non-performant way to monitor setting and getting of values that was removed in 1.9. This has affected the interpretation of data names that contain periods, in a good way. As of 1.9, a call to <code>.data(&quot;abc.def&quot;)</code> retrieves the data for the name &quot;abc.def&quot; <em>only</em>, and never just &quot;abc&quot;.  Note that the lower-level <code>jQuery.data()</code> method never supported events and so it has not changed. The jQuery Migrate plugin does <em>not</em> restore the old behavior for this case.</p>
+<h3 class="toc-linked"><a href="index.html#ordering-of-disconnected-nodes-within-a-jquery-set" id="ordering-of-disconnected-nodes-within-a-jquery-set" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Ordering of disconnected nodes within a jQuery set</h3><p>For many versions, nearly all jQuery methods that return new sets of nodes use the document order to sort the resulting set. (There are a few methods such as <code>.parents()</code>, which returns its results in reverse-document order, but those exceptions are already documented and have not changed in 1.9.)</p>
+<p>Before 1.9, sets that contained some connected and some disconnected nodes would be sorted inconsistently, depending on whether a disconnected node led the original unsorted set. As of 1.9, connected nodes are always placed at the beginning of the set in document order, and disconnected nodes are placed behind them. The jQuery Migrate plugin does <em>not</em> restore the old behavior, which was somewhat random and unpredictable.</p>
+<h3 class="toc-linked"><a href="index.html#loading-and-running-scripts-inside-html-content" id="loading-and-running-scripts-inside-html-content" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Loading and running scripts inside HTML content</h3><p>Prior to 1.9, any HTML-accepting method (e.g., $(), .append(), or .wrap()) executed any scripts in the HTML and removed them from the document to prevent them from being executed again. This still broke in situations where a script might be removed and reinserted into the document using methods such as <code>.wrap()</code>. As of 1.9, scripts inserted into a document are executed, but left in the document and tagged as already executed so they won&#39;t be executed again even if they are removed and reinserted.</p>
+<p>Despite this change, it is <em>very poor practice</em> to mix executable JavaScript into HTML markup; it has design, security, reliability, and performance implications. For example, external script tags included in HTML are fetched <em>synchronously</em> and then evaluated, which can take a significant amount of time. There is no interface to notify when or whether those scripts load, or to take corrective actions when there is an error.</p>
+<p>Code that attempts to load a script by cloning an existing script tag and injecting that clone into the document will no longer work, because the cloned script tag has already been marked as executed. To load a new script, use <code>jQuery.getScript()</code> instead.</p>
+<h3 class="toc-linked"><a href="index.html#attr-versus-prop-" id="attr-versus-prop-" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .attr() versus .prop()</h3><p>jQuery 1.6 introduced the <code>.prop()</code> method for setting or getting <em>properties</em> on nodes and deprecated the use of <code>.attr()</code> to set properties. However, versions up to 1.9 continued to support using <code>.attr()</code> for specific situations. This behavior in the name of backwards compatibility causes confusion when selectors are used that distinguish between attributes and properties.</p>
+<p>For example, boolean attributes such as <code>checked</code> and <code>disabled</code> on a checkbox are affected by this change. The correct behavior of <code>&quot;input[checked]&quot;</code> is to select checkboxes that have a <code>checked</code> attribute, regardless of its string value, and regardless of their current state. In contrast, <code>&quot;input:checked&quot;</code> selects checkboxes that are <em>currently</em> checked as reflected in their boolean (<code>true</code> or <code>false</code>) <code>checked</code> property, which is affected when the user clicks the box for example. Versions prior to 1.9 sometimes do not select the correct nodes with these selectors.</p>
+<p>Here are some examples of correct and incorrect usage when setting <code>checked</code> on a checkbox; the same rules apply for <code>disabled</code>. Note that only the <em>property</em> consistently reflects and updates the current state of the checkbox across all browsers; rarely will you need to set the attribute.</p>
+<div class="syntaxhighlighter javascript nogutter">
+	<table>
+		<tbody>
+			<tr>
+				<td class="gutter">
+					
+						<div class="line n1">1</div>
+					
+						<div class="line n2">2</div>
+					
+						<div class="line n3">3</div>
+					
+						<div class="line n4">4</div>
+					
+						<div class="line n5">5</div>
+					
+						<div class="line n6">6</div>
+					
+						<div class="line n7">7</div>
+					
+						<div class="line n8">8</div>
+					
+						<div class="line n9">9</div>
+					
+				</td>
+				<td class="code">
+					<pre><div class="container"><div class="line"><code><span class="comment">// Correct if changing the attribute is desired</span></code></div></div><div class="container"><div class="line"><code>$(elem).attr(<span class="string">"checked"</span>, <span class="string">"checked"</span>);</code></div></div><div class="container"><div class="line"><code><span class="comment">// Correct for checking the checkbox</span></code></div></div><div class="container"><div class="line"><code>$(elem).prop(<span class="string">"checked"</span>, <span class="literal">true</span>);</code></div></div><div class="container"><div class="line"><code> </code></div></div><div class="container"><div class="line"><code><span class="comment">// Correct if removing the attribute is desired</span></code></div></div><div class="container"><div class="line"><code>$(elem).removeAttr(<span class="string">"checked"</span>);</code></div></div><div class="container"><div class="line"><code><span class="comment">// Correct for clearing the checkbox</span></code></div></div><div class="container"><div class="line"><code>$(elem).prop(<span class="string">"checked"</span>, <span class="literal">false</span>);</code></div></div></pre>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<p>The <code>value</code> property versus attribute on <code>input</code> elements is another example of this ambiguity. The attribute generally reflects the value that was read from the HTML markup; the property reflects the current value. Since the <code>.val()</code> method is the recommended jQuery way to get or set the values of form elements, this confusion usually does not affect users.</p>
+<p>However, when a selector like <code>&quot;input[value=abc]&quot;</code> is used, it should always select by the value <em>attribute</em> and not any change made to the <em>property</em> by the user, for example from them typing into a text input. As of jQuery 1.9, this behaves correctly and consistently. Earlier versions of jQuery would sometimes use the property when they should have used the attribute.</p>
+<p>The jQuery Migrate plugin restores the old attribute-vs-property rules.</p>
+<h3 class="toc-linked"><a href="index.html#quot-input-quot-attr-quot-type-quot-newvalue-in-oldie" id="quot-input-quot-attr-quot-type-quot-newvalue-in-oldie" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> $(&quot;input&quot;).attr(&quot;type&quot;, newValue) in oldIE</h3><p>Prior to version 1.9, jQuery would throw an exception in all browsers for any attempt to set the <code>type</code> attribute on an input or button element. This was done to accommodate the lowest common denominator; IE 6/7/8 throw an error if you attempt to change the type of an input element. As of jQuery 1.9, we allow you to set the type of an element if the browser allows it. However, your own code will need to be aware that attempting to do this on oldIE will still throw an error. The jQuery Migrate plugin warns when you attempt to set the <code>type</code> attribute but does not throw a JavaScript error.</p>
+<h3 class="toc-linked"><a href="index.html#quot-hover-quot-pseudo-event" id="quot-hover-quot-pseudo-event" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> &quot;hover&quot; pseudo-event</h3><p>As of 1.9, the event name string <code>&quot;hover&quot;</code> is no longer supported as a synonym for <code>&quot;mouseenter mouseleave&quot;</code>. This allows applications to attach and trigger a custom &quot;hover&quot; event. Changing existing code is a simple find/replace, and the &quot;hover&quot; pseudo-event is also supported in the jQuery Migrate plugin to simplify migration.</p>
+<h3 class="toc-linked"><a href="index.html#selector-property-on-jquery-objects" id="selector-property-on-jquery-objects" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .selector property on jQuery objects</h3><p>The remaining purpose of the deprecated <code>.selector</code> property on a jQuery object is to support the deprecated <code>.live()</code> event. In 1.9, jQuery no longer attempts to maintain this property in chained methods, since the use of chained methods was never supported with <code>.live()</code>. Do not use the <code>.selector</code> property on a jQuery object. The jQuery Migrate plugin does not attempt to maintain this property.</p>
+<h3 class="toc-linked"><a href="index.html#jquery-attr" id="jquery-attr" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> jQuery.attr()</h3><p>In 1.9 we have removed the undocumented signature jQuery.attr(elem, name, value, pass) using the pass argument. Any code that depended on this should be rewritten, but the jQuery Migrate plugin can provide backward-compatible behavior and will warn if this signature is used.</p>
+<h3 class="toc-linked"><a href="index.html#jquery-ajax-returning-a-json-result-of-an-empty-string" id="jquery-ajax-returning-a-json-result-of-an-empty-string" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> jQuery.ajax returning a JSON result of an empty string</h3><p>Prior to 1.9, an ajax call that expected a return data type of JSON or JSONP would consider a return value of an empty string to be a success case, but return a null to the success handler or promise. As of 1.9, an empty string returned for JSON data is considered to be malformed JSON (because it is); this will now throw an error. Use the error handler to catch such cases.</p>
+<h3 class="toc-linked"><a href="index.html#jquery-proxy-context" id="jquery-proxy-context" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> jQuery.proxy() context</h3><p>New in 1.9, the function returned by calling jQuery.proxy with a falsy context will preserve its <code>this</code> object for the provided function. Previously, a falsy value for context would get translated into the global object (window) if null/undefined, or else wrapped in an object (e.g., new Boolean(false)).</p>
+<h3 class="toc-linked"><a href="index.html#data-quot-events-quot-" id="data-quot-events-quot-" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> .data(&quot;events&quot;)</h3><p>Prior to 1.9, <code>.data(&quot;events&quot;)</code> could be used to retrieve jQuery&#39;s undocumented internal event data structure for an element if no other code had defined a data element with the name &quot;events&quot;. This special case has been removed in 1.9. There is no public interface to retrieve this internal data structure, and it remains undocumented. However, the jQuery Migrate plugin restores this behavior for code that depends upon it.</p>
+<h3 class="toc-linked"><a href="index.html#removed-properties-of-the-event-object" id="removed-properties-of-the-event-object" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Removed properties of the Event object</h3><p>The <code>attrChange</code>, <code>attrName</code>, <code>relatedNode</code>, and <code>srcElement</code> properties of the <code>Event</code> object were deprecated in jQuery 1.7 since they are non-standard and not cross-browser; as of jQuery 1.9 they are no longer copied to the <code>Event</code> object that is passed to an event handler. On any version of jQuery, these properties can still be accessed on browsers that support them by using <code>event.originalEvent</code> instead of <code>event</code>.The jQuery Migrate plugin adds back these properties to the <code>Event</code> object as well.</p>
+<h3 class="toc-linked"><a href="index.html#undocumented-arguments-of-api-methods" id="undocumented-arguments-of-api-methods" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Undocumented arguments of API methods</h3><p>Prior to 1.9, several API methods had undocumented arguments that changed their behavior and created the potential for accidental misuse or incorrect duck punching. These arguments have now been removed. Affected methods include <code>jQuery.data()</code>, <code>jQuery.removeData()</code>, and <code>jQuery.attr()</code>. The jQuery Migrate plugin does not support these undocumented arguments because the refactored code no longer requires it.</p>
+<h3 class="toc-linked"><a href="index.html#other-undocumented-properties-and-methods" id="other-undocumented-properties-and-methods" class="icon-link toc-link"><span class="visuallyhidden">link</span></a> Other undocumented properties and methods</h3><p>The following internal properties and methods were never documented and have been removed in 1.9. Any code that depends on them should be rewritten.</p>
+<ul>
+<li><code>jQuery.deletedIds</code></li>
+<li><code>jQuery.uuid</code></li>
+<li><code>jQuery.attrFn</code></li>
+<li><code>jQuery.clean()</code></li>
+<li><code>jQuery.event.handle()</code></li>
+<li><code>jQuery.offset.bodyOffset()</code></li>
+</ul>	</div>
+</div>
+
+	</div>
+</div>
+
+<footer class="clearfix simple">
+	<div class="constrain">
+		<div class="row">
+			<div class="six columns offset-by-three">
+				<h3><span>Books</span></h3>
+				<ul class="books">
+					<li>
+						<a href="http://www.packtpub.com/learning-jquery-with-simple-javascript-techniques-fourth-edition/book">
+							<img src="../../jquery-wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg" alt="Learning jQuery 4th Edition by Karl Swedberg and Jonathan Chaffer" width="92" height="114">
+							Learning jQuery Fourth Edition
+							<cite>Karl Swedberg and Jonathan Chaffer</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.manning.com/derosa?a_aid=141d9491&a_bid=bdd5b7ad">
+							<img src="../../jquery-wp-content/themes/jquery/content/books/jquery-in-action.jpg" alt="jQuery in Action by Bear Bibeault, Yehuda Katz, and Aurelio De Rosa" width="92" height="114">
+							jQuery in Action
+							<cite>Bear Bibeault, Yehuda Katz, and Aurelio De Rosa</cite>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.syncfusion.com/resources/techportal/ebooks/jquery?utm_medium=BizDev-jQuery.org0513">
+							<img src="../../jquery-wp-content/themes/jquery/content/books/jquery-succinctly.jpg" alt="jQuery Succinctly by Cody Lindley" width="92" height="114">
+							jQuery Succinctly
+							<cite>Cody Lindley</cite>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+<div id="legal">
+	<ul class="footer-site-links">
+			<li><a class="icon-pencil" href="http://learn.jquery.com/">Learning Center</a></li>
+			<li><a class="icon-group" href="http://forum.jquery.com/">Forum</a></li>
+			<li><a class="icon-wrench" href="http://api.jquery.com/">API</a></li>
+			<li><a class="icon-twitter" href="http://twitter.com/jquery">Twitter</a></li>
+			<li><a class="icon-comments" href="http://irc.jquery.org/">IRC</a></li>
+			<li><a class="icon-github" href="https://github.com/jquery">GitHub</a></li>
+	</ul>
+	<p class="copyright">
+		Copyright 2014 <a href="https://jquery.org/team/">The jQuery Foundation</a>.
+		<a href="https://jquery.org/license/">jQuery License</a>
+		<span class="sponsor-line"><a href="http://mediatemple.net" rel="noindex,nofollow" class="mt-link">Web hosting by Media Temple</a> | <a href="http://www.maxcdn.com" rel="noindex,nofollow" class="mc-link">CDN by MaxCDN</a> | <a href="http://wordpress.org/" class="wp-link">Powered by WordPress</a> | Thanks: <a href="https://jquery.org/members/">Members</a>, <a href="https://jquery.org/sponsors/">Sponsors</a></span>
+	</p>
+</div>
+
+	</div>
+</footer>
+
+<script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1076265-1']);
+    _gaq.push(['_setDomainName', 'jquery.com']);
+    _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+</body>
+</html>
