@@ -1,9 +1,6 @@
-coffee
-======
 
-硅谷咖啡官网
-部署命令: forever start app.js
+###[boostrap文档](http://115.29.99.116:20000/getbootstrap.com/)
+http://115.29.99.116:20000/getbootstrap.com/
 
-###感触
-这是第一次尝试做官网，虽然全都是静态页面，但是要做起来真的很费劲，更何况页面用的是网上找的模板，要是自己写就更要命了。
-希望能够有时间好好的去学习一下CSS和简单的图片处理。
+###[boostrap模板](http://115.29.99.116:20000/centaurus.adbee.technology/)
+http://115.29.99.116:20000/centaurus.adbee.technology/
