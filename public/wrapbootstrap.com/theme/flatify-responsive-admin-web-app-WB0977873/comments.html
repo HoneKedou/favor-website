@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en-us">
+        <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+                    <title>Discussion on Flatify - Responsive Admin Web App | Admin &amp; Dashboards | WrapBootstrap - Bootstrap Themes & Templates</title>
+                    <meta name="description" content="Intro &quot;Flatify&quot; is a fully responsive admin web App built with AngularJS. It uses Sass CSS which makes it easy">
+                    <link rel="canonical" href="comments-page=1.html">
+                <meta name="viewport" content="width=1024">
+                    <link rel="alternate" type="application/rss+xml" title="WrapBootstrap" href="http://feeds.feedburner.com/wrapbootstrap">
+                <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+                <link rel="stylesheet" type="text/css" media="screen" href="https://d85wutc1n854v.cloudfront.net/live/css/screen.css?buster-140611-11">
+                <script src="https://d85wutc1n854v.cloudfront.net/live/js/behavior.js?buster-131228-1"></script>
+                <script>$(function(){ $("img.lazy").jail({effect: "fadeIn", speed: 500, placeholder: "//d85wutc1n854v.cloudfront.net/live/imgs/placeholder.gif"}); });</script>
+                <noscript><style>.lazy_product_image { display: none; }</style></noscript>
+                <script type="text/javascript">
+                        var _gaq = _gaq || [];
+                        _gaq.push(['_setAccount', 'UA-28871117-1']);
+                        _gaq.push(['_setDomainName', 'wrapbootstrap.com']);
+                        _gaq.push(['_trackPageview']);
+                        (function() {
+                                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                        })();
+                </script>
+                <link rel="shortcut icon" href="https://d85wutc1n854v.cloudfront.net/live/imgs/favicon.ico">
+                <link rel="apple-touch-icon" sizes="129x129" href="https://d85wutc1n854v.cloudfront.net/live/imgs/apple-touch-icon.png"> 
+        </head>
+        <body>
+                <div id="main">
+                            <div id="raffle-promo">
+                                    <div class="container">
+                                            <div class="widget"><a href="https://twitter.com/share" class="twitter-share-button" data-url="https://wrapbootstrap.com/" data-text="WrapBootstrap - Bootstrap Themes & Templates" data-via="wrapbootstrap" data-size="normal">Tweet</a></div>
+                                            <a class="close" href="comments.html#" onclick="$('#raffle-promo').hide(); $.cookie('raffle', '0', {expires: 30}); _gaq.push(['_trackEvent', 'raffle', 'close']); return false;">close</a>
+                                    </div>
+                            </div>
+                        <div class="topbar">
+                                <div class="fill">
+                                        <div class="container">
+                                                <a class="brand" href="../../index.html" title="WrapBootstrap - Bootstrap Themes & Templates"><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/logo.png" width="187" height="28" alt="WrapBootstrap" title="WrapBootstrap - Bootstrap Themes & Templates"></a>
+                                                <ul class="nav">
+                                                            <li class="active"><a href="../../themes.html" title="Bootstrap themes and templates">Themes</a></li>
+                                                            <li><a href="../../logos.html" title="Logo templates">Logos</a></li>
+                                                                <li><a href="../../sell.html" title="Sell your Bootstrap themes and templates">Selling</a></li>
+                                                            <li><a href="../../bounties.html" title="Bonuses for uploading the most wanted themes">Bounties</a></li>
+                                                        <li><a id="bsw" href="http://bootswatch.com/" data-placement="right" rel="twipsy" target="_blank" title="Free themes for Bootstrap" onclick="_gaq.push(['_trackEvent', 'click', 'outbound', 'bsw']);">Bootswatch <i class="icon-share-alt icon-white"></i></a></li>
+                                                </ul>
+                                                    <ul class="nav secondary-nav">
+                                                                <li><a href="/signin" style="padding-left: 17px; background: transparent url('https://d85wutc1n854v.cloudfront.net/live/imgs/lock_icon.png') no-repeat 0px center;">Sign in</a></li>
+                                                            <li><a href="/signup">Sign up</a></li>
+                                                    </ul>
+                                        </div>
+                                </div>
+                        </div>
+                        <div id="menu">
+                                <div class="container">
+                                        <div id="categories">
+                                                <div class="category_button"><a href="comments.html#" title="Select a category">Categories</a></div>
+                                                <div class="dropdown_container">
+                                                        <div class="categories">
+                                                                <ul>
+                                                                        <li><a href="../../themes/admin.html" title="Admin, dashboard, and other backend themes">Admin &amp; Dashboards <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/landing-pages.html" title="Landing page themes">Landing Pages <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/business.html" title="Business and corporate themes">Business &amp; Corporate <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/portfolios.html" title="Portfolio themes">Portfolios <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/resumes-cv.html" title="Resume and Curriculum Vitae (CV) themes">Resumes &amp; CV <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/e-commerce.html" title="E-Commerce and shopping themes">E-Commerce <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/components.html" title="Theme components">Components <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/blogs-magazines.html" title="Blog and magazine themes">Blogs &amp; Magazines <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/wordpress.html" title="Bootstrap WordPress themes">WordPress <span>&nbsp;</span></a></li>
+                                                                        <li><a href="../../themes/other.html" title="Miscellaneous themes">Other <span>&nbsp;</span></a></li>
+                                                                </ul>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div id="search">
+                                                <form action="/search" method="get">
+                                                        <input class="query" name="q" type="text" placeholder="Enter search terms" size="29" value=""><input class="submit button" type="submit" value="">
+                                                </form>
+                                        </div>
+                                        <ul id="recent" class="clearfix">
+                                            <li><a href="/sku/WB03ND32S" style="background-image: url('https://d85wutc1n854v.cloudfront.net/live/products/rv/WB03ND32S.png');">&nbsp;</a></li>
+                                            <li><a href="/sku/WB00XNXM0" style="background-image: url('https://d85wutc1n854v.cloudfront.net/live/products/rv/WB00XNXM0.png');">&nbsp;</a></li>
+                                            <li><a href="https://wrapbootstrap.com/sku/WB0K71344" style="background-image: url('https://d85wutc1n854v.cloudfront.net/live/products/rv/WB0K71344.png');">&nbsp;</a></li>
+                                            <li><a href="https://wrapbootstrap.com/sku/WB0C4JJ9R" style="background-image: url('https://d85wutc1n854v.cloudfront.net/live/products/rv/WB0C4JJ9R.png');">&nbsp;</a></li>
+                                            <li><a href="https://wrapbootstrap.com/sku/WB067T69D" style="background-image: url('https://d85wutc1n854v.cloudfront.net/live/products/rv/WB067T69D.png');">&nbsp;</a></li>
+                                        </ul>
+        
+                                </div>
+                        </div>
+        <div id="page_theme">
+    <div class="page-header-top">
+        <div class="container">
+            <div class="save_box"><a class="save" href="/save/WB0977873?next=/theme/flatify-responsive-admin-web-app-WB0977873" title="Add to your Saved list"></a></div>
+            <h1><a href="../flatify-responsive-admin-web-app-WB0977873.html" title="Flatify - Responsive Admin Web App"><span id="thing_name" itemprop="name">Flatify - Responsive Admin Web App</span></a></h1>
+            <div class="share_buttons"><a class="facebook" href="comments.html#" onclick="window.open('http://www.facebook.com/sharer.php?u=https%3A%2F%2Fwrapbootstrap.com%2Ftheme%2Fflatify-responsive-admin-web-app-WB0977873&t=Flatify%20-%20Responsive%20Admin%20Web%20App','','scrollbars=yes,width=660,height=328'); return false;" title="Share this"></a><a class="twitter" href="comments.html#" onclick="window.open('https://twitter.com/intent/tweet?url=https%3A%2F%2Fwrapbootstrap.com%2Ftheme%2Fflatify-responsive-admin-web-app-WB0977873&text=Flatify%20-%20Responsive%20Admin%20Web%20App','','scrollbars=yes,width=730,height=252'); return false;" title="Tweet this"></a></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span16">
+                <ul class="tabs">
+                    <li><a href="../flatify-responsive-admin-web-app-WB0977873.html">Details</a></li>
+                    <li class="active"><a href="comments.html">Comments <span class="label success" style="position: relative; top: -1px;">New</span></a></li>
+                </ul>
+                <div class="wrapper">
+                    <div class="product_main">
+                        <div class="product">
+                            <div class="inner">
+                                <div class="item_comments_header">
+                                    <h2 class="comment_count">35 comments</h2>
+                                </div>
+                                <div class="item_comments">
+                                <div class="item_comment">
+                                    <a name="C14470"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/renatomattos2912.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/renatomattos2912.html">renatomattos2912</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14470">1 month ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hy, i love this theme, its really great, but im trying to put a image slider and i put the example of this site http://angular-ui.github.io/bootstrap/ but doest work, you can help me with this?? you have another example?
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14527"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14527">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for purchasing.<br><br>Yeah, there's some wrong with [ui Bootstrap](http://angular-ui.github.io/bootstrap/) when working with AngularJS 1.2.x, and they are still working on it.<br><br>If you remove ngAnimate in this admin (which you shouldn't, since you need it for animation), it will work<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14530"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/renatomattos2912.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture-small.jpg" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/renatomattos2912.html">renatomattos2912</a>
+                                                        <span class="label label_user_purchased">PURCHASED</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14530">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Thanks so much, i remove ngAnimete and it works, i will try to not use ngAnimate for while, but if i need it sometime, i will search another solution for the carousel problem, but thanks for this.<br><br>I have another problem, this time is with the left navbar, i'm using firebase and i put a ng-repeat in &lt;li&gt; tag, it works but the dropdown doesnt show anymore, when i remove the ng-repeat of the tag, the dropdown works, look at my gist https://gist.github.com/renatomattos2912/c26731d10fd7f1d0ddf3<br><br>You can help me with this? i think that is a problem in NavCtrl but i dont know what i do. Thanks.
+                                                </div>
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14557"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14557">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi,<br><br>My support mainly includes:<br>* Responding to questions or problems regarding the item and its features <br>* Fixing bugs and reported issues<br><br>It seems that your question is more skill related which make it hard for me to answer, I can give you some quick guide though. Hope you understand, thanks.<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14561"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/renatomattos2912.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture-small.jpg" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/renatomattos2912.html">renatomattos2912</a>
+                                                        <span class="label label_user_purchased">PURCHASED</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14561">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                I understand, thanks anyway =)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C14495"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/ksambhav.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/ksambhav.html">ksambhav</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14495">1 month ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi<br><br>Good Work !!<br><br>I bought this theme yesterday and I am still not comfortable with CoffeeScript.<br><br>Is it possible that I can get the bundle without CoffeScript components ? Just plain javascript.
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14528"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14528">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for purchasing.<br><br>Yes, you can :)<br><br>Actually, I already have write Grunt task to compile all CoffeeScript to JavaScript automatically, you’ll need to know how to use Grunt though. <br><br>When you run “grunt server” as documented, all the CoffeeScript files will be compile one by one into equivalent JavaScript inside “.tmp” (this file is hidden) folder, you can use those JS files if you prefer to use plain JS. <br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C14532"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/tamil.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/tamil.html">tamil</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14532">1 month ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi, the template is excellent. i am not a advanced coder to understand it i am perfect designer/animator. i am going to use this template for one of my product based client in NZ.  everyday i learn new things from your documentation.<br><br>I have some questions. please check below:<br><br>1, from your documentation it is very easy for me to install bower. But i am not able to pickup Grunt. i am not able to install grunt and not able to understand (package.jason, Gruntfile.coffee) . is it must for me to install grunt. ( the question might be silly, But grunt is nightmares for me)<br><br>2, Correct me if i am wrong : should i use client folder or the dist folder for development.<br><br>3. For development should i install all the yoman, ruby,sass,compass before i use? is there any other simple way to use the template for development. in the template i am only going to use the left navigation,header & the angularjs that you used to avoid the nav and header refresh. <br><br>4, Where the below files are generated. Please if there is any other detailed tutorial let me know<br><br>&lt;script src="scripts/app.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/shared/main.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/shared/directives.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/shared/localize.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/UI/UICtrl.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/UI/UIDirective.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/UI/UIService.js"&gt;&lt;/script&gt;<br>&lt;script src="scripts/Form/FormDirective.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/Form/FormCtrl.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/Form/FormValidation.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/Table/TableCtrl.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/Task/Task.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/Chart/ChartCtrl.js"&gt;&lt;/script&gt;<br>        &lt;script src="scripts/Chart/ChartDirective.js"&gt;&lt;/script&gt;<br><br>5. my client is going to use aspx dot net ajax control ( full and full telerik rad controls) will this template support telerik?<br><br>6. Last question : do you prefer me any other template that is simple. ( i choose this template for the sider nav and for avoiding full page refresh.
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14558"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14558">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, <br><br>Thanks for purchasing, really glad you like my work :)<br><br>About your questions,<br><br>1. I am afraid you’ll need Grunt. Yeah, it's probably a bit scary to you if it's your first time using Grunt. However, you'll **fail in love with it** once you get it, it saves you from repetitive tasks. Project like jQuery, Bootstrap and many more use and love GruntJS.<br><br>2. dist folder is the distribution (production) version, client folder is for development.<br><br>3. Yes, you’ll need them for development :)<br><br>4. They are generated in .tmp folder (this folder is hidden) when you run “grunt server”. You can take a look at [Yeoman](http://yeoman.io/) to know more.<br><br>5. The admin is front end only, you can use whatever back end you prefer, it’s assumption free.<br><br>6. Well, to be honest, I didn’t quite understand this one.<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C14563"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/healtho.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/healtho.html">healtho</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14563">1 month ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi there,<br><br>I have an existing AngularJS app, and I'd like to integrate Flatify. I see the Flatify source has it's own AngularJS app that's compiled from CoffeeScript.<br><br>What's the best way to integrate Flatify into my existing app?
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14600"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14600">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for purchasing.<br><br>Well, it'll be hard to do so, since the style, code in old one may conflict with Flatify.
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C14677"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/CarterZhou.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/CarterZhou.html">CarterZhou</a>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14677">1 month ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi there,<br><br>We have a project ahead but we may not get a proper designer for UI in the near future. This theme seems to be a potential solution.<br><br>But I have the following concerns:<br>- Is there any jQuery stuff in the theme? If so, might it be in conflict with AngularJS code we are about to write?<br>- Will AngularJS  affect the behaviors of some elements e.g. drop-down menu etc.<br><br>Cheers
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14720"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14720">1 month ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi,<br><br>Thanks for your interest.<br><br>1. Yeah, there's lots of jQuery stuff in this theme and they works great with AngularJS :)<br><br>2. What do you mean by "affect"? Anyway, angularjs itself is wonderful
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C14816"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/joergrech.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/joergrech.html">joergrech</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14816">4 weeks ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Is it possible to use Flatify just as a Theme and not an App (i.e., without AngularJS)? If yes, what would I have to do to make it happen? Which CSS and JS files are necessary and which can be removed? <br><br>I assume that I have to remove the AngularJS files from vendor.js and ui.js and get remove app.js completely. Is this correct and sufficient?
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14866"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14866">3 weeks ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for purchasing.<br><br>The whole admin is built on top of AngularJS, I am afraid it takes a lot of work to achieve the effect you want.<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C14827"></a>
+                                    <div class="item_comment_user">
+                                    <a href="https://wrapbootstrap.com/user/lint631" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="https://wrapbootstrap.com/user/lint631">lint631</a>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14827">4 weeks ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        I love the look of this theme. I'm looking to build an email marketing web app that uses Sendgrid. Do you think your template would be a good fit for an email marketing program?<br><br>Thanks!
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14867"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14867">3 weeks ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for your interest.<br><br>Well, I am afraid not. I think Flatify admin is best for admin or dashboard apps.<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C14981"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/jbonilla77.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/jbonilla77.html">jbonilla77</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C14981">3 weeks ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi I am new to wrapbootsrap and i bought this template.What do i have to do or install to run it on my local computer. I know about nodejs and grunt i just installed them but i dont know how to run it locally. Can anybody send me the instructions please.
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C14986"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C14986">3 weeks ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for purchasing.<br><br>I have already documented it in the documentation, take a look at "How to run it" section<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15192"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/ajayep.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/ajayep.html">ajayep</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15192">2 weeks ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi ,<br><br>I need to create two navigation menus on  the dashboard ( duplicate existing nav on left side to right side) . How should I approach. I am new to SASS . Pointers really appreciated .
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C15213"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C15213">2 weeks ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for purchasing.<br><br>I think it'll be hard for you if you are new to SASS, since it take some time to achieve what you want.<br><br>And this question is more skill related, however I can't teach you CSS here, hope you understand.<br><br>You'd better find some friends to help you.<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15204"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/Saiman.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/Saiman.html">Saiman</a>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15204">2 weeks ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi, I purchased this flatify theme for my web application but I am already using another two javascript library prototype and Jquery so now I am getting conflict with Angular JS. Can I use this theme with out angular JS because we can use bootstrap angular with Jquery and I believe we are using all the plugins in this theme are based on Jquey. Correct me if I am wrong.
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C15214"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C15214">2 weeks ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, it's weird that the purchasing sign didn't show up, never mind.<br><br>Q1: I am already using another two javascript library prototype and Jquery so now I am getting conflict with Angular JS. <br>A1: AngularJS works well with other libraries, especially jQuery. In fact, I have used jQuery in this admin as well.<br><br>Q2: Can I use this theme with out angular JS because we can use...<br>A2: AngularJS is fundamental to this admin, I am afraid it takes a lot of work to remove AngularJS<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15218"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/vishalkumar.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/vishalkumar.html">vishalkumar</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15218">2 weeks ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        First off, thank you for creating this amazing theme. By typing grunt server I am able to run the website locally from the client folder and check the changes. Now, what command do I run, to get my changes deployed to the dist folder. I tried grunt build but that didn't put anything in the dist folder.
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C15293"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C15293">1 week ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for purchasing.<br><br>run "grunt server:dist" to build dist (production) version<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15220"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/vishalkumar.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/vishalkumar.html">vishalkumar</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15220">2 weeks ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Actually, scratch off my last comment. I realized that the dist folder is actually created inside the flatify folder and the files are getting deployed there. However, I have this problem. I replaced all your coffee script files in the scripts folder to the js version of it (I got them by running the grunt server command and then copying them over from the tmp folder). But now when I run, grunt build, the app.js file contents in dist\scripts folder is empty. The build error is<br>Running "uglify:dist" (uglify) task<br>&gt;&gt; Destination dist/scripts/app.js not written because src files were empty.<br>Would you know what tweak I will have to make to use the same build process but with javascript source files instead of coffeescript?
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C15294"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C15294">1 week ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, I have already solved your problem in version 1.1, and I have upload it to wrapBootstrap a week ago.<br><br>However, the review process is a bit slow :(<br><br>Hope you understand.
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15295"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/vishalkumar.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/vishalkumar.html">vishalkumar</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15295">1 week ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Very happy to know that there will be an updated version available soon. I can wait for it. Will I have to pay for the new version again though? Also please do update us on this comment thread when the new version is available. Thank you so much!
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C15407"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C15407">1 week ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, all the updates are free :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15408"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/vishalkumar.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/vishalkumar.html">vishalkumar</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15408">1 week ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        I like the date picker and the time picker, but they do not work when we put them in one of the wizard steps. It seems like all angular js directives on them get ignored. My time picker loaded blank with the text looking something like this: Time is: {{mytime | date:'shortTime' }}. So instead of resolving these values, the original markup shows up. Would you know how to make these controls work inside the wizard?
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15417"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/vishalkumar.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/vishalkumar.html">vishalkumar</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15417">1 week ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Testing more with the wizard, realized that it is only good for static content. The styled controls do not work within them. For e.g. if you put the styled checkbox or textarea in them, the html control and the styled div both show up. Any content which have angularjs directives attached to them do not actually work. All angularjs attributes specified in the content are ignored. I think it is because the wizard in the examples is using jquery (http://www.jquery-steps.com/) and it is not playing well with angularjs.
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C15450"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C15450">1 week ago</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Yeah, the jQuery steps plugin is not built for AngularJS.<br><br>You can take a look at [angular-wizard](https://github.com/mgonto/angular-wizard)<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15659"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/Avril.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/Avril.html">Avril</a>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15659">3 days ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi,<br><br>We're interested in buying this template, it seems great! But I have an important question for us.<br>Are your SASS components independent? Besides colors and mixins, it doesn't require another component in order to compile?<br><br>So for example the component "tables" isn't dependent of the component "lists".<br><br>I'm asking this because in the past I've bought other templates with their SASS files included, but for a small site I don't always need for example the "tables" component, so when I created my own "main.scss" file with the imports of the components that I need, I received the error that "component X" can't be compiled because it required some stuff from "component Y". Needless to say that the guy who made that template was putting variables and stuff in the wrong place though.<br><br>Sure it's not a big deal to include that component, but why include a component if you don't need it? It creates a bigger file for the client to download.<br><br>Can you clear this out for me?<br><br>Thanks!
+                                        </div>
+                                        <div class="item_comment_body">
+                                            <a name="C15739"></a>
+                                                <div class="item_comment_body_head">
+                                                    <div class="user_icon">
+                                                        <a href="../../user/arousing.html" title=""><img src="../../static/users/pictures/arousing.png" width="20" height="20" alt="" title=""></a>
+                                                    </div>
+                                                    <div class="user">
+                                                        <a href="../../user/arousing.html">arousing</a>
+                                                        <span class="label label_user_seller">SELLER</span>
+                                                    </div>
+                                                    <div class="timestamp"><a href="comments.html#C15739">Yesterday</a></div>
+                                                </div>
+                                                <div class="item_comment_body_text">
+                                                Hi, thanks for your interest.<br><br>The SASS files are require modular, it looks like this:<br><br>```<br>@import<br>    // Core CSS<br>    "components/scaffolding"<br>,   "components/type"<br>,   "components/tables"<br>,   "components/tables-responsive"<br>,   "components/form-checkbox_radio"<br>,   "components/form-editor"<br>,   "components/form-elements"<br>,   "components/form-input"<br>,   "components/form-select"<br>,   "components/form-spinner"<br>,   "components/form-switch"<br>,   "components/buttons"<br><br>    // Components<br>,   "components/animation"<br>,   "components/badges"<br>,   "components/breadcrumbs"<br>,   "components/callout"<br>,   "components/charts"<br>,   "components/dropdowns"<br>,   "components/icons"<br>,   "components/image-size"<br>,   "components/labels"<br>,   "components/list-group"<br>,   "components/mail"<br>,   "components/mail-compose"<br>,   "components/panels"<br>,   "components/pricing-tables"<br>,   "components/sprites"<br>,   "components/timeline"<br><br>    // Components w/ JavaScript<br>,   "components/accordion"<br>,   "components/pagination"<br>,   "components/progress-bars"<br>,   "components/tab"<br>;<br>```<br><br>Hope this helps :)
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_comment">
+                                    <a name="C15780"></a>
+                                    <div class="item_comment_user">
+                                    <a href="../../user/hungdoan.html" title=""><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/no-picture.jpg" width="100" height="100" alt="" title=""></a>
+                                    </div>
+                                    <div class="item_comment_body">
+                                        <div class="item_comment_body_head">
+                                            <div class="user">
+                                                <a href="../../user/hungdoan.html">hungdoan</a>
+                                                <span class="label label_user_purchased">PURCHASED</span>
+                                            </div>
+                                            <div class="timestamp"><a href="comments.html#C15780">5 hours ago</a></div>
+                                        </div>
+                                        <div class="item_comment_body_text">
+                                        Hi,<br>I feel so excited to use this theme. But, I stuck in modify your navigation bar. (I don't know which script handle it !), - I want my left-menu support multiple level.<br>And can you give us more detail document about:<br>+ You use many plugin ( flot.tooltip, Bootstrap, AngularJS , etc,..). So, can you tell me more detail in which Feature you use these plugin (ex: Responsive Design = Bootstrap+custom, All chart=flot,,... ).<br>+ Purpose of each custom js file (ex: "scripts/app.js",...)<br><br>Thanks :)
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="item_comments_header">
+                                </div>
+                                <div class="item_comment_form">
+                                    <h2>Write a comment</h2>
+                                    <p>This is a great way to give the seller feedback and ask them questions about their item.</p>
+                                    <p>You must <a href="https://wrapbootstrap.com/signin?next=/theme/flatify-responsive-admin-web-app-WB0977873/comments" title="Sign in or sign up">sign in</a> to write a comment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <p><a href="/signin?next=%2Ftheme%2Fflatify-responsive-admin-web-app-WB0977873" title="Sign in or sign up">Sign in</a> to add this purchase to your account</p>
+                        <form id="order" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                            <input type="hidden" name="cmd" value="_s-xclick">
+                            <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----
+MIIJOwYJKoZIhvcNAQcDoIIJLDCCCSgCAQAxggEwMIIBLAIBADCBlDCBjjELMAkG
+A1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQw
+EgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UE
+AxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJ
+KoZIhvcNAQEBBQAEgYAyzrbXXAyRP131aNFUrW74lWl4UNsNTI8fIOLH2byN9Ath
+FCCKSvTRrrxtJcd51P72y/xNTJJaCiS+t7bEyzGyvl9fCA6Ptj13UtqwfA0IAqPu
+CjR7+n6+RbOoHdBiT7OtBHyBAnlpx321DAS/NCHl1RSw64Y33U3DJ0mogYy+PTCC
+B+0GCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIi8BC0C97yaWAggfIDuCGQStV1tDp
+PPtWBh3fYgDnBDoRgiDdYuY9dRCGove5QPeoZ24OgvvBKKR4ExXbV2RH633AN1/r
+AIHWZbHZpgv9E8Kli3AAcpHSN3haq0Cdb9rc2FOSO/+A0YTVqgCTYsdhWIGersFD
+xKJpjZQp9k88qw9KQ59YjmqzzYOyRvwoKcJvSyS3kXBL5n/vyRpqG2rKKHdP+SZT
+NfuHlmp/Rgi23azVbE0xRFu478V3RgmyUM6HBrJTY/VoUWZJ4RgEdJy3U5iczMT7
+kninQ2BaU6s+Isyi9AeVsFG5lzB6Kn/3HsKDl/gsDhWsa5mHA7Qp/Q7463lSn/Ku
+VmcI2N2/Z7NfhdOAJ4eQBCojEv1460iLTpdoFIwA2oRV6X0uOWnSdT+Q4dRo0iRj
+f53Y9PKBP/5pyswtDM2++5MrbIlIQtuFJqIjMz1wb7kQ7HcghxZzigXnMNxRgnhM
+erNA6kqfY9Bcf5O8ZEBxLnBMqV40ut6tTeED1RpbkG8OJO6TC4kQrFQOrlZEjDNA
+Rpev65ZAtiB/b03RgoKwARQy776kIARXbgzLj2LmX3a+9blrKGlNaFmmHH1Q4xGy
+F4fRjRYdgcxtOm0Lb+Romk0TBbjr1BiBSYbtLAJkVZSpsOdqlANj9cZ5tJzK8zF/
+/4dCPxqiI2LkR4TOuKO3BQUaTJg4xK/V+YwLIc/kEbw4YdkM2P9AlCcz18NQYVRs
+WVzPZU70VSJp418A2BO+NP/w0lFZRpOiloNJ6sdGxayhNED5JsRAjMnbK+FdoQfC
+F8TxiGgGciN4JQZNAE+gfxF20ZdYACvXlOrTDFfcW2Ow5g4WkLEpv05ySvJSj8J4
+IiRuOsTd9g+9tub2gIILM6FJMTjcErn2e8T3uytqCN8DLXLNuxj76cnnVlX1oCfL
+p0ARW91cTNPcBU/tha7w5/2hgI7WkfWhYpgO1U4OHAWy7DbNo4rCMd68JyoNW1s1
+3Gx3EUsFf25mb8N/zH8i2EQpbgsQfrnZDJ9pJ/Zxf3xyub0+hzplEqi/BNlOB8qv
+jMpi52dMxpIx0Jmu9uVY/HiVUBSUjeAWLTEPvUZtoPJ4PzU+vrAzU/5kCbgD3YWa
+lI4KjRtPwuD8tmrb1Ehxa0ONM1yfkL5iSZAM0V4VlUm0/9mfzXxoJr/AOtJiKtSy
+BHw7IMk5wEmzlcbw8hevooUbHiGwMe1O6XtQn80nARUVNyqeXpjXX91mZ3CiOsDZ
+MmCpyN4Uum4ZA3bp8ObUJ/hpnLTLCL7trJcSoA7y0ftHmf2FTnSIxnuY68U/zYy/
+GeEKbqNg6o4pvX3qwgA3L4cOjoKMgyH/lXGGtJfDu3SLIJb616Y9XFWAbX+2touZ
+SthHhnmrRT06PCUw1Mtou44CzP5gD+LLw82D55XO+2I1HpRRPvHOgESqViIMvGPR
+5Ak24mPBxoj6BALbJnHmARFoDO0agXTtg3sI5pMUjHa1cWCbRHm5DszAFtmEvRAK
+nL0Jte2udNGWO2KFdciDdt1WTo0xGM06S6v1s0sd6ntYjqKFdDxntCsojcYqq8Zh
+g4/fWwQZFVkJiocza32D3seDOfh1zkHCHe5kpbeGXSS/5966HTidvEhBXgDFg6DX
+W7kjVClkMzYsxbY39bi71fBr7Ozy1Awni69MHJyQgjPMa+Z2+jPbQYmscptf3Tx5
+0Mklhd/22VVyBF7zGfg821eEmNRbdqKr1jX+l0sbLkys8mlWvBQqXPEP80u4FlZk
+RzvZxsZzPPcWRhBy18VWET7yYSdK9qUBTPzqxuazMOS5+mB4R49vNul9a2Wuksml
+7IHn5ILwEklS1GdRzN01arDqC925W9miNndyBf6Lc469rAouDO5jh7aGRFvwl3jX
+Nef/Iyc6mj0xZf2csvho3ZUHk4gL55/FON/9Cjs6Y65/5tC/fc/NkiVAJDpASiYs
+CY+6+OIyEW6rPdTSY6PtbG6FM54Ajh6jaJ/29uaB2+DQxiCPzG9WqzBiJqzieomi
+9m7LHSI8CQtPBFBNAqZ9RMUUdA4aMwbWyL7qnJ+BkEKn0S30TQL+L6END2y9jtnw
+cjFWEKbdQTh+5hhS9duh6rtaPuyGjLokqCs/1nBSxx1xC1QlX90vJO11X/coPvoT
+/bWDoT/Fz76AUppDbl+Qua1O5hDlix22VvyBCwsZ0xOCODPvBrqq51NKNxmFt6qW
+MZsRTNR964wmWNPd346kUF9g80U9XT6kY09/2i2sUeIcB2BNodlbzHdmGxFO8lBb
+7/+CXbVQ7fZAHBlD85IJGqkVI52EEkeqU/wHHlP0JxXTCD9hATkVBT0h2pwIMV7J
+RlJQCU/Op0z2sHRxOkFRiegDFeIhrPWx+Hnqalqk4QrNPr/iEgiCerLnVxwuDfld
+7dql8NEyNNqfI23lVUatGQj0+KcLKsgnQi67X7nsR8WT2YoyHPtCWTubJ5nxjUqj
+ovQnzRJIwEHHG95AG9Wbu7feb9KTA2W2uFwqQQje9Q8XYL6JJvzmxaQbkl/C1h64
+JDMG1+Psb1S1OURUDaLwTnbaOMcypPr1wsOx3bZpCXIeoB7XUkDlEWQsl14ySsiD
+uaVqCRHzjvGq6g1iX72wjhzovOM+stNTsRfHn+nbQw2GemPqkOk7fg/EUazIdiDM
+8i1aMGFLv/vd1b7fVNi+
+-----END PKCS7-----
+">
+                            <a id="buynow" class="btn primary btn-xlarge" href="comments.html#" rel="nofollow" onclick="document.getElementById('order').submit(); return false;"><span id="offer_price" itemprop="price" style="">$15</span></a>
+                            <noscript>
+                                <style>#buynow { display: none; } #page_theme #order input { display: inline; }</style>
+                                <input type="submit" class="btn primary btn-xlarge" value="$15">
+                            </noscript>
+                        </form>
+                        <div class="coffee-pitch"><span>That's about 6 cups of coffee</span></div>
+                        <div class="purchase_info">
+                            <div class="purchases">
+                                <span class="count">1188</span><span class="count_label">Purchases</span>
+                            </div>
+                            <div class="license">
+                                <span class="license_label">License:</span>
+                                <a class="license_type" href="https://wrapbootstrap.com/help/licenses" target="_blank" title="Usage licenses">
+                                Single application
+                                </a>
+                            </div>
+                        </div>
+                        <div class="addons">
+                            <p>Licenses: <span><a href="https://wrapbootstrap.com/help/licenses" target="_blank" title="Usage licenses">Details &raquo;</a></span></p>
+                        <div class="addon-selected sunken container">
+                            Single application <span>$15</span>
+                        </div>
+                        <div class="addon container">
+                            <a href="../flatify-responsive-admin-web-app-WB0977873-l=m.html">Multiple applications <span><b id="ma-star" style="display: none; color: #FFD700;">&#x2739;</b> $50</span></a>
+                        </div>
+                        <div class="addon container">
+                            <a href="../flatify-responsive-admin-web-app-WB0977873-l=e.html">Extended <span>$500</span></a>
+                        </div>
+                        </div>
+                        <div class="info_wrapper">
+                            <p class="sidebar_title">Item attributes</p>
+                            <table class="attributes zebra-striped">
+                                <tbody>
+                                    <tr class="first"><td class="key"><strong>Version:</strong></td><td class="value"><span id="creativework_version" itemprop="version">1.0.1</span></td></tr>
+                                    <tr>
+                                        <td class="key"><strong>Bootstrap:</strong></td>
+                                        <td class="value">Compatible with 3.1.x</td>
+                                    </tr>
+                                    <tr><td class="key"><strong>Columns:</strong></td><td class="value">4+</td></tr>
+                                    <tr>
+                                        <td class="key"><strong>Layouts:</strong></td>
+                                        <td class="value">
+                                            <ul>
+                                            <li>Fluid</li>
+                                            <li>Responsive</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><strong>Browsers:</strong></td>
+                                        <td class="value">
+                                            <ul>
+                                            <li>Internet Explorer 10</li>
+                                            <li>Internet Explorer 11</li>
+                                            <li>Internet Explorer 9</li>
+                                            <li>Latest Chrome</li>
+                                            <li>Latest Firefox</li>
+                                            <li>Latest Opera</li>
+                                            <li>Latest Safari</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr><td class="key"><strong>Uses LESS:</strong></td><td class="value">No</td></tr>
+                                    <tr><td class="key"><strong>Uses Sass:</strong></td><td class="value">Yes</td></tr>
+                                    <tr>
+                                        <td class="key"><strong>Categories:</strong></td>
+                                        <td class="value">
+                                            <ul>
+                                            <li><a href="../../themes/admin.html" title="Admin &amp; Dashboards"><span id="offer_category" itemprop="category">Admin &amp; Dashboards</span></a></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="key"><strong>Tags:</strong></td>
+                                        <td class="value"><span id="creativework_keywords" itemprop="keywords"><a href="../../tag/admin.html" title="Themes tagged with admin">admin</a>, <a href="../../tag/angular.html" title="Themes tagged with angular">angular</a>, <a href="../../tag/angularjs.html" title="Themes tagged with angularjs">angularjs</a>, <a href="../../tag/dashboard.html" title="Themes tagged with dashboard">dashboard</a>, <a href="../../tag/flat.html" title="Themes tagged with flat">flat</a>, <a href="../../tag/flat-square.html" title="Themes tagged with flat square">flat square</a>, <a href="../../tag/flat-ui.html" title="Themes tagged with flat ui">flat ui</a>, <a href="../../tag/ios7.html" title="Themes tagged with ios7">ios7</a>, <a href="../../tag/sass.html" title="Themes tagged with sass">sass</a>, <a href="../../tag/scss.html" title="Themes tagged with scss">scss</a></span></td>
+                                    </tr>
+                                    <tr><td class="key"><strong>Item#:</strong></td><td class="value"><span id="offer_sku" itemprop="sku">WB0977873</span></td></tr>
+                                    <tr><td class="key"><strong>Released:</strong></td><td class="value">3 months ago</td></tr>
+                                    <tr><td class="key"><strong>Updated:</strong></td><td class="value">2 months ago</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="exclusive"><img src="https://d85wutc1n854v.cloudfront.net/live/imgs/wb_exclusive.png" width="205" height="29" title="Sold exclusively on WrapBootstrap" alt="Sold exclusively on WrapBootstrap"></div>
+                        <div class="info_wrapper">
+                            <p class="sidebar_title">Item seller</p>
+                            <div class="seller">
+                                <a href="../../user/arousing.html" title="arousing"><img src="../../static/users/pictures/arousing.png" width="40" height="40" alt="arousing" title="arousing"></a>
+                                <div class="info">
+                                    <p class="user"><a href="../../user/arousing.html" title="arousing"><span id="product_manufacturer" itemprop="manufacturer">arousing</span></a></p>
+                                    <p class="days">Signed up 4 months ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="item_cs_header">Need a front-end theme?</p>
+                        <div class="item_cs"><a href="../planuswp-one-page-wordpress-theme-WB0SFJ043.html" title="PlanusWP - One Page WordPress Theme"><img src="https://d85wutc1n854v.cloudfront.net/live/products/icons/WB0SFJ043.jpg?v=1.1" width="252" height="158"></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+</script>
+
+                            <div style="padding-top: 35px; background: #eee url('https://d85wutc1n854v.cloudfront.net/live/imgs/darkgrain.png');">
+                                    <div class="container">
+                                            <div class="social_stuff">
+                                                    <div class="widget">
+                                                            <div class="twitter">
+                                                                    <div class="stat"><a href="http://twitter.com/wrapbootstrap" title="Follow us on Twitter!" target="_blank" rel="nofollow"><span class="count">14.8k</span><span class="desc">Followers</span></a></div>
+                                                            </div>
+                                                            <div class="facebook">
+                                                                    <div class="stat"><a href="http://www.facebook.com/wrapbootstrap" title="Follow us on Facebook!" target="_blank" rel="nofollow"><span class="count">19.1k</span><span class="desc">Followers</span></a></div>
+                                                            </div>
+                                                            <div class="rss">
+                                                                    <div class="stat"><a href="http://feeds.feedburner.com/wrapbootstrap" title="Subscribe to our RSS feed!" target="_blank" rel="nofollow"><span class="count">320</span><span class="desc">Subscribers</span></a></div>
+                                                            </div>
+                                                            <div class="email">
+                                                                    <div class="stat"><a href="http://eepurl.com/iVhpj" title="Subscribe to our newsletter!" target="_blank" rel="nofollow"><span class="count">34.6k</span><span class="desc">Subscribers</span></a></div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="newsletter">
+                                                            <p><strong>See new themes weekly:</strong></p>
+                                                            <form action="https://wrapbootstrap.us4.list-manage.com/subscribe/post?u=a6573691f554e1ed4eda8c965&amp;id=a9f54c6355" method="post" target="_blank">
+                                                                    <input type="text" name="EMAIL" class="span5" placeholder="Email address">&nbsp;<input class="btn primary" type="submit" name="subscribe" value="Subscribe">
+                                                            </form>
+                                                    </div>
+                                            </div>
+                                    </div>
+                            </div>
+                            <div id="about_bootstrap">
+                                    <div class="container">
+                                            <section>
+                                                    <div class="row">
+                                                            <div class="span-one-third">
+                                                                    <h3>About Bootstrap</h3>
+                                                                    <p><a href="http://getbootstrap.com/" target="_blank" title="Bootstrap">Bootstrap</a> is designed to help people of all skill levels &ndash; designer or developer, huge nerd or early beginner. Use it as a complete kit or use it to start something more complex.</p>
+                                                                    <p>Unlike other front-end toolkits, Bootstrap was designed first and foremost as a styleguide to document not only its features, but best practices and living, coded examples.</p>
+                                                                    <p>Built to support new HTML5 elements and syntax with progressively enhanced components.</p>
+                                                            </div>
+                                                            <div class="span-one-third">
+                                                                    <h3>Browser support</h3>
+                                                                    <p>Bootstrap is tested and supported in major modern browsers like Chrome, Firefox, and Internet Explorer.</p>
+                                                                    <img src="https://d85wutc1n854v.cloudfront.net/live/imgs/browser_logos.png" width="280" height="52" alt="Tested and supported in Chrome, Safari, Firefox, Internet Explorer, and Opera." title="Tested and supported in Chrome, Safari, Firefox, Internet Explorer, and Opera.">
+                                                                    <ul>
+                                                                            <li>Latest Chrome</li>
+                                                                            <li>Latest Safari</li>
+                                                                            <li>Latest Firefox</li>
+                                                                            <li>Internet Explorer 8/9/10/11</li>
+                                                                            <li>Latest Opera</li>
+                                                                    </ul>
+                                                            </div>
+                                                            <div class="span-one-third">
+                                                                    <h3>Features &amp; includes</h3>
+                                                                    <p>Bootstrap provides an unparalleled array of features and reusable components that let you hit the ground running:</p>
+                                                                    <ul>
+                                                                            <li>Responsive <a href="http://getbootstrap.com/css/#grid" title="Bootstrap documentation, grid system" target="_blank">12-column grid</a></li>
+                                                                            <li>12 custom, modular <a href="http://getbootstrap.com/javascript/" target="_blank" title="Bootstrap documentation, JavaScript">jQuery plugins</a></li>
+                                                                            <li><a href="http://getbootstrap.com/css/" title="Bootstrap documentation, Base CSS" target="_blank">CSS styles</a> for forms, navigation &amp; more</li>
+                                                                            <li>Dozens of reusable <a href="http://getbootstrap.com/components/" target="_blank" title="Bootstrap documentation, Components">components</a></li>
+                                                                            <li>Components are scaled according to a range of resolutions and devices</li>
+                                                                            <li>Built with <a href="http://lesscss.org/" target="_blank" title="LESS - The dynamic stylesheet language">LESS</a> and <a href="http://sass-lang.com/" target="_blank" title="Sass - Syntactically Awesome Style Sheets">Sass</a> (CSS included)</li>
+                                                                            <li>Complete styleguide documentation</li>
+                                                                    </ul>
+                                                            </div>
+                                                    </div>
+                                            </section>
+                                    </div>
+                            </div>
+                        <div class="push"></div>
+                </div>
+                <div id="footer">
+                        <div class="container">
+                                <footer>
+                                        <p>
+                                                <a href="../../support.html" title="Buyer and seller support"><b>Support</b></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="http://support.wrapbootstrap.com/" title="Knowledge base" target="_none"><b>Knowledge base</b></a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="../../affiliates.html" title="Affiliates">Affiliates</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="../../privacy.html" title="Privacy policy">Privacy</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="../../terms.html" title="Terms of use">Terms</a>&nbsp;&nbsp;&middot;&nbsp;&nbsp;<a href="../../about.html" title="About us">About</a> <span class="pull-right">&copy; 2014 <a href="http://wrapmarket.com/" title="WrapMarket LLC" target="_blank">WrapMarket LLC</a></span>
+                                                    <span class="pull-right" style="position: relative; top: -2px;"><a href="https://twitter.com/wrapbootstrap" class="twitter-follow-button" data-width="80px" data-show-count="false" data-show-screen-name="false">Follow @wrapbootstrap</a></span>
+                                        </p>
+                                </footer>
+                        </div>
+                </div>
+                <div id="subscribe_dialog">
+                        <div class="shell">
+                                <div class="topbar"><a class="close" href="comments.html#">Close</a></div>
+                                <div class="inner"></div>
+                        </div>
+                </div>
+                <div id="mask"></div>
+                <script>$(document).ready(function(){ $(".alert-message").alert(); $("#bsw").twipsy(); });</script>
+                    <!-- twitter widget --><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                <script type="text/javascript">
+                        adroll_adv_id = "7ZLH3TJ7RFHP5IXPNREKUT";
+                        adroll_pix_id = "FXS6CQLPC5G7ZN6YQH3GWR";
+                        (function () {
+                                var oldonload = window.onload;
+                                window.onload = function(){
+                                __adroll_loaded=true;
+                                var scr = document.createElement("script");
+                                var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+                                scr.setAttribute('async', 'true');
+                                scr.type = "text/javascript";
+                                scr.src = host + "/j/roundtrip.js";
+                                ((document.getElementsByTagName('head') || [null])[0] ||
+                                document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+                                if(oldonload){oldonload()}};
+                        }());
+                </script>
+        </body>
+</html>
