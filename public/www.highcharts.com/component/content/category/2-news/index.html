@@ -1,0 +1,733 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en-gb"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-gb"><!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<head>
+  <!--<base href="http://www.highcharts.com/component/content/category/2-news/" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="highcharts, charts, javascript charts, ajax charts, plots, line charts, bar charts, pie charts, javascript plots, ajax plots" />
+  <meta name="description" content="Highcharts - Interactive JavaScript charts for your web pages." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Highcharts - Highcharts</title>
+  <link href="../2-articles/news-format=feed&type=rss.rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="../2-articles/news-format=feed&type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../joomla/templates/highsoft_colorful/css/template.css" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="http://www.highcharts.com/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="http://www.highcharts.com/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="../../../../lib/jquery-1.7.2.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/jquery.cookies.2.2.0.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/slide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});window.addEvent('domready', function() {
+			$$('.hasTip').each(function(el) {
+				var title = el.get('title');
+				if (title) {
+					var parts = title.split('::', 2);
+					el.store('tip:title', parts[0]);
+					el.store('tip:text', parts[1]);
+				}
+			});
+			var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
+		});
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+  </script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"><link href="/templates/highsoft_colorful/images/favicon.ico" rel="shortcut icon"/><!-- Echo Header Script -->
+
+</head>
+<body id="bd" class="clearfix">
+	<div id="zt-wrapper">
+		<div id="zt-wrapper-inner">
+						<!--Header-->
+			<div id="zt-header" class="clearfix">
+				<div class="container">
+			        					<div id="zt-header-inner" class="row-fluid">
+			            <!-- Logo -->
+													<a  id="zt-logo-image"  class="span3" href="../../../../index.html" title="Highcharts"><img src="/templates/highsoft_colorful/images/logo.svg" alt="Highcharts" /></a>
+									            <!-- #Logo -->
+			            <!--Mainmenu-->
+			            <div id="zt-mainmenu" class="span9 pull-right" >
+			                <div id="zt-mainmenu-inner" class="row-fluid">
+			                    <div class="smallmenu"><div class="menusys_mega"><ul><li class="first "><a href="../../../../about.html"  ><span>About Us</span></a></li><li class="hasChild"><a><span>Our Products</span></a><ul class="submenu"><li class="first"><a href="../../../../products/highcharts.html"  ><span>Highcharts</span></a></li><li><a href="../../../../products/highstock.html"  ><span>Highstock</span></a></li><li><a href="../../../../products/highmaps.html"  ><span>Highmaps</span></a></li><li class="last"><a href="http://highslide.com/"  ><span>Highslide JS</span></a></li></ul></li><li class="last "><a href="../../../../contact-email.html"  ><span>Contact</span></a></li></ul></div></div><div class="largemenu"><div class="menusys_mega"><ul><li class="first "><a href="../../../../index.html"  ><span>Home</span></a></li><li class="hasChild"><a><span>Demo</span></a><ul class="submenu"><li class="first"><a href="../../../../demo.html"  ><span>Highcharts demos</span></a></li><li><a href="../../../../stock/demo.html"  ><span>Highstock demos</span></a></li><li class="last"><a href="../../../../maps/demo.html"  ><span>Highmaps demo</span></a></li></ul></li><li class="hasChild"><a><span>Docs</span></a><ul class="submenu"><li class="first"><a href="../../../../docs.html"  ><span>General Documentation</span></a></li><li><a href="http://api.highcharts.com/highcharts"  ><span>Highcharts API Reference</span></a></li><li><a href="http://api.highcharts.com/highstock"  ><span>Highstock API Reference</span></a></li><li><a href="http://api.highcharts.com/highmaps"  ><span>Highmaps API Reference</span></a></li><li><a href="../../../../documentation/compatibility.html"  ><span>Compatibility</span></a></li><li class="last"><a href="../../../../documentation/changelog.html"  ><span>Changelog</span></a></li></ul></li><li class="hasChild"><a><span>Support</span></a><ul class="submenu"><li class="first"><a href="../../../../support.html"  ><span>Support</span></a></li><li><a href="../../../../support/roadmap.html"  ><span>Roadmap</span></a></li><li><a href="../../../../download.html"  ><span>Download</span></a></li><li class="last"><a href="http://forum.highcharts.com/"  ><span>Forum</span></a></li></ul></li><li><a href="../../../../plugin-registry.html"  ><span>Plugins</span></a></li><li class="last "><a href="http://shop.highsoft.com/"  ><span>Shop</span></a></li></ul></div></div>			                </div>
+			            </div>
+			            <!--#Mainmenu-->
+						<!--Drill Menu-->
+						<div class="zt-drillmenu-inner">
+							<div class="navbar">
+								<a class="btn-navbar collapsed" id="mobile-button" data-toggle="collapse" data-target=".menusys_drill"></a>
+								<div class="menusys_drill collapse"><ul id="zo2-drilldown-menu" class="nav-drilldown"><li class="first item"><a href="../../../../index.html"  id="menusys101_drill" title="Home"><span class="menusys_name">Home</span></a></li><li class="item hasChild"><a id="menusys103_drill" title="Demo"><span class="menusys_name">Demo</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../../demo.html"  id="menusys106_drill" title="Highcharts demos"><span class="menusys_name">Highcharts demos</span></a></li><li class="item"><a href="../../../../stock/demo.html"  id="menusys107_drill" title="Highstock demos"><span class="menusys_name">Highstock demos</span></a></li><li class="last item"><a href="../../../../maps/demo.html"  id="menusys205_drill" title="Highmaps demo"><span class="menusys_name">Highmaps demo</span></a></li></ul></li><li class="item hasChild"><a id="menusys108_drill" title="Docs"><span class="menusys_name">Docs</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../../docs.html"  id="menusys128_drill" title="General Documentation"><span class="menusys_name">General Documentation</span></a></li><li class="item"><a href="http://api.highcharts.com/highcharts"  id="menusys124_drill" title="Highcharts API Reference"><span class="menusys_name">Highcharts API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highstock"  id="menusys125_drill" title="Highstock API Reference"><span class="menusys_name">Highstock API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highmaps"  id="menusys211_drill" title="Highmaps API Reference"><span class="menusys_name">Highmaps API Reference</span></a></li><li class="item"><a href="../../../../documentation/compatibility.html"  id="menusys126_drill" title="Compatibility"><span class="menusys_name">Compatibility</span></a></li><li class="last item"><a href="../../../../documentation/changelog.html"  id="menusys127_drill" title="Changelog"><span class="menusys_name">Changelog</span></a></li></ul></li><li class="item hasChild"><a id="menusys109_drill" title="Support"><span class="menusys_name">Support</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../../support.html"  id="menusys110_drill" title="Support"><span class="menusys_name">Support</span></a></li><li class="item"><a href="../../../../support/roadmap.html"  id="menusys129_drill" title="Roadmap"><span class="menusys_name">Roadmap</span></a></li><li class="item"><a href="../../../../download.html"  id="menusys201_drill" title="Download"><span class="menusys_name">Download</span></a></li><li class="last item"><a href="http://forum.highcharts.com/"  id="menusys208_drill" title="Forum"><span class="menusys_name">Forum</span></a></li></ul></li><li class="item"><a href="../../../../plugin-registry.html"  id="menusys111_drill" title="Plugins"><span class="menusys_name">Plugins</span></a></li><li class="item"><a href="http://shop.highsoft.com/"  id="menusys115_drill" title="Shop"><span class="menusys_name">Shop</span></a></li><li class="item"><a href="../../../../about.html"  id="menusys112_drill" title="About Us"><span class="menusys_name">About Us</span></a></li><li class="item hasChild"><a id="menusys113_drill" title="Our Products"><span class="menusys_name">Our Products</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../../products/highcharts.html"  id="menusys121_drill" title="Highcharts"><span class="menusys_name">Highcharts</span></a></li><li class="item"><a href="../../../../products/highstock.html"  id="menusys122_drill" title="Highstock"><span class="menusys_name">Highstock</span></a></li><li class="item"><a href="../../../../products/highmaps.html"  id="menusys210_drill" title="Highmaps"><span class="menusys_name">Highmaps</span></a></li><li class="last item"><a href="http://highslide.com/"  id="menusys123_drill" title="Highslide JS"><span class="menusys_name">Highslide JS</span></a></li></ul></li><li class="last item"><a href="../../../../contact-email.html"  id="menusys114_drill" title="Contact"><span class="menusys_name">Contact</span></a></li></ul></div>							</div>
+							<div class="clearfix"></div>
+						</div>
+						<!--#Drill Menu-->
+					</div>
+				</div>
+			</div>
+			<!--#Header-->
+            <!--Slideshow-->
+                        <!--#Slideshow-->
+            			            <!-- ZT Userwrap2 -->
+			            <!-- #ZT Userwrap2 -->
+            <!-- ZT Userwrap3 -->
+			            <!-- #ZT Userwrap3 -->
+                        			<!--Main-->
+						<div id="zt-mainframe" class="clearfix">
+				<div class="container">
+					<div id="zt-mainframe-inner" class="row-fluid clearfix">
+						<div id="zt-mainframe-inner2" class="zt-container">
+														<div id="zt-content" class="span12">
+																<div id="zt-component" class="clearfix">
+									<div id="zt-component-inner">
+										
+<div id="system-message-container">
+</div>
+										<section class="category">
+		<header>
+			
+				<h2>
+									News					</h2>
+			
+			</header>
+	
+	
+	<form action="http://www.highcharts.com/component/content/category/2-news/" method="post" name="adminForm" id="adminForm">
+				<fieldset class="filters">
+				
+			<div class="filter-search">
+				<label class="filter-search-lbl" for="filter-search">Title Filter&#160;</label>
+				<input type="text" name="filter-search" id="filter-search" value="" class="inputbox" onchange="document.adminForm.submit();" title="Content Filter Search" />
+				<div class="clearfix"></div>
+			</div>
+				
+				
+			<input type="hidden" name="filter_order" value="" />
+			<input type="hidden" name="filter_order_Dir" value="" />
+			<input type="hidden" name="limitstart" value="" />
+		</fieldset>
+			
+		<table class="category-table">
+				
+			<tbody>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#1					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/136-highsoft-nominated-for-nordic-startup-awards.html">
+								Highsoft nominated for Nordic Startup Awards</a>
+						</td>
+	
+												<td class="list-date">
+							14 May 2014						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#2					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/134-announcing-highcharts-4.html">
+								Announcing Highcharts 4</a>
+						</td>
+	
+												<td class="list-date">
+							22 April 2014						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#3					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/132-highmaps-beta.html">
+								Announcing Highmaps Beta</a>
+						</td>
+	
+												<td class="list-date">
+							24 February 2014						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#4					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/139-highmaps-released.html">
+								Highmaps Released</a>
+						</td>
+	
+												<td class="list-date">
+							24 February 2014						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#5					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/131-our-ceo-grethe-met-with-the-norwegian-minister-of-trade-and-industry-.html">
+								Highsoft met with minister</a>
+						</td>
+	
+												<td class="list-date">
+							24 February 2014						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#6					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/126-want-to-author-a-book-on-highcharts.html">
+								Want to author a book on Highcharts?</a>
+						</td>
+	
+												<td class="list-date">
+							16 January 2014						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#7					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/125-new-features-drilldown-and-no-data.html">
+								New features: drilldown and no-data</a>
+						</td>
+	
+												<td class="list-date">
+							09 January 2014						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#8					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/122-introducing-plugin-listing.html">
+								Introducing Plugin listing</a>
+						</td>
+	
+												<td class="list-date">
+							21 October 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#9					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/121-introducing-highcharts-cloud-alpha.html">
+								Introducing Highcharts Cloud Alpha</a>
+						</td>
+	
+												<td class="list-date">
+							03 September 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#10					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/58-highcharts-standalone-framework.html">
+								Highcharts Standalone Framework</a>
+						</td>
+	
+												<td class="list-date">
+							09 August 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#11					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/57-highsoft-nominated-norways-entrepeneur-of-the-year.html">
+								Highsoft Nominated Norway's Entrepeneur of the Year</a>
+						</td>
+	
+												<td class="list-date">
+							24 May 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#12					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/56-improved-image-export-with-phantomjs.html">
+								Improved image export with PhantomJS</a>
+						</td>
+	
+												<td class="list-date">
+							08 May 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#13					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/55-meet-us-in-silicon-valley.html">
+								Meet us in Silicon Valley!</a>
+						</td>
+	
+												<td class="list-date">
+							18 April 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#14					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/54-highcharts-3-0-released.html">
+								Highcharts 3.0 released</a>
+						</td>
+	
+												<td class="list-date">
+							22 March 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#15					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/52-serverside-generated-charts.html">
+								Render charts on the server</a>
+						</td>
+	
+												<td class="list-date">
+							02 January 2013						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#16					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/51-highsoft-solutions-awarded-entrepeneur-of-the-year.html">
+								Highsoft Solutions awarded Entrepeneur of the Year</a>
+						</td>
+	
+												<td class="list-date">
+							02 November 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#17					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/50-codehighchartscom-moves-to-cdn.html">
+								Hotlink your Highcharts files from our CDN</a>
+						</td>
+	
+												<td class="list-date">
+							01 November 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#18					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/49-meet-us-in-zuerich.html">
+								Meet us in Zürich!</a>
+						</td>
+	
+												<td class="list-date">
+							05 September 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#19					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/48-loading-millions-of-points-in-highcharts.html">
+								Loading millions of points in Highcharts</a>
+						</td>
+	
+												<td class="list-date">
+							31 August 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#20					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/47-ranges-polar-charts-and-gauges-released.html">
+								Ranges, polar charts and gauges released</a>
+						</td>
+	
+												<td class="list-date">
+							27 August 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#21					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/46-gauges-ranges-and-polar-charts-in-beta.html">
+								Gauges, ranges and polar charts in Beta</a>
+						</td>
+	
+												<td class="list-date">
+							04 July 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#22					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/45-highcharts-introduces-legend-paging.html">
+								Highcharts introduces legend paging</a>
+						</td>
+	
+												<td class="list-date">
+							31 May 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#23					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/43-computerworld-recommends-highcharts.html">
+								ComputerWorld recommends Highcharts</a>
+						</td>
+	
+												<td class="list-date">
+							30 March 2012						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#24					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/42-highcharts-on-the-server.html">
+								Highcharts on the server</a>
+						</td>
+	
+												<td class="list-date">
+							26 October 2011						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#25					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/37-highstock-is-out.html">
+								Highstock is out</a>
+						</td>
+	
+												<td class="list-date">
+							18 October 2011						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#26					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/31-highstock-beta-released.html">
+								Highstock Beta released</a>
+						</td>
+	
+												<td class="list-date">
+							08 July 2011						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#27					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/25-highcharts-stock-development-started.html">
+								Highcharts Stock development started</a>
+						</td>
+	
+												<td class="list-date">
+							22 February 2011						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#28					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/24-highcharts-drawing-api-documented.html">
+								Highcharts drawing API documented</a>
+						</td>
+	
+												<td class="list-date">
+							09 December 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#29					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/23-version-21-released.html">
+								Version 2.1 released!</a>
+						</td>
+	
+												<td class="list-date">
+							23 November 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#30					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/22-21-beta-released.html">
+								2.1 beta released</a>
+						</td>
+	
+												<td class="list-date">
+							18 October 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#31					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/21-version-20-released.html">
+								Version 2.0 released</a>
+						</td>
+	
+												<td class="list-date">
+							14 July 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#32					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/16-campaign-monitor-endorses-highcharts.html">
+								Campaign Monitor endorses Highcharts</a>
+						</td>
+	
+												<td class="list-date">
+							11 June 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#33					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/15-highcharts-plugin-and-adapter-for-ext-js.html">
+								Highcharts plugin and adapter for Ext JS</a>
+						</td>
+	
+												<td class="list-date">
+							14 May 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#34					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/14-bbc-uses-highcharts.html">
+								BBC uses Highcharts</a>
+						</td>
+	
+												<td class="list-date">
+							08 May 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#35					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/13-contract-job-opening.html">
+								Contract job opening</a>
+						</td>
+	
+												<td class="list-date">
+							13 April 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#36					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/12-highcharts-goes-svg.html">
+								Highcharts goes SVG</a>
+						</td>
+	
+												<td class="list-date">
+							17 March 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#37					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/11-dynamic-charts-available.html">
+								Dynamic charts available</a>
+						</td>
+	
+												<td class="list-date">
+							24 February 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row1" >
+									<td class="list-nr">
+						#38					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/10-live-charts-in-public-beta.html">
+								Live Charts in Public Beta</a>
+						</td>
+	
+												<td class="list-date">
+							05 February 2010						</td>
+							
+							
+							
+									</tr>
+												<tr class="cat-list-row0" >
+									<td class="list-nr">
+						#39					</td>
+											<td class="list-title">
+							<a href="../../article/2-articles/news/9-multi-axes-and-events-support-added.html">
+								Multi Axes and Events Support Added</a>
+						</td>
+	
+												<td class="list-date">
+							18 December 2009						</td>
+							
+							
+							
+									</tr>
+						</tbody>
+		</table>
+	
+			</form>
+
+	</section>
+									</div>
+								</div>
+																							</div>
+							
+														<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--#main-->
+			            <!-- ZT Userwrap6 -->
+			            <!-- #ZT Userwrap6 -->
+            <!-- ZT Userwrap7 -->
+			            <!-- #ZT Userwrap7 -->
+			<!--Footer-->
+			<div id="zt-footer" class="clearfix ">
+				<div class="container">
+					<div id="zt-footer-inner" class="row-fluid">
+						<div id="zt-footer-left" class="span6">
+															
+							<div id="zt-footer-copy">
+							© 2014 Highcharts. All rights reserved.							</div>
+						</div>
+												<div id="zt-social" class="span4">
+							<div>
+<a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon"><i class="fa fa-twitter"></i></a>
+<a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon"><i class="fa fa-linkedin"></i></a>
+<a href="https://github.com/highslide-software/highcharts.com" title="Github" class="social-icon"><i class="fa fa-github"></i></a>
+</div>
+						</div>
+												<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+            <!--#Footer-->
+		</div>
+	</div>
+	
+	    <!-- Echo Footer Script -->
+        	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-2995052-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>

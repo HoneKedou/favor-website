@@ -1,0 +1,623 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en-gb"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-gb"><!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<head>
+  <!--<base href="http://www.highcharts.com/stock/demo/dynamic-update/sand-signika" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="highcharts, charts, javascript charts, ajax charts, plots, line charts, bar charts, pie charts, javascript plots, ajax plots" />
+  <meta name="description" content="Highcharts - Interactive JavaScript charts for your web pages." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Highcharts -  Dynamically updated data</title>
+  <link rel="stylesheet" href="/components/com_demo/assets/css/demo.css" type="text/css" />
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="../../../joomla/templates/highsoft_colorful/css/template.css" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="../../../lib/jquery-1.7.2.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/jquery.cookies.2.2.0.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/slide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+  </script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"><link href="/templates/highsoft_colorful/images/favicon.ico" rel="shortcut icon"/><!-- Echo Header Script -->
+
+</head>
+<body id="bd" class="clearfix">
+	<div id="zt-wrapper">
+		<div id="zt-wrapper-inner">
+						<!--Header-->
+			<div id="zt-header" class="clearfix">
+				<div class="container">
+			        					<div id="zt-header-inner" class="row-fluid">
+			            <!-- Logo -->
+													<a  id="zt-logo-image"  class="span3" href="../../../index.html" title="Highcharts"><img src="/templates/highsoft_colorful/images/logo.svg" alt="Highcharts" /></a>
+									            <!-- #Logo -->
+			            <!--Mainmenu-->
+			            <div id="zt-mainmenu" class="span9 pull-right" >
+			                <div id="zt-mainmenu-inner" class="row-fluid">
+			                    <div class="smallmenu"><div class="menusys_mega"><ul><li class="first "><a href="../../../about.html"  ><span>About Us</span></a></li><li class="hasChild"><a><span>Our Products</span></a><ul class="submenu"><li class="first"><a href="../../../products/highcharts.html"  ><span>Highcharts</span></a></li><li><a href="../../../products/highstock.html"  ><span>Highstock</span></a></li><li><a href="../../../products/highmaps.html"  ><span>Highmaps</span></a></li><li class="last"><a href="http://highslide.com/"  ><span>Highslide JS</span></a></li></ul></li><li class="last "><a href="../../../contact-email.html"  ><span>Contact</span></a></li></ul></div></div><div class="largemenu"><div class="menusys_mega"><ul><li class="first "><a href="../../../index.html"  ><span>Home</span></a></li><li class="hasChild active"><a><span>Demo</span></a><ul class="submenu"><li class="first"><a href="../../../demo.html"  ><span>Highcharts demos</span></a></li><li><a href="../../demo.html"  class=' active' ><span>Highstock demos</span></a></li><li class="last"><a href="../../../maps/demo.html"  ><span>Highmaps demo</span></a></li></ul></li><li class="hasChild"><a><span>Docs</span></a><ul class="submenu"><li class="first"><a href="../../../docs.html"  ><span>General Documentation</span></a></li><li><a href="http://api.highcharts.com/highcharts"  ><span>Highcharts API Reference</span></a></li><li><a href="http://api.highcharts.com/highstock"  ><span>Highstock API Reference</span></a></li><li><a href="http://api.highcharts.com/highmaps"  ><span>Highmaps API Reference</span></a></li><li><a href="../../../documentation/compatibility.html"  ><span>Compatibility</span></a></li><li class="last"><a href="../../../documentation/changelog.html"  ><span>Changelog</span></a></li></ul></li><li class="hasChild"><a><span>Support</span></a><ul class="submenu"><li class="first"><a href="../../../support.html"  ><span>Support</span></a></li><li><a href="../../../support/roadmap.html"  ><span>Roadmap</span></a></li><li><a href="../../../download.html"  ><span>Download</span></a></li><li class="last"><a href="http://forum.highcharts.com/"  ><span>Forum</span></a></li></ul></li><li><a href="../../../plugin-registry.html"  ><span>Plugins</span></a></li><li class="last "><a href="http://shop.highsoft.com/"  ><span>Shop</span></a></li></ul></div></div>			                </div>
+			            </div>
+			            <!--#Mainmenu-->
+						<!--Drill Menu-->
+						<div class="zt-drillmenu-inner">
+							<div class="navbar">
+								<a class="btn-navbar collapsed" id="mobile-button" data-toggle="collapse" data-target=".menusys_drill"></a>
+								<div class="menusys_drill collapse"><ul id="zo2-drilldown-menu" class="nav-drilldown"><li class="first item"><a href="../../../index.html"  id="menusys101_drill" title="Home"><span class="menusys_name">Home</span></a></li><li class="item hasChild active"><a id="menusys103_drill" title="Demo"><span class="menusys_name">Demo</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../demo.html"  id="menusys106_drill" title="Highcharts demos"><span class="menusys_name">Highcharts demos</span></a></li><li class="item active"><a href="../../demo.html"  class=' active' id="menusys107_drill" title="Highstock demos"><span class="menusys_name">Highstock demos</span></a></li><li class="last item"><a href="../../../maps/demo.html"  id="menusys205_drill" title="Highmaps demo"><span class="menusys_name">Highmaps demo</span></a></li></ul></li><li class="item hasChild"><a id="menusys108_drill" title="Docs"><span class="menusys_name">Docs</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../docs.html"  id="menusys128_drill" title="General Documentation"><span class="menusys_name">General Documentation</span></a></li><li class="item"><a href="http://api.highcharts.com/highcharts"  id="menusys124_drill" title="Highcharts API Reference"><span class="menusys_name">Highcharts API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highstock"  id="menusys125_drill" title="Highstock API Reference"><span class="menusys_name">Highstock API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highmaps"  id="menusys211_drill" title="Highmaps API Reference"><span class="menusys_name">Highmaps API Reference</span></a></li><li class="item"><a href="../../../documentation/compatibility.html"  id="menusys126_drill" title="Compatibility"><span class="menusys_name">Compatibility</span></a></li><li class="last item"><a href="../../../documentation/changelog.html"  id="menusys127_drill" title="Changelog"><span class="menusys_name">Changelog</span></a></li></ul></li><li class="item hasChild"><a id="menusys109_drill" title="Support"><span class="menusys_name">Support</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../support.html"  id="menusys110_drill" title="Support"><span class="menusys_name">Support</span></a></li><li class="item"><a href="../../../support/roadmap.html"  id="menusys129_drill" title="Roadmap"><span class="menusys_name">Roadmap</span></a></li><li class="item"><a href="../../../download.html"  id="menusys201_drill" title="Download"><span class="menusys_name">Download</span></a></li><li class="last item"><a href="http://forum.highcharts.com/"  id="menusys208_drill" title="Forum"><span class="menusys_name">Forum</span></a></li></ul></li><li class="item"><a href="../../../plugin-registry.html"  id="menusys111_drill" title="Plugins"><span class="menusys_name">Plugins</span></a></li><li class="item"><a href="http://shop.highsoft.com/"  id="menusys115_drill" title="Shop"><span class="menusys_name">Shop</span></a></li><li class="item"><a href="../../../about.html"  id="menusys112_drill" title="About Us"><span class="menusys_name">About Us</span></a></li><li class="item hasChild"><a id="menusys113_drill" title="Our Products"><span class="menusys_name">Our Products</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../../products/highcharts.html"  id="menusys121_drill" title="Highcharts"><span class="menusys_name">Highcharts</span></a></li><li class="item"><a href="../../../products/highstock.html"  id="menusys122_drill" title="Highstock"><span class="menusys_name">Highstock</span></a></li><li class="item"><a href="../../../products/highmaps.html"  id="menusys210_drill" title="Highmaps"><span class="menusys_name">Highmaps</span></a></li><li class="last item"><a href="http://highslide.com/"  id="menusys123_drill" title="Highslide JS"><span class="menusys_name">Highslide JS</span></a></li></ul></li><li class="last item"><a href="../../../contact-email.html"  id="menusys114_drill" title="Contact"><span class="menusys_name">Contact</span></a></li></ul></div>							</div>
+							<div class="clearfix"></div>
+						</div>
+						<!--#Drill Menu-->
+					</div>
+				</div>
+			</div>
+			<!--#Header-->
+            <!--Slideshow-->
+                        <!--#Slideshow-->
+            			            <!-- ZT Userwrap2 -->
+			            <!-- #ZT Userwrap2 -->
+            <!-- ZT Userwrap3 -->
+			            <!-- #ZT Userwrap3 -->
+                        			<!--Main-->
+						<div id="zt-mainframe" class="clearfix">
+				<div class="container">
+					<div id="zt-mainframe-inner" class="row-fluid clearfix">
+						<div id="zt-mainframe-inner2" class="zt-container">
+														<div id="zt-content" class="span12">
+																<div id="zt-component" class="clearfix">
+									<div id="zt-component-inner">
+										
+<div id="system-message-container">
+</div>
+										<h2 class="demo-header">Highstock demo -  Dynamically updated data</h2>
+<div id="demo-component">
+	<script type="text/javascript">
+		jQuery.noConflict();
+
+		var example = 'dynamic-update', 
+		theme = 'sand-signika';
+
+		(function($){ // encapsulate jQuery
+			$(function() {
+	
+	Highcharts.setOptions({
+		global : {
+			useUTC : false
+		}
+	});
+	
+	// Create the chart
+	$('#container').highcharts('StockChart', {
+		chart : {
+			events : {
+				load : function() {
+
+					// set up the updating of the chart each second
+					var series = this.series[0];
+					setInterval(function() {
+						var x = (new Date()).getTime(), // current time
+						y = Math.round(Math.random() * 100);
+						series.addPoint([x, y], true, true);
+					}, 1000);
+				}
+			}
+		},
+		
+		rangeSelector: {
+			buttons: [{
+				count: 1,
+				type: 'minute',
+				text: '1M'
+			}, {
+				count: 5,
+				type: 'minute',
+				text: '5M'
+			}, {
+				type: 'all',
+				text: 'All'
+			}],
+			inputEnabled: false,
+			selected: 0
+		},
+		
+		title : {
+			text : 'Live random data'
+		},
+		
+		exporting: {
+			enabled: false
+		},
+		
+		series : [{
+			name : 'Random data',
+			data : (function() {
+				// generate an array of random data
+				var data = [], time = (new Date()).getTime(), i;
+
+				for( i = -999; i <= 0; i++) {
+					data.push([
+						time + i * 1000,
+						Math.round(Math.random() * 100)
+					]);
+				}
+				return data;
+			})()
+		}]
+	});
+
+});
+		})(jQuery);
+	</script>
+	<div id="demo-menu">
+		<div id="demo-menu-inner">
+						<div class="demo-menu-item  active">
+				<h4 class="menu-toggle active">
+					<span class="toggle-text">
+						General					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content active">
+					<ul>
+												<li class="">
+							<a href="../basic-line/sand-signika.html">
+								 Single line series							</a>
+						</li>
+												<li class="">
+							<a href="../candlestick-and-volume/sand-signika.html">
+								 Two panes, candlestick and volume							</a>
+						</li>
+												<li class="">
+							<a href="../compare/sand-signika.html">
+								 Compare multiple series							</a>
+						</li>
+												<li class="">
+							<a href="../data-grouping/sand-signika.html">
+								 52,000 points with data grouping							</a>
+						</li>
+												<li class="">
+							<a href="../lazy-loading/sand-signika.html">
+								 1.7 million points with async loading							</a>
+						</li>
+												<li class="">
+							<a href="../intraday-area/sand-signika.html">
+								 Intraday area							</a>
+						</li>
+												<li class="">
+							<a href="../intraday-candlestick/sand-signika.html">
+								 Intraday candlestick							</a>
+						</li>
+												<li class="">
+							<a href="../flags-general/sand-signika.html">
+								 Flags marking events							</a>
+						</li>
+												<li class="active">
+							<a href="sand-signika.html">
+								 Dynamically updated data							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Chart types					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../line-markers/sand-signika.html">
+								 Line with markers and shadow							</a>
+						</li>
+												<li class="">
+							<a href="../spline/sand-signika.html">
+								 Spline							</a>
+						</li>
+												<li class="">
+							<a href="../step-line/sand-signika.html">
+								 Step line							</a>
+						</li>
+												<li class="">
+							<a href="../area/sand-signika.html">
+								 Area							</a>
+						</li>
+												<li class="">
+							<a href="../areaspline/sand-signika.html">
+								 Area spline							</a>
+						</li>
+												<li class="">
+							<a href="../arearange/sand-signika.html">
+								 Area range							</a>
+						</li>
+												<li class="">
+							<a href="../areasplinerange/sand-signika.html">
+								 Area spline range							</a>
+						</li>
+												<li class="">
+							<a href="../candlestick/sand-signika.html">
+								 Candlestick							</a>
+						</li>
+												<li class="">
+							<a href="../ohlc/sand-signika.html">
+								 OHLC							</a>
+						</li>
+												<li class="">
+							<a href="../column/sand-signika.html">
+								 Column							</a>
+						</li>
+												<li class="">
+							<a href="../columnrange/sand-signika.html">
+								 Column range							</a>
+						</li>
+												<li class="">
+							<a href="../markers-only/sand-signika.html">
+								 Point markers only							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Various features					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../yaxis-plotlines/sand-signika.html">
+								 Plot lines on Y axis							</a>
+						</li>
+												<li class="">
+							<a href="../yaxis-plotbands/sand-signika.html">
+								 Plot bands on Y axis							</a>
+						</li>
+												<li class="">
+							<a href="../yaxis-reversed/sand-signika.html">
+								 Reversed Y axis							</a>
+						</li>
+												<li class="">
+							<a href="../styled-scrollbar/sand-signika.html">
+								 Styled scrollbar							</a>
+						</li>
+												<li class="">
+							<a href="../scrollbar-disabled/sand-signika.html">
+								 Disabled scrollbar							</a>
+						</li>
+												<li class="">
+							<a href="../navigator-disabled/sand-signika.html">
+								 Disabled navigator							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Flags					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../flags-placement/sand-signika.html">
+								 Flags placement							</a>
+						</li>
+												<li class="">
+							<a href="../flags-shapes/sand-signika.html">
+								 Flags shapes and colors							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+					</div>
+	</div>
+	<div id="demo-content">
+		<div id="demo-content-container">
+			<div id="chart-switcher">
+									<a id="previous-example" title="Previous (arrow left)" 
+						href="../flags-general/sand-signika.html"><i class="fa fa-angle-left"></i></a>
+									<span id="chart-title"> Dynamically updated data</span>
+				
+									<a id="next-example"  title="Next (arrow right)"
+						href="../line-markers/sand-signika.html"><i class="fa fa-angle-right"></i></a>
+							</div>
+			<div id="styleswitcher">
+				<ul>
+					<li class=""><a href="../dynamic-update.html">Default theme</a></li>
+					<li class=""><a href="dark-unica.html">Dark Unica</a></li>
+					<li class="active"><a href="sand-signika.html">Sand Signika</a></li>
+					<li class=""><a href="grid-light.html">Grid Light</a></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div id="small-switcher">
+				<a class="button" id="view-menu" onclick="">Menu &raquo;</a>
+
+				<select id="switcher-selector">
+					<option value="http://www.highcharts.com/stock/demo/dynamic-update" >Default theme</option>
+					<option value="http://www.highcharts.com/stock/demo/dynamic-update/dark-unica" >Dark Unica</option>
+					<option value="http://www.highcharts.com/stock/demo/dynamic-update/sand-signika" selected>Sand Signika</option>
+					<option value="http://www.highcharts.com/stock/demo/dynamic-update/grid-light" >Grid Light</option>
+				</select>
+				<div class="clearfix"></div>
+			</div>
+			<div id="demo-chart">
+				<script src="http://code.highcharts.com/stock/highstock.js"></script>
+<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+<div id="container" style="height: 400px; min-width: 310px"></div>			</div>
+			<div id="demo-buttons">
+				<a class="button" href="javascript:" 
+					onclick="hs.htmlExpand(this, { width: 800,
+						headingText: 'Highcharts Configuration Preview', 
+						wrapperClassName: 'draggable-header' })">View options &raquo;</a>
+				<div class="highslide-maincontent">
+					<pre>$(function() {
+	
+	Highcharts.setOptions({
+		global : {
+			useUTC : false
+		}
+	});
+	
+	// Create the chart
+	$('#container').highcharts('StockChart', {
+		chart : {
+			events : {
+				load : function() {
+
+					// set up the updating of the chart each second
+					var series = this.series[0];
+					setInterval(function() {
+						var x = (new Date()).getTime(), // current time
+						y = Math.round(Math.random() * 100);
+						series.addPoint([x, y], true, true);
+					}, 1000);
+				}
+			}
+		},
+		
+		rangeSelector: {
+			buttons: [{
+				count: 1,
+				type: 'minute',
+				text: '1M'
+			}, {
+				count: 5,
+				type: 'minute',
+				text: '5M'
+			}, {
+				type: 'all',
+				text: 'All'
+			}],
+			inputEnabled: false,
+			selected: 0
+		},
+		
+		title : {
+			text : 'Live random data'
+		},
+		
+		exporting: {
+			enabled: false
+		},
+		
+		series : [{
+			name : 'Random data',
+			data : (function() {
+				// generate an array of random data
+				var data = [], time = (new Date()).getTime(), i;
+
+				for( i = -999; i &lt;= 0; i++) {
+					data.push([
+						time + i * 1000,
+						Math.round(Math.random() * 100)
+					]);
+				}
+				return data;
+			})()
+		}]
+	});
+
+});
+</pre>
+				</div>			
+								<a class="button" href="../../../js/themes/sand-signika.js"	onclick="return hs.htmlExpand(this, { width: 800, headingText: 'Highcharts Theme: Sand-signika', wrapperClassName: 'draggable-header' })">
+					View visual theme &raquo;
+				</a>
+				<div class="highslide-maincontent">
+					<pre>/**
+ * Sand-Signika theme for Highcharts JS
+ * @author Torstein Honsi
+ */
+
+// Load the fonts
+Highcharts.createElement('link', {
+   href: 'http://fonts.googleapis.com/css?family=Signika:400,700',
+   rel: 'stylesheet',
+   type: 'text/css'
+}, null, document.getElementsByTagName('head')[0]);
+
+// Add the background image to the container
+Highcharts.wrap(Highcharts.Chart.prototype, 'getContainer', function (proceed) {
+   proceed.call(this);
+   this.container.style.background = 'url(http://www.highcharts.com/samples/graphics/sand.png)';
+});
+
+
+Highcharts.theme = {
+   colors: ["#f45b5b", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "Signika, serif"
+      }
+   },
+   title: {
+      style: {
+         color: 'black',
+         fontSize: '16px',
+         fontWeight: 'bold'
+      }
+   },
+   subtitle: {
+      style: {
+         color: 'black'
+      }
+   },
+   tooltip: {
+      borderWidth: 0
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   yAxis: {
+      labels: {
+         style: {
+            color: '#6e6e70'
+         }
+      }
+   },
+   plotOptions: {
+      series: {
+         shadow: true
+      },
+      candlestick: {
+         lineColor: '#404048'
+      },
+      map: {
+         shadow: false
+      }
+   },
+
+   // Highstock specific
+   navigator: {
+      xAxis: {
+         gridLineColor: '#D0D0D8'
+      }
+   },
+   rangeSelector: {
+      buttonTheme: {
+         fill: 'white',
+         stroke: '#C0C0C8',
+         'stroke-width': 1,
+         states: {
+            select: {
+               fill: '#D0D0D8'
+            }
+         }
+      }
+   },
+   scrollbar: {
+      trackBorderColor: '#C0C0C8'
+   },
+
+   // General
+   background2: '#E0E0E8'
+   
+};
+
+// Apply the theme
+Highcharts.setOptions(Highcharts.theme);</pre>
+				</div>
+								<a class="button" href="http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/stock/demo/dynamic-update/">Edit in jsFiddle &raquo;</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>		
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<script src="/components/com_demo/assets/js/scripts.js"></script>
+<script src="/media/com_demo/highslide-full.min.js"></script>
+<script src="/media/com_demo/highslide.config.js"></script>
+<script src="http://code.highcharts.com/themes/sand-signika.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/components/com_demo/assets/css/highslide.css" />
+
+
+
+									</div>
+								</div>
+																							</div>
+							
+														<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--#main-->
+			            <!-- ZT Userwrap6 -->
+			            <!-- #ZT Userwrap6 -->
+            <!-- ZT Userwrap7 -->
+			            <!-- #ZT Userwrap7 -->
+			<!--Footer-->
+			<div id="zt-footer" class="clearfix ">
+				<div class="container">
+					<div id="zt-footer-inner" class="row-fluid">
+						<div id="zt-footer-left" class="span6">
+															
+							<div id="zt-footer-copy">
+							© 2014 Highcharts. All rights reserved.							</div>
+						</div>
+												<div id="zt-social" class="span4">
+							<div>
+<a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon"><i class="fa fa-twitter"></i></a>
+<a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon"><i class="fa fa-linkedin"></i></a>
+<a href="https://github.com/highslide-software/highcharts.com" title="Github" class="social-icon"><i class="fa fa-github"></i></a>
+</div>
+						</div>
+												<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+            <!--#Footer-->
+		</div>
+	</div>
+	
+	    <!-- Echo Footer Script -->
+        	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-2995052-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Maps</title>
+		<description><![CDATA[Highcharts - Interactive JavaScript charts for your web pages.]]></description>
+		<link>http://www.highcharts.com/docs/maps/12-docs/documentation</link>
+		<lastBuildDate>Mon, 11 Aug 2014 00:43:12 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://www.highcharts.com/docs/maps/12-docs/documentation?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<item>
+			<title>Home</title>
+			<link>http://www.highcharts.com/docs</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Highcharts and Highstock documentation</h1>
+<h2>Topics</h2>
+<ul>
+<li style="line-height: 19px;"><a href="http://www.highcharts.com/docs/getting-started/installation">Installation</a></li>
+<li style="line-height: 19px;"><a href="http://www.highcharts.com/docs/getting-started/your-first-chart">Your first chart</a></li>
+</ul>
+<ul>
+<li style="line-height: 19px;"><a href="http://www.highcharts.com/docs/getting-started/frequently-asked-questions">FAQs</a></li>
+</ul>
+<h2>Demo</h2>
+<p>For live examples see our demo pages:</p>
+<ul>
+<li style="line-height: 19px;"><a href="http://www.highcharts.com/demo/">Highcharts demo</a></li>
+<li style="line-height: 19px;"><a href="http://www.highcharts.com/stock/demo/">Highstock demo</a></li>
+</ul>
+<h2 style="line-height: 19px;">API</h2>
+<p>For more specific information on Highcharts and Highstock options and functions, visit our API sites which also include several live and customizeable examples.</p>
+<ul>
+<li style="line-height: 19px;"><a href="http://api.highcharts.com/highcharts">Highcharts API reference</a></li>
+<li style="line-height: 19px;"><a href="http://api.highcharts.com/highstock">Highstock API reference</a></li>
+</ul>
+<p> </p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Documentation</category>
+			<pubDate>Thu, 22 Aug 2013 08:52:46 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

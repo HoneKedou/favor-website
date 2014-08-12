@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/11-docs/frequently-asked-questions</id>
+	<updated>2014-08-11T00:43:12+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/11-docs/frequently-asked-questions?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Frequently asked questions</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/getting-started/frequently-asked-questions"/>
+		<published>2013-08-22T09:33:48+00:00</published>
+		<updated>2013-08-22T09:33:48+00:00</updated>
+		<id>http://www.highcharts.com/docs/getting-started/frequently-asked-questions</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Frequently asked questions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#files-outside-domain&quot;&gt;Does Highcharts refer to files outside our domain?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#not-showing-in-explorer&quot;&gt;My charts are not showing in Internet Explorer 7 or 8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#can-i-use-highcharts-with&quot;&gt;Can I use Highcharts with a ... server?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#highstock-features-in-highcharts&quot;&gt;Can I use features from Highstock in Highcharts?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#add-data-table&quot;&gt;Can I add a data table to the exported chart?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#optimize-performance&quot;&gt;How can I get the best performance out of Highcharts?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#export-multiple&quot;&gt;Can I export multiple charts to the same image or PDF?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#non-ascii&quot;&gt;My non-English characters don't display right in my charts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#server-side-charts&quot;&gt;Can I generate charts on the server without using a browser?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#irregular-time&quot;&gt;How do I define irregular time data?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#data-from-sql&quot;&gt;How do I add data from a MySQL database?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;files-outside-domain&quot;&gt;&lt;/a&gt;Does Highcharts refer to files outside our domain?&lt;/h2&gt;
+&lt;p&gt;For basic usage, Highcharts doesn't refer to any files other than highcharts.js/highstock.js, though there are some cases that you should be aware of.&lt;/p&gt;
+&lt;ul style=&quot;margin-left: 40px;&quot;&gt;
+&lt;li&gt;The exporting module. Since the browser itself is not able to convert the chart to an image format, this operation is by default done on our web service, http://export.highcharts.com. The chart SVG is sent from your browser to the export server, and an image is sent back. If you're concerned about your data content being passed over the internet, you should set up your own export server. See &lt;a href=&quot;docs/export-module/setting-up-the-server&quot;&gt;Setting up the export server&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Canvas rendering in Android 2.x. In this case, Highcharts lazy loads a second JavaScript file in order to render the canvas. No information from your data is sent across the net, but your page will appear as the referer in the HTTP request. The file is by default loaded from code.highcharts.com. This can be changed through the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.canvasToolsURL&quot;&gt;canvasToolsURL &lt;/a&gt;option.&lt;/li&gt;
+&lt;li&gt;If you are using radial gradients, IE &amp;lt; 9 is unable to render it natively, and needs to load a PNG image pattern. No information from your data is sent across the net, but your page will appear as the referer in the HTTP request. The file is by default loaded from code.highcharts.com. This can be changed through the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.VMLRadialGradientURL&quot;&gt;VMLRadialGradientURL&lt;/a&gt; option. The PNG file can be found inside the &lt;a href=&quot;download&quot;&gt;download package&lt;/a&gt; at &lt;code&gt;/gfx/vml-radial-gradient.png&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;not-showing-in-explorer&quot;&gt;&lt;/a&gt;My charts are not showing in Internet Explorer 7 or 8&lt;/h2&gt;
+&lt;p&gt;The most common reason why a chart works in modern browsers but fails in IE6, 7 and 8, is stray commas in the configuration options. Stray commas are commas after the last item of an object or an array in JavaScript. These will pass silently in modern browsers, but cause a JavaScript error in legacy IE.&lt;/p&gt;
+&lt;pre&gt;var chart = new Highcharts.Chart({
+    chart: {
+        renderTo: 'container'
+    },
+    xAxis: {
+        type: 'datetime'
+    },
+    series: [{
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5,&lt;br /&gt;               216.4, 194.1, 95.6, 54.4],
+        pointStart: Date.UTC(2012, 0, 1),
+        pointInterval: 24 * 3600 * 1000,
+    }]
+});&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/DXnPa/&quot;&gt;Try it live&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another case where legacy IE fails to show charts, is when the security setting &lt;span style=&quot;color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 13px; line-height: 20px; background-color: #fbfbfb;&quot;&gt;&quot;ActiveX controls and plug-ins&quot; =&amp;gt; &lt;/span&gt;&quot;Binary and script behavious&quot; is disabled. This happens very rarely on user computers, but we have seen it from time to time on company networks. In this case, IE fails to draw any of the vector graphics, only the the text is shown. &lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a id=&quot;can-i-use-highcharts-with&quot; name=&quot;can-i-use-highcharts-with&quot;&gt;&lt;/a&gt;Can I use Highcharts with a ... server?&lt;/h2&gt;
+&lt;p&gt;Highcharts runs entirely on the client, and works with any web server that can deliver HTML and JavaScript content. Whether your server is PHP, Perl, ASP, ASP.NET, Node.js or whatever, Highcharts is completely ignorant of it. The HTML/JavaScript files may also be loaded from the file system, which is the case in app platforms where Highcharts is loaded in a web component inside the app.&lt;/p&gt;
+&lt;p&gt;The best practice in integrating Highcharts may differ from system to system. You should follow the common practice for handing JavaScript on your specific system. Some prefer to serve a clean JSON or JavaScript file with the Highcharts setup, others to write the JavaScript setup directly to the web page. Data can be loaded in form of JSON or CSV files (see Working with data in the left menu), or printed inline in the chart setup. When working with a databased powered backend, it may be cleaner to have your server system serve JSON or CSV files.&lt;/p&gt;
+&lt;p&gt;Before you start to set up a complex backend, you may want to check out &lt;a href=&quot;download&quot;&gt;www.highcharts.com/download&lt;/a&gt; whether someone has created a wrapper for your specific system.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;highstock-features-in-highcharts&quot;&gt;&lt;/a&gt;Can I use features from Highstock in Highcharts?&lt;/h2&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Yes, most Highstock features can be applied to standard charts. From a licensing point of view, using features of the Stock package obviously requires a Highstock license.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Technically Highcharts Stock is implemented as a set of plugins for Highcharts. The entire code base for Highcharts is included in the Stock package, and you can invoke a chart using &lt;code&gt;Highcharts.Chart&lt;/code&gt; and enable certain features that are normally associated with a stock chart.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Examples:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/2BGSK/&quot;&gt;Using flags in Highcharts &lt;/a&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/fj6d2/&quot;&gt;Enabling a scrollbar in Highcharts&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/VwkHu/&quot;&gt;Gap size in Highcharts&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;add-data-table&quot;&gt;&lt;/a&gt;Can I add a data table to the exported chart?&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;Yes, with a little programming on top of the Highcharts data and drawing API you can draw a table. See &lt;a href=&quot;http://jsfiddle.net/highcharts/z9zXM/&quot;&gt;http://jsfiddle.net/highcharts/z9zXM/&lt;/a&gt; for source code and live example.&lt;/div&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;optimize-performance&quot;&gt;&lt;/a&gt;How can I get the best performance out of Highcharts?&lt;/h2&gt;
+&lt;div&gt;When working with series with a high number of data points, there are a few things to consider.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;For line plots, it is recommended that you disable point markers, as these will add a performace overhead. See &lt;a href=&quot;http://highcharts.com/demo/line-time-series&quot;&gt;http://highcharts.com/demo/line-time-series&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Disabling shadows increases performance, as three shadow elements are created for each shape that includes a shadow.&lt;/li&gt;
+&lt;li&gt;For large column series, it is recommended that you disable the initial animation, &lt;a href=&quot;http://api.highcharts.com#plotOptions.column.animation&quot;&gt;plotOptions.column.animation&lt;/a&gt;, at least for VML based browsers. The best way to distinguish between fast SVG browsers and slower VML browsers is to use the Highcharts.svg boolean property.&lt;/li&gt;
+&lt;/ol&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;export-multiple&quot;&gt;&lt;/a&gt;Can I export multiple charts to the same image or PDF?&lt;/h2&gt;
+&lt;div&gt;Currently this isn't implemented in the core, but there are a couple of paths you can go to achieve this. &lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Use our hack as presented at &lt;a href=&quot;http://jsfiddle.net/highcharts/gd7bB/&quot;&gt;http://jsfiddle.net/highcharts/gd7bB/&lt;/a&gt;. Basically, this code gets the SVG of all charts, modifies it and applies it to one single SVG file that is sent to the server for image conversion.&lt;/li&gt;
+&lt;li&gt;Create a HTML file on your server that contains all your desired charts, and do a pure server side conversion of this. See &lt;a href=&quot;#server-side-charts&quot;&gt;Can I generate charts on the server without using a browser?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;non-ascii&quot;&gt;&lt;/a&gt;My non-English characters don't display right in my charts&lt;/h2&gt;
+&lt;p&gt;If you're using German umlauts, Scandinavian vowels or non-European alphabets, you need to use UTF-8 encoding for your files. There are two ways of doing this.&lt;/p&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;1. Make sure your HTML page where your charts are defined, is UTF-8. The file itself and if applicable its database content must be encoded as UTF-8. Additionally, either the &quot;content-type&quot; HTTP header or the corresponding meta tag must reflect this:&lt;/span&gt;&lt;/div&gt;
+&lt;pre&gt; &lt;/pre&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;2. If you don't have access to change your whole HTML file, you can define your charts in a separate JS file that has UTF-8 encoding. &lt;/div&gt;
+&lt;pre&gt; &lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;server-side-charts&quot;&gt;&lt;/a&gt;Can I generate charts on the server without using a browser?&lt;/h2&gt;
+&lt;p&gt;Yes. See our article, &lt;a href=&quot;docs/export-module/render-charts-serverside&quot;&gt;Render charts on the server&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;There are also other approaches for server-side chart generation:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;David Padbury wrote a very interesting piece about &lt;a href=&quot;http://blog.davidpadbury.com/2010/10/03/using-nodejs-to-render-js-charts-on-server/&quot;&gt; running Highcharts on a Node JS server.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Travis Hansen has kindly shared his &lt;a href=&quot;https://github.com/travisghansen/highcharts-svg&quot;&gt; Phantom JS module.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;irregular-time&quot;&gt;&lt;/a&gt;How do I define irregular time data?&lt;/h2&gt;
+&lt;div&gt;To add data points with irregular intervals, instead of defining pointStart and pointInterval for the series, define an X value (date) for each point. See &lt;a href=&quot;http://jsfiddle.net/highcharts/Jx5n2/&quot;&gt;http://jsfiddle.net/highcharts/Jx5n2/&lt;/a&gt;.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;If you want the line to be broken for missing dates, insert null values instead.&lt;/div&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;data-from-sql&quot;&gt;&lt;/a&gt;How do I add data from a MySQL database?&lt;/h2&gt;
+&lt;div&gt;See &lt;a href=&quot;docs/working-with-data/preprocessing-data-from-a-database&quot;&gt;Preprocessing data from a database&lt;/a&gt;.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Frequently asked questions&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#files-outside-domain&quot;&gt;Does Highcharts refer to files outside our domain?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#not-showing-in-explorer&quot;&gt;My charts are not showing in Internet Explorer 7 or 8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#can-i-use-highcharts-with&quot;&gt;Can I use Highcharts with a ... server?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#highstock-features-in-highcharts&quot;&gt;Can I use features from Highstock in Highcharts?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#add-data-table&quot;&gt;Can I add a data table to the exported chart?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#optimize-performance&quot;&gt;How can I get the best performance out of Highcharts?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#export-multiple&quot;&gt;Can I export multiple charts to the same image or PDF?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#non-ascii&quot;&gt;My non-English characters don't display right in my charts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#server-side-charts&quot;&gt;Can I generate charts on the server without using a browser?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#irregular-time&quot;&gt;How do I define irregular time data?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#data-from-sql&quot;&gt;How do I add data from a MySQL database?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;files-outside-domain&quot;&gt;&lt;/a&gt;Does Highcharts refer to files outside our domain?&lt;/h2&gt;
+&lt;p&gt;For basic usage, Highcharts doesn't refer to any files other than highcharts.js/highstock.js, though there are some cases that you should be aware of.&lt;/p&gt;
+&lt;ul style=&quot;margin-left: 40px;&quot;&gt;
+&lt;li&gt;The exporting module. Since the browser itself is not able to convert the chart to an image format, this operation is by default done on our web service, http://export.highcharts.com. The chart SVG is sent from your browser to the export server, and an image is sent back. If you're concerned about your data content being passed over the internet, you should set up your own export server. See &lt;a href=&quot;docs/export-module/setting-up-the-server&quot;&gt;Setting up the export server&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Canvas rendering in Android 2.x. In this case, Highcharts lazy loads a second JavaScript file in order to render the canvas. No information from your data is sent across the net, but your page will appear as the referer in the HTTP request. The file is by default loaded from code.highcharts.com. This can be changed through the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.canvasToolsURL&quot;&gt;canvasToolsURL &lt;/a&gt;option.&lt;/li&gt;
+&lt;li&gt;If you are using radial gradients, IE &amp;lt; 9 is unable to render it natively, and needs to load a PNG image pattern. No information from your data is sent across the net, but your page will appear as the referer in the HTTP request. The file is by default loaded from code.highcharts.com. This can be changed through the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.VMLRadialGradientURL&quot;&gt;VMLRadialGradientURL&lt;/a&gt; option. The PNG file can be found inside the &lt;a href=&quot;download&quot;&gt;download package&lt;/a&gt; at &lt;code&gt;/gfx/vml-radial-gradient.png&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;not-showing-in-explorer&quot;&gt;&lt;/a&gt;My charts are not showing in Internet Explorer 7 or 8&lt;/h2&gt;
+&lt;p&gt;The most common reason why a chart works in modern browsers but fails in IE6, 7 and 8, is stray commas in the configuration options. Stray commas are commas after the last item of an object or an array in JavaScript. These will pass silently in modern browsers, but cause a JavaScript error in legacy IE.&lt;/p&gt;
+&lt;pre&gt;var chart = new Highcharts.Chart({
+    chart: {
+        renderTo: 'container'
+    },
+    xAxis: {
+        type: 'datetime'
+    },
+    series: [{
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5,&lt;br /&gt;               216.4, 194.1, 95.6, 54.4],
+        pointStart: Date.UTC(2012, 0, 1),
+        pointInterval: 24 * 3600 * 1000,
+    }]
+});&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/DXnPa/&quot;&gt;Try it live&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Another case where legacy IE fails to show charts, is when the security setting &lt;span style=&quot;color: #333333; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 13px; line-height: 20px; background-color: #fbfbfb;&quot;&gt;&quot;ActiveX controls and plug-ins&quot; =&amp;gt; &lt;/span&gt;&quot;Binary and script behavious&quot; is disabled. This happens very rarely on user computers, but we have seen it from time to time on company networks. In this case, IE fails to draw any of the vector graphics, only the the text is shown. &lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a id=&quot;can-i-use-highcharts-with&quot; name=&quot;can-i-use-highcharts-with&quot;&gt;&lt;/a&gt;Can I use Highcharts with a ... server?&lt;/h2&gt;
+&lt;p&gt;Highcharts runs entirely on the client, and works with any web server that can deliver HTML and JavaScript content. Whether your server is PHP, Perl, ASP, ASP.NET, Node.js or whatever, Highcharts is completely ignorant of it. The HTML/JavaScript files may also be loaded from the file system, which is the case in app platforms where Highcharts is loaded in a web component inside the app.&lt;/p&gt;
+&lt;p&gt;The best practice in integrating Highcharts may differ from system to system. You should follow the common practice for handing JavaScript on your specific system. Some prefer to serve a clean JSON or JavaScript file with the Highcharts setup, others to write the JavaScript setup directly to the web page. Data can be loaded in form of JSON or CSV files (see Working with data in the left menu), or printed inline in the chart setup. When working with a databased powered backend, it may be cleaner to have your server system serve JSON or CSV files.&lt;/p&gt;
+&lt;p&gt;Before you start to set up a complex backend, you may want to check out &lt;a href=&quot;download&quot;&gt;www.highcharts.com/download&lt;/a&gt; whether someone has created a wrapper for your specific system.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;highstock-features-in-highcharts&quot;&gt;&lt;/a&gt;Can I use features from Highstock in Highcharts?&lt;/h2&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Yes, most Highstock features can be applied to standard charts. From a licensing point of view, using features of the Stock package obviously requires a Highstock license.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Technically Highcharts Stock is implemented as a set of plugins for Highcharts. The entire code base for Highcharts is included in the Stock package, and you can invoke a chart using &lt;code&gt;Highcharts.Chart&lt;/code&gt; and enable certain features that are normally associated with a stock chart.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;Examples:&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/2BGSK/&quot;&gt;Using flags in Highcharts &lt;/a&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/fj6d2/&quot;&gt;Enabling a scrollbar in Highcharts&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/VwkHu/&quot;&gt;Gap size in Highcharts&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;add-data-table&quot;&gt;&lt;/a&gt;Can I add a data table to the exported chart?&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;Yes, with a little programming on top of the Highcharts data and drawing API you can draw a table. See &lt;a href=&quot;http://jsfiddle.net/highcharts/z9zXM/&quot;&gt;http://jsfiddle.net/highcharts/z9zXM/&lt;/a&gt; for source code and live example.&lt;/div&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;optimize-performance&quot;&gt;&lt;/a&gt;How can I get the best performance out of Highcharts?&lt;/h2&gt;
+&lt;div&gt;When working with series with a high number of data points, there are a few things to consider.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;For line plots, it is recommended that you disable point markers, as these will add a performace overhead. See &lt;a href=&quot;http://highcharts.com/demo/line-time-series&quot;&gt;http://highcharts.com/demo/line-time-series&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Disabling shadows increases performance, as three shadow elements are created for each shape that includes a shadow.&lt;/li&gt;
+&lt;li&gt;For large column series, it is recommended that you disable the initial animation, &lt;a href=&quot;http://api.highcharts.com#plotOptions.column.animation&quot;&gt;plotOptions.column.animation&lt;/a&gt;, at least for VML based browsers. The best way to distinguish between fast SVG browsers and slower VML browsers is to use the Highcharts.svg boolean property.&lt;/li&gt;
+&lt;/ol&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;export-multiple&quot;&gt;&lt;/a&gt;Can I export multiple charts to the same image or PDF?&lt;/h2&gt;
+&lt;div&gt;Currently this isn't implemented in the core, but there are a couple of paths you can go to achieve this. &lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Use our hack as presented at &lt;a href=&quot;http://jsfiddle.net/highcharts/gd7bB/&quot;&gt;http://jsfiddle.net/highcharts/gd7bB/&lt;/a&gt;. Basically, this code gets the SVG of all charts, modifies it and applies it to one single SVG file that is sent to the server for image conversion.&lt;/li&gt;
+&lt;li&gt;Create a HTML file on your server that contains all your desired charts, and do a pure server side conversion of this. See &lt;a href=&quot;#server-side-charts&quot;&gt;Can I generate charts on the server without using a browser?&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;non-ascii&quot;&gt;&lt;/a&gt;My non-English characters don't display right in my charts&lt;/h2&gt;
+&lt;p&gt;If you're using German umlauts, Scandinavian vowels or non-European alphabets, you need to use UTF-8 encoding for your files. There are two ways of doing this.&lt;/p&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;1. Make sure your HTML page where your charts are defined, is UTF-8. The file itself and if applicable its database content must be encoded as UTF-8. Additionally, either the &quot;content-type&quot; HTTP header or the corresponding meta tag must reflect this:&lt;/span&gt;&lt;/div&gt;
+&lt;pre&gt; &lt;/pre&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;2. If you don't have access to change your whole HTML file, you can define your charts in a separate JS file that has UTF-8 encoding. &lt;/div&gt;
+&lt;pre&gt; &lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;server-side-charts&quot;&gt;&lt;/a&gt;Can I generate charts on the server without using a browser?&lt;/h2&gt;
+&lt;p&gt;Yes. See our article, &lt;a href=&quot;docs/export-module/render-charts-serverside&quot;&gt;Render charts on the server&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;There are also other approaches for server-side chart generation:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;David Padbury wrote a very interesting piece about &lt;a href=&quot;http://blog.davidpadbury.com/2010/10/03/using-nodejs-to-render-js-charts-on-server/&quot;&gt; running Highcharts on a Node JS server.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Travis Hansen has kindly shared his &lt;a href=&quot;https://github.com/travisghansen/highcharts-svg&quot;&gt; Phantom JS module.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;irregular-time&quot;&gt;&lt;/a&gt;How do I define irregular time data?&lt;/h2&gt;
+&lt;div&gt;To add data points with irregular intervals, instead of defining pointStart and pointInterval for the series, define an X value (date) for each point. See &lt;a href=&quot;http://jsfiddle.net/highcharts/Jx5n2/&quot;&gt;http://jsfiddle.net/highcharts/Jx5n2/&lt;/a&gt;.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;If you want the line to be broken for missing dates, insert null values instead.&lt;/div&gt;
+&lt;div&gt;&lt;hr /&gt;
+&lt;h2&gt;&lt;a name=&quot;data-from-sql&quot;&gt;&lt;/a&gt;How do I add data from a MySQL database?&lt;/h2&gt;
+&lt;div&gt;See &lt;a href=&quot;docs/working-with-data/preprocessing-data-from-a-database&quot;&gt;Preprocessing data from a database&lt;/a&gt;.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+		<category term="Frequently asked questions" />
+	</entry>
+</feed>

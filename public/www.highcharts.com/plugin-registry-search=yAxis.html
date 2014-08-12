@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en-gb"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-gb"><!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<head>
+  <!--<base href="http://www.highcharts.com/plugin-registry" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="highcharts, charts, javascript charts, ajax charts, plots, line charts, bar charts, pie charts, javascript plots, ajax plots" />
+  <meta name="description" content="Highcharts - Interactive JavaScript charts for your web pages." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Highcharts - Plugins</title>
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="joomla/templates/highsoft_colorful/css/template.css" type="text/css" />
+  <style type="text/css">
+p, h1
+{
+	margin-top:10px;
+	margin-bottom:10px;
+	margin-right:10px;
+}
+h2
+{
+	margin-top:20px;
+	margin-right:20px;
+	margin-left:20px;
+	text-align: center;
+}
+table
+{
+	width: 100%;
+}
+form div {
+	margin: 0px 0 0px 0;
+}
+.links {
+	width: 80%;
+	margin: auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.links ul {
+	display: inline-block;
+}
+.links li
+{
+	float: left;
+	padding-right: 10px;
+}
+.search
+{
+	clear: both;
+}
+.plugin
+{
+	width:80%;
+	margin: 0.5em auto 0.5em auto;
+	border-bottom: 1px solid silver;
+}
+.plugin:nth-child(1)
+{
+	border-top: 1px solid silver;
+}
+.ptop
+{
+	clear:both;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-right:10px;
+	margin-left:10px;
+}
+.ptop div
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.pbottom
+{
+	clear:both;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-right:10px;
+	margin-left:10px;
+}
+.title
+{
+	float:left;
+}
+.title *
+{
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+.prtop
+{
+	float: right;
+}
+.prtop *
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.listFooter div
+{
+	text-align: center;
+}
+.searchbar
+{
+	text-align: center;
+	clear: both;
+	width: 80%;
+	margin: 0 auto;
+}
+#text-container {
+	width: 65%;
+	float: left;
+}
+#search-plugins {
+	height: 34px;
+	padding: 5px;
+	width: 65%;
+	margin: 0 10px 1em auto;
+}
+#search-buttons {
+	display: inline-block;
+}
+.plugin-menu li {
+	list-style: none;
+}
+@media screen and (max-width: 767px) {
+	#search-plugins {
+		width: 100%;
+	}
+	#search-buttons {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 480px) {
+	#search-buttons button {
+		width: 100%;
+	}
+	.title,
+	.prtop {
+		float: none;
+	}
+}
+  </style>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="lib/jquery-1.7.2.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/jquery.cookies.2.2.0.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/slide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('domready', function() {
+			$$('.hasTip').each(function(el) {
+				var title = el.get('title');
+				if (title) {
+					var parts = title.split('::', 2);
+					el.store('tip:title', parts[0]);
+					el.store('tip:text', parts[1]);
+				}
+			});
+			var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false});
+		});
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+  </script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"><link href="/templates/highsoft_colorful/images/favicon.ico" rel="shortcut icon"/><!-- Echo Header Script -->
+
+</head>
+<body id="bd" class="clearfix">
+	<div id="zt-wrapper">
+		<div id="zt-wrapper-inner">
+						<!--Header-->
+			<div id="zt-header" class="clearfix">
+				<div class="container">
+			        					<div id="zt-header-inner" class="row-fluid">
+			            <!-- Logo -->
+													<a  id="zt-logo-image"  class="span3" href="index.html" title="Highcharts"><img src="/templates/highsoft_colorful/images/logo.svg" alt="Highcharts" /></a>
+									            <!-- #Logo -->
+			            <!--Mainmenu-->
+			            <div id="zt-mainmenu" class="span9 pull-right" >
+			                <div id="zt-mainmenu-inner" class="row-fluid">
+			                    <div class="smallmenu"><div class="menusys_mega"><ul><li class="first "><a href="about.html"  ><span>About Us</span></a></li><li class="hasChild"><a><span>Our Products</span></a><ul class="submenu"><li class="first"><a href="products/highcharts.html"  ><span>Highcharts</span></a></li><li><a href="products/highstock.html"  ><span>Highstock</span></a></li><li><a href="products/highmaps.html"  ><span>Highmaps</span></a></li><li class="last"><a href="http://highslide.com/"  ><span>Highslide JS</span></a></li></ul></li><li class="last "><a href="contact-email.html"  ><span>Contact</span></a></li></ul></div></div><div class="largemenu"><div class="menusys_mega"><ul><li class="first "><a href="index.html"  ><span>Home</span></a></li><li class="hasChild"><a><span>Demo</span></a><ul class="submenu"><li class="first"><a href="demo.html"  ><span>Highcharts demos</span></a></li><li><a href="stock/demo.html"  ><span>Highstock demos</span></a></li><li class="last"><a href="maps/demo.html"  ><span>Highmaps demo</span></a></li></ul></li><li class="hasChild"><a><span>Docs</span></a><ul class="submenu"><li class="first"><a href="docs.html"  ><span>General Documentation</span></a></li><li><a href="http://api.highcharts.com/highcharts"  ><span>Highcharts API Reference</span></a></li><li><a href="http://api.highcharts.com/highstock"  ><span>Highstock API Reference</span></a></li><li><a href="http://api.highcharts.com/highmaps"  ><span>Highmaps API Reference</span></a></li><li><a href="documentation/compatibility.html"  ><span>Compatibility</span></a></li><li class="last"><a href="documentation/changelog.html"  ><span>Changelog</span></a></li></ul></li><li class="hasChild"><a><span>Support</span></a><ul class="submenu"><li class="first"><a href="support.html"  ><span>Support</span></a></li><li><a href="support/roadmap.html"  ><span>Roadmap</span></a></li><li><a href="download.html"  ><span>Download</span></a></li><li class="last"><a href="http://forum.highcharts.com/"  ><span>Forum</span></a></li></ul></li><li class=" active"><a href="plugin-registry.html"  class=' active' ><span>Plugins</span></a></li><li class="last "><a href="http://shop.highsoft.com/"  ><span>Shop</span></a></li></ul></div></div>			                </div>
+			            </div>
+			            <!--#Mainmenu-->
+						<!--Drill Menu-->
+						<div class="zt-drillmenu-inner">
+							<div class="navbar">
+								<a class="btn-navbar collapsed" id="mobile-button" data-toggle="collapse" data-target=".menusys_drill"></a>
+								<div class="menusys_drill collapse"><ul id="zo2-drilldown-menu" class="nav-drilldown"><li class="first item"><a href="index.html"  id="menusys101_drill" title="Home"><span class="menusys_name">Home</span></a></li><li class="item hasChild"><a id="menusys103_drill" title="Demo"><span class="menusys_name">Demo</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="demo.html"  id="menusys106_drill" title="Highcharts demos"><span class="menusys_name">Highcharts demos</span></a></li><li class="item"><a href="stock/demo.html"  id="menusys107_drill" title="Highstock demos"><span class="menusys_name">Highstock demos</span></a></li><li class="last item"><a href="maps/demo.html"  id="menusys205_drill" title="Highmaps demo"><span class="menusys_name">Highmaps demo</span></a></li></ul></li><li class="item hasChild"><a id="menusys108_drill" title="Docs"><span class="menusys_name">Docs</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="docs.html"  id="menusys128_drill" title="General Documentation"><span class="menusys_name">General Documentation</span></a></li><li class="item"><a href="http://api.highcharts.com/highcharts"  id="menusys124_drill" title="Highcharts API Reference"><span class="menusys_name">Highcharts API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highstock"  id="menusys125_drill" title="Highstock API Reference"><span class="menusys_name">Highstock API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highmaps"  id="menusys211_drill" title="Highmaps API Reference"><span class="menusys_name">Highmaps API Reference</span></a></li><li class="item"><a href="documentation/compatibility.html"  id="menusys126_drill" title="Compatibility"><span class="menusys_name">Compatibility</span></a></li><li class="last item"><a href="documentation/changelog.html"  id="menusys127_drill" title="Changelog"><span class="menusys_name">Changelog</span></a></li></ul></li><li class="item hasChild"><a id="menusys109_drill" title="Support"><span class="menusys_name">Support</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="support.html"  id="menusys110_drill" title="Support"><span class="menusys_name">Support</span></a></li><li class="item"><a href="support/roadmap.html"  id="menusys129_drill" title="Roadmap"><span class="menusys_name">Roadmap</span></a></li><li class="item"><a href="download.html"  id="menusys201_drill" title="Download"><span class="menusys_name">Download</span></a></li><li class="last item"><a href="http://forum.highcharts.com/"  id="menusys208_drill" title="Forum"><span class="menusys_name">Forum</span></a></li></ul></li><li class="item active"><a href="plugin-registry.html"  class=' active' id="menusys111_drill" title="Plugins"><span class="menusys_name">Plugins</span></a></li><li class="item"><a href="http://shop.highsoft.com/"  id="menusys115_drill" title="Shop"><span class="menusys_name">Shop</span></a></li><li class="item"><a href="about.html"  id="menusys112_drill" title="About Us"><span class="menusys_name">About Us</span></a></li><li class="item hasChild"><a id="menusys113_drill" title="Our Products"><span class="menusys_name">Our Products</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="products/highcharts.html"  id="menusys121_drill" title="Highcharts"><span class="menusys_name">Highcharts</span></a></li><li class="item"><a href="products/highstock.html"  id="menusys122_drill" title="Highstock"><span class="menusys_name">Highstock</span></a></li><li class="item"><a href="products/highmaps.html"  id="menusys210_drill" title="Highmaps"><span class="menusys_name">Highmaps</span></a></li><li class="last item"><a href="http://highslide.com/"  id="menusys123_drill" title="Highslide JS"><span class="menusys_name">Highslide JS</span></a></li></ul></li><li class="last item"><a href="contact-email.html"  id="menusys114_drill" title="Contact"><span class="menusys_name">Contact</span></a></li></ul></div>							</div>
+							<div class="clearfix"></div>
+						</div>
+						<!--#Drill Menu-->
+					</div>
+				</div>
+			</div>
+			<!--#Header-->
+            <!--Slideshow-->
+                        <!--#Slideshow-->
+            			            <!-- ZT Userwrap2 -->
+			            <!-- #ZT Userwrap2 -->
+            <!-- ZT Userwrap3 -->
+			            <!-- #ZT Userwrap3 -->
+                        			<!--Main-->
+						<div id="zt-mainframe" class="clearfix">
+				<div class="container">
+					<div id="zt-mainframe-inner" class="row-fluid clearfix">
+						<div id="zt-mainframe-inner2" class="zt-container">
+														<div id="zt-content" class="span12">
+																<div id="zt-component" class="clearfix">
+									<div id="zt-component-inner">
+										
+<div id="system-message-container">
+</div>
+										<script>
+(function ($) {
+	$(function () {
+		var helpText = 'Search for name, title, keywords and author',
+			$input = $('#search-plugins'),
+			clear = function () {
+				if ($input.attr('value') === helpText) {
+					$input.attr('value', '')
+						.css({
+							color: 'black'
+						});
+
+				}
+			};
+		if ($input.attr('value') === '') {
+			$input
+				.attr('value', helpText)
+				.css({
+					color: 'silver'
+				})
+				.bind('focus', clear);
+
+			$('#limit').bind('mousedown', clear);
+		}
+
+		$('#search-clear').click(function () {
+			$input.attr('value', '');
+		});
+	});
+}(jQuery));
+</script>
+<h2>Highcharts plugins</h2>
+<div class="bod">
+	<div class="links">
+		<ul class="plugin-menu">
+						<li><a href="plugin-registry.html">View all</a></li>			
+			<li><a href="plugin-registry/editors.html">Editor's pick!</a></li>
+			<li><a href="plugin-registry/howto.html">Create plugin</a></li>
+			<li><a href="plugin-registry/validate.html">Validate manifest</a></li>
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+	<div class="plugin-container">
+		<form action="/plugin-registry" method="get" name="adminForm">
+			<div class="searchbar">
+				<input type="text" id="search-plugins" name="search" value="yaxis" class="search1" />
+				<div id="search-buttons">
+					<button type="submit"><i class="fa fa-search"></i> Search</button>
+					<button id="search-clear"><i class="fa fa-times-circle"></i> Clear</button>	
+				</div>				
+				<div class="clearfix"></div>
+			</div>
+			<div id="plugins">
+							<div class="plugin">
+					<div class="ptop">
+						<div class="title">
+							<h3>
+								<a href= "plugin-registry/single/28/Current Price Indicator.html">Current Price Indicator</a>							</h3>
+						</div>
+						<div class="prtop">
+							<p>
+								Version:
+								1.0.2							</p>
+							<p>
+								Date:
+								2014-03-18							</p>
+						</div>
+					</div>
+					<div class="pbottom">
+						<div class="description">
+							<p>
+								Using this plugin will display current price indicator in Highstock.							</p>
+						</div>						
+					</div>
+				</div>
+								<div class="plugin">
+					<div class="ptop">
+						<div class="title">
+							<h3>
+								<a href= "plugin-registry/single/20/Scalable Y-Axis.html">Scalable Y-Axis</a>							</h3>
+						</div>
+						<div class="prtop">
+							<p>
+								Version:
+								1.2.3							</p>
+							<p>
+								Date:
+								2014-03-18							</p>
+						</div>
+					</div>
+					<div class="pbottom">
+						<div class="description">
+							<p>
+								Using this plugin lets the user manually adjust Y-Axis range by dragging the labels. Double click to go back to default range.							</p>
+						</div>						
+					</div>
+				</div>
+								<div class="plugin">
+					<div class="ptop">
+						<div class="title">
+							<h3>
+								<a href= "plugin-registry/single/27/Y-Axis Panning.html">Y-Axis Panning</a>							</h3>
+						</div>
+						<div class="prtop">
+							<p>
+								Version:
+								1.0.2							</p>
+							<p>
+								Date:
+								2014-03-13							</p>
+						</div>
+					</div>
+					<div class="pbottom">
+						<div class="description">
+							<p>
+								Using this plugin will enable Y-Axis panning.							</p>
+						</div>						
+					</div>
+				</div>
+								<div class="plugin">
+					<div class="ptop">
+						<div class="title">
+							<h3>
+								<a href= "plugin-registry/single/23/highcharts-legend-yaxis.html">highcharts-legend-yaxis</a>							</h3>
+						</div>
+						<div class="prtop">
+							<p>
+								Version:
+								0.2							</p>
+							<p>
+								Date:
+								2014-03-07							</p>
+						</div>
+					</div>
+					<div class="pbottom">
+						<div class="description">
+							<p>
+								This plugin allows the user to see the legend boxes (rects) bellow the yAxis area							</p>
+						</div>						
+					</div>
+				</div>
+							</div>
+			<div class="listFooter">
+				<div class="list-footer">
+
+<div class="limit">Display #<select id="limit" name="limit" class="inputbox" size="1" onchange="this.form.submit()">
+	<option value="5">5</option>
+	<option value="10">10</option>
+	<option value="15">15</option>
+	<option value="20" selected="selected">20</option>
+	<option value="25">25</option>
+	<option value="30">30</option>
+	<option value="50">50</option>
+	<option value="100">100</option>
+	<option value="0">All</option>
+</select>
+</div>
+<div class="counter"></div>
+<input type="hidden" name="limitstart" value="0" />
+</div>			</div>
+			
+					</form>
+	</div>
+	<div class="clearfix"></div>
+</div>
+									</div>
+								</div>
+																							</div>
+							
+														<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--#main-->
+			            <!-- ZT Userwrap6 -->
+			            <!-- #ZT Userwrap6 -->
+            <!-- ZT Userwrap7 -->
+			            <!-- #ZT Userwrap7 -->
+			<!--Footer-->
+			<div id="zt-footer" class="clearfix ">
+				<div class="container">
+					<div id="zt-footer-inner" class="row-fluid">
+						<div id="zt-footer-left" class="span6">
+															
+							<div id="zt-footer-copy">
+							© 2014 Highcharts. All rights reserved.							</div>
+						</div>
+												<div id="zt-social" class="span4">
+							<div>
+<a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon"><i class="fa fa-twitter"></i></a>
+<a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon"><i class="fa fa-linkedin"></i></a>
+<a href="https://github.com/highslide-software/highcharts.com" title="Github" class="social-icon"><i class="fa fa-github"></i></a>
+</div>
+						</div>
+												<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+            <!--#Footer-->
+		</div>
+	</div>
+	
+	    <!-- Echo Footer Script -->
+        	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-2995052-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>

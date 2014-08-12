@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Maps</title>
+		<description><![CDATA[Highcharts - Interactive JavaScript charts for your web pages.]]></description>
+		<link>http://www.highcharts.com/docs/maps/2-articles/news</link>
+		<lastBuildDate>Mon, 11 Aug 2014 00:42:51 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://www.highcharts.com/docs/maps/2-articles/news?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<item>
+			<title>Highsoft nominated for Nordic Startup Awards</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/136-highsoft-nominated-for-nordic-startup-awards</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/136-highsoft-nominated-for-nordic-startup-awards</guid>
+			<description><![CDATA[<div class="feed-description"><p><span style="color: #141823; font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; line-height: 19.31999969482422px;">We have been nominated for Nordic Startup Awards! First, national winners will be picked. To to win the Norwegian nomination we need your help. Go to the <a href="https://app.socialcee.com/controls/pagemodules/imageuploadcompetition/fbshareitem.aspx?id=988961&amp;pagemoduleid=8670">Startup Awards voting page</a>, select country (Norway) and category (Startup of the year), then vote for Highsoft. Thank you!</span></p>
+<p><a href="https://www.facebook.com/nordicstartupawards?sk=app_1447390765505585&amp;app_data=item%7C988961"><img src="https://app.socialcee.com/Images/Upload/10331/nordic-startup-awards-2014/nordic-startup-pentalogo.png" border="0" width="282" height="287" /></a></p>
+<p><span style="color: #141823; font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif; font-size: 14px; line-height: 19.31999969482422px;"> </span></p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Wed, 14 May 2014 12:30:23 +0000</pubDate>
+		</item>
+		<item>
+			<title>Announcing Highcharts 4</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/134-announcing-highcharts-4</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/134-announcing-highcharts-4</guid>
+			<description><![CDATA[<div class="feed-description"><p>We're thrilled to announce Highcharts 4, including new feature like the long-awaited 3D display and heatmaps, as well as new graphic design and solid, colored gauges. New is also the Download Builder, where you can pick the features you need for your project and create a customized file for quick delivery. Along with the new release comes Highstock 2, including the new Highcharts 4, new design and some new features.</p>
+<p>Developed for the mobile web, Highcharts is the perfect choice for interactive dashboards, or standalone in any web page or web-based project.</p>
+<h2>Resources</h2>
+<ul>
+<li>Visit the <a href="http://www.highcharts.com/download">Download page</a> for pre-built files or to dynamically create your own build.<span style="line-height: 1.3em;"> </span></li>
+</ul>
+<h2>3D demo</h2>
+<p><iframe style="width: 100%; border: none; height: 500px;" src="http://jsfiddle.net/highcharts/8U9Bc/embedded/result%2Cjs%2Chtml%2Ccss/"></iframe></p>
+<h2>New features</h2>
+<div class="intro">
+<h4><img class="float-left" src="http://www.highcharts.com/images/stories/features/3d.png" border="0" alt="" width="164" height="124" />3D view</h4>
+<p>In Highcharts 4 we have gone very far in creating a realistic 3D view of your charts. Other charting tools typically add a couple of faces to a 2D chart to fake 3D. Highcharts on the other hand has created a true 3D space with perspective to make the columns feel like true objects in space. <a href="http://www.highcharts.com/docs/chart-concepts/3d-charts/">Read more</a>.</p>
+<br />
+<h4><img class="float-right" src="http://www.highcharts.com/images/stories/features/download-builder.png" border="0" alt="" width="164" height="124" />Download Builder</h4>
+<p>With the new Download Builder you can cherry pick the features you need for your web project and create a custom Highcharts build. Ideal for applications where bandwidth is crucial, like mobile websites or web applications. Go to <a href="http://www.highcharts.com/download">Download Builder</a>.</p>
+<br />
+<h4><img class="float-left" src="http://www.highcharts.com/images/stories/features/heatmap.png" border="0" alt="" width="164" height="124" />Heat maps</h4>
+<p>Create color coded heat maps displaying density or distribution values across X and Y axes. Heat maps borrow the color axis from Highmaps, where a full gradient or data class axis is added into the legend of the chart. With the HTML5 canvas demo, heatmaps can display thousands of data points in a few hundred milliseconds. <a href="http://www.highcharts.com/docs/chart-and-series-types/heatmap/">Read more</a>.</p>
+<br />
+<h4><img class="float-right" src="http://www.highcharts.com/images/stories/features/solid-gauge.png" border="0" alt="" width="164" height="124" />Solid gauge</h4>
+<p>The solid gauge is an extension of the angular gauge, where the dial is replaced by a colored solid arc. The arc is color coded to reflect the point value. Colors can be defined as a minimum-maximum range, a gradient or as categorized data classes.</p>
+<br />
+<h4><img class="float-left" src="http://www.highcharts.com/images/stories/features/v4-design.png" border="0" alt="" width="164" height="124" />New design</h4>
+<p>Highcharts 4 and Highstock 2 have been overhauled with new default colors, more space between elements, a cleaner navigator layout, callout-type tooltips and better highlighting of hovered points. In addition, three new featured themes are published on the demo page, to showcase Highcharts' versability when it comes to customizing the design and typography.</p>
+<br />
+<h4><img class="float-right" src="http://www.highcharts.com/images/stories/features/auto-markers.png" border="0" alt="" width="164" height="124" />Auto markers</h4>
+<p>Previously, markers of a line-type chart could be turned on or off. In Highcharts 4, it is handled automatically to avoid charts with too dense markers when there are many data points. Once the chart is zoomed in, the markers appear to make it clear where the control points are.</p>
+<br />
+<h4><img class="float-left" src="http://www.highcharts.com/images/stories/features/benchmark.png" border="0" alt="" width="164" height="124" />Faster</h4>
+<p>Highcharts 4 and Highstock 2 clock in at 10% faster than the latest of the HC3 releases, mainly thanks to a more modular structure in the SVG and VML renderers. The same refactoring also makes extending the renderers easier, as each SVG attribute now has its own setter method.</p>
+</div></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Tue, 22 Apr 2014 13:15:58 +0000</pubDate>
+		</item>
+		<item>
+			<title>Announcing Highmaps Beta</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/132-highmaps-beta</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/132-highmaps-beta</guid>
+			<description><![CDATA[<div class="feed-description"><p>We're proud to announce the Beta release of Highmaps, the mapping component for Highcharts. Highmaps allows creation of interactive and standards compliant maps with the well-known ease of use from Highcharts.</p>
+
+<p>Developed for the mobile web, Highmaps works great along with Highcharts for interactive dashboards, or standalone for geo maps or heat maps.</p>
+
+<h2>Resources</h2>
+<ul>
+<li>View the demos at <a href="http://www.highcharts.com/maps/demo/">www.highcharts.com/maps/demo</a>.</li>
+<li>Read the docs at <a href="http://www.highcharts.com/docs/maps/">www.highcharts.com/docs/maps</a>.</li>
+<li>Read the full API reference and view 101 samples at <a href="http://api.highcharts.com/highmaps">api.highcharts.com/highmaps</a>.</li>
+<li>Download <a href="http://code.highcharts.com/zips/Highmaps-1.0.0-beta.zip">the zip package</a>. You can also run the files directly from <code>http://code.highcharts.com/maps/</code>, like for example <code>http://code.highcharts.com/maps/highmaps.js</code>.</li>
+</ul>
+
+<h2>Demo</h2>
+<iframe style="width: 100%; border: none; height: 500px" src="http://jsfiddle.net/highcharts/WzVkV/embedded/result%2Cjs%2Chtml%2Ccss/"></iframe>
+
+<h2>Features</h2>
+<div class="intro">
+<h4><img class="float-left" src="http://www.highcharts.com//images/stories/features/browsers.png" alt="" border="0" height="124" width="164">Mobile friendly</h4>
+<p>Highmaps is designed from ground up with mobile browsers in mind. Everything from multitouch zooming to touch-friendly tooltips responds great on mobile platforms. Nevertheless, Highmaps also works in old browsers like IE6-8.</p>
+<br />
+
+<h4><img class="float-right" src="http://www.highcharts.com//images/stories/features/map-types.png" alt="" border="0" height="124" width="164">Various map types</h4>
+<p>Map area, map line, points of interest, bubbles on maps, heatmaps. These features correspond to series types in Highcharts.</p>
+<br />
+
+<h4><img class="float-left" src="http://www.highcharts.com//images/stories/features/color-axis.png" alt="" border="0" height="124" width="164">Color axis</h4>
+<p>For full control over the color layout of the Highmaps choropleth maps, a separate <a href="http://api.highcharts.com/highmaps#colorAxis">color axis</a> is displayed inside the legend. It inherits most features from scalar axes in order to provide common options like min, max, logarithic scale and more.</p>
+<br />
+
+<h4><img class="float-right" src="http://www.highcharts.com//images/stories/features/map-navigation.png" alt="" border="0" height="124" width="164">Navigation</h4>
+<p>Highmaps features all common ways of <a href="http://api.highcharts.com/highmaps#mapNavigation">navigating</a>, like plus/minus buttons, doubleclick to zoom, mousewheel zooming, multitouch and panning.</p>
+<br />
+
+<h4 style="clear:both"><img class="float-left" src="http://www.highcharts.com//images/stories/features/drilldown.png" alt="" border="0" height="124" width="164">Drilldown</h4>
+<p>The <a href="http://www.highcharts.com/maps/demo/map-drilldown">drilldown module</a> ensures smooth interaction between map areas on one layer, which zoom into a full map on the underlying layer. Let your users click their way down into increasingly local data!</p>
+<br />
+
+<h4><img class="float-right" src="http://www.highcharts.com//images/stories/features/dynamic.png" alt="" border="0" height="124" width="164">Dynamic</h4>
+<p>Like Highcharts, Highmaps support full dynamic access to add, update or delete points/areas, series etc.</p>
+<br />
+
+<h4><img class="float-left" src="http://www.highcharts.com//images/stories/features/geojson.png" alt="" border="0" height="124" width="164">GeoJSON support</h4>
+<p>Besides the common Series/Point concept, Highmaps accepts the standardized GeoJSON format for map input.</p>
+</div></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Mon, 24 Feb 2014 14:20:55 +0000</pubDate>
+		</item>
+		<item>
+			<title>Highmaps Released</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/139-highmaps-released</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/139-highmaps-released</guid>
+			<description><![CDATA[<div class="feed-description"><p>We're proud to announce Highmaps 1.0, the mapping component for Highcharts. Highmaps allows creation of interactive and standards compliant maps with the well-known ease of use from Highcharts.</p>
+<p>Developed for the mobile web, Highmaps works great along with Highcharts for interactive dashboards, or standalone for geo maps or heat maps.</p>
+<h2>Coupon Code</h2>
+<p>Go to our shop within the June 30th, and you'll receive a 20% discount for Highmaps! All you need to do is to enter "highmaps" as the coupon code.</p>
+<p><a class="button" href="http://shop.highsoft.com/highmaps.html">Buy now</a></p>
+<h2>Resources</h2>
+<ul>
+<li>View the demos at <a href="http://www.highcharts.com/maps/demo/">www.highcharts.com/maps/demo</a>.</li>
+<li>Read the docs at <a href="http://www.highcharts.com/docs/maps/">www.highcharts.com/docs/maps</a>.</li>
+<li>Read the full API reference and view 101 samples at <a href="http://api.highcharts.com/highmaps">api.highcharts.com/highmaps</a>.</li>
+<li>Download <a href="http://www.highcharts.com/download">the zip package</a>. You can also run the files directly from <code>http://code.highcharts.com/maps/</code>, like for example <code>http://code.highcharts.com/maps/highmaps.js</code>.</li>
+<li>View our featured <a href="http://code.highcharts.com/mapdata/">Map Collection</a>, currently of 387 maps. In our <a href="http://www.highcharts.com/maps/demo/all-maps">Overview demo</a>, you'll find a searchable and drillable presentation.</li>
+</ul>
+<h2>Demo</h2>
+<p><iframe style="width: 100%; border: none; height: 550px;" src="http://jsfiddle.net/highcharts/sSDPQ/embedded/result%2Cjs%2Chtml%2Ccss/"></iframe></p>
+<h2>Features</h2>
+<div class="intro">
+<h4><img class="float-right" src="http://www.highcharts.com/images/stories/features/browsers.png" border="0" alt="" width="164" height="124" />Mobile friendly</h4>
+<p>Highmaps is designed from ground up with mobile browsers in mind. Everything from multitouch zooming to touch-friendly tooltips responds great on mobile platforms. Nevertheless, Highmaps also works in old browsers like IE6-8.</p>
+<br />
+<h4><img class="float-left" src="http://www.highcharts.com/images/stories/features/map-collection.png" border="0" alt="" width="164" height="124" />Map Collection</h4>
+<p>For your convenience, we provide a collection of hundreds of maps, all optimized for fast download and rendering with Highmaps.</p>
+<br />
+<h4><img class="float-right" src="http://www.highcharts.com/images/stories/features/map-types.png" border="0" alt="" width="164" height="124" />Various map types</h4>
+<p>Map area, map line, points of interest, bubbles on maps, heatmaps. These features correspond to series types in Highcharts.</p>
+<br />
+<h4><img class="float-left" src="http://www.highcharts.com/images/stories/features/color-axis.png" border="0" alt="" width="164" height="124" />Color axis</h4>
+<p>For full control over the color layout of the Highmaps choropleth maps, a separate <a href="http://api.highcharts.com/highmaps#colorAxis">color axis</a> is displayed inside the legend. It inherits most features from scalar axes in order to provide common options like min, max, logarithic scale and more.</p>
+<br />
+<h4><img class="float-right" src="http://www.highcharts.com/images/stories/features/map-navigation.png" border="0" alt="" width="164" height="124" />Navigation</h4>
+<p>Highmaps features all common ways of <a href="http://api.highcharts.com/highmaps#mapNavigation">navigating</a>, like plus/minus buttons, doubleclick to zoom, mousewheel zooming, multitouch and panning.</p>
+<br />
+<h4 style="clear: both;"><img class="float-left" src="http://www.highcharts.com/images/stories/features/drilldown.png" border="0" alt="" width="164" height="124" />Drilldown</h4>
+<p>The <a href="http://www.highcharts.com/maps/demo/map-drilldown">drilldown module</a> ensures smooth interaction between map areas on one layer, which zoom into a full map on the underlying layer. Let your users click their way down into increasingly local data!</p>
+<br />
+<h4><img class="float-right" src="http://www.highcharts.com/images/stories/features/dynamic.png" border="0" alt="" width="164" height="124" />Dynamic</h4>
+<p>Like Highcharts, Highmaps support full dynamic access to add, update or delete points/areas, series etc.</p>
+<br />
+<h4><img class="float-left" src="http://www.highcharts.com/images/stories/features/geojson.png" border="0" alt="" width="164" height="124" />GeoJSON support</h4>
+<p>Besides the common Series/Point concept, Highmaps accepts the standardized GeoJSON format for map input.</p>
+</div></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Mon, 24 Feb 2014 14:20:55 +0000</pubDate>
+		</item>
+		<item>
+			<title>Highsoft met with minister</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/131-our-ceo-grethe-met-with-the-norwegian-minister-of-trade-and-industry-</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/131-our-ceo-grethe-met-with-the-norwegian-minister-of-trade-and-industry-</guid>
+			<description><![CDATA[<div class="feed-description"><p><strong>Our CEO, Grethe, met with the Norwegian Minister of Trade and Industry. Entrepreneurs were invited to visit the Norwegian Ministry of Trade and Industry. </strong></p>
+<p>Highsoft’s CEO, Grethe Hjetland, was one of the participants in a round table conference for entrepreneurship and startups, organized by the Norwegian Minister of Trade and Industry, Monica Meland. Entrepreneurs, representatives from various start up communities and The Norwegian Governement’s instrument for development and innovation joined in to share their experience with Mrs. Meland, who enthusiastically listened to each participants experience and recommendations. </p>
+<p>Hjetland’s emphasize was to communicate how Highsoft has grown into a solid leader within the market of web tools for charting solutions grounded on a great idea from a local entrepreneur without leveraging from the start up instruments available in the initial phase. However, access to network and consulting from Innovation Norway and Connect Vest has become an important part of Highsoft’s future strategy planning seeing how the main product, Highcharts, has established a solid share in the market.</p>
+<p> <img style="display: block; margin-left: auto; margin-right: auto;" src="http://www.highcharts.com/images/stories/102.png" alt="" width="574" height="383" /></p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Mon, 24 Feb 2014 09:49:49 +0000</pubDate>
+		</item>
+		<item>
+			<title>Want to author a book on Highcharts?</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/126-want-to-author-a-book-on-highcharts</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/126-want-to-author-a-book-on-highcharts</guid>
+			<description><![CDATA[<div class="feed-description"><p><a href="http://manning.com/">Manning Publications</a> is planning a new book on Highcharts. In their words:</p>
+
+<blockquote>
+Manning Publications is focused on producing the highest quality books for
+IT professionals, such as the recent bestsellers Secrets of the Javascript
+Ninja and NodeJS in Action. Manning are on the lookout for expert
+Highcharts users who might like to become prospective authors for this
+leading publisher. Previous writing experience isn't necessary but a true
+desire to teach and share knowledge with others is! If you are interested,
+please contact <a href="mailto:ozha@manning.com">ozha@manning.com</a>
+</blockquote></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Thu, 16 Jan 2014 09:43:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>New features: drilldown and no-data</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/125-new-features-drilldown-and-no-data</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/125-new-features-drilldown-and-no-data</guid>
+			<description><![CDATA[<div class="feed-description"><p>Highcharts version 3.0.8 was released today, bringing so many new features that we realized too late it should be called 3.1! In addition to <a href="http://www.highcharts.com/documentation/changelog">a ton of bug fixes</a> and some speed improvement, these features are new:</p>
+
+<h3>Drilldown module</h3>
+<p>This new module allows you to display drilldown data with stunning animations, visualizing to your users how your data is connected. Read more in <a href="http://www.highcharts.com/docs/chart-concepts/drilldown">the docs</a> and in <a href="http://api.highcharts.com#drilldown">the API</a>. Check out the demo:</p>
+<iframe src="http://jsfiddle.net/highcharts/CPKAt/embedded/result%2Cjs/" style="border:none; width: 100%; height: 460px"></iframe>
+
+<h3>No data to display</h3>
+<p>You requested a simple way to tell your users you have no data to display. Check out the <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/no-data-to-display/no-data-pie/">no-data-to-display</a> module.
+
+<h3>Non-snapping crosshairs</h3>
+<p>For charts with high data density, users have requested crosshairs that are not snapping to the closest point. In order to achieve this, we disconnected the crosshair logic from the tooltip, instead assigning it to the axis itself. Check out the <a href="http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/crosshair/">axis crosshair</a> demo. 
+
+<p>Highcharts 3.0.8 can run directly from <a href="http://code.highcharts.com">code.highcharts.com</a> or be downloaded from <a href="http://www.highcharts.com/download">the download page</a>.</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Thu, 09 Jan 2014 15:14:04 +0000</pubDate>
+		</item>
+		<item>
+			<title>Introducing Plugin listing</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/122-introducing-plugin-listing</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/122-introducing-plugin-listing</guid>
+			<description><![CDATA[<div class="feed-description"><p>More and more frequently we have found ourselves writing small plugins to demonstrate how a new feature can be added to Highcharts without adding it (and bloating) the core software. On <a href="http://highcharts.uservoice.com">UserVoice</a> a common reply to a feature request is to present a plugin. So we decided that these small snippets should be structured and presented to the public in a more systematic way, not only to provide features, but also to display how flexible and extendible Highcharts really is, and to invite our huge community to participate with their own plugins. Since version 2.3 Highcharts has been solely built on the prototype pattern, in practice making every method of the code base extendible from the outside. This allows for a flexible plugin architecture where Highcharts can be tweaked and bent into any direction.</p>
+<p>We invite anyone with an idea of a plugin to contribute. We were inspired by the jQuery team and created a plugin system where each plugin is hosted in its own repo on GitHub. A post-receive hook is added to the repo to report changes in the plugin to our site, an a manifest is added to provide information to our site. See <a href="http://www.highcharts.com/plugin-registry/howto">Create your own plugin</a> for the full details on creating and deploying.</p>
+<p> </p>
+<p><iframe src="http://jsfiddle.net/highcharts/ErU8H/embedded/result,js,html,css/" width="100%" height="350" style="border: 0" allowfullscreen="allowfullscreen"></iframe></p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Mon, 21 Oct 2013 09:31:08 +0000</pubDate>
+		</item>
+		<item>
+			<title>Introducing Highcharts Cloud Alpha</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/121-introducing-highcharts-cloud-alpha</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/121-introducing-highcharts-cloud-alpha</guid>
+			<description><![CDATA[<div class="feed-description"><p><strong>Did you ever want to use a full charting API without writing a single line of code? Highcharts Cloud is the ideal tool for designers, journalists or bloggers to create their Highcharts without having to actually learn JavaScript, or for seasoned developers to quickly set up prototypes. Use the online&nbsp;editor to design your charts and change the data, then serve it directly from the cloud. After the chart is saved you&nbsp;can easily share it on social media or embed it directly into your web page. </strong></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18pt;"><strong>Try it now at&nbsp;<a href="http://cloud.highcharts.com">cloud.highcharts.com</a>!</strong></span></p>
+<h3>&nbsp;</h3>
+<h3>Creating your first chart</h3>
+<p>To create your first chart you select one of the template charts and modify its look and the underlying&nbsp;data. Clicking 'Create Chart' from the front page gets you to the templates dialog. Templates exists&nbsp;for line charts, area charts, bar/column charts and pie charts. The templates only contain very basic&nbsp;settings and a small sample data set.</p>
+<p><img src="http://www.highcharts.com/images/stories/articles/cloudtemplate.png" alt="cloud template" /></p>
+<p>After you have selected a template you are taken to the editor where more settings can be changed. For&nbsp;example, to change the chart title, you select the 'Titles' section in the view called 'Simple'. There&nbsp;you will find fields for updating the main title, subtitle and axis titles. Typing text in the field will&nbsp;directly update the chart on the right.</p>
+<p><img src="http://www.highcharts.com/images/stories/articles/cloudedit.png" alt="cloud edit" /></p>
+<h3>Saving charts</h3>
+<p>Charts are saved by clicking 'Save', saving a chart will give it a generated name and a version that starts&nbsp;with 0. The name is a semi-random string that mixes vowels and consonants, like "oqypu". Clicking 'Save'&nbsp;again will bump the version number to 1. The other way to save charts is to click 'Fork', this will give the&nbsp;chart a new name and start over at version 0.</p>
+<p><img src="http://www.highcharts.com/images/stories/articles/cloudsave.png" alt="cloud-save" /></p>
+<p>Logged in users can also set a base version for their charts. A base version is a special version that will&nbsp;be shown if no version are specified.</p>
+<p>Examples:</p>
+<ul>
+<li><code>"oqypu/3"</code> will show version 3</li>
+<li><code>"oqypu"</code> will show the base version (or version 0 if no base version is set)</li>
+</ul>
+<h3>Logging in</h3>
+<p><span style="text-align: justify;">You can use Highcharts Cloud without logging in, but logged in users can set a base version of their charts&nbsp;and also remove unused charts. We don't store any passwords at our site, instead we let you log in using an&nbsp;OpenId provider such as Gmail.</span></p>
+<p><span style="text-align: justify;"><img style="text-align: justify;" src="http://www.highcharts.com/images/stories/articles/cloudlogin.png" alt="cloud login" /></span></p>
+<h3>Sharing and embedding charts</h3>
+<p>To share a chart you click the 'Share' button from the editor page. This will bring up a dialog with 3 tabs,&nbsp;one for sharing on social sites, one for embedding the chart in your own web page and one for emailing a link&nbsp;to the chart.</p>
+<p><img src="http://www.highcharts.com/images/stories/articles/cloudshare.png" alt="cloud-share" /></p>
+<p>Clicking for example the Facebook icon will take you to the Facebook share page and you get the option to add&nbsp;a description and more text to share. A small thumbnail of the chart will also be added to your share.&nbsp;The embed tab simply shows a small piece of html code that you can use to embed the chart in an iframe on your&nbsp;web page.&nbsp;To send an email with a link to the chart, just click the email icon on the last tab. This will bring up your&nbsp;email client with a template email with the link filled in.</p>
+<h3>Licensing</h3>
+<p>The Alpha release of Highcharts Cloud is intended for preview, though charts served through it will work well when shared on social media and embedded in websites. For the final release, we will most likely introduce a freemium model where the tool can be used for free and without subscription to generate basic charts, and then a subscription is required for advanced features. The web application will also be sold as OEM for installation in corporate websites, media houses etc.</p>
+<h3>Feedback</h3>
+<ul>
+<li>Please give feedback, bug reports or general discussion in our <a href="http://forum.highcharts.com/highcharts-cloud-f13/">forum section for Highcharts Cloud</a>.</li>
+</ul>
+<p>&nbsp;</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Tue, 03 Sep 2013 12:59:50 +0000</pubDate>
+		</item>
+		<item>
+			<title>Highcharts Standalone Framework</title>
+			<link>http://www.highcharts.com/docs/maps/2-articles/news/58-highcharts-standalone-framework</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/maps/2-articles/news/58-highcharts-standalone-framework</guid>
+			<description><![CDATA[<div class="feed-description"><p>Finally we're ready to introduce our Standalone Framework for Highcharts! Since the first release, Highcharts has relied on jQuery, MooTools or Prototype to run. Not any more.</p>
+
+<p>Although almost every website runs on jQuery these days, there are many situations where you want to run Highcharts alone. Mobile apps trimmed for minimum bandwidth use, web apps built on other frameworks, or just a simple website where you want to keep it clean.</p>
+
+<p>Currently Highcharts comes bundled with a jQuery adapter that can't be removed, but this will change when we launch our new download builder, which will let you pick the components you need in your web project.</p>
+
+<p>The new Standalone Framework weighs in a 2.1kB compiled and gzipped, as opposed to 1.1kB for both the (internal) jQuery adapter and the MooTools adapter. But then you need to load the frameworks at 32kB and 25kB respectively. It's worth to note that we only save 1.0kB on using an adapter in the first place even if a framework is already in use on the page!</p>
+
+<p>The adapter can be downloaded from <a href="https://github.com/highslide-software/highcharts.com/blob/master/js/adapters/standalone-framework.src.js">our GitHub page</a> and works at least with existing Highcharts 3.0.x releases. From the next maintenance it will be part of the download package.</p>
+
+<p>To see the adapter in action, go to <a href="http://jsfiddle.net/highcharts/aEuGP/">this jsFiddle page</a></p>
+
+<iframe width="100%" height="500"
+    src="http://cloud.highcharts.com/embed/elyguc"
+    style="border: 0px;">
+</iframe></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>News</category>
+			<pubDate>Fri, 09 Aug 2013 15:58:33 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

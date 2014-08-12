@@ -1,0 +1,538 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en-gb"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-gb"><!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<head>
+  <!--<base href="http://www.highcharts.com/about" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="highcharts, charts, javascript charts, ajax charts, plots, line charts, bar charts, pie charts, javascript plots, ajax plots" />
+  <meta name="description" content="Highcharts - Interactive JavaScript charts for your web pages." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Highcharts - About Us</title>
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="joomla/templates/highsoft_colorful/css/template.css" type="text/css" />
+  <style type="text/css">
+h1, h2 {
+	text-align: center;
+}
+h2 {
+	margin-top: 2em;
+}
+div > ul {
+	list-style: none;
+	margin: 0;
+}
+#company-container img {
+	width: 100%;
+}
+.image-container {
+	text-align: center;
+}
+/* Company section */
+
+/* Products section */
+#products-container ul {
+	text-align: center;
+}
+#products-container ul li {
+	margin-right: 20px;
+	font-size: 22px;
+	display: inline-block;
+}
+
+/* Numbers section */
+#numbers-container {
+	text-align: center;
+}
+#numbers-container p {
+	padding: 15px;
+	background-color: #ddd;
+	width: 210px;
+	margin: 15px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+/* Employee section */
+#employees-container {
+	text-align: center;
+}
+.employee {
+	display: inline-block;
+	width: 210px;
+	margin: 15px;
+	vertical-align: top;
+}
+.employee .image-container {
+	padding: 5px;
+	border-radius: 50%;
+	border: 1px solid silver;
+}
+.employee .image-container.green {
+	background-color: #90ef7f;
+}
+.employee .image-container.purple {
+	background-color: #8085e8;
+}
+.employee .image-container img {
+	width: 200px;
+	border-radius: 100px;
+	background-color: #eeeaea;
+}
+.employee .description p {
+	text-align: left;
+}
+.employee p.name {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+}
+
+/* Facts section */
+#facts-container {
+	word-break: break-word;
+	/*text-align: center;*/
+	width: 50%;
+	float: left;
+}
+
+/* Press section */
+#press-container {
+	width: 50%;
+	float: left;
+}
+@media screen and (max-width: 767px) {
+	#facts-container,
+	#press-container {
+		width: 100%;
+		float: none;
+	}
+	#numbers-container p {
+		width: auto;
+		min-height: 0px !important;
+	}
+}
+  </style>
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="lib/jquery-1.7.2.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/jquery.cookies.2.2.0.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/slide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(document).ready(function() {
+	if (jQuery(window).width() >= 768) {
+		setBoxHeight();
+	} else {
+		jQuery(window).on('resize.graybox', setResizeBoxHeight);
+	}
+});
+function setBoxHeight() {
+	var t=0;
+	jQuery("#numbers-container p").each(function () {
+	    jQueryThis = jQuery(this);
+	    if (jQueryThis.height() > t) {
+	        t=jQueryThis.height();
+	    }
+	});
+	jQuery("#numbers-container p").css('min-height', (t + 'px'));
+}
+function setResizeBoxHeight() {
+	if(jQuery(window).width() >= 768) {
+		setBoxHeight();
+		jQuery(window).off('resize.graybox', setResizeBoxHeight);
+	}
+}
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+  </script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"><link href="/templates/highsoft_colorful/images/favicon.ico" rel="shortcut icon"/><!-- Echo Header Script -->
+
+</head>
+<body id="bd" class="clearfix">
+	<div id="zt-wrapper">
+		<div id="zt-wrapper-inner">
+						<!--Header-->
+			<div id="zt-header" class="clearfix">
+				<div class="container">
+			        					<div id="zt-header-inner" class="row-fluid">
+			            <!-- Logo -->
+													<a  id="zt-logo-image"  class="span3" href="index.html" title="Highcharts"><img src="/templates/highsoft_colorful/images/logo.svg" alt="Highcharts" /></a>
+									            <!-- #Logo -->
+			            <!--Mainmenu-->
+			            <div id="zt-mainmenu" class="span9 pull-right" >
+			                <div id="zt-mainmenu-inner" class="row-fluid">
+			                    <div class="smallmenu"><div class="menusys_mega"><ul><li class="first  active"><a href="about.html"  class=' active' ><span>About Us</span></a></li><li class="hasChild"><a><span>Our Products</span></a><ul class="submenu"><li class="first"><a href="products/highcharts.html"  ><span>Highcharts</span></a></li><li><a href="products/highstock.html"  ><span>Highstock</span></a></li><li><a href="products/highmaps.html"  ><span>Highmaps</span></a></li><li class="last"><a href="http://highslide.com/"  ><span>Highslide JS</span></a></li></ul></li><li class="last "><a href="contact-email.html"  ><span>Contact</span></a></li></ul></div></div><div class="largemenu"><div class="menusys_mega"><ul><li class="first "><a href="index.html"  ><span>Home</span></a></li><li class="hasChild"><a><span>Demo</span></a><ul class="submenu"><li class="first"><a href="demo.html"  ><span>Highcharts demos</span></a></li><li><a href="stock/demo.html"  ><span>Highstock demos</span></a></li><li class="last"><a href="maps/demo.html"  ><span>Highmaps demo</span></a></li></ul></li><li class="hasChild"><a><span>Docs</span></a><ul class="submenu"><li class="first"><a href="docs.html"  ><span>General Documentation</span></a></li><li><a href="http://api.highcharts.com/highcharts"  ><span>Highcharts API Reference</span></a></li><li><a href="http://api.highcharts.com/highstock"  ><span>Highstock API Reference</span></a></li><li><a href="http://api.highcharts.com/highmaps"  ><span>Highmaps API Reference</span></a></li><li><a href="documentation/compatibility.html"  ><span>Compatibility</span></a></li><li class="last"><a href="documentation/changelog.html"  ><span>Changelog</span></a></li></ul></li><li class="hasChild"><a><span>Support</span></a><ul class="submenu"><li class="first"><a href="support.html"  ><span>Support</span></a></li><li><a href="support/roadmap.html"  ><span>Roadmap</span></a></li><li><a href="download.html"  ><span>Download</span></a></li><li class="last"><a href="http://forum.highcharts.com/"  ><span>Forum</span></a></li></ul></li><li><a href="plugin-registry.html"  ><span>Plugins</span></a></li><li class="last "><a href="http://shop.highsoft.com/"  ><span>Shop</span></a></li></ul></div></div>			                </div>
+			            </div>
+			            <!--#Mainmenu-->
+						<!--Drill Menu-->
+						<div class="zt-drillmenu-inner">
+							<div class="navbar">
+								<a class="btn-navbar collapsed" id="mobile-button" data-toggle="collapse" data-target=".menusys_drill"></a>
+								<div class="menusys_drill collapse"><ul id="zo2-drilldown-menu" class="nav-drilldown"><li class="first item"><a href="index.html"  id="menusys101_drill" title="Home"><span class="menusys_name">Home</span></a></li><li class="item hasChild"><a id="menusys103_drill" title="Demo"><span class="menusys_name">Demo</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="demo.html"  id="menusys106_drill" title="Highcharts demos"><span class="menusys_name">Highcharts demos</span></a></li><li class="item"><a href="stock/demo.html"  id="menusys107_drill" title="Highstock demos"><span class="menusys_name">Highstock demos</span></a></li><li class="last item"><a href="maps/demo.html"  id="menusys205_drill" title="Highmaps demo"><span class="menusys_name">Highmaps demo</span></a></li></ul></li><li class="item hasChild"><a id="menusys108_drill" title="Docs"><span class="menusys_name">Docs</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="docs.html"  id="menusys128_drill" title="General Documentation"><span class="menusys_name">General Documentation</span></a></li><li class="item"><a href="http://api.highcharts.com/highcharts"  id="menusys124_drill" title="Highcharts API Reference"><span class="menusys_name">Highcharts API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highstock"  id="menusys125_drill" title="Highstock API Reference"><span class="menusys_name">Highstock API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highmaps"  id="menusys211_drill" title="Highmaps API Reference"><span class="menusys_name">Highmaps API Reference</span></a></li><li class="item"><a href="documentation/compatibility.html"  id="menusys126_drill" title="Compatibility"><span class="menusys_name">Compatibility</span></a></li><li class="last item"><a href="documentation/changelog.html"  id="menusys127_drill" title="Changelog"><span class="menusys_name">Changelog</span></a></li></ul></li><li class="item hasChild"><a id="menusys109_drill" title="Support"><span class="menusys_name">Support</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="support.html"  id="menusys110_drill" title="Support"><span class="menusys_name">Support</span></a></li><li class="item"><a href="support/roadmap.html"  id="menusys129_drill" title="Roadmap"><span class="menusys_name">Roadmap</span></a></li><li class="item"><a href="download.html"  id="menusys201_drill" title="Download"><span class="menusys_name">Download</span></a></li><li class="last item"><a href="http://forum.highcharts.com/"  id="menusys208_drill" title="Forum"><span class="menusys_name">Forum</span></a></li></ul></li><li class="item"><a href="plugin-registry.html"  id="menusys111_drill" title="Plugins"><span class="menusys_name">Plugins</span></a></li><li class="item"><a href="http://shop.highsoft.com/"  id="menusys115_drill" title="Shop"><span class="menusys_name">Shop</span></a></li><li class="item active"><a href="about.html"  class=' active' id="menusys112_drill" title="About Us"><span class="menusys_name">About Us</span></a></li><li class="item hasChild"><a id="menusys113_drill" title="Our Products"><span class="menusys_name">Our Products</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="products/highcharts.html"  id="menusys121_drill" title="Highcharts"><span class="menusys_name">Highcharts</span></a></li><li class="item"><a href="products/highstock.html"  id="menusys122_drill" title="Highstock"><span class="menusys_name">Highstock</span></a></li><li class="item"><a href="products/highmaps.html"  id="menusys210_drill" title="Highmaps"><span class="menusys_name">Highmaps</span></a></li><li class="last item"><a href="http://highslide.com/"  id="menusys123_drill" title="Highslide JS"><span class="menusys_name">Highslide JS</span></a></li></ul></li><li class="last item"><a href="contact-email.html"  id="menusys114_drill" title="Contact"><span class="menusys_name">Contact</span></a></li></ul></div>							</div>
+							<div class="clearfix"></div>
+						</div>
+						<!--#Drill Menu-->
+					</div>
+				</div>
+			</div>
+			<!--#Header-->
+            <!--Slideshow-->
+                        <!--#Slideshow-->
+            			            <!-- ZT Userwrap2 -->
+			            <!-- #ZT Userwrap2 -->
+            <!-- ZT Userwrap3 -->
+			            <!-- #ZT Userwrap3 -->
+                        			<!--Main-->
+						<div id="zt-mainframe" class="clearfix">
+				<div class="container">
+					<div id="zt-mainframe-inner" class="row-fluid clearfix">
+						<div id="zt-mainframe-inner2" class="zt-container">
+														<div id="zt-content" class="span12">
+																<div id="zt-component" class="clearfix">
+									<div id="zt-component-inner">
+										
+<div id="system-message-container">
+</div>
+										<h1>Highsoft AS</h1>
+<div id="company-container">
+	<p class="lead"><strong>Highsoft AS</strong> is the company behind Highcharts JS, the JavaScript charting engine, and Highslide JS, the image and media viewer. Highcharts has quickly become one of the industry leaders in standards compatible, JavaScript based charting.</p>
+	<p>In October 2011 we launched Highstock, a charting product targeted at financial visualization. Highstock lets you create stock or general timeline charts in pure   JavaScript, including sophisticated navigation options like a small   navigator series, preset date ranges, date picker, scrolling and   panning.</p>
+	<div class="image-container">
+		<img src="joomla/components/com_about/assets/images/bilde-800px.jpg" border="0">
+	</div>
+	<p>The company is a limited company succeeding the former Highslide Software, founder Torstein Hønsi's sole proprietorship.These companies have been profitable since the start in 2006, and since Highcharts was released in late 2009, our growth really escalated. During 2012 we quickly grew and today we are 10 employees.&nbsp;We also have 5 external engineers working on technical support. Our offices are located in Vik i Sogn, Norway, a beautiful small town surrounded by mountains and fjords. Many bright ideas have come to us while walking or skiing in the mountains! Check out <a href="http://www.vikjavev.no">Torstein's personal website</a>.</p>
+	<div class="clearfix"></div>
+</div>
+<h2>Products</h2>
+<div id="products-container">
+	<ul>
+		<li><a href="http://highcharts.com">Highcharts JS</a></li>
+		<li><a href="http://highslide.com">Highslide JS</a></li>
+		<li><a href="http://highcharts.com/products/highstock">Highstock JS</a></li>
+        <li><a href="http://highcharts.com/products/highmaps">Highmaps JS</a></li>
+		<div class="clearfix"></div>
+	</ul>
+</div>
+<h2>Numbers</h2>
+<div id="numbers-container">
+	<p>
+		Out  of the Fortune 100 Global list of the greatest companies in the world, <strong>51</strong> are Highcharts/Highstock licensees and <strong>8</strong> are Highslide licensees.
+	</p>
+	<p>
+		By February 2013 we have sold <strong>25,</strong><strong>000</strong> software licenses around the world, ranging from $29 Single Website licenses to high-end Highcharts and Highstock Enterprise licenses.
+	</p>
+	<p>
+		Since the first release in November 2009, the open Highcharts code base has been downloaded more than <strong>16</strong><strong>0,000</strong> times.</p>
+	<p>
+		The Highcharts JS website receives more than <strong>280,000</strong> visits a month. Each of these visitors spends in average more than <strong>5 minutes</strong> on our site.
+	</p>
+	<p>
+		During April 2012, <strong>190,379</strong> charts were generated through our Highcharts Exporting service for generating images from online charts.
+	</p>
+</div>
+<h2>The Team</h2>
+<div id="employees-container">
+	<div class="employee">
+		<div class="image-container purple">
+			<img src="joomla/components/com_about/assets/images/Torstein.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Torstein Hønsi</p>
+			<p>CTO and owner, located in Vik i Sogn, Norway. Works on developing and maintaining Highcharts, Highstock and Highslide.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container green">
+			<img src="joomla/components/com_about/assets/images/Grethe.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Grethe Hjetland</p>
+			<p>CEO, located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container purple">
+			<img src="joomla/components/com_about/assets/images/Gert.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Gert Vaartjes</p>
+			<p>Developer, located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container green">
+			<img src="joomla/components/com_about/assets/images/Hilde.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Hilde Instefjord</p>
+			<p>Sales and marketing, located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container purple">
+			<img src="joomla/components/com_about/assets/images/Guro.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Guro Myrkaskog</p>
+			<p>Sales consultant, located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container green">
+			<img src="joomla/components/com_about/assets/images/Anne%20Jorunn.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Anne Jorunn Fjærestad</p>
+			<p>Sales consultant, located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container purple">
+			<img src="joomla/components/com_about/assets/images/Erik.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Erik Olsson</p>
+			<p>Developer, located in Göteborg, Sweden.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container green">
+			<img src="joomla/components/com_about/assets/images/Slawek.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Sławomir Kołodziej</p>
+			<p>Highcharts support engineer, employed by <a href="http://www.blacklabel.pl">Black Label</a> and located in Krakow, Poland.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container purple">
+			<img src="joomla/components/com_about/assets/images/Pawel.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Paweł Fus</p>
+			<p>Highcharts support engineer, employed by <a href="http://www.blacklabel.pl/">Black Label</a> and located in Krakow, Poland.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container green">
+			<img src="joomla/components/com_about/assets/images/Sebastian.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Sebastian Bochan</p>
+			<p>Highcharts support engineer, employed by <a href="http://www.blacklabel.pl">Black Label</a> and located in Krakow, Poland.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container purple">
+			<img src="joomla/components/com_about/assets/images/HildeT.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Hilde Tindlund</p>
+			<p>Highslide support engineer, located in Fredrikstad, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container green">
+			<img src="joomla/components/com_about/assets/images/Stephane.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Stephane Vanraes</p>
+			<p>Developer, located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container purple">
+			<img src="joomla/components/com_about/assets/images/Oystein.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Øystein Moseng</p>
+			<p>Developer, located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="employee">
+		<div class="image-container green">
+			<img src="joomla/components/com_about/assets/images/Jon%20Arild.jpg">
+		</div>
+		<div class="description">
+			<p class="name">Jon Arild Nygård</p>
+			<p>Developer and Trainee located in Vik i Sogn, Norway.</p>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>	
+</div><div>
+	<div id="facts-container">
+	<h2>Facts</h2>
+	<ul>
+		<li>
+			Official company name: Highsoft AS
+		</li>
+		<li>
+			Company location: Elvegata 1, 6893 VIK I SOGN, Norway.
+		</li>
+		<li>Foretaksregisteret (VAT No.): <span style="background-color: #e4ecf3;">NO 996840506</li>
+		<li>D-U-N-S no.: <span style="background-color: #e4ecf3;">67-134-3420 <a href="http://www.highsoft.com/legal/D&B%20business%20report.pdf" title="D&amp;B Business Report"><img src="http://www.highcharts.com/images/stories/pdf_button.png" border="0"></a></span></li>
+		<li>Official information: <a href="http://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=996840506">Brønnøysundregistrene</a></li>
+		<li>Contact us: 
+			<ul>
+				<li>
+					<a href="http://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=996840506">
+					 <script language="JavaScript" type="text/javascript">
+					 <!--
+					 var prefix = 'm&#97;&#105;lt&#111;:';
+					 var suffix = '';
+					 var attribs = '';
+					 var path = 'hr' + 'ef' + '=';
+					 var addy54200 = 's&#117;pp&#111;rt' + '&#64;';
+					 addy54200 = addy54200 + 'h&#105;ghch&#97;rts' + '&#46;' + 'c&#111;m';
+					 document.write( '<a ' + path + '\'' + prefix + addy54200 + suffix + '\'' + attribs + '>' );
+					 document.write( addy54200 );
+					 document.write( '<\/a>' );
+					 //-->
+					 </script></a>
+					 <script language="JavaScript" type="text/javascript">
+					 <!--
+					 document.write( '<span style=\'display: none;\'>' );
+					 //-->
+					 </script><span style="display: none;">This e-mail address is being protected from spambots. You need JavaScript enabled to view it
+					 <script language="JavaScript" type="text/javascript">
+					 <!--
+					 document.write( '</' );
+					 document.write( 'span>' );
+					 //-->
+					 </script></span>
+				</li>
+				<li>
+					<a href="http://w2.brreg.no/enhet/sok/detalj.jsp?orgnr=996840506">
+					 <script language="JavaScript" type="text/javascript">
+					 <!--
+					 var prefix = 'm&#97;&#105;lt&#111;:';
+					 var suffix = '';
+					 var attribs = '';
+					 var path = 'hr' + 'ef' + '=';
+					 var addy60128 = 's&#97;l&#101;s' + '&#64;';
+					 addy60128 = addy60128 + 'h&#105;ghs&#111;ft' + '&#46;' + 'c&#111;m';
+					 document.write( '<a ' + path + '\'' + prefix + addy60128 + suffix + '\'' + attribs + '>' );
+					 document.write( addy60128 );
+					 document.write( '<\/a>' );
+					 //-->
+					 </script></a>
+					 <script language="JavaScript" type="text/javascript">
+					 <!--
+					 document.write( '<span style=\'display: none;\'>' );
+					 //-->
+					 </script><span style="display: none;">This e-mail address is being protected from spambots. You need JavaScript enabled to view it
+					 <script language="JavaScript" type="text/javascript">
+					 <!--
+					 document.write( '</' );
+					 document.write( 'span>' );
+					 //-->
+					 </script></span>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div><div id="press-container">
+	<h2>Press</h2>
+	<ul>
+		<li><a href="index.php-option=com_content&view=article&id=141.html">Norwegian Prime Minister impressed by Highsoft.</a></li>
+		<li><a href="http://www.fastcolabs.com/3030447/how-highcharts-won-the-enterprise-data-viz-market">How Highcharts won the enterprise data viz market</a> - an interview with CTO Torstein Hønsi, focused on testing and compatibility.</li>
+		<li><a href="component/content/article/2-news/131-our-ceo-grethe-met-with-the-norwegian-minister-of-trade-and-industry-.html">Our CEO, Grethe, met with the Norwegian Minister of Trade and Industry.</a></li>
+		<li><a href="component/content/article/2-news/57-highsoft-nominated-norways-entrepeneur-of-the-year.html">Highsoft nominated Norway's Entrepeneur of the Year.</a></li>
+		<li>Highsoft awarded <a href="component/content/article/2-news/51-highsoft-solutions-awarded-entrepeneur-of-the-year.html">Entrepeneur of the Year 2012</a> for Sogn og Fjordane.</li>
+		<li>Interview with Torstein Hønsi on the&nbsp;<a href="http://blog.socialintent.com/2011/05/highcharts-software-entrepreneurship-in-the-fjords/">Social Intent blog</a>.</li>
+		<li><a href="http://www.highsoft.com/images/logo/highsoft-logo-pack.zip">Download logos</a></li>
+	</ul>
+	<p><strong>Publications in Norwegian</strong></p>
+	<ul>
+		<li><a href="http://www.hegnar.no/okonomi/article758218.ece">Torstein styrer en fantastisk pengemaskin fra byda Vik i Sogn</a>. </li>
+		<li><a href="http://www.bt.no/tv/Dataeventyret-i-Vik-2596948.html" title="Dataeventyret i Vik">Dataeventyret i Vik</a></li>
+		<li><a href="http://framtidsfylket.no/om-framtidsfylket/nyheiter/naeringsliv/grafane-peikar-til-rett-til-vers-for-databedrift-i-vik/" title="Grafane peikar til rett til vêrs for databedrift i Vik">Grafane peikar til rett til vêrs for databedrift i Vik</a></li>
+		<li><a href="http://framtidsfylket.no/om-framtidsfylket/nyheiter/naeringsliv/fra-vik-til-wall-street/" title="Frå Vik til Wall Street">Frå Vik til Wall Street</a></li>
+		<li><a href="http://www.nrk.no/nyheter/distrikt/nrk_sogn_og_fjordane/1.8339198">Finalistane i Årets Gründer i Sogn og Fjordane</a></li>
+	</ul>
+</div>	<div class="clearfix"></div>
+</div>
+
+									</div>
+								</div>
+																							</div>
+							
+														<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--#main-->
+			            <!-- ZT Userwrap6 -->
+			            <!-- #ZT Userwrap6 -->
+            <!-- ZT Userwrap7 -->
+			            <!-- #ZT Userwrap7 -->
+			<!--Footer-->
+			<div id="zt-footer" class="clearfix ">
+				<div class="container">
+					<div id="zt-footer-inner" class="row-fluid">
+						<div id="zt-footer-left" class="span6">
+															
+							<div id="zt-footer-copy">
+							© 2014 Highcharts. All rights reserved.							</div>
+						</div>
+												<div id="zt-social" class="span4">
+							<div>
+<a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon"><i class="fa fa-twitter"></i></a>
+<a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon"><i class="fa fa-linkedin"></i></a>
+<a href="https://github.com/highslide-software/highcharts.com" title="Github" class="social-icon"><i class="fa fa-github"></i></a>
+</div>
+						</div>
+												<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+            <!--#Footer-->
+		</div>
+	</div>
+	
+	    <!-- Echo Footer Script -->
+        	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-2995052-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>

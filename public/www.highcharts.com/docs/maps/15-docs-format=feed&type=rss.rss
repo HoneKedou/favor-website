@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Maps</title>
+		<description><![CDATA[Highcharts - Interactive JavaScript charts for your web pages.]]></description>
+		<link>http://www.highcharts.com/docs/maps/15-docs</link>
+		<lastBuildDate>Mon, 11 Aug 2014 00:43:02 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://www.highcharts.com/docs/maps/15-docs?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+	</channel>
+</rss>

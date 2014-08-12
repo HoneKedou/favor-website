@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/4-docs/chart-concepts</id>
+	<updated>2014-08-11T00:43:06+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/4-docs/chart-concepts?format=feed&amp;type=atom"/>
+	<entry>
+		<title>3D Charts</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/3d-charts"/>
+		<published>2014-03-13T12:21:14+00:00</published>
+		<updated>2014-03-13T12:21:14+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/3d-charts</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h2&gt;Getting started with Highcharts 3D Support.&lt;/h2&gt;
+&lt;p&gt;Highcharts 3D is a Highcharts module providing limited 3D support to charts. It currently allows to create 3D Column charts, 3D Pie charts and 3D Scatter charts.&lt;/p&gt;
+&lt;h3&gt;Load the required files.&lt;/h3&gt;
+&lt;p&gt;To be able to use Highcharts 3D you first have to load Highcharts as usual and load the additional 3D plugin module:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;&lt;a href=&quot;http://code.highcharts.com/highcharts-3d.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&quot;&gt;http://code.highcharts.com/highcharts-3d.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;p&gt;(This should be included after highcharts.js)&lt;/p&gt;
+&lt;h3&gt;Configuring the 3D options for a chart.&lt;/h3&gt;
+&lt;p&gt;Loading the 3D module will not alter existing charts unless they are specifically set up to be 3D, this allows you to have both 3D Charts and regular charts on one page. The configuration for the 3D chart in general is done the &lt;em&gt;chart&lt;/em&gt; section of the options, while some specific settings for different chart type can be found under &lt;em&gt;plotOptions&lt;/em&gt;; here you see the fully extended 3D options with the type of value it expects:&lt;/p&gt;
+&lt;pre&gt;chart: {&lt;br /&gt;    ....&lt;br /&gt;    options3d: {&lt;br /&gt;        enabled: ´boolean value´,&lt;br /&gt;        alpha: ´numeric value´,&lt;br /&gt;        beta: ´numeric value´,&lt;br /&gt;        depth: ´numeric value´,&lt;br /&gt;        viewDistance: ´numeric value´,&lt;br /&gt;        frame: {&lt;br /&gt;            bottom: {&lt;br /&gt;                size: ´numeric value´,&lt;br /&gt;                color: ´color value´&lt;br /&gt;            },&lt;br /&gt;            side: {&lt;br /&gt;                size: ´numeric value´,&lt;br /&gt;                color: ´color value´&lt;br /&gt;            },&lt;br /&gt;            back: {&lt;br /&gt;                size: ´numeric value´,&lt;br /&gt;                color: ´color value´&lt;br /&gt;            }&lt;br /&gt;       }&lt;br /&gt;   },&lt;br /&gt;   ...&lt;br /&gt;}&lt;br /&gt;...&lt;br /&gt;plotOptions: {&lt;br /&gt;    ...&lt;br /&gt;    column: {&lt;br /&gt;        ...&lt;br /&gt;        depth: ´numeric value´,&lt;br /&gt;        groupZPadding: ´numeric value´,&lt;br /&gt;        ...&lt;br /&gt;    },&lt;br /&gt;    ...&lt;br /&gt;    pie: {&lt;br /&gt;        depth: ´numeric value´&lt;br /&gt;    },&lt;br /&gt;    ...&lt;br /&gt;}&lt;/pre&gt;
+&lt;h2&gt;General&lt;/h2&gt;
+&lt;p&gt;For all 3D charts the following options are the most important (part of &lt;em&gt;chart.options3d&lt;/em&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;enabled                   This indicates wether the chart has to have 3D or not, set this to true.&lt;/li&gt;
+&lt;li&gt;depth                        The total depth of the chart, defaults to 100.&lt;/li&gt;
+&lt;li&gt;viewDistance          This defines how far a viewer is from the chart.&lt;/li&gt;
+&lt;li&gt;alpha &amp;amp; beta           The angles to rotate the view of the chart.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Beware that setting a low &lt;em&gt;viewDistance&lt;/em&gt; can result in twisted effects in the perspective because the view point is too close to the chart.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;chart.options3d&lt;/em&gt; there is also the possibility to construct three panes around the chart called the &lt;em&gt;frame&lt;/em&gt;, by default these panes are invisible but they can each be configured seperately in &lt;em&gt;chart.options.3d.frame&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;bottom|side|back: {&lt;br /&gt;    size:   The thickness of the pane (defaults to 0)&lt;br /&gt;    color:  The color of the pane (default to transparent)&lt;br /&gt;}&lt;/pre&gt;
+&lt;h2&gt;3D Columns&lt;/h2&gt;
+&lt;p&gt;A 3D chart of type &lt;a href=&quot;docs/chart-and-series-types/column-chart&quot;&gt;columns&lt;/a&gt; will draw each column as a cuboid and thus create a 3D effect. By default the depth of this column is set to 25. To define another depth you have to go into the &lt;em&gt;plotOptions&lt;/em&gt; and define one for the columns:&lt;/p&gt;
+&lt;pre&gt;plotOptions.column.depth: The depth of each individual column.&lt;/pre&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/2fuRA/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h3&gt;Displaying multiple columns&lt;/h3&gt;
+&lt;p&gt;Just like in normal column charts, the Highcharts 3D plugin does allow to display a series of charts and to order these as desired using techniques like &lt;em&gt;grouping&lt;/em&gt; and &lt;em&gt;stacking&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;By default, &lt;em&gt;grouping&lt;/em&gt; is &lt;strong&gt;true&lt;/strong&gt; in Highcharts, displaying the columns next to each other, in Highcharts 3D this is still the same: the columns will be standing next to each other on the front row of your chart. By setting &lt;em&gt;grouping&lt;/em&gt; to &lt;strong&gt;false&lt;/strong&gt;, the columns will be placed behind each other in order of appearance. The default behavious is to place the columns without any spacing against each other, this can be modified by setting the &lt;em&gt;groupZPadding&lt;/em&gt; option&lt;/p&gt;
+&lt;pre&gt;plotOptions.column.groupZPadding: Spacing between columns on the z-axis.&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Make sure the depth of the chart is sufficient to display all your columns. You will need at least the following depth: number of columns * (depth of column + z-padding)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A regular Highcharts column chart also offers the possibility to stack columns together, this is of course still available in 3D charts and works in exactly the same way by setting &lt;em&gt;stacking&lt;/em&gt; to &lt;strong&gt;true&lt;/strong&gt; and defining a stack number for each series.&lt;/p&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/4dccq/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;3D Pie&lt;/h2&gt;
+&lt;p&gt;For a &lt;a href=&quot;docs/chart-and-series-types/pie-chart&quot;&gt;pie chart&lt;/a&gt; the depth of the total chart is not important and setting the frame does not do anything (the frame is linked to the axis line and pies do not have these in the same way the other charts have). For pie charts it is important to set the depth property in&lt;em&gt; plotOptions&lt;/em&gt;.&lt;/p&gt;
+&lt;pre&gt;plotOptions.pie.depth: Defines the 'thickness' of the pie.&lt;/pre&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/FKKz9/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;3D Scatter&lt;/h2&gt;
+&lt;p&gt;In addition to x &amp;amp; y coordinates like in a regular &lt;a href=&quot;docs/chart-and-series-types/scatter-chart&quot;&gt;scatter chart&lt;/a&gt;, the 3D plugin adds an extra z coordinate to each point to place in 3 dimensions. Similar to the normal chart these coordinates can be sent eithe literally or using an array:&lt;/p&gt;
+&lt;pre&gt;{x: 1, y: 1, z: 1} is the same point as [1,1,1]&lt;/pre&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/V37Vv/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h2&gt;Getting started with Highcharts 3D Support.&lt;/h2&gt;
+&lt;p&gt;Highcharts 3D is a Highcharts module providing limited 3D support to charts. It currently allows to create 3D Column charts, 3D Pie charts and 3D Scatter charts.&lt;/p&gt;
+&lt;h3&gt;Load the required files.&lt;/h3&gt;
+&lt;p&gt;To be able to use Highcharts 3D you first have to load Highcharts as usual and load the additional 3D plugin module:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;&lt;a href=&quot;http://code.highcharts.com/highcharts-3d.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&quot;&gt;http://code.highcharts.com/highcharts-3d.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/a&gt;&lt;/pre&gt;
+&lt;p&gt;(This should be included after highcharts.js)&lt;/p&gt;
+&lt;h3&gt;Configuring the 3D options for a chart.&lt;/h3&gt;
+&lt;p&gt;Loading the 3D module will not alter existing charts unless they are specifically set up to be 3D, this allows you to have both 3D Charts and regular charts on one page. The configuration for the 3D chart in general is done the &lt;em&gt;chart&lt;/em&gt; section of the options, while some specific settings for different chart type can be found under &lt;em&gt;plotOptions&lt;/em&gt;; here you see the fully extended 3D options with the type of value it expects:&lt;/p&gt;
+&lt;pre&gt;chart: {&lt;br /&gt;    ....&lt;br /&gt;    options3d: {&lt;br /&gt;        enabled: ´boolean value´,&lt;br /&gt;        alpha: ´numeric value´,&lt;br /&gt;        beta: ´numeric value´,&lt;br /&gt;        depth: ´numeric value´,&lt;br /&gt;        viewDistance: ´numeric value´,&lt;br /&gt;        frame: {&lt;br /&gt;            bottom: {&lt;br /&gt;                size: ´numeric value´,&lt;br /&gt;                color: ´color value´&lt;br /&gt;            },&lt;br /&gt;            side: {&lt;br /&gt;                size: ´numeric value´,&lt;br /&gt;                color: ´color value´&lt;br /&gt;            },&lt;br /&gt;            back: {&lt;br /&gt;                size: ´numeric value´,&lt;br /&gt;                color: ´color value´&lt;br /&gt;            }&lt;br /&gt;       }&lt;br /&gt;   },&lt;br /&gt;   ...&lt;br /&gt;}&lt;br /&gt;...&lt;br /&gt;plotOptions: {&lt;br /&gt;    ...&lt;br /&gt;    column: {&lt;br /&gt;        ...&lt;br /&gt;        depth: ´numeric value´,&lt;br /&gt;        groupZPadding: ´numeric value´,&lt;br /&gt;        ...&lt;br /&gt;    },&lt;br /&gt;    ...&lt;br /&gt;    pie: {&lt;br /&gt;        depth: ´numeric value´&lt;br /&gt;    },&lt;br /&gt;    ...&lt;br /&gt;}&lt;/pre&gt;
+&lt;h2&gt;General&lt;/h2&gt;
+&lt;p&gt;For all 3D charts the following options are the most important (part of &lt;em&gt;chart.options3d&lt;/em&gt;):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;enabled                   This indicates wether the chart has to have 3D or not, set this to true.&lt;/li&gt;
+&lt;li&gt;depth                        The total depth of the chart, defaults to 100.&lt;/li&gt;
+&lt;li&gt;viewDistance          This defines how far a viewer is from the chart.&lt;/li&gt;
+&lt;li&gt;alpha &amp;amp; beta           The angles to rotate the view of the chart.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Beware that setting a low &lt;em&gt;viewDistance&lt;/em&gt; can result in twisted effects in the perspective because the view point is too close to the chart.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;em&gt;chart.options3d&lt;/em&gt; there is also the possibility to construct three panes around the chart called the &lt;em&gt;frame&lt;/em&gt;, by default these panes are invisible but they can each be configured seperately in &lt;em&gt;chart.options.3d.frame&lt;/em&gt;:&lt;/p&gt;
+&lt;pre&gt;bottom|side|back: {&lt;br /&gt;    size:   The thickness of the pane (defaults to 0)&lt;br /&gt;    color:  The color of the pane (default to transparent)&lt;br /&gt;}&lt;/pre&gt;
+&lt;h2&gt;3D Columns&lt;/h2&gt;
+&lt;p&gt;A 3D chart of type &lt;a href=&quot;docs/chart-and-series-types/column-chart&quot;&gt;columns&lt;/a&gt; will draw each column as a cuboid and thus create a 3D effect. By default the depth of this column is set to 25. To define another depth you have to go into the &lt;em&gt;plotOptions&lt;/em&gt; and define one for the columns:&lt;/p&gt;
+&lt;pre&gt;plotOptions.column.depth: The depth of each individual column.&lt;/pre&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/2fuRA/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h3&gt;Displaying multiple columns&lt;/h3&gt;
+&lt;p&gt;Just like in normal column charts, the Highcharts 3D plugin does allow to display a series of charts and to order these as desired using techniques like &lt;em&gt;grouping&lt;/em&gt; and &lt;em&gt;stacking&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;By default, &lt;em&gt;grouping&lt;/em&gt; is &lt;strong&gt;true&lt;/strong&gt; in Highcharts, displaying the columns next to each other, in Highcharts 3D this is still the same: the columns will be standing next to each other on the front row of your chart. By setting &lt;em&gt;grouping&lt;/em&gt; to &lt;strong&gt;false&lt;/strong&gt;, the columns will be placed behind each other in order of appearance. The default behavious is to place the columns without any spacing against each other, this can be modified by setting the &lt;em&gt;groupZPadding&lt;/em&gt; option&lt;/p&gt;
+&lt;pre&gt;plotOptions.column.groupZPadding: Spacing between columns on the z-axis.&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;&lt;strong&gt;Make sure the depth of the chart is sufficient to display all your columns. You will need at least the following depth: number of columns * (depth of column + z-padding)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A regular Highcharts column chart also offers the possibility to stack columns together, this is of course still available in 3D charts and works in exactly the same way by setting &lt;em&gt;stacking&lt;/em&gt; to &lt;strong&gt;true&lt;/strong&gt; and defining a stack number for each series.&lt;/p&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/4dccq/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;3D Pie&lt;/h2&gt;
+&lt;p&gt;For a &lt;a href=&quot;docs/chart-and-series-types/pie-chart&quot;&gt;pie chart&lt;/a&gt; the depth of the total chart is not important and setting the frame does not do anything (the frame is linked to the axis line and pies do not have these in the same way the other charts have). For pie charts it is important to set the depth property in&lt;em&gt; plotOptions&lt;/em&gt;.&lt;/p&gt;
+&lt;pre&gt;plotOptions.pie.depth: Defines the 'thickness' of the pie.&lt;/pre&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/FKKz9/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;h2&gt;3D Scatter&lt;/h2&gt;
+&lt;p&gt;In addition to x &amp;amp; y coordinates like in a regular &lt;a href=&quot;docs/chart-and-series-types/scatter-chart&quot;&gt;scatter chart&lt;/a&gt;, the 3D plugin adds an extra z coordinate to each point to place in 3 dimensions. Similar to the normal chart these coordinates can be sent eithe literally or using an array:&lt;/p&gt;
+&lt;pre&gt;{x: 1, y: 1, z: 1} is the same point as [1,1,1]&lt;/pre&gt;
+&lt;p&gt;&lt;iframe src=&quot;http://jsfiddle.net/highcharts/V37Vv/embedded/result,js/&quot; width=&quot;100%&quot; height=&quot;450&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Drilldown</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/drilldown"/>
+		<published>2014-01-09T13:58:11+00:00</published>
+		<updated>2014-01-09T13:58:11+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/drilldown</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;For full detailed documentation and more samples of the drilldown feature, see &lt;a href=&quot;http://api.highcharts.com#drilldown&quot;&gt;the Highcharts API&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;p&gt;Since version 3.0.8, Highcharts has built-in support for drilldown. By giving a point configuration a drilldown option that corresponds to a series configuration in the &lt;code&gt;drilldown.series&lt;/code&gt; array, the point is linked to a hidden series. When the point is clicked, this series is loaded in the chart and replaces the existing series. For column, bar and pie series, an animation occurs to help visualize that the single clicked point is extracted into a drilldown series.&lt;/p&gt;
+&lt;h3&gt;Basic setup&lt;/h3&gt;
+&lt;p&gt;For a basic setup, the drilldown series are defined in a separate array under the &lt;code&gt;drilldown&lt;/code&gt; configuration. Each series configuration is given an id, which is used for the drilldown parent point to identify its series.&amp;nbsp;&lt;/p&gt;
+&lt;pre&gt;        series: [{
+            name: 'Things',
+            colorByPoint: true,
+            data: [{
+                name: 'Animals',
+                y: 5,
+                drilldown: 'animals'
+            }, {
+                name: 'Fruits',
+                y: 2,
+                drilldown: 'fruits'
+            }, {
+                name: 'Cars',
+                y: 4,
+                drilldown: 'cars'
+            }]
+        }],
+        drilldown: {
+            series: [{
+                id: 'animals',
+                data: [
+                    ['Cats', 4],
+                    ['Dogs', 2],
+                    ['Cows', 1],
+                    ['Sheep', 2],
+                    ['Pigs', 1]
+                ]
+            }, {
+                id: 'fruits',
+                data: [
+                    ['Apples', 4],
+                    ['Oranges', 2]
+                ]
+            }, {
+                id: 'cars',
+                data: [
+                    ['Toyota', 4],
+                    ['Opel', 2],
+                    ['Volkswagen', 2]
+                ]
+            }]
+        }&lt;/pre&gt;
+&lt;p&gt;See it &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/basic/&quot;&gt;live on jsFiddle&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Async setup&lt;/h3&gt;
+&lt;p&gt;In many cases you may want to load the drilldown series dynamically. In this case we set the &lt;code&gt;point.drilldown&lt;/code&gt; option to true, and use the chart's drilldown event to load the drilldown series configuration based on the clicked point. When the series data arrives, we add it by calling the &lt;a href=&quot;http://api.highcharts.com/#Chart.addSeriesAsDrilldown&quot;&gt;Chart.addSeriesAsDrilldown&lt;/a&gt; method.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/async/&quot;&gt;async drilldown&lt;/a&gt; demo.&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;For full detailed documentation and more samples of the drilldown feature, see &lt;a href=&quot;http://api.highcharts.com#drilldown&quot;&gt;the Highcharts API&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;p&gt;Since version 3.0.8, Highcharts has built-in support for drilldown. By giving a point configuration a drilldown option that corresponds to a series configuration in the &lt;code&gt;drilldown.series&lt;/code&gt; array, the point is linked to a hidden series. When the point is clicked, this series is loaded in the chart and replaces the existing series. For column, bar and pie series, an animation occurs to help visualize that the single clicked point is extracted into a drilldown series.&lt;/p&gt;
+&lt;h3&gt;Basic setup&lt;/h3&gt;
+&lt;p&gt;For a basic setup, the drilldown series are defined in a separate array under the &lt;code&gt;drilldown&lt;/code&gt; configuration. Each series configuration is given an id, which is used for the drilldown parent point to identify its series.&amp;nbsp;&lt;/p&gt;
+&lt;pre&gt;        series: [{
+            name: 'Things',
+            colorByPoint: true,
+            data: [{
+                name: 'Animals',
+                y: 5,
+                drilldown: 'animals'
+            }, {
+                name: 'Fruits',
+                y: 2,
+                drilldown: 'fruits'
+            }, {
+                name: 'Cars',
+                y: 4,
+                drilldown: 'cars'
+            }]
+        }],
+        drilldown: {
+            series: [{
+                id: 'animals',
+                data: [
+                    ['Cats', 4],
+                    ['Dogs', 2],
+                    ['Cows', 1],
+                    ['Sheep', 2],
+                    ['Pigs', 1]
+                ]
+            }, {
+                id: 'fruits',
+                data: [
+                    ['Apples', 4],
+                    ['Oranges', 2]
+                ]
+            }, {
+                id: 'cars',
+                data: [
+                    ['Toyota', 4],
+                    ['Opel', 2],
+                    ['Volkswagen', 2]
+                ]
+            }]
+        }&lt;/pre&gt;
+&lt;p&gt;See it &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/basic/&quot;&gt;live on jsFiddle&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Async setup&lt;/h3&gt;
+&lt;p&gt;In many cases you may want to load the drilldown series dynamically. In this case we set the &lt;code&gt;point.drilldown&lt;/code&gt; option to true, and use the chart's drilldown event to load the drilldown series configuration based on the clicked point. When the series data arrives, we add it by calling the &lt;a href=&quot;http://api.highcharts.com/#Chart.addSeriesAsDrilldown&quot;&gt;Chart.addSeriesAsDrilldown&lt;/a&gt; method.&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/drilldown/async/&quot;&gt;async drilldown&lt;/a&gt; demo.&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Labels and string formatting</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting"/>
+		<published>2013-08-22T09:20:22+00:00</published>
+		<updated>2013-08-22T09:20:22+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/labels-and-string-formatting</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Labels and string formatting&lt;/h1&gt;
+
+&lt;p&gt;Anywhere in Highcharts where text strings occur, they allow modification by &lt;em&gt;formatters&lt;/em&gt; or &lt;em&gt;format&lt;/em&gt; options.&amp;nbsp;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt;All format string options have matching formatter callbacks. While formatter callbacks&amp;nbsp;have greater flexibility,&amp;nbsp;format strings are typically more compact, and they are JSON compatible.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3&gt;&lt;a id=&quot;html&quot; name=&quot;html&quot;&gt;&lt;/a&gt;HTML in Highcharts&lt;/h3&gt;
+
+&lt;p&gt;Texts and labels in Highcharts are given in HTML, but as the HTML is parsed and rendered in SVG, only a subset is supported.&amp;nbsp;The following tabs are supported: &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;. Spans can be styled with a style attribute, but only text-related CSS that is shared with SVG is handled.&lt;/p&gt;
+
+&lt;p&gt;Most places where text is handled in Highcharts, it is also followed by an option called &lt;code&gt;useHTML&lt;/code&gt;. When this is true, the text is laid out as HTML on top of the chart. This allows for full HTML support and can be a good idea if you want to add images in your labels, tables in your tooltip etc. The downsides are that it will always be laid out on top of all other SVG content, and that it is not rendered the same way in exported charts. Using HTML also works around some older browser bugs with bi-directional text. Read more under &lt;a href=&quot;/docs/advanced-chart-features/internationalization&quot;&gt;Internationalization.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3&gt;Format strings&lt;/h3&gt;
+
+&lt;p&gt;Format strings are templates for labels, where variables are inserted. Format strings were introduced in Highcharts 2.3 and improved in 3.0 to allow number and date formatting. Examples of format strings are &lt;a href=&quot;http://api.highcharts.com#xAxis.labels.format&quot;&gt;xAxis.labels.format&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#tooltip.pointFormat&quot;&gt;tooltip.pointFormat&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#legend.labelFormat&quot;&gt;legend.labelFormat&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt; are inserted width a bracket notation, for example &lt;code&gt;&amp;quot;The point value at {point.x} is {point.y}&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Numbers&lt;/strong&gt; are formatted with a subset of float formatting conventions from the C library funciton sprintf. The formatting is appended inside the variable brackets, separated by a colon. For example:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Two decimal places:&amp;nbsp;&lt;code&gt;&amp;quot;{point.y:.2f}&amp;quot;&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/AYWsW/&quot;&gt;Demo&lt;/a&gt;]&lt;/li&gt;
+    &lt;li&gt;Thousands separator, no decimal places: &lt;code&gt;{point.y:,.0f}&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/rmTWS/&quot;&gt;Demo&lt;/a&gt;]&lt;/li&gt;
+    &lt;li&gt;Thousands separator, one decimal place: &lt;code&gt;{point.y:,.1f}&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/eeDnv/&quot;&gt;Demo, internationalized&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Dates&lt;/strong&gt; allow, like numbers, the format to be appended behind a colon. The format conventions allowed are the same as those of &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.dateFormat()&quot;&gt;Highcharts.dateFormat()&lt;/a&gt;. For example:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Full date: &lt;code&gt;{value:%Y-%m-%d}&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/PwEnd/&quot;&gt;Demo&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3&gt;Formatter callbacks&lt;/h3&gt;
+
+&lt;p&gt;For full constrol over string handling and additional scripting capabilities around the labels, you might need to use formatter callbacks. These formatters return HTML (subset).&amp;nbsp;Examples of these are &lt;a href=&quot;http://api.highcharts.com#xAxis.labels.formatter&quot;&gt;xAxis.labels.formatter&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#tooltip.formatter&quot;&gt;tooltip.formatter&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#legend.labelFormatter&quot;&gt;legend.labelFormatter&lt;/a&gt;. Often times you&amp;#39;ll need to call &lt;a href=&quot;http://api.highcharts.com#Highcharts.dateFormat()&quot;&gt;Highcharts.dateFormat()&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#Highcharts.numberFormat()&quot;&gt;Highcharts.numberFormat()&lt;/a&gt; from the formatters.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Labels and string formatting&lt;/h1&gt;
+
+&lt;p&gt;Anywhere in Highcharts where text strings occur, they allow modification by &lt;em&gt;formatters&lt;/em&gt; or &lt;em&gt;format&lt;/em&gt; options.&amp;nbsp;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt;All format string options have matching formatter callbacks. While formatter callbacks&amp;nbsp;have greater flexibility,&amp;nbsp;format strings are typically more compact, and they are JSON compatible.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3&gt;&lt;a id=&quot;html&quot; name=&quot;html&quot;&gt;&lt;/a&gt;HTML in Highcharts&lt;/h3&gt;
+
+&lt;p&gt;Texts and labels in Highcharts are given in HTML, but as the HTML is parsed and rendered in SVG, only a subset is supported.&amp;nbsp;The following tabs are supported: &lt;code&gt;&amp;lt;b&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;i&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;. Spans can be styled with a style attribute, but only text-related CSS that is shared with SVG is handled.&lt;/p&gt;
+
+&lt;p&gt;Most places where text is handled in Highcharts, it is also followed by an option called &lt;code&gt;useHTML&lt;/code&gt;. When this is true, the text is laid out as HTML on top of the chart. This allows for full HTML support and can be a good idea if you want to add images in your labels, tables in your tooltip etc. The downsides are that it will always be laid out on top of all other SVG content, and that it is not rendered the same way in exported charts. Using HTML also works around some older browser bugs with bi-directional text. Read more under &lt;a href=&quot;/docs/advanced-chart-features/internationalization&quot;&gt;Internationalization.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3&gt;Format strings&lt;/h3&gt;
+
+&lt;p&gt;Format strings are templates for labels, where variables are inserted. Format strings were introduced in Highcharts 2.3 and improved in 3.0 to allow number and date formatting. Examples of format strings are &lt;a href=&quot;http://api.highcharts.com#xAxis.labels.format&quot;&gt;xAxis.labels.format&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#tooltip.pointFormat&quot;&gt;tooltip.pointFormat&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#legend.labelFormat&quot;&gt;legend.labelFormat&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Variables&lt;/strong&gt; are inserted width a bracket notation, for example &lt;code&gt;&amp;quot;The point value at {point.x} is {point.y}&amp;quot;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Numbers&lt;/strong&gt; are formatted with a subset of float formatting conventions from the C library funciton sprintf. The formatting is appended inside the variable brackets, separated by a colon. For example:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Two decimal places:&amp;nbsp;&lt;code&gt;&amp;quot;{point.y:.2f}&amp;quot;&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/AYWsW/&quot;&gt;Demo&lt;/a&gt;]&lt;/li&gt;
+    &lt;li&gt;Thousands separator, no decimal places: &lt;code&gt;{point.y:,.0f}&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/rmTWS/&quot;&gt;Demo&lt;/a&gt;]&lt;/li&gt;
+    &lt;li&gt;Thousands separator, one decimal place: &lt;code&gt;{point.y:,.1f}&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/eeDnv/&quot;&gt;Demo, internationalized&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Dates&lt;/strong&gt; allow, like numbers, the format to be appended behind a colon. The format conventions allowed are the same as those of &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.dateFormat()&quot;&gt;Highcharts.dateFormat()&lt;/a&gt;. For example:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;Full date: &lt;code&gt;{value:%Y-%m-%d}&lt;/code&gt;&amp;nbsp;[&lt;a href=&quot;http://jsfiddle.net/highcharts/PwEnd/&quot;&gt;Demo&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3&gt;Formatter callbacks&lt;/h3&gt;
+
+&lt;p&gt;For full constrol over string handling and additional scripting capabilities around the labels, you might need to use formatter callbacks. These formatters return HTML (subset).&amp;nbsp;Examples of these are &lt;a href=&quot;http://api.highcharts.com#xAxis.labels.formatter&quot;&gt;xAxis.labels.formatter&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#tooltip.formatter&quot;&gt;tooltip.formatter&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#legend.labelFormatter&quot;&gt;legend.labelFormatter&lt;/a&gt;. Often times you&amp;#39;ll need to call &lt;a href=&quot;http://api.highcharts.com#Highcharts.dateFormat()&quot;&gt;Highcharts.dateFormat()&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#Highcharts.numberFormat()&quot;&gt;Highcharts.numberFormat()&lt;/a&gt; from the formatters.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Zooming</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/zooming"/>
+		<published>2013-08-22T09:20:08+00:00</published>
+		<updated>2013-08-22T09:20:08+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/zooming</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Zooming&lt;/h1&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Highcharts Basic&lt;/h3&gt;
+&lt;p&gt;Zooming in Highcharts can be enabled on the X axes or Y axes separately. The &lt;a href=&quot;http://api.highcharts.com#chart.zoomType&quot;&gt;chart.zoomType&lt;/a&gt; option is set to either &lt;code&gt;&quot;x&quot;&lt;/code&gt;, &lt;code&gt;&quot;y&quot;&lt;/code&gt; or &lt;code&gt;&quot;xy&quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With a mouse pointer, the zooming is performed by dragging out a rectangle in the chart. Unlike pinch zooming, the user can't pan the zoomed area, but has to zoom out then in again on a new area.&lt;/p&gt;
+&lt;p&gt;On touch devices, the user can zoom by pinching in the chart area. On these devices, the user may also move the zoomed area by panning with one finger across the chart. &lt;/p&gt;
+&lt;h3&gt; &lt;/h3&gt;
+&lt;h3&gt;Highstock&lt;/h3&gt;
+&lt;p&gt;In Highstock, we also have the Navigator, Range Selector and Scrollbar to ease navigation, so zooming is disabled by default. Instead, panning is enabled so that moving the zoomed area is easier. &lt;/p&gt;
+&lt;p&gt;On touch devices, both zooming and panning are enabled through the &lt;a href=&quot;http://api.highcharts.com/highstock#chart.pinchType&quot;&gt;chart.pinchType&lt;/a&gt; option, which defaults to &lt;code&gt;&quot;x&quot;&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Zooming&lt;/h1&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Highcharts Basic&lt;/h3&gt;
+&lt;p&gt;Zooming in Highcharts can be enabled on the X axes or Y axes separately. The &lt;a href=&quot;http://api.highcharts.com#chart.zoomType&quot;&gt;chart.zoomType&lt;/a&gt; option is set to either &lt;code&gt;&quot;x&quot;&lt;/code&gt;, &lt;code&gt;&quot;y&quot;&lt;/code&gt; or &lt;code&gt;&quot;xy&quot;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With a mouse pointer, the zooming is performed by dragging out a rectangle in the chart. Unlike pinch zooming, the user can't pan the zoomed area, but has to zoom out then in again on a new area.&lt;/p&gt;
+&lt;p&gt;On touch devices, the user can zoom by pinching in the chart area. On these devices, the user may also move the zoomed area by panning with one finger across the chart. &lt;/p&gt;
+&lt;h3&gt; &lt;/h3&gt;
+&lt;h3&gt;Highstock&lt;/h3&gt;
+&lt;p&gt;In Highstock, we also have the Navigator, Range Selector and Scrollbar to ease navigation, so zooming is disabled by default. Instead, panning is enabled so that moving the zoomed area is easier. &lt;/p&gt;
+&lt;p&gt;On touch devices, both zooming and panning are enabled through the &lt;a href=&quot;http://api.highcharts.com/highstock#chart.pinchType&quot;&gt;chart.pinchType&lt;/a&gt; option, which defaults to &lt;code&gt;&quot;x&quot;&lt;/code&gt;.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Plot bands and plot lines</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/plot-bands-and-plot-lines"/>
+		<published>2013-08-22T09:19:47+00:00</published>
+		<updated>2013-08-22T09:19:47+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/plot-bands-and-plot-lines</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Plot bands and plot lines&lt;/h1&gt;
+&lt;p&gt;Plot lines and plot bands are quite similar in use. They both have the option of color, events, id, label and zIndex. The lines and bands will always be perpendicular to the axis it is defined within. With the use of a polar chart or gauge this will create interesting examples which are described later. When a plot band/line is used on both the x- and y-axis, the plot band/line on the y-axis will be shown in front, as seen in the example below.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 800px; height: 390px;&quot; src=&quot;/images/docs/plot_bands_and_plot_lines.png&quot; alt=&quot;Image of plot bands and plot lines&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Plot bands can be created either on the x-axis or the y-axis. It can also be created on both axes:&lt;/p&gt;
+&lt;pre&gt;xAxis: {
+  ...,
+  plotBands: {
+    color: 'orange', // Color value
+    from: '3', // Start of the plot band
+    to: '4' // End of the plot band
+  },
+  plotLines: {
+    color: 'red', // Color value
+    dashStyle: 'longdashdot', // Style of the plot line. Default to solid
+    value: '3' // Value of where the line will appear
+    width: '2' // Width of the line    
+  }
+},
+yAxis: {
+  ...,
+  plotBands: {
+    ... // Same as in the xAxis
+  },
+  plotLines: {
+    ... // Same as in the xAxis
+  }
+}&lt;/pre&gt;
+&lt;h2&gt;Labels&lt;/h2&gt;
+&lt;p&gt;The plot bands and plot lines have the option of containing a label. This is a text which will be shown on top of the band or line.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 600px; height: 293px;&quot; src=&quot;/images/docs/labels_in_plot_bands_and_lines.png&quot; alt=&quot;Image of label&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;To create labels for plot bands or lines you can add the object &quot;label&quot;:&lt;/p&gt;
+&lt;pre&gt;plotBands: {
+  ...,
+  label: { 
+    text: 'I am a label', // Content of the label. 
+    align: 'left', // Positioning of the label. 
+    Default to center. x: +10 // Amount of pixels the label will be repositioned according to the alignment. 
+  }
+}&lt;/pre&gt;
+&lt;div&gt;&lt;span style=&quot;color: #052d6e; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;&quot;&gt;Events&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;&quot;events&quot; are an object which can be created inside a plot band or plot line object. This object defines mouse events according to the band or line. Values that are supported are click, mouseover, mouseout and mousemove.&lt;/p&gt;
+&lt;pre&gt;plotBands: {
+  ...,
+  events: {
+    click: function () {
+      // Action performed when event occurs
+    },
+    mouseover: function () {
+      // Action performed when event occurs
+    },
+    mouseout: function () {
+      // Action performed when event occurs
+    },
+    mousemove: function () {
+      // Action performed when event occurs
+    }
+  }
+}&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-events/&quot;&gt;Example &lt;/a&gt;of how events can be used.&lt;/p&gt;
+&lt;h2&gt;Dynamically update&lt;/h2&gt;
+&lt;p&gt;After render time a chart can be updated with new plot bands or lines, or if you want some can be removed. This is done by using the functions addPlotBand(), addPlotLine(), removePlotBand() or removePlotLine(). With use of these functions the chart allows for interaction with the user.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;When removing a plot band or line it is critical that the object which should be removed has been given an id. Without it the object can not be recognized and the function can not be executed.&lt;/p&gt;
+&lt;p&gt;Some simple examples of how a plot band can be &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotband/&quot;&gt;added&lt;/a&gt; to the chart and how it can be &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-id/&quot;&gt;removed&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Plot bands and lines in polar charts and gauges&lt;/h2&gt;
+&lt;p&gt;With a plot band in a polar chart or a gauge, the band will form as a concentric circle around the chart. &amp;nbsp;When used inside the x-axis of a polar chart the band will wrap around the outer corner of the chart. With the y-axis it will form a circle and fill the given area. Inside a gauge the band will wrap around the outer corner of the chart. The plot line will form as a straigth line when used within the x-axis, and as a concentric circle used within the y-axis.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 600px; height: 293px;&quot; src=&quot;/images/docs/plot_bands_in_polar_chart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Options related to plot bands and plot lines&lt;/h2&gt;
+&lt;table style=&quot;width: 1000px;&quot; border=&quot;1&quot; cellspacing=&quot;1&quot; cellpadding=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td colspan=&quot;2&quot;&gt;
+&lt;h3&gt;Common options&lt;/h3&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotBands.color&quot;&gt;plotBands.color&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotLines.color&quot;&gt;plotLines.color&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The color of the plotted band or line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotBands.events&quot;&gt;plotBands.events&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.events&quot;&gt;plotLines.events&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;An object defining mouse events for the plotted band or line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.id&quot;&gt;plotBands.id&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.id&quot;&gt;plotLines.id&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;An id used for identifying the plotted band or line in Axis.removePlotBand or&amp;nbsp;Axis.removePlotLine&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.label&quot;&gt;plotBands.label&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.label&quot;&gt;plotLines.label&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Text labels for the plotted bands or lines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.zIndex&quot;&gt;plotBands.zIndex&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.zIndex&quot;&gt;plotLines.zIndex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The z index of the plotted band or line within the chart&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&quot;2&quot;&gt;
+&lt;h3&gt;Separate options&lt;/h3&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.from&quot;&gt;plotBands.from&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The start position of the plot band in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.to&quot;&gt;plotBands.to&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The end position of the plot band in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.dashStyle&quot;&gt;plotLines.dashStyle&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The end position of the plot band in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.value&quot;&gt;plotLines.value&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The position of the line in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.width&quot;&gt;plotLines.width&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The width or thickness of the plot line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.addPlotBand()&quot;&gt;Axis.addPlotBand()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for adding a plot band after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.addPlotLine()&quot;&gt;Axis.addPlotLine()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for adding a plot line after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.removePlotBand()&quot;&gt;Axis.removePlotBand()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for removing a plot band after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.removePlotLine()&quot;&gt;Axis.removePlotLine()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for removing a plot line after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Plot bands and plot lines examples&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;demo/spline-plot-bands&quot;&gt;Spline with plot bands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/&quot;&gt;Spline with dashed and dotted plot lines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-id/&quot;&gt;Removing a plot band&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotband/&quot;&gt;Toggle plot band&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information and examples look in the api for &lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotBands&quot;&gt;plotBands &lt;/a&gt;and &lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotLines&quot;&gt;plotLines&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Plot bands and plot lines&lt;/h1&gt;
+&lt;p&gt;Plot lines and plot bands are quite similar in use. They both have the option of color, events, id, label and zIndex. The lines and bands will always be perpendicular to the axis it is defined within. With the use of a polar chart or gauge this will create interesting examples which are described later. When a plot band/line is used on both the x- and y-axis, the plot band/line on the y-axis will be shown in front, as seen in the example below.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 800px; height: 390px;&quot; src=&quot;/images/docs/plot_bands_and_plot_lines.png&quot; alt=&quot;Image of plot bands and plot lines&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Plot bands can be created either on the x-axis or the y-axis. It can also be created on both axes:&lt;/p&gt;
+&lt;pre&gt;xAxis: {
+  ...,
+  plotBands: {
+    color: 'orange', // Color value
+    from: '3', // Start of the plot band
+    to: '4' // End of the plot band
+  },
+  plotLines: {
+    color: 'red', // Color value
+    dashStyle: 'longdashdot', // Style of the plot line. Default to solid
+    value: '3' // Value of where the line will appear
+    width: '2' // Width of the line    
+  }
+},
+yAxis: {
+  ...,
+  plotBands: {
+    ... // Same as in the xAxis
+  },
+  plotLines: {
+    ... // Same as in the xAxis
+  }
+}&lt;/pre&gt;
+&lt;h2&gt;Labels&lt;/h2&gt;
+&lt;p&gt;The plot bands and plot lines have the option of containing a label. This is a text which will be shown on top of the band or line.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 600px; height: 293px;&quot; src=&quot;/images/docs/labels_in_plot_bands_and_lines.png&quot; alt=&quot;Image of label&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;To create labels for plot bands or lines you can add the object &quot;label&quot;:&lt;/p&gt;
+&lt;pre&gt;plotBands: {
+  ...,
+  label: { 
+    text: 'I am a label', // Content of the label. 
+    align: 'left', // Positioning of the label. 
+    Default to center. x: +10 // Amount of pixels the label will be repositioned according to the alignment. 
+  }
+}&lt;/pre&gt;
+&lt;div&gt;&lt;span style=&quot;color: #052d6e; font-family: Arial, sans-serif; font-size: 18px; font-weight: bold;&quot;&gt;Events&lt;/span&gt;&lt;/div&gt;
+&lt;p&gt;&quot;events&quot; are an object which can be created inside a plot band or plot line object. This object defines mouse events according to the band or line. Values that are supported are click, mouseover, mouseout and mousemove.&lt;/p&gt;
+&lt;pre&gt;plotBands: {
+  ...,
+  events: {
+    click: function () {
+      // Action performed when event occurs
+    },
+    mouseover: function () {
+      // Action performed when event occurs
+    },
+    mouseout: function () {
+      // Action performed when event occurs
+    },
+    mousemove: function () {
+      // Action performed when event occurs
+    }
+  }
+}&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-events/&quot;&gt;Example &lt;/a&gt;of how events can be used.&lt;/p&gt;
+&lt;h2&gt;Dynamically update&lt;/h2&gt;
+&lt;p&gt;After render time a chart can be updated with new plot bands or lines, or if you want some can be removed. This is done by using the functions addPlotBand(), addPlotLine(), removePlotBand() or removePlotLine(). With use of these functions the chart allows for interaction with the user.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;When removing a plot band or line it is critical that the object which should be removed has been given an id. Without it the object can not be recognized and the function can not be executed.&lt;/p&gt;
+&lt;p&gt;Some simple examples of how a plot band can be &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotband/&quot;&gt;added&lt;/a&gt; to the chart and how it can be &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-id/&quot;&gt;removed&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Plot bands and lines in polar charts and gauges&lt;/h2&gt;
+&lt;p&gt;With a plot band in a polar chart or a gauge, the band will form as a concentric circle around the chart. &amp;nbsp;When used inside the x-axis of a polar chart the band will wrap around the outer corner of the chart. With the y-axis it will form a circle and fill the given area. Inside a gauge the band will wrap around the outer corner of the chart. The plot line will form as a straigth line when used within the x-axis, and as a concentric circle used within the y-axis.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 600px; height: 293px;&quot; src=&quot;/images/docs/plot_bands_in_polar_chart.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;Options related to plot bands and plot lines&lt;/h2&gt;
+&lt;table style=&quot;width: 1000px;&quot; border=&quot;1&quot; cellspacing=&quot;1&quot; cellpadding=&quot;1&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td colspan=&quot;2&quot;&gt;
+&lt;h3&gt;Common options&lt;/h3&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotBands.color&quot;&gt;plotBands.color&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotLines.color&quot;&gt;plotLines.color&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The color of the plotted band or line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotBands.events&quot;&gt;plotBands.events&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.events&quot;&gt;plotLines.events&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;An object defining mouse events for the plotted band or line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.id&quot;&gt;plotBands.id&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.id&quot;&gt;plotLines.id&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;An id used for identifying the plotted band or line in Axis.removePlotBand or&amp;nbsp;Axis.removePlotLine&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.label&quot;&gt;plotBands.label&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.label&quot;&gt;plotLines.label&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Text labels for the plotted bands or lines&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.zIndex&quot;&gt;plotBands.zIndex&lt;/a&gt;/&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.zIndex&quot;&gt;plotLines.zIndex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The z index of the plotted band or line within the chart&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td colspan=&quot;2&quot;&gt;
+&lt;h3&gt;Separate options&lt;/h3&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.from&quot;&gt;plotBands.from&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The start position of the plot band in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotBands.to&quot;&gt;plotBands.to&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The end position of the plot band in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.dashStyle&quot;&gt;plotLines.dashStyle&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The end position of the plot band in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.value&quot;&gt;plotLines.value&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The position of the line in axis units&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#yAxis.plotLines.width&quot;&gt;plotLines.width&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;The width or thickness of the plot line&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.addPlotBand()&quot;&gt;Axis.addPlotBand()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for adding a plot band after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.addPlotLine()&quot;&gt;Axis.addPlotLine()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for adding a plot line after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.removePlotBand()&quot;&gt;Axis.removePlotBand()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for removing a plot band after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts#Axis.removePlotLine()&quot;&gt;Axis.removePlotLine()&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Used for removing a plot line after render time&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Plot bands and plot lines examples&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;demo/spline-plot-bands&quot;&gt;Spline with plot bands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotlines-dashstyle/&quot;&gt;Spline with dashed and dotted plot lines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/xaxis/plotbands-id/&quot;&gt;Removing a plot band&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/axis-addplotband/&quot;&gt;Toggle plot band&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information and examples look in the api for &lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotBands&quot;&gt;plotBands &lt;/a&gt;and &lt;a href=&quot;http://api.highcharts.com/highcharts#xAxis.plotLines&quot;&gt;plotLines&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Scrollbar</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/scrollbar"/>
+		<published>2013-08-22T09:19:34+00:00</published>
+		<updated>2013-08-22T09:19:34+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/scrollbar</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Scrollbar&amp;nbsp;(Highstock&amp;nbsp;only)&lt;/h1&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;The scrollbar is a means of panning over the X axis of a chart.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img alt=&quot;&quot; src=&quot;/images/docs/scrollbar.png&quot; style=&quot;width: 700px; height: 400px; &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;For more information on scrollbar options see the&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://api.highcharts.com/highstock#scrollbar&quot; style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;API reference&lt;/a&gt;&lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Scrollbar&amp;nbsp;(Highstock&amp;nbsp;only)&lt;/h1&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;The scrollbar is a means of panning over the X axis of a chart.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;img alt=&quot;&quot; src=&quot;/images/docs/scrollbar.png&quot; style=&quot;width: 700px; height: 400px; &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;For more information on scrollbar options see the&amp;nbsp;&lt;/span&gt;&lt;a href=&quot;http://api.highcharts.com/highstock#scrollbar&quot; style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;API reference&lt;/a&gt;&lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Navigator</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/navigator"/>
+		<published>2013-08-22T09:19:21+00:00</published>
+		<updated>2013-08-22T09:19:21+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/navigator</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Navigator (Highstock&amp;nbsp;only)&lt;/h1&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;The navigator is a small series below the main series, displaying a view of the entire data set. It provides tools to zoom in and out on parts of the data as well as panning across the dataset.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/images/docs/navigator.png&quot; style=&quot;width: 700px; height: 400px; &quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;For more information on navigator options see the &lt;a href=&quot;http://api.highcharts.com/highstock#navigator&quot;&gt;API reference&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Navigator (Highstock&amp;nbsp;only)&lt;/h1&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;The navigator is a small series below the main series, displaying a view of the entire data set. It provides tools to zoom in and out on parts of the data as well as panning across the dataset.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/images/docs/navigator.png&quot; style=&quot;width: 700px; height: 400px; &quot; /&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;
+    &lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px; &quot;&gt;For more information on navigator options see the &lt;a href=&quot;http://api.highcharts.com/highstock#navigator&quot;&gt;API reference&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Range selector</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/range-selector"/>
+		<published>2013-08-22T09:19:06+00:00</published>
+		<updated>2013-08-22T09:19:06+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/range-selector</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Range selector (Highstock&amp;nbsp;only)&lt;/h1&gt;
+&lt;p&gt;&lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px;&quot;&gt;The range selector is a tool for selecting ranges to display within the chart. It provides buttons to select preconfigured ranges in the chart, like 1 day, 1 week, 1 month etc. It also provides input boxes where min and max dates can be manually input.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 700px; height: 400px;&quot; src=&quot;/images/docs/rangeSelector.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;http://api.highcharts.com/highstock#rangeSelector&quot;&gt;API reference&lt;/a&gt;&amp;nbsp;for the rangeSelector option for more information on how to set up the range selector tool.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Range selector (Highstock&amp;nbsp;only)&lt;/h1&gt;
+&lt;p&gt;&lt;span style=&quot;font-family: Arial, Verdana, sans-serif; font-size: 13px;&quot;&gt;The range selector is a tool for selecting ranges to display within the chart. It provides buttons to select preconfigured ranges in the chart, like 1 day, 1 week, 1 month etc. It also provides input boxes where min and max dates can be manually input.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 700px; height: 400px;&quot; src=&quot;/images/docs/rangeSelector.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;See the &lt;a href=&quot;http://api.highcharts.com/highstock#rangeSelector&quot;&gt;API reference&lt;/a&gt;&amp;nbsp;for the rangeSelector option for more information on how to set up the range selector tool.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Legend</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/legend"/>
+		<published>2013-08-22T09:18:29+00:00</published>
+		<updated>2013-08-22T09:18:29+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/legend</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Legend&lt;/h1&gt;
+&lt;p&gt;
+    The legend displays the series in a chart with a predefined symbol and the name of the series. Series can be disabled and enabled from the legend.&lt;/p&gt;
+&lt;p&gt;
+    &lt;img alt=&quot;&quot; src=&quot;/images/docs/legend.png&quot; style=&quot;width: 600px; height: 350px; &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    For more information see the &lt;a href=&quot;http://api.highcharts.com#legend&quot;&gt;API reference&lt;/a&gt; for legend options.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Legend&lt;/h1&gt;
+&lt;p&gt;
+    The legend displays the series in a chart with a predefined symbol and the name of the series. Series can be disabled and enabled from the legend.&lt;/p&gt;
+&lt;p&gt;
+    &lt;img alt=&quot;&quot; src=&quot;/images/docs/legend.png&quot; style=&quot;width: 600px; height: 350px; &quot; /&gt;&lt;/p&gt;
+&lt;p&gt;
+    For more information see the &lt;a href=&quot;http://api.highcharts.com#legend&quot;&gt;API reference&lt;/a&gt; for legend options.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+	<entry>
+		<title>Tooltip</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-concepts/tooltip"/>
+		<published>2013-08-22T09:18:07+00:00</published>
+		<updated>2013-08-22T09:18:07+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-concepts/tooltip</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Tooltip&lt;/h1&gt;
+&lt;p&gt;The tooltip appears when hovering over a point in a series. By default the tooltip shows the values of the point and the name of the series. For the full set of options available for the tooltip, see &lt;a href=&quot;http://api.highcharts.com#tooltip&quot;&gt;api.highcharts.com#tooltip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 599px; height: 309px;&quot; src=&quot;/images/docs/tooltip.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Some basic concepts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#app&quot;&gt;Appearance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#formatter&quot;&gt;Tooltip formatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#cross&quot;&gt;Crosshairs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;&lt;a name=&quot;app&quot;&gt;&lt;/a&gt;Appearance&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;The following code example shows the most common appearance options for tooltip:&lt;/p&gt;
+&lt;pre&gt;tooltip: {
+&amp;nbsp; &amp;nbsp; backgroundColor: '#FCFFC5',
+&amp;nbsp; &amp;nbsp; borderColor: 'black',
+&amp;nbsp; &amp;nbsp; borderRadius: 10,
+&amp;nbsp; &amp;nbsp; borderWidth: 3
+}
+&lt;/pre&gt;
+&lt;p style=&quot;line-height: 19px;&quot;&gt;The background color can also be set to a gradient, see &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/&quot;&gt;an example&lt;/a&gt;. Text properties can be set using the style option.&lt;/p&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;&lt;a name=&quot;formatter&quot;&gt;&lt;/a&gt;Tooltip formatting&lt;/h2&gt;
+&lt;p&gt;The tooltip's content is rendered from a subset of HTML that can be altered in a number of ways, all in all giving the implementer full control over the content. In addition to options on the &lt;a href=&quot;http://api.highcharts.com#tooltip&quot;&gt;tooltip&lt;/a&gt; configuration object, you can set the options for how each series should be represented in the tooltip by &lt;a href=&quot;http://api.highcharts.com#plotOptions.series.tooltip&quot;&gt;series.tooltip&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The header part of the tooltip can be altered using the tooltip.headerFormat. In a shared tooltip, the first series' headerFormat is used.&lt;/li&gt;
+&lt;li&gt;The listing of each series is given in the &lt;a href=&quot;http://api.highcharts.com#tooltip.pointFormat&quot;&gt;tooltip.pointFormat&lt;/a&gt; option, or an individual pointFormat for each series.&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;The footer part can be set in the tooltip.headerFormat option.&lt;/li&gt;
+&lt;li&gt;All the options above can be overridden by the &lt;a href=&quot;http://api.highcharts.com#tooltip.formatter&quot;&gt;tooltip.formatter&lt;/a&gt; callback for programmatic control.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By default the tooltip only allows a subset of HTML because the HTML is parsed and rendered using SVG. By setting the &lt;a href=&quot;http://api.highcharts.com#tooltip.useHTML&quot;&gt;useHTML&lt;/a&gt; option to true, the renderer switches to full HTML, which allows for instance table layouts or images inside the tooltip.&lt;/p&gt;
+&lt;pre&gt;tooltip: {
+    formatter: function() {
+        return 'The value for &amp;lt;b&amp;gt;' + this.x + '&amp;lt;/b&amp;gt; is &amp;lt;b&amp;gt;' + this.y + '&amp;lt;/b&amp;gt;, in series '+ this.series.name;
+    }
+}&lt;/pre&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;&lt;a name=&quot;cross&quot;&gt;&lt;/a&gt;Crosshairs&lt;/h2&gt;
+&lt;p&gt;Crosshairs display a line connecting the points with their corresponding axis.&amp;nbsp;Crosshairs are disabled by default in Highcharts, but enabled by default in Highstock. See the full set of options for &lt;a href=&quot;http://api.highcharts.com#tooltip.crosshairs&quot;&gt;crosshairs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 640px; height: 321px;&quot; src=&quot;/images/docs/crosshairs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Crosshairs can be enabled for the x-axis, y-axis or both:&lt;/p&gt;
+&lt;pre&gt;// Enable for x-axis only
+tooltip: {
+    crosshairs: [true]
+}
+
+// Enable for y-axis only
+tooltip: {
+    crosshairs: [false, true]
+}
+
+// Enable for both axes
+tooltip: {
+    crosshairs: [true,true]
+}
+&lt;/pre&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Tooltip&lt;/h1&gt;
+&lt;p&gt;The tooltip appears when hovering over a point in a series. By default the tooltip shows the values of the point and the name of the series. For the full set of options available for the tooltip, see &lt;a href=&quot;http://api.highcharts.com#tooltip&quot;&gt;api.highcharts.com#tooltip&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 599px; height: 309px;&quot; src=&quot;/images/docs/tooltip.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Some basic concepts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#app&quot;&gt;Appearance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#formatter&quot;&gt;Tooltip formatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#cross&quot;&gt;Crosshairs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;&lt;a name=&quot;app&quot;&gt;&lt;/a&gt;Appearance&lt;/h2&gt;
+&lt;p&gt;&amp;nbsp;The following code example shows the most common appearance options for tooltip:&lt;/p&gt;
+&lt;pre&gt;tooltip: {
+&amp;nbsp; &amp;nbsp; backgroundColor: '#FCFFC5',
+&amp;nbsp; &amp;nbsp; borderColor: 'black',
+&amp;nbsp; &amp;nbsp; borderRadius: 10,
+&amp;nbsp; &amp;nbsp; borderWidth: 3
+}
+&lt;/pre&gt;
+&lt;p style=&quot;line-height: 19px;&quot;&gt;The background color can also be set to a gradient, see &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.1/highslide-software/highcharts.com/tree/master/samples/highcharts/tooltip/backgroundcolor-gradient/&quot;&gt;an example&lt;/a&gt;. Text properties can be set using the style option.&lt;/p&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;&lt;a name=&quot;formatter&quot;&gt;&lt;/a&gt;Tooltip formatting&lt;/h2&gt;
+&lt;p&gt;The tooltip's content is rendered from a subset of HTML that can be altered in a number of ways, all in all giving the implementer full control over the content. In addition to options on the &lt;a href=&quot;http://api.highcharts.com#tooltip&quot;&gt;tooltip&lt;/a&gt; configuration object, you can set the options for how each series should be represented in the tooltip by &lt;a href=&quot;http://api.highcharts.com#plotOptions.series.tooltip&quot;&gt;series.tooltip&lt;/a&gt;.&amp;nbsp;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The header part of the tooltip can be altered using the tooltip.headerFormat. In a shared tooltip, the first series' headerFormat is used.&lt;/li&gt;
+&lt;li&gt;The listing of each series is given in the &lt;a href=&quot;http://api.highcharts.com#tooltip.pointFormat&quot;&gt;tooltip.pointFormat&lt;/a&gt; option, or an individual pointFormat for each series.&amp;nbsp;&lt;/li&gt;
+&lt;li&gt;The footer part can be set in the tooltip.headerFormat option.&lt;/li&gt;
+&lt;li&gt;All the options above can be overridden by the &lt;a href=&quot;http://api.highcharts.com#tooltip.formatter&quot;&gt;tooltip.formatter&lt;/a&gt; callback for programmatic control.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By default the tooltip only allows a subset of HTML because the HTML is parsed and rendered using SVG. By setting the &lt;a href=&quot;http://api.highcharts.com#tooltip.useHTML&quot;&gt;useHTML&lt;/a&gt; option to true, the renderer switches to full HTML, which allows for instance table layouts or images inside the tooltip.&lt;/p&gt;
+&lt;pre&gt;tooltip: {
+    formatter: function() {
+        return 'The value for &amp;lt;b&amp;gt;' + this.x + '&amp;lt;/b&amp;gt; is &amp;lt;b&amp;gt;' + this.y + '&amp;lt;/b&amp;gt;, in series '+ this.series.name;
+    }
+}&lt;/pre&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;&lt;a name=&quot;cross&quot;&gt;&lt;/a&gt;Crosshairs&lt;/h2&gt;
+&lt;p&gt;Crosshairs display a line connecting the points with their corresponding axis.&amp;nbsp;Crosshairs are disabled by default in Highcharts, but enabled by default in Highstock. See the full set of options for &lt;a href=&quot;http://api.highcharts.com#tooltip.crosshairs&quot;&gt;crosshairs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;width: 640px; height: 321px;&quot; src=&quot;/images/docs/crosshairs.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Crosshairs can be enabled for the x-axis, y-axis or both:&lt;/p&gt;
+&lt;pre&gt;// Enable for x-axis only
+tooltip: {
+    crosshairs: [true]
+}
+
+// Enable for y-axis only
+tooltip: {
+    crosshairs: [false, true]
+}
+
+// Enable for both axes
+tooltip: {
+    crosshairs: [true,true]
+}
+&lt;/pre&gt;&lt;/div&gt;</content>
+		<category term="Chart concepts" />
+	</entry>
+</feed>

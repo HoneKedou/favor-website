@@ -1,0 +1,1005 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/3-docs/getting-started</id>
+	<updated>2014-08-11T00:43:04+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/3-docs/getting-started?format=feed&amp;type=atom"/>
+	<entry>
+		<title>How to set options</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/getting-started/how-to-set-options"/>
+		<published>2013-08-22T09:15:32+00:00</published>
+		<updated>2013-08-22T09:15:32+00:00</updated>
+		<id>http://www.highcharts.com/docs/getting-started/how-to-set-options</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    How to set options&lt;/h1&gt;
+&lt;p&gt;
+    Highcharts&amp;nbsp;use a JavaScript object structure to define the options or settings of a chart. This article explains how the options object works and how to use it.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#1&quot;&gt;The options object&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#2&quot;&gt;Global options&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;
+    &lt;a name=&quot;1&quot;&gt;&lt;/a&gt;The options object&lt;/h2&gt;
+&lt;p&gt;
+    When you initialize the chart using its constructor &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.Chart()&quot;&gt;Highcharts.Chart&lt;/a&gt;, the options object is the first parameter you pass.&lt;/p&gt;
+&lt;p&gt;
+    In the example below the code marked as red represents the options object:&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(document).ready(function() {
+    var chart1 = new Highcharts.Chart(&lt;span style=&quot;color:#ff0000;&quot;&gt;{
+        chart: {
+            renderTo: &amp;#39;container&amp;#39;,
+            type: &amp;#39;bar&amp;#39;
+        },
+        title: {
+            text: &amp;#39;Fruit Consumption&amp;#39;
+        },
+        xAxis: {
+            categories: [&amp;#39;Apples&amp;#39;, &amp;#39;Bananas&amp;#39;, &amp;#39;Oranges&amp;#39;]
+        },
+        yAxis: {
+            title: {
+                text: &amp;#39;Fruit eaten&amp;#39;
+            }
+        },
+        series: [{
+            name: &amp;#39;Jane&amp;#39;,
+            data: [1, 0, 4]
+        }, {
+            name: &amp;#39;John&amp;#39;,
+            data: [5, 7, 3]
+        }]
+    }&lt;/span&gt;);
+});
+&lt;/pre&gt;
+&lt;div&gt;
+    To get the most out of Highcharts, it is important to understand how the options object works and how it can be altered programmatically. These are some key concepts on JavaScript objects:&lt;/div&gt;
+&lt;div&gt;
+    &amp;nbsp;&lt;/div&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        The Highcharts options in the examples are defined as object literals. By notating the configuration this way, we can have a clean, human readable and low space consuming config object.&amp;nbsp;The following complicated code is perhaps more familiar to developers with a background from C-type languages:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+// Bad code:
+var options = new Object();
+
+options.chart = new Object();
+options.chart.renderTo = &amp;#39;container&amp;#39;;
+options.chart.type = &amp;#39;bar&amp;#39;;
+
+options.series = new Array();
+options.series[0] = new Object();
+options.series[0].name = &amp;#39;Jane&amp;#39;;
+options.series[0].data = new Array(1, 0, 4);
+&lt;/pre&gt;
+&lt;div style=&quot;margin-left: 40px; &quot;&gt;
+    As JavaScript object literals, we would write it like below. Note that the two options objects will produce exactly the same result.&lt;/div&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+// Good code:
+var options = {
+    chart: {
+        renderTo: &amp;#39;container&amp;#39;,
+        type: &amp;#39;bar&amp;#39;
+    },
+    series: [{
+        name: &amp;#39;Jane&amp;#39;,
+        data: [1, 0, 4]
+    }]
+};
+&lt;/pre&gt;
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;
+    In the example above the options object is created by itself and can be added to the chart by passing it to the chart constructor:&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(document).ready(function() {
+    var chart = new Highcharts.Chart(options);
+});&lt;/pre&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        After an object is created using the object literal notation, we can extend its members by the dot notation. Say we have an object like defined in the &amp;quot;Good code&amp;quot; above. The code below adds another series to it. Remember options.series is an array, so it has a push method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+options.series.push({
+    name: &amp;#39;John&amp;#39;,
+    data: [3, 4, 2]
+})
+&lt;/pre&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        Another fact that can come in handy when working on JavaScript objects, is that the dot notation and square bracket notation are equivalent, so you can access all members by their string names. Which in practice means that&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+options.renderTo
+&lt;/pre&gt;
+&lt;div style=&quot;margin-left: 40px; &quot;&gt;
+    is always the same as:&lt;/div&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+options[&amp;#39;renderTo&amp;#39;]&lt;/pre&gt;
+&lt;h2&gt;
+    &lt;a name=&quot;2&quot;&gt;&lt;/a&gt;Global Options&lt;/h2&gt;
+&lt;div&gt;
+    If you want to apply a set of options to all charts on the same page, use Highcharts.setOptions like shown below.&amp;nbsp;&lt;/div&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(function() {
+    Highcharts.setOptions({
+        chart: {
+            backgroundColor: {
+                linearGradient: [0, 0, 500, 500],
+                stops: [
+                    [0, &amp;#39;rgb(255, 255, 255)&amp;#39;],
+                    [1, &amp;#39;rgb(240, 240, 255)&amp;#39;]
+                    ]
+            },
+            borderWidth: 2,
+            plotBackgroundColor: &amp;#39;rgba(255, 255, 255, .9)&amp;#39;,
+            plotShadow: true,
+            plotBorderWidth: 1
+        }
+    });
+    
+    var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: &amp;#39;container&amp;#39;,
+        },
+
+        xAxis: {
+            type: &amp;#39;datetime&amp;#39;
+        },
+
+        series: [{
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+            pointStart: Date.UTC(2010, 0, 1),
+            pointInterval: 3600 * 1000 // one hour
+        }]
+    });
+
+    var chart2 = new Highcharts.Chart({
+        chart: {
+            renderTo: &amp;#39;container2&amp;#39;,
+            type: &amp;#39;column&amp;#39;
+        },
+
+        xAxis: {
+            type: &amp;#39;datetime&amp;#39;
+        },
+
+        series: [{
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+            pointStart: Date.UTC(2010, 0, 1),
+            pointInterval: 3600 * 1000 // one hour
+        }]
+    });
+});
+&lt;/pre&gt;
+&lt;div style=&quot;margin-left: 40px; &quot;&gt;
+    Note: The themes supplied with Highcharts download use this function. See &lt;a href=&quot;/docs/chart-design-and-style/themes&quot;&gt;Themes&lt;/a&gt;&amp;nbsp;for more information.&lt;/div&gt;
+&lt;div&gt;
+    &amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+    For a full reference of the options available, see the &lt;a href=&quot;http://api.highcharts.com/highcharts&quot;&gt;Highcharts options reference&lt;/a&gt; or the &lt;a href=&quot;http://api.highcharts.com/highstock&quot;&gt;Highstock options reference&lt;/a&gt;.&lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;
+&lt;br /&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    How to set options&lt;/h1&gt;
+&lt;p&gt;
+    Highcharts&amp;nbsp;use a JavaScript object structure to define the options or settings of a chart. This article explains how the options object works and how to use it.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#1&quot;&gt;The options object&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#2&quot;&gt;Global options&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;
+    &lt;a name=&quot;1&quot;&gt;&lt;/a&gt;The options object&lt;/h2&gt;
+&lt;p&gt;
+    When you initialize the chart using its constructor &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.Chart()&quot;&gt;Highcharts.Chart&lt;/a&gt;, the options object is the first parameter you pass.&lt;/p&gt;
+&lt;p&gt;
+    In the example below the code marked as red represents the options object:&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(document).ready(function() {
+    var chart1 = new Highcharts.Chart(&lt;span style=&quot;color:#ff0000;&quot;&gt;{
+        chart: {
+            renderTo: &amp;#39;container&amp;#39;,
+            type: &amp;#39;bar&amp;#39;
+        },
+        title: {
+            text: &amp;#39;Fruit Consumption&amp;#39;
+        },
+        xAxis: {
+            categories: [&amp;#39;Apples&amp;#39;, &amp;#39;Bananas&amp;#39;, &amp;#39;Oranges&amp;#39;]
+        },
+        yAxis: {
+            title: {
+                text: &amp;#39;Fruit eaten&amp;#39;
+            }
+        },
+        series: [{
+            name: &amp;#39;Jane&amp;#39;,
+            data: [1, 0, 4]
+        }, {
+            name: &amp;#39;John&amp;#39;,
+            data: [5, 7, 3]
+        }]
+    }&lt;/span&gt;);
+});
+&lt;/pre&gt;
+&lt;div&gt;
+    To get the most out of Highcharts, it is important to understand how the options object works and how it can be altered programmatically. These are some key concepts on JavaScript objects:&lt;/div&gt;
+&lt;div&gt;
+    &amp;nbsp;&lt;/div&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        The Highcharts options in the examples are defined as object literals. By notating the configuration this way, we can have a clean, human readable and low space consuming config object.&amp;nbsp;The following complicated code is perhaps more familiar to developers with a background from C-type languages:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+// Bad code:
+var options = new Object();
+
+options.chart = new Object();
+options.chart.renderTo = &amp;#39;container&amp;#39;;
+options.chart.type = &amp;#39;bar&amp;#39;;
+
+options.series = new Array();
+options.series[0] = new Object();
+options.series[0].name = &amp;#39;Jane&amp;#39;;
+options.series[0].data = new Array(1, 0, 4);
+&lt;/pre&gt;
+&lt;div style=&quot;margin-left: 40px; &quot;&gt;
+    As JavaScript object literals, we would write it like below. Note that the two options objects will produce exactly the same result.&lt;/div&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+// Good code:
+var options = {
+    chart: {
+        renderTo: &amp;#39;container&amp;#39;,
+        type: &amp;#39;bar&amp;#39;
+    },
+    series: [{
+        name: &amp;#39;Jane&amp;#39;,
+        data: [1, 0, 4]
+    }]
+};
+&lt;/pre&gt;
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;
+    In the example above the options object is created by itself and can be added to the chart by passing it to the chart constructor:&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(document).ready(function() {
+    var chart = new Highcharts.Chart(options);
+});&lt;/pre&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        After an object is created using the object literal notation, we can extend its members by the dot notation. Say we have an object like defined in the &amp;quot;Good code&amp;quot; above. The code below adds another series to it. Remember options.series is an array, so it has a push method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+options.series.push({
+    name: &amp;#39;John&amp;#39;,
+    data: [3, 4, 2]
+})
+&lt;/pre&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        Another fact that can come in handy when working on JavaScript objects, is that the dot notation and square bracket notation are equivalent, so you can access all members by their string names. Which in practice means that&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+options.renderTo
+&lt;/pre&gt;
+&lt;div style=&quot;margin-left: 40px; &quot;&gt;
+    is always the same as:&lt;/div&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+options[&amp;#39;renderTo&amp;#39;]&lt;/pre&gt;
+&lt;h2&gt;
+    &lt;a name=&quot;2&quot;&gt;&lt;/a&gt;Global Options&lt;/h2&gt;
+&lt;div&gt;
+    If you want to apply a set of options to all charts on the same page, use Highcharts.setOptions like shown below.&amp;nbsp;&lt;/div&gt;
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(function() {
+    Highcharts.setOptions({
+        chart: {
+            backgroundColor: {
+                linearGradient: [0, 0, 500, 500],
+                stops: [
+                    [0, &amp;#39;rgb(255, 255, 255)&amp;#39;],
+                    [1, &amp;#39;rgb(240, 240, 255)&amp;#39;]
+                    ]
+            },
+            borderWidth: 2,
+            plotBackgroundColor: &amp;#39;rgba(255, 255, 255, .9)&amp;#39;,
+            plotShadow: true,
+            plotBorderWidth: 1
+        }
+    });
+    
+    var chart1 = new Highcharts.Chart({
+        chart: {
+            renderTo: &amp;#39;container&amp;#39;,
+        },
+
+        xAxis: {
+            type: &amp;#39;datetime&amp;#39;
+        },
+
+        series: [{
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+            pointStart: Date.UTC(2010, 0, 1),
+            pointInterval: 3600 * 1000 // one hour
+        }]
+    });
+
+    var chart2 = new Highcharts.Chart({
+        chart: {
+            renderTo: &amp;#39;container2&amp;#39;,
+            type: &amp;#39;column&amp;#39;
+        },
+
+        xAxis: {
+            type: &amp;#39;datetime&amp;#39;
+        },
+
+        series: [{
+            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+            pointStart: Date.UTC(2010, 0, 1),
+            pointInterval: 3600 * 1000 // one hour
+        }]
+    });
+});
+&lt;/pre&gt;
+&lt;div style=&quot;margin-left: 40px; &quot;&gt;
+    Note: The themes supplied with Highcharts download use this function. See &lt;a href=&quot;/docs/chart-design-and-style/themes&quot;&gt;Themes&lt;/a&gt;&amp;nbsp;for more information.&lt;/div&gt;
+&lt;div&gt;
+    &amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+    For a full reference of the options available, see the &lt;a href=&quot;http://api.highcharts.com/highcharts&quot;&gt;Highcharts options reference&lt;/a&gt; or the &lt;a href=&quot;http://api.highcharts.com/highstock&quot;&gt;Highstock options reference&lt;/a&gt;.&lt;/div&gt;
+&lt;br /&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;
+&lt;br /&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Getting Started" />
+	</entry>
+	<entry>
+		<title>Your first chart</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/getting-started/your-first-chart"/>
+		<published>2013-08-22T09:15:12+00:00</published>
+		<updated>2013-08-22T09:15:12+00:00</updated>
+		<id>http://www.highcharts.com/docs/getting-started/your-first-chart</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Your first chart&lt;/h1&gt;
+
+&lt;p&gt;With Highcharts included in your webpage you are ready to create your first chart.&lt;/p&gt;
+
+&lt;p&gt;We will start off by creating a simple bar chart.&lt;/p&gt;
+
+&lt;ol&gt;
+    &lt;li style=&quot;line-height: 19px;&quot;&gt;Add a div in your webpage. Give it an id and set a specific width and height which will be the width and height of your chart.
+    &lt;pre style=&quot;font-size: 13px;&quot;&gt;
+&amp;lt;div id=&amp;quot;container&amp;quot; style=&amp;quot;width:100%; height:400px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/pre&gt;
+
+    &lt;div&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;A chart is initialized by adding the JavaScript tag,&amp;nbsp;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 12px; &quot;&gt;&lt;span class=&quot;webkit-html-tag&quot; style=&quot;white-space: pre-wrap; &quot;&gt;&amp;lt;script&amp;gt; &amp;lt;/script&amp;gt;, anywhere in a webpage, containing the following code for jQuery. The div from #1 is referenced in the jQuery object.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(function () { 
+    $(&amp;#39;#container&amp;#39;).highcharts({
+        chart: {
+            type: &amp;#39;bar&amp;#39;
+        },
+        title: {
+            text: &amp;#39;Fruit Consumption&amp;#39;
+        },
+        xAxis: {
+            categories: [&amp;#39;Apples&amp;#39;, &amp;#39;Bananas&amp;#39;, &amp;#39;Oranges&amp;#39;]
+        },
+        yAxis: {
+            title: {
+                text: &amp;#39;Fruit eaten&amp;#39;
+            }
+        },
+        series: [{
+            name: &amp;#39;Jane&amp;#39;,
+            data: [1, 0, 4]
+        }, {
+            name: &amp;#39;John&amp;#39;,
+            data: [5, 7, 3]
+        }]
+    });
+});
+&lt;/pre&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;The code above uses the jQuery specific way of launching code on document ready, as explained at the jQuery website. If you use MooTools or Prototype, instead of the &lt;code&gt;$(function&amp;nbsp;()&lt;/code&gt; syntax you do it slightly differently. Also, Highcharts isn&amp;#39;t registered as a plugin in these frameworks, so you need to use the &lt;a href=&quot;http://api.highcharts.com/highcharts#Chart&quot;&gt;Highcharts.Chart&lt;/a&gt; constructor and define the&amp;nbsp;&lt;a href=&quot;http://api.highcharts.com#chart.renderTo&quot;&gt;chart.renderTo&lt;/a&gt; option.&lt;/p&gt;
+
+&lt;h4 style=&quot;margin-left: 40px;&quot;&gt;MooTools&lt;/h4&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+window.addEvent(&amp;#39;domready&amp;#39;, function() {
+   var chart1 = new Highcharts.Chart({
+      chart: {
+         renderTo: &amp;#39;container&amp;#39;,
+         type: &amp;#39;bar&amp;#39;
+   ...
+});&lt;/pre&gt;
+
+&lt;h4 style=&quot;margin-left: 40px;&quot;&gt;Prototype&lt;/h4&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+document.observe(&amp;quot;dom:loaded&amp;quot;, function() {
+   var chart1 = new Highcharts.Chart({
+      chart: {
+         renderTo: &amp;#39;container&amp;#39;,
+         type: &amp;#39;bar&amp;#39;
+   ...
+}); &lt;/pre&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;If you are inserting a Stock chart, there is a separate constructor method called Highcharts.StockChart. In these charts, typically the data is supplied in a separate JavaScript array, either taken from a separate JavaScript file or by an Ajax call to the server.&lt;/p&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+var chart1; // globally available
+$(function() {
+      chart1 = new Highcharts.StockChart({
+         chart: {
+            renderTo: &amp;#39;container&amp;#39;
+         },
+         rangeSelector: {
+            selected: 1
+         },
+         series: [{
+            name: &amp;#39;USD to EUR&amp;#39;,
+            data: usdtoeur // predefined JavaScript array
+         }]
+      });
+   });&lt;/pre&gt;
+
+&lt;ol start=&quot;2&quot; style=&quot;&quot;&gt;
+    &lt;li&gt;You should now see this chart on your webpage:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/images/docs/your-first-chart.png&quot; style=&quot;width: 400px; height: 300px; &quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;ol start=&quot;4&quot; style=&quot;&quot;&gt;
+    &lt;li&gt;Optionally, you can apply a global theme to your charts. A theme is just a set of options that are applied globally through the &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.setOptions()&quot;&gt;Highcharts.setOptions&lt;/a&gt; method. The download package comes with four predefined themes. To apply a theme from one of these files, add this directly after the highcharts.js file inclusion:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/js/themes/gray.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;For more details on how the options or settings in Highcharts work see&amp;nbsp;&lt;a href=&quot;/docs/getting-started/how-to-set-options&quot;&gt;How to set options&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below is a list of online examples of the examples shown in this article:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/kh5jY/&quot;&gt;Simple bar chart (jQuery)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/NxHgR/&quot;&gt;Simple bar chart (MooTools)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/nacKs/&quot;&gt;Simple bar chart (Prototype)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/demo/basic-line/&quot;&gt;Highstock Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Your first chart&lt;/h1&gt;
+
+&lt;p&gt;With Highcharts included in your webpage you are ready to create your first chart.&lt;/p&gt;
+
+&lt;p&gt;We will start off by creating a simple bar chart.&lt;/p&gt;
+
+&lt;ol&gt;
+    &lt;li style=&quot;line-height: 19px;&quot;&gt;Add a div in your webpage. Give it an id and set a specific width and height which will be the width and height of your chart.
+    &lt;pre style=&quot;font-size: 13px;&quot;&gt;
+&amp;lt;div id=&amp;quot;container&amp;quot; style=&amp;quot;width:100%; height:400px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/pre&gt;
+
+    &lt;div&gt;&amp;nbsp;&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li&gt;A chart is initialized by adding the JavaScript tag,&amp;nbsp;&lt;span style=&quot;font-family:verdana,geneva,sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 12px; &quot;&gt;&lt;span class=&quot;webkit-html-tag&quot; style=&quot;white-space: pre-wrap; &quot;&gt;&amp;lt;script&amp;gt; &amp;lt;/script&amp;gt;, anywhere in a webpage, containing the following code for jQuery. The div from #1 is referenced in the jQuery object.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+$(function () { 
+    $(&amp;#39;#container&amp;#39;).highcharts({
+        chart: {
+            type: &amp;#39;bar&amp;#39;
+        },
+        title: {
+            text: &amp;#39;Fruit Consumption&amp;#39;
+        },
+        xAxis: {
+            categories: [&amp;#39;Apples&amp;#39;, &amp;#39;Bananas&amp;#39;, &amp;#39;Oranges&amp;#39;]
+        },
+        yAxis: {
+            title: {
+                text: &amp;#39;Fruit eaten&amp;#39;
+            }
+        },
+        series: [{
+            name: &amp;#39;Jane&amp;#39;,
+            data: [1, 0, 4]
+        }, {
+            name: &amp;#39;John&amp;#39;,
+            data: [5, 7, 3]
+        }]
+    });
+});
+&lt;/pre&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;The code above uses the jQuery specific way of launching code on document ready, as explained at the jQuery website. If you use MooTools or Prototype, instead of the &lt;code&gt;$(function&amp;nbsp;()&lt;/code&gt; syntax you do it slightly differently. Also, Highcharts isn&amp;#39;t registered as a plugin in these frameworks, so you need to use the &lt;a href=&quot;http://api.highcharts.com/highcharts#Chart&quot;&gt;Highcharts.Chart&lt;/a&gt; constructor and define the&amp;nbsp;&lt;a href=&quot;http://api.highcharts.com#chart.renderTo&quot;&gt;chart.renderTo&lt;/a&gt; option.&lt;/p&gt;
+
+&lt;h4 style=&quot;margin-left: 40px;&quot;&gt;MooTools&lt;/h4&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+window.addEvent(&amp;#39;domready&amp;#39;, function() {
+   var chart1 = new Highcharts.Chart({
+      chart: {
+         renderTo: &amp;#39;container&amp;#39;,
+         type: &amp;#39;bar&amp;#39;
+   ...
+});&lt;/pre&gt;
+
+&lt;h4 style=&quot;margin-left: 40px;&quot;&gt;Prototype&lt;/h4&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+document.observe(&amp;quot;dom:loaded&amp;quot;, function() {
+   var chart1 = new Highcharts.Chart({
+      chart: {
+         renderTo: &amp;#39;container&amp;#39;,
+         type: &amp;#39;bar&amp;#39;
+   ...
+}); &lt;/pre&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;If you are inserting a Stock chart, there is a separate constructor method called Highcharts.StockChart. In these charts, typically the data is supplied in a separate JavaScript array, either taken from a separate JavaScript file or by an Ajax call to the server.&lt;/p&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+var chart1; // globally available
+$(function() {
+      chart1 = new Highcharts.StockChart({
+         chart: {
+            renderTo: &amp;#39;container&amp;#39;
+         },
+         rangeSelector: {
+            selected: 1
+         },
+         series: [{
+            name: &amp;#39;USD to EUR&amp;#39;,
+            data: usdtoeur // predefined JavaScript array
+         }]
+      });
+   });&lt;/pre&gt;
+
+&lt;ol start=&quot;2&quot; style=&quot;&quot;&gt;
+    &lt;li&gt;You should now see this chart on your webpage:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p style=&quot;margin-left: 40px; &quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/images/docs/your-first-chart.png&quot; style=&quot;width: 400px; height: 300px; &quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;ol start=&quot;4&quot; style=&quot;&quot;&gt;
+    &lt;li&gt;Optionally, you can apply a global theme to your charts. A theme is just a set of options that are applied globally through the &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.setOptions()&quot;&gt;Highcharts.setOptions&lt;/a&gt; method. The download package comes with four predefined themes. To apply a theme from one of these files, add this directly after the highcharts.js file inclusion:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;pre style=&quot;margin-left: 40px; &quot;&gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/js/themes/gray.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+
+&lt;p&gt;For more details on how the options or settings in Highcharts work see&amp;nbsp;&lt;a href=&quot;/docs/getting-started/how-to-set-options&quot;&gt;How to set options&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Below is a list of online examples of the examples shown in this article:&lt;/p&gt;
+
+&lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/kh5jY/&quot;&gt;Simple bar chart (jQuery)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/NxHgR/&quot;&gt;Simple bar chart (MooTools)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/highcharts/nacKs/&quot;&gt;Simple bar chart (Prototype)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/stock/demo/basic-line/&quot;&gt;Highstock Example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</content>
+		<category term="Getting Started" />
+	</entry>
+	<entry>
+		<title>Installation</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/getting-started/installation"/>
+		<published>2013-08-22T09:14:54+00:00</published>
+		<updated>2013-08-22T09:14:54+00:00</updated>
+		<id>http://www.highcharts.com/docs/getting-started/installation</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Installation&lt;/h1&gt;
+&lt;p&gt;Highcharts requires two files to run, &lt;a href=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;highcharts.js&lt;/a&gt; and either jQuery, MooTools or Prototype or our own Highcharts Standalone Framework which are used for some common JavaScript tasks. If you're installing Highstock, the procedure is the same as below, except the JavaScript file name is highstock.js rather than highcharts.js.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;A. Include Highcharts and framework&lt;/h3&gt;
+&lt;p&gt;Include the JavaScript files in the &amp;lt;head&amp;gt; section of your web page as shown below.&lt;/p&gt;
+
+&lt;h4&gt;Option #1: use jQuery&lt;/h4&gt;
+&lt;p&gt;Use this code to include Highcharts with jQuery:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;Option #2: use Highcharts Standalone Framework&lt;/h4&gt;
+&lt;p&gt;jQuery is currently used in most websites, but there may be situations where you don't want to load the full framework in order to utilize Highcharts. For this we have built the Highcharts Standalone Framework, a compact file of 2 kB gzipped. It is available since Highcharts 3.0.5. Use this code to load the Standalone Framework from our CDN:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/adapters/standalone-framework.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;Option #3: Use MooTools or Prototype&lt;/h4&gt;
+&lt;p&gt;While the jQuery adapter is built into Highcharts and Highstock, the MooTools and Prototype adapter has to be included separately. Use this code to include Highcharts with MooTools:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/adapters/mootools-adapter.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;and use this code to include Highcharts with Prototype:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/prototype/1.7/prototype.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/adapters/prototype-adapter.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;Note: If MooTools or Prototype is used they need to be included before highcharts.js, this is because highcharts.js checks to see if MooTools or Prototype are present.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;B. Alternatively, load files from your own domain&lt;/h3&gt;
+&lt;p&gt;In the example above the JavaScript files are loaded from ajax.googleapis.com and &lt;a href=&quot;http://code.highcharts.com&quot;&gt;code.highcharts.com&lt;/a&gt;. The Highcharts files can be downloaded from &lt;a href=&quot;download&quot;&gt;highcharts.com&lt;/a&gt; and put on your webpage. Here is an example with jQuery and highcharts served from your own server:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;/js/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;/js/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;h3&gt;C. Get started&lt;/h3&gt;
+&lt;p&gt;You are now ready to use Highcharts, see &lt;a href=&quot;/docs/getting-started/your-first-chart&quot;&gt;Your first chart&lt;/a&gt; to get started.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;*) Highcharts version 1.x relied on excanvas.js for rendering in IE. From Highcharts 2.0 (and all Highstock versions) IE VML rendering is built into the library.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Installation&lt;/h1&gt;
+&lt;p&gt;Highcharts requires two files to run, &lt;a href=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;highcharts.js&lt;/a&gt; and either jQuery, MooTools or Prototype or our own Highcharts Standalone Framework which are used for some common JavaScript tasks. If you're installing Highstock, the procedure is the same as below, except the JavaScript file name is highstock.js rather than highcharts.js.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;A. Include Highcharts and framework&lt;/h3&gt;
+&lt;p&gt;Include the JavaScript files in the &amp;lt;head&amp;gt; section of your web page as shown below.&lt;/p&gt;
+
+&lt;h4&gt;Option #1: use jQuery&lt;/h4&gt;
+&lt;p&gt;Use this code to include Highcharts with jQuery:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;Option #2: use Highcharts Standalone Framework&lt;/h4&gt;
+&lt;p&gt;jQuery is currently used in most websites, but there may be situations where you don't want to load the full framework in order to utilize Highcharts. For this we have built the Highcharts Standalone Framework, a compact file of 2 kB gzipped. It is available since Highcharts 3.0.5. Use this code to load the Standalone Framework from our CDN:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/adapters/standalone-framework.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h4&gt;Option #3: Use MooTools or Prototype&lt;/h4&gt;
+&lt;p&gt;While the jQuery adapter is built into Highcharts and Highstock, the MooTools and Prototype adapter has to be included separately. Use this code to include Highcharts with MooTools:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/adapters/mootools-adapter.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;and use this code to include Highcharts with Prototype:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/prototype/1.7/prototype.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/adapters/prototype-adapter.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;http://code.highcharts.com/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;Note: If MooTools or Prototype is used they need to be included before highcharts.js, this is because highcharts.js checks to see if MooTools or Prototype are present.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3&gt;B. Alternatively, load files from your own domain&lt;/h3&gt;
+&lt;p&gt;In the example above the JavaScript files are loaded from ajax.googleapis.com and &lt;a href=&quot;http://code.highcharts.com&quot;&gt;code.highcharts.com&lt;/a&gt;. The Highcharts files can be downloaded from &lt;a href=&quot;download&quot;&gt;highcharts.com&lt;/a&gt; and put on your webpage. Here is an example with jQuery and highcharts served from your own server:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;/js/jquery.min.js&quot;&amp;gt;&amp;lt;/script&amp;gt;
+&amp;lt;script src=&quot;/js/highcharts.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;h3&gt;C. Get started&lt;/h3&gt;
+&lt;p&gt;You are now ready to use Highcharts, see &lt;a href=&quot;/docs/getting-started/your-first-chart&quot;&gt;Your first chart&lt;/a&gt; to get started.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;*) Highcharts version 1.x relied on excanvas.js for rendering in IE. From Highcharts 2.0 (and all Highstock versions) IE VML rendering is built into the library.&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Getting Started" />
+	</entry>
+	<entry>
+		<title>System Requirements</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/getting-started/system-requirements"/>
+		<published>2013-08-22T09:14:22+00:00</published>
+		<updated>2013-08-22T09:14:22+00:00</updated>
+		<id>http://www.highcharts.com/docs/getting-started/system-requirements</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;System requirements&lt;/h1&gt;
+&lt;p&gt;Highcharts is solely based on native browser technologies and doesn't require client side plugins like Flash or Java. Furthermore you don't need to install anything on your server. No PHP or ASP.NET. Highcharts needs only two JS files to run: The highcharts.js core and either the jQuery, MooTools, Prototype or Highcharts Standalone framework. The Highcharts Standalone framework is designed for those who do not already use jQuery, MooTools or Prototype in their web page, and wish to use Highcharts with minimal overhead.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Highcharts and Highstock&amp;nbsp;work in all modern browsers including mobile devices and Internet Explorer from version 6. Standard browsers use &lt;a href=&quot;http://www.w3.org/Graphics/SVG/&quot;&gt;SVG&lt;/a&gt; for the graphics rendering. In legacy Internet Explorer (IE8 and before) graphics are drawn using &lt;a href=&quot;http://www.w3.org/TR/NOTE-VML&quot;&gt;VML&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Highcharts and Highstock run on any server that supports HTML. You can even run Highcharts locally from a filesystem, since all the rendering is done locally in a browser.&lt;/p&gt;
+&lt;h2&gt;Browser compatibility&lt;/h2&gt;
+&lt;p&gt;We test our software on many browsers using the latest versions. Knowing that Internet Explorer users have a tendency not to upgrade we also systematically test older versions of that browser. Highcharts runs on the following browser versions:&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border-style: solid; border-color: silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Brand&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Versions supported&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;6.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Firefox&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;2.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Chrome&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Safari&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;4.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Opera&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;9.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;iOS (Safari)&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;3.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Android Browser&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;2.0 + *)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;*) Android browser 2.x has limited support, see &lt;a href=&quot;#android&quot;&gt;below&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;JavaScript frameworks&lt;/h2&gt;
+&lt;p&gt;Our products rely on external JavaScript frameworks to do DOM manipulation, animation and event handling. We try to keep the interface between our library and the JavaScript framework as small as possible, the adapter classes that serve as a bridge to the JavaScript frameworks are about 10 methods long.&lt;/p&gt;
+&lt;p&gt;We have built-in support for jQuery and we bundle adapter classes for use with Mootools and Prototype. The strategy we have chosen is to always test the latest versions (possibly with a small delay) and to also include the latest patch on earlier versions. Currently our test-framework runs unit tests for the following versions of javascript libraries:&lt;/p&gt;
+&lt;div&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border-style: solid; border-color: silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;jQuery&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Mootools&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Prototype&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.8.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.4.5&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.7.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.3.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.6.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.2.5&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.5.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.4.4&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.3.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Other versions may still work even though they are not tested.&lt;/p&gt;
+&lt;h2&gt;Rendering engines and performance&lt;/h2&gt;
+&lt;p&gt;Different browsers support different rendering technologies, modern browsers have support for SVG but older versions of Internet Explorer do not, here we use VML to draw the graphs. This table describes the technologies we use in various browsers:&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border-style: solid; border-color: silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Browser version&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Rendering technology&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Rendering performance&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 9&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 8&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;VML&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Ok&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 7&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;VML&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 6&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;VML&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Firefox&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Chrome&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Safari&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Opera&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;iOS Safari&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Ok&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Android 3+&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Ok&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Android 2.x&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Canvas&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;&lt;a name=&quot;android&quot;&gt;&lt;/a&gt;Android 2.x&lt;/h2&gt;
+&lt;div&gt;Android 2.x doesn't have SVG support built in, so we have created a separate renderer based on the canvg library for this system. This solution has some limitations:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Shared tooltip is always enabled.&lt;/li&gt;
+&lt;li&gt;During first render, the canvg renderer + rgbcolor.js + canvg.js (concatenated to one file) will be downloaded from code.highcharts.com This is configurable with the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.canvasToolsURL&quot;&gt;global.canvasToolsURL&lt;/a&gt; option.&lt;/li&gt;
+&lt;li&gt;Chart and series animation is turned off.&lt;/li&gt;
+&lt;li&gt;Show/hide series from the legend is not enabled.&lt;/li&gt;
+&lt;li&gt;Series and point touch events are not enabled.&lt;/li&gt;
+&lt;li&gt;Zooming is not enabled.&lt;/li&gt;
+&lt;li&gt;Using the Renderer API directly to add shapes to the charts is not supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;System requirements&lt;/h1&gt;
+&lt;p&gt;Highcharts is solely based on native browser technologies and doesn't require client side plugins like Flash or Java. Furthermore you don't need to install anything on your server. No PHP or ASP.NET. Highcharts needs only two JS files to run: The highcharts.js core and either the jQuery, MooTools, Prototype or Highcharts Standalone framework. The Highcharts Standalone framework is designed for those who do not already use jQuery, MooTools or Prototype in their web page, and wish to use Highcharts with minimal overhead.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Highcharts and Highstock&amp;nbsp;work in all modern browsers including mobile devices and Internet Explorer from version 6. Standard browsers use &lt;a href=&quot;http://www.w3.org/Graphics/SVG/&quot;&gt;SVG&lt;/a&gt; for the graphics rendering. In legacy Internet Explorer (IE8 and before) graphics are drawn using &lt;a href=&quot;http://www.w3.org/TR/NOTE-VML&quot;&gt;VML&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Highcharts and Highstock run on any server that supports HTML. You can even run Highcharts locally from a filesystem, since all the rendering is done locally in a browser.&lt;/p&gt;
+&lt;h2&gt;Browser compatibility&lt;/h2&gt;
+&lt;p&gt;We test our software on many browsers using the latest versions. Knowing that Internet Explorer users have a tendency not to upgrade we also systematically test older versions of that browser. Highcharts runs on the following browser versions:&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border-style: solid; border-color: silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Brand&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Versions supported&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;6.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Firefox&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;2.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Chrome&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Safari&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;4.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Opera&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;9.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;iOS (Safari)&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;3.0 +&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Android Browser&lt;/th&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;2.0 + *)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;*) Android browser 2.x has limited support, see &lt;a href=&quot;#android&quot;&gt;below&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;JavaScript frameworks&lt;/h2&gt;
+&lt;p&gt;Our products rely on external JavaScript frameworks to do DOM manipulation, animation and event handling. We try to keep the interface between our library and the JavaScript framework as small as possible, the adapter classes that serve as a bridge to the JavaScript frameworks are about 10 methods long.&lt;/p&gt;
+&lt;p&gt;We have built-in support for jQuery and we bundle adapter classes for use with Mootools and Prototype. The strategy we have chosen is to always test the latest versions (possibly with a small delay) and to also include the latest patch on earlier versions. Currently our test-framework runs unit tests for the following versions of javascript libraries:&lt;/p&gt;
+&lt;div&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border-style: solid; border-color: silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;jQuery&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Mootools&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Prototype&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.8.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.4.5&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.7.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.3.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.6.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.2.5&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.5.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.4.4&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;1.3.2&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Other versions may still work even though they are not tested.&lt;/p&gt;
+&lt;h2&gt;Rendering engines and performance&lt;/h2&gt;
+&lt;p&gt;Different browsers support different rendering technologies, modern browsers have support for SVG but older versions of Internet Explorer do not, here we use VML to draw the graphs. This table describes the technologies we use in various browsers:&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border-style: solid; border-color: silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Browser version&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Rendering technology&lt;/th&gt;&lt;th style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Rendering performance&lt;/th&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 9&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 8&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;VML&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Ok&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 7&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;VML&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Internet Explorer 6&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;VML&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Firefox&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Chrome&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Safari&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Opera&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Excellent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;iOS Safari&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Ok&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Android 3+&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;SVG&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Ok&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Android 2.x&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Canvas&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border-style: solid; border-color: silver;&quot;&gt;Slow&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;&lt;a name=&quot;android&quot;&gt;&lt;/a&gt;Android 2.x&lt;/h2&gt;
+&lt;div&gt;Android 2.x doesn't have SVG support built in, so we have created a separate renderer based on the canvg library for this system. This solution has some limitations:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Shared tooltip is always enabled.&lt;/li&gt;
+&lt;li&gt;During first render, the canvg renderer + rgbcolor.js + canvg.js (concatenated to one file) will be downloaded from code.highcharts.com This is configurable with the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.canvasToolsURL&quot;&gt;global.canvasToolsURL&lt;/a&gt; option.&lt;/li&gt;
+&lt;li&gt;Chart and series animation is turned off.&lt;/li&gt;
+&lt;li&gt;Show/hide series from the legend is not enabled.&lt;/li&gt;
+&lt;li&gt;Series and point touch events are not enabled.&lt;/li&gt;
+&lt;li&gt;Zooming is not enabled.&lt;/li&gt;
+&lt;li&gt;Using the Renderer API directly to add shapes to the charts is not supported.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Getting Started" />
+	</entry>
+</feed>

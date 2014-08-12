@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/9-docs/chart-design-and-style</id>
+	<updated>2014-08-11T00:43:11+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/9-docs/chart-design-and-style?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Themes</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-design-and-style/themes"/>
+		<published>2013-08-22T09:32:54+00:00</published>
+		<updated>2013-08-22T09:32:54+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-design-and-style/themes</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Themes&lt;/h1&gt;
+&lt;p&gt;A Highcharts theme is a set of pre-defined options that are applied as default Highcharts options before each chart is instanciated. The highcharts.zip package comes with some themes that can easily be applied to your chart by including the follow script tag:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;/js/themes/gray.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;The themes can also be found on github:&amp;nbsp;&lt;a href=&quot;https://github.com/highslide-software/highcharts.com/tree/master/js/themes&quot;&gt;https://github.com/highslide-software/highcharts.com/tree/master/js/themes&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Creating your own theme&lt;/h2&gt;
+&lt;p&gt;It can be useful to separate the styling of a chart from the data. Such a separation allows the look and feel of your charts to be shared easily between charts across your website. This can be done by creating a options object and apply it to the chart using the &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.setOptions()&quot;&gt;Highcharts.setOptions&lt;/a&gt; method (which is done in the theme JavaScript files)&lt;/p&gt;
+&lt;p&gt;Here is simple example to show the process:&lt;/p&gt;
+&lt;pre&gt;Highcharts.theme = {
+    colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', &lt;br /&gt;             '#FF9655', '#FFF263', '#6AF9C4'],
+    chart: {
+        backgroundColor: {
+            linearGradient: [0, 0, 500, 500],
+            stops: [
+                [0, 'rgb(255, 255, 255)'],
+                [1, 'rgb(240, 240, 255)']
+            ]
+        },
+    },
+    title: {
+        style: {
+            color: '#000',
+            font: 'bold 16px &quot;Trebuchet MS&quot;, Verdana, sans-serif'
+        }
+    },
+    subtitle: {
+        style: {
+            color: '#666666',
+            font: 'bold 12px &quot;Trebuchet MS&quot;, Verdana, sans-serif'
+        }
+    },
+
+    legend: {
+        itemStyle: {
+            font: '9pt Trebuchet MS, Verdana, sans-serif',
+            color: 'black'
+        },
+        itemHoverStyle:{
+            color: 'gray'
+        }   
+    }
+};
+
+// Apply the theme
+Highcharts.setOptions(Highcharts.theme);
+&lt;/pre&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Themes&lt;/h1&gt;
+&lt;p&gt;A Highcharts theme is a set of pre-defined options that are applied as default Highcharts options before each chart is instanciated. The highcharts.zip package comes with some themes that can easily be applied to your chart by including the follow script tag:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;/js/themes/gray.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;The themes can also be found on github:&amp;nbsp;&lt;a href=&quot;https://github.com/highslide-software/highcharts.com/tree/master/js/themes&quot;&gt;https://github.com/highslide-software/highcharts.com/tree/master/js/themes&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Creating your own theme&lt;/h2&gt;
+&lt;p&gt;It can be useful to separate the styling of a chart from the data. Such a separation allows the look and feel of your charts to be shared easily between charts across your website. This can be done by creating a options object and apply it to the chart using the &lt;a href=&quot;http://api.highcharts.com/highcharts#Highcharts.setOptions()&quot;&gt;Highcharts.setOptions&lt;/a&gt; method (which is done in the theme JavaScript files)&lt;/p&gt;
+&lt;p&gt;Here is simple example to show the process:&lt;/p&gt;
+&lt;pre&gt;Highcharts.theme = {
+    colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', &lt;br /&gt;             '#FF9655', '#FFF263', '#6AF9C4'],
+    chart: {
+        backgroundColor: {
+            linearGradient: [0, 0, 500, 500],
+            stops: [
+                [0, 'rgb(255, 255, 255)'],
+                [1, 'rgb(240, 240, 255)']
+            ]
+        },
+    },
+    title: {
+        style: {
+            color: '#000',
+            font: 'bold 16px &quot;Trebuchet MS&quot;, Verdana, sans-serif'
+        }
+    },
+    subtitle: {
+        style: {
+            color: '#666666',
+            font: 'bold 12px &quot;Trebuchet MS&quot;, Verdana, sans-serif'
+        }
+    },
+
+    legend: {
+        itemStyle: {
+            font: '9pt Trebuchet MS, Verdana, sans-serif',
+            color: 'black'
+        },
+        itemHoverStyle:{
+            color: 'gray'
+        }   
+    }
+};
+
+// Apply the theme
+Highcharts.setOptions(Highcharts.theme);
+&lt;/pre&gt;&lt;/div&gt;</content>
+		<category term="Chart design and style" />
+	</entry>
+	<entry>
+		<title>Colors</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-design-and-style/colors"/>
+		<published>2013-08-22T09:32:41+00:00</published>
+		<updated>2013-08-22T09:32:41+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-design-and-style/colors</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Colors&lt;/h1&gt;
+&lt;p&gt;Highcharts supports solid and semi-transparent colors as well as linear and radial gradients. Unless specified below, this applies to all color options in the Highcharts API, whether it is called color, backgroundColor, borderColor, lineColor etc.&lt;/p&gt;
+&lt;h2&gt;Solid colors&lt;/h2&gt;
+&lt;p&gt;Primarily, Highcharts supports solid colors given in hex format &lt;em&gt;#00FF00&lt;/em&gt; and rgb format &lt;em&gt;rgb(0,255,0)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;Secondary, any color format that is recognized by the browser, like short Hex &lt;/span&gt;&lt;em style=&quot;line-height: 1.6em;&quot;&gt;#0F0&lt;/em&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; or color names (&lt;/span&gt;&lt;em style=&quot;line-height: 1.6em;&quot;&gt;red, brown, blue&lt;/em&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;) is supported. However, in some cases Highcharts alters the brightness of the color, like when hovering a column chart. When using the secondary color formats, this operation isn't performed.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Semi-transparent colors - opacity&lt;/h3&gt;
+&lt;p&gt;Semi-transparent colors in Highcharts are given in the rgba format &lt;em&gt;rgba(255,255,255,1)&lt;/em&gt;. The last parameter is the alpha or opacity that ranges from 0, fully transparent, to 1, fully opaque. Because of this, there are no separate opacity options in the Highcharts API.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2&gt;Linear gradients&lt;/h2&gt;
+&lt;p&gt;Linear gradients in Highcharts have a similar syntax to that of SVG:&lt;/p&gt;
+&lt;pre&gt;color: {
+    linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+    stops: [
+        [0, '#003399'],
+        [1, '#3366AA']
+    ]
+}&lt;/pre&gt;
+&lt;p&gt;The color is given as an object literal containing two properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;linearGradient&lt;/strong&gt; holds another object literal that defines the start position (x1, y1) and the end position (x2, y2) relative to the shape, where 0 is top/left and 1 is bottom/right.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stops&lt;/strong&gt; is an array of tuples. The first item in each tuple is the position in the gradient, where 0 is the start of the gradient and 1 is the end of the gradient. Multiple stops can be applied. The second item is the color for each stop. This color can also be given in the rgba format, though in Internet Explorer 8 and less only the first and last opacity will be applied, and intermediate stops will have opacities interpolated between those.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In modern SVG enabled browsers the linear gradients can be applied to both fills (backgrounds) and strokes (lines). Internet Explorer 8 and less doesn't support gradients on lines, so in these browsers only the first stop color is used.&lt;/p&gt;
+&lt;p&gt;See the online example of a &lt;a href=&quot;http://jsfiddle.net/highcharts/4rTBY/&quot;&gt;linear gradient chart background&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Radial gradients&lt;/h2&gt;
+&lt;p&gt;Since Highcharts 2.3 radial gradients have been supported. They have a similar syntax to that of SVG:&lt;/p&gt;
+&lt;pre&gt;color: {
+    radialGradient: { cx: 0.5, cy: 0.5, r: 0.5 },
+    stops:
+       [0, '#003399'],
+       [1, '#3366AA']
+    ]
+}&lt;/pre&gt;
+&lt;p&gt;The color is given as an object literal containing two properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;radialGradient&lt;/strong&gt; holds another object literal, with three properies. The &lt;strong&gt;cx&lt;/strong&gt; and &lt;strong&gt;cy&lt;/strong&gt; properties are the horizontal and vertical centers of the radial gradient respectively, relative to the shape where 0 and 1 are the edges and 0.5 is the center of the shape. The r property defines the radius relative to the shape's diameter. When all values are 0.5, the gradient starts in the middle of the circle and ends along the perimeter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stops&lt;/strong&gt; is an array of tuples. The first item in each tuple is the position in the gradient, where 0 is the start of the gradient and 1 is the end of the gradient. Multiple stops can be applied. The second item is the color for each stop. This color can also be given in the rgba format, though in Internet Explorer 8 and less only the first and last opacity will be applied, and intermediate stops will have opacities interpolated between those.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When a radial gradient is used as the color of a pie slice or the background color of a gauge or polar chart, the gradient is drawn relative to the full circle, not only the specific shape.&lt;/p&gt;
+&lt;p&gt;In Internet Explorer 8 and less, radial gradients are not natively supported. Instead, we emulate the effect by loading a graphic pattern image. This image is by default loaded from the Highcharts CDN. To load it from your own server, set the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.VMLRadialGradientURL&quot;&gt;VMLRadialGradientURL&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;See the demo of &lt;a href=&quot;demo/pie-gradient&quot;&gt;radial gradients in a pie chart&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Colors&lt;/h1&gt;
+&lt;p&gt;Highcharts supports solid and semi-transparent colors as well as linear and radial gradients. Unless specified below, this applies to all color options in the Highcharts API, whether it is called color, backgroundColor, borderColor, lineColor etc.&lt;/p&gt;
+&lt;h2&gt;Solid colors&lt;/h2&gt;
+&lt;p&gt;Primarily, Highcharts supports solid colors given in hex format &lt;em&gt;#00FF00&lt;/em&gt; and rgb format &lt;em&gt;rgb(0,255,0)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;Secondary, any color format that is recognized by the browser, like short Hex &lt;/span&gt;&lt;em style=&quot;line-height: 1.6em;&quot;&gt;#0F0&lt;/em&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; or color names (&lt;/span&gt;&lt;em style=&quot;line-height: 1.6em;&quot;&gt;red, brown, blue&lt;/em&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;) is supported. However, in some cases Highcharts alters the brightness of the color, like when hovering a column chart. When using the secondary color formats, this operation isn't performed.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Semi-transparent colors - opacity&lt;/h3&gt;
+&lt;p&gt;Semi-transparent colors in Highcharts are given in the rgba format &lt;em&gt;rgba(255,255,255,1)&lt;/em&gt;. The last parameter is the alpha or opacity that ranges from 0, fully transparent, to 1, fully opaque. Because of this, there are no separate opacity options in the Highcharts API.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2&gt;Linear gradients&lt;/h2&gt;
+&lt;p&gt;Linear gradients in Highcharts have a similar syntax to that of SVG:&lt;/p&gt;
+&lt;pre&gt;color: {
+    linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+    stops: [
+        [0, '#003399'],
+        [1, '#3366AA']
+    ]
+}&lt;/pre&gt;
+&lt;p&gt;The color is given as an object literal containing two properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;linearGradient&lt;/strong&gt; holds another object literal that defines the start position (x1, y1) and the end position (x2, y2) relative to the shape, where 0 is top/left and 1 is bottom/right.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stops&lt;/strong&gt; is an array of tuples. The first item in each tuple is the position in the gradient, where 0 is the start of the gradient and 1 is the end of the gradient. Multiple stops can be applied. The second item is the color for each stop. This color can also be given in the rgba format, though in Internet Explorer 8 and less only the first and last opacity will be applied, and intermediate stops will have opacities interpolated between those.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In modern SVG enabled browsers the linear gradients can be applied to both fills (backgrounds) and strokes (lines). Internet Explorer 8 and less doesn't support gradients on lines, so in these browsers only the first stop color is used.&lt;/p&gt;
+&lt;p&gt;See the online example of a &lt;a href=&quot;http://jsfiddle.net/highcharts/4rTBY/&quot;&gt;linear gradient chart background&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Radial gradients&lt;/h2&gt;
+&lt;p&gt;Since Highcharts 2.3 radial gradients have been supported. They have a similar syntax to that of SVG:&lt;/p&gt;
+&lt;pre&gt;color: {
+    radialGradient: { cx: 0.5, cy: 0.5, r: 0.5 },
+    stops:
+       [0, '#003399'],
+       [1, '#3366AA']
+    ]
+}&lt;/pre&gt;
+&lt;p&gt;The color is given as an object literal containing two properties:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;radialGradient&lt;/strong&gt; holds another object literal, with three properies. The &lt;strong&gt;cx&lt;/strong&gt; and &lt;strong&gt;cy&lt;/strong&gt; properties are the horizontal and vertical centers of the radial gradient respectively, relative to the shape where 0 and 1 are the edges and 0.5 is the center of the shape. The r property defines the radius relative to the shape's diameter. When all values are 0.5, the gradient starts in the middle of the circle and ends along the perimeter.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;stops&lt;/strong&gt; is an array of tuples. The first item in each tuple is the position in the gradient, where 0 is the start of the gradient and 1 is the end of the gradient. Multiple stops can be applied. The second item is the color for each stop. This color can also be given in the rgba format, though in Internet Explorer 8 and less only the first and last opacity will be applied, and intermediate stops will have opacities interpolated between those.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When a radial gradient is used as the color of a pie slice or the background color of a gauge or polar chart, the gradient is drawn relative to the full circle, not only the specific shape.&lt;/p&gt;
+&lt;p&gt;In Internet Explorer 8 and less, radial gradients are not natively supported. Instead, we emulate the effect by loading a graphic pattern image. This image is by default loaded from the Highcharts CDN. To load it from your own server, set the &lt;a href=&quot;http://api.highcharts.com/highcharts#global.VMLRadialGradientURL&quot;&gt;VMLRadialGradientURL&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;See the demo of &lt;a href=&quot;demo/pie-gradient&quot;&gt;radial gradients in a pie chart&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart design and style" />
+	</entry>
+	<entry>
+		<title>Design and style</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/chart-design-and-style/design-and-style"/>
+		<published>2013-08-22T09:32:24+00:00</published>
+		<updated>2013-08-22T09:32:24+00:00</updated>
+		<id>http://www.highcharts.com/docs/chart-design-and-style/design-and-style</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Design and style&lt;/h1&gt;
+&lt;p&gt;All Highcharts elements are customizable through options. &lt;/p&gt;
+&lt;h2&gt;Layout and positioning&lt;/h2&gt;
+&lt;p&gt;Most Highcharts elements displayed on a chart can be positioned using x and y values relative to the top left corner and using the &quot;align&quot; and &quot;verticalAlign&quot; options. The &quot;align&quot; option can have the values 'left', 'right' and 'center'. The &quot;verticalAlign&quot; align option can have the values 'top', 'bottom' and 'middle'.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Chart&lt;/h3&gt;
+&lt;p&gt;The chart's position in the HTML page is defined by the position of the container div. Height and width is set either by setting a height and width of the container div, or by setting the &lt;a href=&quot;http://api.highcharts.com#chart.height&quot;&gt;chart.height&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#chart.width&quot;&gt;chart.width&lt;/a&gt; Highcharts options.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;plot area&lt;/em&gt; is the square area within the axes, where the series are drawn. There are two sets of options that decide where the plot area is placed within the chart. The &lt;em&gt;margin&lt;/em&gt; options (marginLeft, marginTop etc) give the margin to the actual plot area and does not apply to other elements on the chart (labels, legend etc). The &lt;em&gt;spacing&lt;/em&gt; options (spacingLeft, spacingTop etc) decide the padding between the outer area and all elements inside a chart. In this mode, the chart is adjusted to make room for title and legend, axis labels etc. By default, the margins are null. Margins are only used in legacy charts as well as in situations where you want to make sure plot areas are align between multiple charts. Margins override their counterpart spacing options.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/docs/chartPosition.png&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;width: 671px; height: 398px;&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;chart: {
+        // Edit chart spacing
+        spacingBottom: 15,
+        spacingTop: 10,
+        spacingLeft: 10,
+        spacingRight: 10,
+
+        // Explicitly tell the width and height of a chart
+        width: null,
+        height: null
+}&lt;/pre&gt;
+&lt;h3&gt;Credits&lt;/h3&gt;
+&lt;p&gt;Credits can be moved around using the &quot;position&quot; option:&lt;/p&gt;
+&lt;pre&gt;credits: {
+    position: {
+        align: 'left',
+        verticalAlign: 'bottom',
+        x: 10,
+        y: -10
+    }
+}&lt;/pre&gt;
+&lt;p&gt;See &lt;a href=&quot;http://api.highcharts.com#credits&quot;&gt;api.highcharts.com#credits&lt;/a&gt; for full option set.&lt;/p&gt;
+&lt;h3&gt; &lt;/h3&gt;
+&lt;h3&gt;Axis labels&lt;/h3&gt;
+&lt;p&gt;Axis labels can be placed relative to the plot area using the &quot;align&quot; option, &quot;x&quot; and &quot;y&quot; options.&lt;/p&gt;
+&lt;pre&gt;labels: {
+    align: 'right',
+    x: -10,
+    y: 0
+}
+&lt;/pre&gt;
+&lt;p&gt;They can also be rotated using the &quot;rotate&quot; option. Font styling for the axis labels are given through the xAxis.labels.style options. See &lt;a href=&quot;http://api.highcharts.com#xAxis.labels&quot;&gt;xAxis.labels&lt;/a&gt; for full option set.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Legend&lt;/h3&gt;
+&lt;p&gt;The legend is by default placed at the bottom of the chart in the center. This can be changed by the &quot;align&quot; and &quot;verticalAlign&quot; options. The legend can also be positioned anywhere in the chart area using the &quot;floating&quot; option. This will cause the legend to float freely over the plot area.&lt;/p&gt;
+&lt;pre&gt;legend:{
+     align: 'left',
+     verticalAlign: 'top',
+     floating: true        
+}
+&lt;/pre&gt;
+&lt;p&gt;The legend can also be positioned using the &quot;x&quot; and &quot;y&quot; options.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;http://api.highcharts.com#legend&quot;&gt;api.highcharts.com#legend&lt;/a&gt; for full option set.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Title and subtitle&lt;/h3&gt;
+&lt;p&gt;The title and subtitle can be positioned using the &quot;align&quot;, &quot;verticalAlign&quot;, &quot;x&quot; and &quot;y&quot; options. They can also float setting the &quot;floating&quot; option to true.&lt;/p&gt;
+&lt;p&gt;General text styling is set in the &lt;em&gt;style&lt;/em&gt; option. The text can also be styled inline using spans and CSS.&lt;/p&gt;
+&lt;pre&gt;title: {
+    text: 'Example with &lt;strong&gt;bold&lt;/strong&gt; text',
+    floating: true,
+    align: 'right',
+    x: -30,
+    y: 30
+}
+&lt;/pre&gt;
+&lt;h3&gt;Export&lt;/h3&gt;
+&lt;p&gt;The export buttons can be styled through options given in the &lt;a href=&quot;http://api.highcharts.com/highcharts#navigation&quot;&gt;navigation&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.buttons&quot;&gt;exporting.buttons&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Borders&lt;/h2&gt;
+&lt;p&gt;A chart can have two borders that are both disabled by default.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;outer border&lt;/em&gt; is enabled by giving &lt;a href=&quot;http://api.highcharts.com#chart.borderWidth&quot;&gt;chart.borderWidth&lt;/a&gt; a pixel value. It can be further styled by other options like chart.borderRadius, chart.borderColor. These borders will also be part of the exported chart. If you want a border that is not visible in the export, using a CSS border on the container div may be a good alternative.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;plot border&lt;/em&gt; is the inner border around the plot area, marked with orange in the figure above. This border is enabled by giving &lt;a href=&quot;http://api.highcharts.com#chart.plotBorderWidth&quot;&gt;chart.plotBorderWidth&lt;/a&gt; a pixel value. Its color is set by chart.plotBorderColor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both these borders can be complemented by a shadow through the &lt;a href=&quot;http://api.highcharts.com#chart.shadow&quot;&gt;chart.shadow&lt;/a&gt; or &lt;a href=&quot;http://api.highcharts.com#chart.plotShadow&quot;&gt;chart.plotShadow&lt;/a&gt; options.&lt;/p&gt;
+&lt;h2&gt;Backgrounds&lt;/h2&gt;
+&lt;p&gt;The &lt;em&gt;chart area&lt;/em&gt; accepts a background color through the &lt;a href=&quot;http://api.highcharts.com#chart.backgroundColor&quot;&gt;chart.backgroundColor&lt;/a&gt; option. Advanced backgrounds and background images may also be applied to the HTML container, but won't be visible until the chart.backgroundColor is set to &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;null&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;plot area&lt;/em&gt; accepts a background color through the &lt;a href=&quot;http://api.highcharts.com#plotBackgroundColor&quot;&gt;chart.plotBackgroundColor&lt;/a&gt; option. It also has a &lt;a href=&quot;http://api.highcharts.com#chart.plotBackgroundImage&quot;&gt;chart.plotBackgroundImage&lt;/a&gt; option to allow setting image backgrounds. &lt;/p&gt;
+&lt;h2&gt;Fonts&lt;/h2&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;A global font family can be set using the &lt;/span&gt;&lt;a href=&quot;http://api.highcharts.com#chart.style&quot; style=&quot;line-height: 1.6em;&quot;&gt;chart.style&lt;/a&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; option:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt;Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'serif'
+        }
+    }
+});&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;All layout elements of the chart that include text, have a style option that allow setting text related CSS properties. There are options like &lt;a href=&quot;http://api.highcharts.com#xAxis.labels.style&quot;&gt;xAxis.labels.style&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#title.style&quot;&gt;title.style&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#legend.itemStyle&quot;&gt;legend.itemStyle&lt;/a&gt; to mention a few. If you go to &lt;a href=&quot;http://api.highcharts.com&quot;&gt;api.highcharts.com&lt;/a&gt; and search for &quot;style&quot; you'll get the full list.&lt;/p&gt;
+&lt;p&gt;Style properties are given in camel case like in JavaScript. So &lt;code&gt;fontFamily&lt;/code&gt; will work, but &lt;code&gt;&quot;font-family&quot;&lt;/code&gt; will not.&lt;/p&gt;
+&lt;p&gt;Common for all these is that all CSS is set to the related SVG/HTML/VML element, but not all have any effect. These configurations are meant for styling text, so properties like &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;color&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;textUnderline&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;fontSize&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;fontFamily&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;textShadow&lt;/span&gt; etc. will make good sense. Other properties, like &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;margin&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;padding&lt;/span&gt; and other layout related properties will not have an effect (or even an unintended effect) and should not be used. Layout is instead handled by specific Highcharts layout options.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2&gt;Shadows&lt;/h2&gt;
+&lt;p&gt;Many layout elements including series types in Highcharts have &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;shadow&lt;/span&gt; options. Go to &lt;a href=&quot;http://api.highcharts.com&quot;&gt;api.highcharts.com&lt;/a&gt; and search for &quot;shadow&quot; to see the full list. The shadow can be &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;false&lt;/span&gt;, or &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;true&lt;/span&gt; to display the shadow. In addition to that, the shadow can be an object configuration containing &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;color&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;offsetX&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;offsetY&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;opacity&lt;/span&gt; and &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;width&lt;/span&gt;. For instance, the options can be used to add a glow to the graphs: &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt;shadow: {
+    color: 'yellow',
+    width: 10,
+    offsetX: 0,
+    offsetY: 0
+}&lt;/pre&gt;
+&lt;p&gt;See it &lt;a href=&quot;http://jsfiddle.net/highcharts/jYLXN/&quot;&gt;demonstrated at jsFiddle&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Styling axes&lt;/h2&gt;
+&lt;p&gt;Several graphic elements are associated with axes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;axis line&lt;/em&gt; extends along the axis. It is styled by the &lt;a href=&quot;http://api.highcharts.com#xAxis.lineWidth&quot;&gt;lineWidth&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#xAxis.lineColor&quot;&gt;lineColor&lt;/a&gt; options. &lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;tick markers&lt;/em&gt; are styled by the &lt;a href=&quot;http://api.highcharts.com#xAxis.tickColor&quot;&gt;tickColor&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#xAxis.tickLength&quot;&gt;tickLength&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#xAxis.tickPosition&quot;&gt;tickPosition&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#xAxis.tickWidth&quot;&gt;tickWidth&lt;/a&gt; options.&lt;/li&gt;
+&lt;li&gt;If &lt;em&gt;minor ticks&lt;/em&gt; are enabled, they have similar options in &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickColor&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickLength&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickPosition&lt;/span&gt; and &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickWidth&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;axis labels&lt;/em&gt; are styled according to font styling above.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;grid lines&lt;/em&gt; and minor grid lines have options like &lt;a href=&quot;http://api.highcharts.com#xAxis.gridLineWidth&quot;&gt;gridLineWidth&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#xAxis.gridLineColor&quot;&gt;gridLineColor&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#xAxis.gridLineDashStyle&quot;&gt;gridLineDashStyle&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;In between grid lines, every other interval can be colored according to the &lt;a href=&quot;http://api.highcharts.com#xAxis.alternateGridColor&quot;&gt;alternateGridColor&lt;/a&gt; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Tooltip&lt;/h2&gt;
+&lt;p&gt;See the &lt;a href=&quot;docs/chart-concepts/tooltip&quot;&gt;Tooltip concept page&lt;/a&gt; for styling tooltips. &lt;/p&gt;
+&lt;h2&gt;Animation&lt;/h2&gt;
+&lt;p&gt;In Highcharts, animation is enabled or disabled in two separate places.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;http://api.highcharts.com#chart.animation&quot;&gt;chart.animation&lt;/a&gt; option applies to animation when anything is changed dynamically in the chart. This change can be that a series is hidden and the plot area needs to animate to update to new axis scales, the chart is altered dynamically, or any other redraw operation. When the chart is altered dynamically, the animation can be overridden in each individual method. For example, the &lt;a href=&quot;http://api.highcharts.com#Series.addPoint()&quot;&gt;Series.addPoint&lt;/a&gt; method takes animation as an argument.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&quot;http://api.highcharts.com#plotOptions.series.animation&quot;&gt;plotOptions.series.animation&lt;/a&gt; option - and similar for any series type - applies only to the initial animation for this series or series type. Once the animation has run, it never runs again. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div&gt;The animation can either be set as a boolean or a configuration object. If true, it will use the 'swing' jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;duration - &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;The duration of the animation in milliseconds.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;easing - &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;When using jQuery as the general framework, the easing can be set to linear or swing. More easing functions are available with the use of jQuery plug-ins, most notably the jQuery UI suite. See the &lt;a href=&quot;http://api.jquery.com/animate/&quot;&gt;jQuery docs&lt;/a&gt;. When using MooTools as the general framework, use the property name &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;transition&lt;/span&gt; instead of &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;easing&lt;/span&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Design and style&lt;/h1&gt;
+&lt;p&gt;All Highcharts elements are customizable through options. &lt;/p&gt;
+&lt;h2&gt;Layout and positioning&lt;/h2&gt;
+&lt;p&gt;Most Highcharts elements displayed on a chart can be positioned using x and y values relative to the top left corner and using the &quot;align&quot; and &quot;verticalAlign&quot; options. The &quot;align&quot; option can have the values 'left', 'right' and 'center'. The &quot;verticalAlign&quot; align option can have the values 'top', 'bottom' and 'middle'.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Chart&lt;/h3&gt;
+&lt;p&gt;The chart's position in the HTML page is defined by the position of the container div. Height and width is set either by setting a height and width of the container div, or by setting the &lt;a href=&quot;http://api.highcharts.com#chart.height&quot;&gt;chart.height&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#chart.width&quot;&gt;chart.width&lt;/a&gt; Highcharts options.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;plot area&lt;/em&gt; is the square area within the axes, where the series are drawn. There are two sets of options that decide where the plot area is placed within the chart. The &lt;em&gt;margin&lt;/em&gt; options (marginLeft, marginTop etc) give the margin to the actual plot area and does not apply to other elements on the chart (labels, legend etc). The &lt;em&gt;spacing&lt;/em&gt; options (spacingLeft, spacingTop etc) decide the padding between the outer area and all elements inside a chart. In this mode, the chart is adjusted to make room for title and legend, axis labels etc. By default, the margins are null. Margins are only used in legacy charts as well as in situations where you want to make sure plot areas are align between multiple charts. Margins override their counterpart spacing options.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/docs/chartPosition.png&quot; border=&quot;0&quot; alt=&quot;&quot; style=&quot;width: 671px; height: 398px;&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;chart: {
+        // Edit chart spacing
+        spacingBottom: 15,
+        spacingTop: 10,
+        spacingLeft: 10,
+        spacingRight: 10,
+
+        // Explicitly tell the width and height of a chart
+        width: null,
+        height: null
+}&lt;/pre&gt;
+&lt;h3&gt;Credits&lt;/h3&gt;
+&lt;p&gt;Credits can be moved around using the &quot;position&quot; option:&lt;/p&gt;
+&lt;pre&gt;credits: {
+    position: {
+        align: 'left',
+        verticalAlign: 'bottom',
+        x: 10,
+        y: -10
+    }
+}&lt;/pre&gt;
+&lt;p&gt;See &lt;a href=&quot;http://api.highcharts.com#credits&quot;&gt;api.highcharts.com#credits&lt;/a&gt; for full option set.&lt;/p&gt;
+&lt;h3&gt; &lt;/h3&gt;
+&lt;h3&gt;Axis labels&lt;/h3&gt;
+&lt;p&gt;Axis labels can be placed relative to the plot area using the &quot;align&quot; option, &quot;x&quot; and &quot;y&quot; options.&lt;/p&gt;
+&lt;pre&gt;labels: {
+    align: 'right',
+    x: -10,
+    y: 0
+}
+&lt;/pre&gt;
+&lt;p&gt;They can also be rotated using the &quot;rotate&quot; option. Font styling for the axis labels are given through the xAxis.labels.style options. See &lt;a href=&quot;http://api.highcharts.com#xAxis.labels&quot;&gt;xAxis.labels&lt;/a&gt; for full option set.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Legend&lt;/h3&gt;
+&lt;p&gt;The legend is by default placed at the bottom of the chart in the center. This can be changed by the &quot;align&quot; and &quot;verticalAlign&quot; options. The legend can also be positioned anywhere in the chart area using the &quot;floating&quot; option. This will cause the legend to float freely over the plot area.&lt;/p&gt;
+&lt;pre&gt;legend:{
+     align: 'left',
+     verticalAlign: 'top',
+     floating: true        
+}
+&lt;/pre&gt;
+&lt;p&gt;The legend can also be positioned using the &quot;x&quot; and &quot;y&quot; options.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;http://api.highcharts.com#legend&quot;&gt;api.highcharts.com#legend&lt;/a&gt; for full option set.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Title and subtitle&lt;/h3&gt;
+&lt;p&gt;The title and subtitle can be positioned using the &quot;align&quot;, &quot;verticalAlign&quot;, &quot;x&quot; and &quot;y&quot; options. They can also float setting the &quot;floating&quot; option to true.&lt;/p&gt;
+&lt;p&gt;General text styling is set in the &lt;em&gt;style&lt;/em&gt; option. The text can also be styled inline using spans and CSS.&lt;/p&gt;
+&lt;pre&gt;title: {
+    text: 'Example with &lt;strong&gt;bold&lt;/strong&gt; text',
+    floating: true,
+    align: 'right',
+    x: -30,
+    y: 30
+}
+&lt;/pre&gt;
+&lt;h3&gt;Export&lt;/h3&gt;
+&lt;p&gt;The export buttons can be styled through options given in the &lt;a href=&quot;http://api.highcharts.com/highcharts#navigation&quot;&gt;navigation&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.buttons&quot;&gt;exporting.buttons&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Borders&lt;/h2&gt;
+&lt;p&gt;A chart can have two borders that are both disabled by default.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;outer border&lt;/em&gt; is enabled by giving &lt;a href=&quot;http://api.highcharts.com#chart.borderWidth&quot;&gt;chart.borderWidth&lt;/a&gt; a pixel value. It can be further styled by other options like chart.borderRadius, chart.borderColor. These borders will also be part of the exported chart. If you want a border that is not visible in the export, using a CSS border on the container div may be a good alternative.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;plot border&lt;/em&gt; is the inner border around the plot area, marked with orange in the figure above. This border is enabled by giving &lt;a href=&quot;http://api.highcharts.com#chart.plotBorderWidth&quot;&gt;chart.plotBorderWidth&lt;/a&gt; a pixel value. Its color is set by chart.plotBorderColor.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both these borders can be complemented by a shadow through the &lt;a href=&quot;http://api.highcharts.com#chart.shadow&quot;&gt;chart.shadow&lt;/a&gt; or &lt;a href=&quot;http://api.highcharts.com#chart.plotShadow&quot;&gt;chart.plotShadow&lt;/a&gt; options.&lt;/p&gt;
+&lt;h2&gt;Backgrounds&lt;/h2&gt;
+&lt;p&gt;The &lt;em&gt;chart area&lt;/em&gt; accepts a background color through the &lt;a href=&quot;http://api.highcharts.com#chart.backgroundColor&quot;&gt;chart.backgroundColor&lt;/a&gt; option. Advanced backgrounds and background images may also be applied to the HTML container, but won't be visible until the chart.backgroundColor is set to &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;null&lt;/span&gt;. &lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;plot area&lt;/em&gt; accepts a background color through the &lt;a href=&quot;http://api.highcharts.com#plotBackgroundColor&quot;&gt;chart.plotBackgroundColor&lt;/a&gt; option. It also has a &lt;a href=&quot;http://api.highcharts.com#chart.plotBackgroundImage&quot;&gt;chart.plotBackgroundImage&lt;/a&gt; option to allow setting image backgrounds. &lt;/p&gt;
+&lt;h2&gt;Fonts&lt;/h2&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;A global font family can be set using the &lt;/span&gt;&lt;a href=&quot;http://api.highcharts.com#chart.style&quot; style=&quot;line-height: 1.6em;&quot;&gt;chart.style&lt;/a&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; option:&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt;Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'serif'
+        }
+    }
+});&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;All layout elements of the chart that include text, have a style option that allow setting text related CSS properties. There are options like &lt;a href=&quot;http://api.highcharts.com#xAxis.labels.style&quot;&gt;xAxis.labels.style&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#title.style&quot;&gt;title.style&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#legend.itemStyle&quot;&gt;legend.itemStyle&lt;/a&gt; to mention a few. If you go to &lt;a href=&quot;http://api.highcharts.com&quot;&gt;api.highcharts.com&lt;/a&gt; and search for &quot;style&quot; you'll get the full list.&lt;/p&gt;
+&lt;p&gt;Style properties are given in camel case like in JavaScript. So &lt;code&gt;fontFamily&lt;/code&gt; will work, but &lt;code&gt;&quot;font-family&quot;&lt;/code&gt; will not.&lt;/p&gt;
+&lt;p&gt;Common for all these is that all CSS is set to the related SVG/HTML/VML element, but not all have any effect. These configurations are meant for styling text, so properties like &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;color&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;textUnderline&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;fontSize&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;fontFamily&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;textShadow&lt;/span&gt; etc. will make good sense. Other properties, like &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;margin&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;padding&lt;/span&gt; and other layout related properties will not have an effect (or even an unintended effect) and should not be used. Layout is instead handled by specific Highcharts layout options.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2&gt;Shadows&lt;/h2&gt;
+&lt;p&gt;Many layout elements including series types in Highcharts have &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;shadow&lt;/span&gt; options. Go to &lt;a href=&quot;http://api.highcharts.com&quot;&gt;api.highcharts.com&lt;/a&gt; and search for &quot;shadow&quot; to see the full list. The shadow can be &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;false&lt;/span&gt;, or &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;true&lt;/span&gt; to display the shadow. In addition to that, the shadow can be an object configuration containing &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;color&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;offsetX&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;offsetY&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;opacity&lt;/span&gt; and &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;width&lt;/span&gt;. For instance, the options can be used to add a glow to the graphs: &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre&gt;shadow: {
+    color: 'yellow',
+    width: 10,
+    offsetX: 0,
+    offsetY: 0
+}&lt;/pre&gt;
+&lt;p&gt;See it &lt;a href=&quot;http://jsfiddle.net/highcharts/jYLXN/&quot;&gt;demonstrated at jsFiddle&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Styling axes&lt;/h2&gt;
+&lt;p&gt;Several graphic elements are associated with axes.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;em&gt;axis line&lt;/em&gt; extends along the axis. It is styled by the &lt;a href=&quot;http://api.highcharts.com#xAxis.lineWidth&quot;&gt;lineWidth&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#xAxis.lineColor&quot;&gt;lineColor&lt;/a&gt; options. &lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;tick markers&lt;/em&gt; are styled by the &lt;a href=&quot;http://api.highcharts.com#xAxis.tickColor&quot;&gt;tickColor&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#xAxis.tickLength&quot;&gt;tickLength&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#xAxis.tickPosition&quot;&gt;tickPosition&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#xAxis.tickWidth&quot;&gt;tickWidth&lt;/a&gt; options.&lt;/li&gt;
+&lt;li&gt;If &lt;em&gt;minor ticks&lt;/em&gt; are enabled, they have similar options in &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickColor&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickLength&lt;/span&gt;, &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickPosition&lt;/span&gt; and &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;minorTickWidth&lt;/span&gt;.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;axis labels&lt;/em&gt; are styled according to font styling above.&lt;/li&gt;
+&lt;li&gt;The &lt;em&gt;grid lines&lt;/em&gt; and minor grid lines have options like &lt;a href=&quot;http://api.highcharts.com#xAxis.gridLineWidth&quot;&gt;gridLineWidth&lt;/a&gt;, &lt;a href=&quot;http://api.highcharts.com#xAxis.gridLineColor&quot;&gt;gridLineColor&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#xAxis.gridLineDashStyle&quot;&gt;gridLineDashStyle&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;In between grid lines, every other interval can be colored according to the &lt;a href=&quot;http://api.highcharts.com#xAxis.alternateGridColor&quot;&gt;alternateGridColor&lt;/a&gt; option.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Tooltip&lt;/h2&gt;
+&lt;p&gt;See the &lt;a href=&quot;docs/chart-concepts/tooltip&quot;&gt;Tooltip concept page&lt;/a&gt; for styling tooltips. &lt;/p&gt;
+&lt;h2&gt;Animation&lt;/h2&gt;
+&lt;p&gt;In Highcharts, animation is enabled or disabled in two separate places.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;a href=&quot;http://api.highcharts.com#chart.animation&quot;&gt;chart.animation&lt;/a&gt; option applies to animation when anything is changed dynamically in the chart. This change can be that a series is hidden and the plot area needs to animate to update to new axis scales, the chart is altered dynamically, or any other redraw operation. When the chart is altered dynamically, the animation can be overridden in each individual method. For example, the &lt;a href=&quot;http://api.highcharts.com#Series.addPoint()&quot;&gt;Series.addPoint&lt;/a&gt; method takes animation as an argument.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&quot;http://api.highcharts.com#plotOptions.series.animation&quot;&gt;plotOptions.series.animation&lt;/a&gt; option - and similar for any series type - applies only to the initial animation for this series or series type. Once the animation has run, it never runs again. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div&gt;The animation can either be set as a boolean or a configuration object. If true, it will use the 'swing' jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;duration - &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;The duration of the animation in milliseconds.&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;easing - &lt;/span&gt;&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;When using jQuery as the general framework, the easing can be set to linear or swing. More easing functions are available with the use of jQuery plug-ins, most notably the jQuery UI suite. See the &lt;a href=&quot;http://api.jquery.com/animate/&quot;&gt;jQuery docs&lt;/a&gt;. When using MooTools as the general framework, use the property name &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;transition&lt;/span&gt; instead of &lt;span style=&quot;font-family: courier new,courier,monospace;&quot;&gt;easing&lt;/span&gt;.&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Chart design and style" />
+	</entry>
+</feed>

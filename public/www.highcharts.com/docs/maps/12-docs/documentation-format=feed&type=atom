@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/12-docs/documentation</id>
+	<updated>2014-08-11T00:43:12+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/12-docs/documentation?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Home</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs"/>
+		<published>2013-08-22T08:52:46+00:00</published>
+		<updated>2013-08-22T08:52:46+00:00</updated>
+		<id>http://www.highcharts.com/docs</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Highcharts and Highstock documentation&lt;/h1&gt;
+&lt;h2&gt;Topics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;docs/getting-started/installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;docs/getting-started/your-first-chart&quot;&gt;Your first chart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;docs/getting-started/frequently-asked-questions&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Demo&lt;/h2&gt;
+&lt;p&gt;For live examples see our demo pages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;demo/&quot;&gt;Highcharts demo&lt;/a&gt;&lt;/li&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;stock/demo/&quot;&gt;Highstock demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;API&lt;/h2&gt;
+&lt;p&gt;For more specific information on Highcharts and Highstock options and functions, visit our API sites which also include several live and customizeable examples.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts&quot;&gt;Highcharts API reference&lt;/a&gt;&lt;/li&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;http://api.highcharts.com/highstock&quot;&gt;Highstock API reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Highcharts and Highstock documentation&lt;/h1&gt;
+&lt;h2&gt;Topics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;docs/getting-started/installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;docs/getting-started/your-first-chart&quot;&gt;Your first chart&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;docs/getting-started/frequently-asked-questions&quot;&gt;FAQs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Demo&lt;/h2&gt;
+&lt;p&gt;For live examples see our demo pages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;demo/&quot;&gt;Highcharts demo&lt;/a&gt;&lt;/li&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;stock/demo/&quot;&gt;Highstock demo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 style=&quot;line-height: 19px;&quot;&gt;API&lt;/h2&gt;
+&lt;p&gt;For more specific information on Highcharts and Highstock options and functions, visit our API sites which also include several live and customizeable examples.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;http://api.highcharts.com/highcharts&quot;&gt;Highcharts API reference&lt;/a&gt;&lt;/li&gt;
+&lt;li style=&quot;line-height: 19px;&quot;&gt;&lt;a href=&quot;http://api.highcharts.com/highstock&quot;&gt;Highstock API reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Documentation" />
+	</entry>
+</feed>

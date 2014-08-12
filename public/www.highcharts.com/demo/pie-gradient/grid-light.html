@@ -1,0 +1,834 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en-gb"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-gb"><!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<head>
+  <!--<base href="http://www.highcharts.com/demo/pie-gradient/grid-light" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="highcharts, charts, javascript charts, ajax charts, plots, line charts, bar charts, pie charts, javascript plots, ajax plots" />
+  <meta name="description" content="Highcharts - Interactive JavaScript charts for your web pages." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Highcharts - Pie with gradient fill</title>
+  <link rel="stylesheet" href="/components/com_demo/assets/css/demo.css" type="text/css" />
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="../../joomla/templates/highsoft_colorful/css/template.css" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="../../lib/jquery-1.7.2.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/jquery.cookies.2.2.0.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/slide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+  </script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"><link href="/templates/highsoft_colorful/images/favicon.ico" rel="shortcut icon"/><!-- Echo Header Script -->
+
+</head>
+<body id="bd" class="clearfix">
+	<div id="zt-wrapper">
+		<div id="zt-wrapper-inner">
+						<!--Header-->
+			<div id="zt-header" class="clearfix">
+				<div class="container">
+			        					<div id="zt-header-inner" class="row-fluid">
+			            <!-- Logo -->
+													<a  id="zt-logo-image"  class="span3" href="../../index.html" title="Highcharts"><img src="/templates/highsoft_colorful/images/logo.svg" alt="Highcharts" /></a>
+									            <!-- #Logo -->
+			            <!--Mainmenu-->
+			            <div id="zt-mainmenu" class="span9 pull-right" >
+			                <div id="zt-mainmenu-inner" class="row-fluid">
+			                    <div class="smallmenu"><div class="menusys_mega"><ul><li class="first "><a href="../../about.html"  ><span>About Us</span></a></li><li class="hasChild"><a><span>Our Products</span></a><ul class="submenu"><li class="first"><a href="../../products/highcharts.html"  ><span>Highcharts</span></a></li><li><a href="../../products/highstock.html"  ><span>Highstock</span></a></li><li><a href="../../products/highmaps.html"  ><span>Highmaps</span></a></li><li class="last"><a href="http://highslide.com/"  ><span>Highslide JS</span></a></li></ul></li><li class="last "><a href="../../contact-email.html"  ><span>Contact</span></a></li></ul></div></div><div class="largemenu"><div class="menusys_mega"><ul><li class="first "><a href="../../index.html"  ><span>Home</span></a></li><li class="hasChild active"><a><span>Demo</span></a><ul class="submenu"><li class="first"><a href="../../demo.html"  class=' active' ><span>Highcharts demos</span></a></li><li><a href="../../stock/demo.html"  ><span>Highstock demos</span></a></li><li class="last"><a href="../../maps/demo.html"  ><span>Highmaps demo</span></a></li></ul></li><li class="hasChild"><a><span>Docs</span></a><ul class="submenu"><li class="first"><a href="../../docs.html"  ><span>General Documentation</span></a></li><li><a href="http://api.highcharts.com/highcharts"  ><span>Highcharts API Reference</span></a></li><li><a href="http://api.highcharts.com/highstock"  ><span>Highstock API Reference</span></a></li><li><a href="http://api.highcharts.com/highmaps"  ><span>Highmaps API Reference</span></a></li><li><a href="../../documentation/compatibility.html"  ><span>Compatibility</span></a></li><li class="last"><a href="../../documentation/changelog.html"  ><span>Changelog</span></a></li></ul></li><li class="hasChild"><a><span>Support</span></a><ul class="submenu"><li class="first"><a href="../../support.html"  ><span>Support</span></a></li><li><a href="../../support/roadmap.html"  ><span>Roadmap</span></a></li><li><a href="../../download.html"  ><span>Download</span></a></li><li class="last"><a href="http://forum.highcharts.com/"  ><span>Forum</span></a></li></ul></li><li><a href="../../plugin-registry.html"  ><span>Plugins</span></a></li><li class="last "><a href="http://shop.highsoft.com/"  ><span>Shop</span></a></li></ul></div></div>			                </div>
+			            </div>
+			            <!--#Mainmenu-->
+						<!--Drill Menu-->
+						<div class="zt-drillmenu-inner">
+							<div class="navbar">
+								<a class="btn-navbar collapsed" id="mobile-button" data-toggle="collapse" data-target=".menusys_drill"></a>
+								<div class="menusys_drill collapse"><ul id="zo2-drilldown-menu" class="nav-drilldown"><li class="first item"><a href="../../index.html"  id="menusys101_drill" title="Home"><span class="menusys_name">Home</span></a></li><li class="item hasChild active"><a id="menusys103_drill" title="Demo"><span class="menusys_name">Demo</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item active"><a href="../../demo.html"  class=' active' id="menusys106_drill" title="Highcharts demos"><span class="menusys_name">Highcharts demos</span></a></li><li class="item"><a href="../../stock/demo.html"  id="menusys107_drill" title="Highstock demos"><span class="menusys_name">Highstock demos</span></a></li><li class="last item"><a href="../../maps/demo.html"  id="menusys205_drill" title="Highmaps demo"><span class="menusys_name">Highmaps demo</span></a></li></ul></li><li class="item hasChild"><a id="menusys108_drill" title="Docs"><span class="menusys_name">Docs</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../docs.html"  id="menusys128_drill" title="General Documentation"><span class="menusys_name">General Documentation</span></a></li><li class="item"><a href="http://api.highcharts.com/highcharts"  id="menusys124_drill" title="Highcharts API Reference"><span class="menusys_name">Highcharts API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highstock"  id="menusys125_drill" title="Highstock API Reference"><span class="menusys_name">Highstock API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highmaps"  id="menusys211_drill" title="Highmaps API Reference"><span class="menusys_name">Highmaps API Reference</span></a></li><li class="item"><a href="../../documentation/compatibility.html"  id="menusys126_drill" title="Compatibility"><span class="menusys_name">Compatibility</span></a></li><li class="last item"><a href="../../documentation/changelog.html"  id="menusys127_drill" title="Changelog"><span class="menusys_name">Changelog</span></a></li></ul></li><li class="item hasChild"><a id="menusys109_drill" title="Support"><span class="menusys_name">Support</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../support.html"  id="menusys110_drill" title="Support"><span class="menusys_name">Support</span></a></li><li class="item"><a href="../../support/roadmap.html"  id="menusys129_drill" title="Roadmap"><span class="menusys_name">Roadmap</span></a></li><li class="item"><a href="../../download.html"  id="menusys201_drill" title="Download"><span class="menusys_name">Download</span></a></li><li class="last item"><a href="http://forum.highcharts.com/"  id="menusys208_drill" title="Forum"><span class="menusys_name">Forum</span></a></li></ul></li><li class="item"><a href="../../plugin-registry.html"  id="menusys111_drill" title="Plugins"><span class="menusys_name">Plugins</span></a></li><li class="item"><a href="http://shop.highsoft.com/"  id="menusys115_drill" title="Shop"><span class="menusys_name">Shop</span></a></li><li class="item"><a href="../../about.html"  id="menusys112_drill" title="About Us"><span class="menusys_name">About Us</span></a></li><li class="item hasChild"><a id="menusys113_drill" title="Our Products"><span class="menusys_name">Our Products</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../products/highcharts.html"  id="menusys121_drill" title="Highcharts"><span class="menusys_name">Highcharts</span></a></li><li class="item"><a href="../../products/highstock.html"  id="menusys122_drill" title="Highstock"><span class="menusys_name">Highstock</span></a></li><li class="item"><a href="../../products/highmaps.html"  id="menusys210_drill" title="Highmaps"><span class="menusys_name">Highmaps</span></a></li><li class="last item"><a href="http://highslide.com/"  id="menusys123_drill" title="Highslide JS"><span class="menusys_name">Highslide JS</span></a></li></ul></li><li class="last item"><a href="../../contact-email.html"  id="menusys114_drill" title="Contact"><span class="menusys_name">Contact</span></a></li></ul></div>							</div>
+							<div class="clearfix"></div>
+						</div>
+						<!--#Drill Menu-->
+					</div>
+				</div>
+			</div>
+			<!--#Header-->
+            <!--Slideshow-->
+                        <!--#Slideshow-->
+            			            <!-- ZT Userwrap2 -->
+			            <!-- #ZT Userwrap2 -->
+            <!-- ZT Userwrap3 -->
+			            <!-- #ZT Userwrap3 -->
+                        			<!--Main-->
+						<div id="zt-mainframe" class="clearfix">
+				<div class="container">
+					<div id="zt-mainframe-inner" class="row-fluid clearfix">
+						<div id="zt-mainframe-inner2" class="zt-container">
+														<div id="zt-content" class="span12">
+																<div id="zt-component" class="clearfix">
+									<div id="zt-component-inner">
+										
+<div id="system-message-container">
+</div>
+										<h2 class="demo-header">Demo - Pie with gradient fill</h2>
+<div id="demo-component">
+	<script type="text/javascript">
+		jQuery.noConflict();
+
+		var example = 'pie-gradient', 
+		theme = 'grid-light';
+
+		(function($){ // encapsulate jQuery
+			$(function () {
+    	
+    	// Radialize the colors
+		Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function(color) {
+		    return {
+		        radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+		        stops: [
+		            [0, color],
+		            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+		        ]
+		    };
+		});
+		
+		// Build the chart
+        $('#container').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Browser market shares at a specific website, 2014'
+            },
+            tooltip: {
+        	    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        },
+                        connectorColor: 'silver'
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: [
+                    ['Firefox',   45.0],
+                    ['IE',       26.8],
+                    {
+                        name: 'Chrome',
+                        y: 12.8,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Safari',    8.5],
+                    ['Opera',     6.2],
+                    ['Others',   0.7]
+                ]
+            }]
+        });
+    });
+    
+		})(jQuery);
+	</script>
+	<div id="demo-menu">
+		<div id="demo-menu-inner">
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Line charts					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../line-basic/grid-light.html">
+								Basic line							</a>
+						</li>
+												<li class="">
+							<a href="../line-ajax/grid-light.html">
+								Ajax loaded data, clickable points							</a>
+						</li>
+												<li class="">
+							<a href="../line-labels/grid-light.html">
+								With data labels							</a>
+						</li>
+												<li class="">
+							<a href="../line-time-series/grid-light.html">
+								Time series, zoomable							</a>
+						</li>
+												<li class="">
+							<a href="../spline-inverted/grid-light.html">
+								Spline with inverted axes							</a>
+						</li>
+												<li class="">
+							<a href="../spline-symbols/grid-light.html">
+								Spline with symbols							</a>
+						</li>
+												<li class="">
+							<a href="../spline-plot-bands/grid-light.html">
+								Spline with plot bands							</a>
+						</li>
+												<li class="">
+							<a href="../spline-irregular-time/grid-light.html">
+								Time data with irregular intervals							</a>
+						</li>
+												<li class="">
+							<a href="../line-log-axis/grid-light.html">
+								Logarithmic axis							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Area charts					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../area-basic/grid-light.html">
+								Basic area							</a>
+						</li>
+												<li class="">
+							<a href="../area-negative/grid-light.html">
+								Area with negative values							</a>
+						</li>
+												<li class="">
+							<a href="../area-stacked/grid-light.html">
+								Stacked area							</a>
+						</li>
+												<li class="">
+							<a href="../area-stacked-percent/grid-light.html">
+								Percentage area							</a>
+						</li>
+												<li class="">
+							<a href="../area-missing/grid-light.html">
+								Area with missing points							</a>
+						</li>
+												<li class="">
+							<a href="../area-inverted/grid-light.html">
+								Inverted axes							</a>
+						</li>
+												<li class="">
+							<a href="../areaspline/grid-light.html">
+								Area-spline							</a>
+						</li>
+												<li class="">
+							<a href="../arearange/grid-light.html">
+								Area range							</a>
+						</li>
+												<li class="">
+							<a href="../arearange-line/grid-light.html">
+								Area range and line							</a>
+						</li>
+												<li class="">
+							<a href="../sparkline/grid-light.html">
+								Sparkline charts							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Column and bar charts					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../bar-basic/grid-light.html">
+								Basic bar							</a>
+						</li>
+												<li class="">
+							<a href="../bar-stacked/grid-light.html">
+								Stacked bar							</a>
+						</li>
+												<li class="">
+							<a href="../bar-negative-stack/grid-light.html">
+								Bar with negative stack							</a>
+						</li>
+												<li class="">
+							<a href="../column-basic/grid-light.html">
+								Basic column							</a>
+						</li>
+												<li class="">
+							<a href="../column-negative/grid-light.html">
+								Column with negative values							</a>
+						</li>
+												<li class="">
+							<a href="../column-stacked/grid-light.html">
+								Stacked column							</a>
+						</li>
+												<li class="">
+							<a href="../column-stacked-and-grouped/grid-light.html">
+								Stacked and grouped column							</a>
+						</li>
+												<li class="">
+							<a href="../column-stacked-percent/grid-light.html">
+								Stacked percentage column							</a>
+						</li>
+												<li class="">
+							<a href="../column-rotated-labels/grid-light.html">
+								Column with rotated labels							</a>
+						</li>
+												<li class="">
+							<a href="../column-drilldown/grid-light.html">
+								Column with drilldown							</a>
+						</li>
+												<li class="">
+							<a href="../column-placement/grid-light.html">
+								Fixed placement columns							</a>
+						</li>
+												<li class="">
+							<a href="../column-parsed/grid-light.html">
+								Data defined in a HTML table							</a>
+						</li>
+												<li class="">
+							<a href="../columnrange/grid-light.html">
+								Column range							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  active">
+				<h4 class="menu-toggle active">
+					<span class="toggle-text">
+						Pie charts					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content active">
+					<ul>
+												<li class="">
+							<a href="../pie-basic/grid-light.html">
+								Pie chart							</a>
+						</li>
+												<li class="">
+							<a href="../pie-legend/grid-light.html">
+								Pie with legend							</a>
+						</li>
+												<li class="">
+							<a href="../pie-donut/grid-light.html">
+								Donut chart							</a>
+						</li>
+												<li class="">
+							<a href="../pie-semi-circle/grid-light.html">
+								Semi circle donut							</a>
+						</li>
+												<li class="">
+							<a href="../pie-drilldown/grid-light.html">
+								Pie with drilldown							</a>
+						</li>
+												<li class="active">
+							<a href="grid-light.html">
+								Pie with gradient fill							</a>
+						</li>
+												<li class="">
+							<a href="../pie-monochrome/grid-light.html">
+								Pie with monochrome fill							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Scatter and bubble charts					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../scatter/grid-light.html">
+								Scatter plot							</a>
+						</li>
+												<li class="">
+							<a href="../bubble/grid-light.html">
+								Bubble chart							</a>
+						</li>
+												<li class="">
+							<a href="../bubble-3d/grid-light.html">
+								3D bubbles							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Dynamic charts					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../dynamic-update/grid-light.html">
+								Spline updating each second							</a>
+						</li>
+												<li class="">
+							<a href="../dynamic-click-to-add/grid-light.html">
+								Click to add a point							</a>
+						</li>
+												<li class="">
+							<a href="../dynamic-master-detail/grid-light.html">
+								Master-detail chart							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Combinations					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../combo/grid-light.html">
+								Column, line and pie							</a>
+						</li>
+												<li class="">
+							<a href="../combo-dual-axes/grid-light.html">
+								Dual axes, line and column							</a>
+						</li>
+												<li class="">
+							<a href="../combo-multi-axes/grid-light.html">
+								Multiple axes							</a>
+						</li>
+												<li class="">
+							<a href="../combo-regression/grid-light.html">
+								Scatter with regression line							</a>
+						</li>
+												<li class="">
+							<a href="../combo-meteogram/grid-light.html">
+								Meteogram							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						3D charts					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../3d-column-interactive/grid-light.html">
+								3D column							</a>
+						</li>
+												<li class="">
+							<a href="../3d-column-null-values/grid-light.html">
+								3D column with null and 0 values							</a>
+						</li>
+												<li class="">
+							<a href="../3d-column-stacking-grouping/grid-light.html">
+								3D column with stacking and grouping							</a>
+						</li>
+												<li class="">
+							<a href="../3d-pie/grid-light.html">
+								3D pie							</a>
+						</li>
+												<li class="">
+							<a href="../3d-pie-donut/grid-light.html">
+								3D donut							</a>
+						</li>
+												<li class="">
+							<a href="../3d-scatter-draggable/grid-light.html">
+								3D scatter chart							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Gauges					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../gauge-speedometer/grid-light.html">
+								Angular gauge							</a>
+						</li>
+												<li class="">
+							<a href="../gauge-solid/grid-light.html">
+								Solid gauge							</a>
+						</li>
+												<li class="">
+							<a href="../gauge-clock/grid-light.html">
+								Clock							</a>
+						</li>
+												<li class="">
+							<a href="../gauge-dual/grid-light.html">
+								Gauge with dual axes							</a>
+						</li>
+												<li class="">
+							<a href="../gauge-vu-meter/grid-light.html">
+								VU meter							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						Heat maps					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../heatmap/grid-light.html">
+								Heat map							</a>
+						</li>
+												<li class="">
+							<a href="../heatmap-canvas/grid-light.html">
+								Large heat map							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+						<div class="demo-menu-item  ">
+				<h4 class="menu-toggle ">
+					<span class="toggle-text">
+						More chart types					</span>
+					<span><icon class="toggle-icon"></icon></span>
+					<div class="clearfix"></div>
+				</h4>
+				<div class="menu-content ">
+					<ul>
+												<li class="">
+							<a href="../polar/grid-light.html">
+								Polar chart							</a>
+						</li>
+												<li class="">
+							<a href="../polar-spider/grid-light.html">
+								Spiderweb							</a>
+						</li>
+												<li class="">
+							<a href="../polar-wind-rose/grid-light.html">
+								Wind rose							</a>
+						</li>
+												<li class="">
+							<a href="../box-plot/grid-light.html">
+								Box plot							</a>
+						</li>
+												<li class="">
+							<a href="../error-bar/grid-light.html">
+								Error bar							</a>
+						</li>
+												<li class="">
+							<a href="../waterfall/grid-light.html">
+								Waterfall							</a>
+						</li>
+												<li class="">
+							<a href="../funnel/grid-light.html">
+								Funnel chart							</a>
+						</li>
+												<li class="">
+							<a href="../pyramid/grid-light.html">
+								Pyramid chart							</a>
+						</li>
+												<li class="">
+							<a href="../renderer/grid-light.html">
+								General drawing							</a>
+						</li>
+											</ul>
+				</div>
+			</div>
+					</div>
+	</div>
+	<div id="demo-content">
+		<div id="demo-content-container">
+			<div id="chart-switcher">
+									<a id="previous-example" title="Previous (arrow left)" 
+						href="../pie-drilldown/grid-light.html"><i class="fa fa-angle-left"></i></a>
+									<span id="chart-title">Pie with gradient fill</span>
+				
+									<a id="next-example"  title="Next (arrow right)"
+						href="../pie-monochrome/grid-light.html"><i class="fa fa-angle-right"></i></a>
+							</div>
+			<div id="styleswitcher">
+				<ul>
+					<li class=""><a href="../pie-gradient.html">Default theme</a></li>
+					<li class=""><a href="dark-unica.html">Dark Unica</a></li>
+					<li class=""><a href="sand-signika.html">Sand Signika</a></li>
+					<li class="active"><a href="grid-light.html">Grid Light</a></li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div id="small-switcher">
+				<a class="button" id="view-menu" onclick="">Menu &raquo;</a>
+
+				<select id="switcher-selector">
+					<option value="http://www.highcharts.com/demo/pie-gradient" >Default theme</option>
+					<option value="http://www.highcharts.com/demo/pie-gradient/dark-unica" >Dark Unica</option>
+					<option value="http://www.highcharts.com/demo/pie-gradient/sand-signika" >Sand Signika</option>
+					<option value="http://www.highcharts.com/demo/pie-gradient/grid-light" selected>Grid Light</option>
+				</select>
+				<div class="clearfix"></div>
+			</div>
+			<div id="demo-chart">
+				<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+			</div>
+			<div id="demo-buttons">
+				<a class="button" href="javascript:" 
+					onclick="hs.htmlExpand(this, { width: 800,
+						headingText: 'Highcharts Configuration Preview', 
+						wrapperClassName: 'draggable-header' })">View options &raquo;</a>
+				<div class="highslide-maincontent">
+					<pre>$(function () {
+    	
+    	// Radialize the colors
+		Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function(color) {
+		    return {
+		        radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+		        stops: [
+		            [0, color],
+		            [1, Highcharts.Color(color).brighten(-0.3).get('rgb')] // darken
+		        ]
+		    };
+		});
+		
+		// Build the chart
+        $('#container').highcharts({
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false
+            },
+            title: {
+                text: 'Browser market shares at a specific website, 2014'
+            },
+            tooltip: {
+        	    pointFormat: '{series.name}: &lt;b&gt;{point.percentage:.1f}%&lt;/b&gt;'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '&lt;b&gt;{point.name}&lt;/b&gt;: {point.percentage:.1f} %',
+                        style: {
+                            color: (Highcharts.theme &amp;&amp; Highcharts.theme.contrastTextColor) || 'black'
+                        },
+                        connectorColor: 'silver'
+                    }
+                }
+            },
+            series: [{
+                type: 'pie',
+                name: 'Browser share',
+                data: [
+                    ['Firefox',   45.0],
+                    ['IE',       26.8],
+                    {
+                        name: 'Chrome',
+                        y: 12.8,
+                        sliced: true,
+                        selected: true
+                    },
+                    ['Safari',    8.5],
+                    ['Opera',     6.2],
+                    ['Others',   0.7]
+                ]
+            }]
+        });
+    });
+    
+</pre>
+				</div>			
+								<a class="button" href="../../js/themes/grid-light.js"	onclick="return hs.htmlExpand(this, { width: 800, headingText: 'Highcharts Theme: Grid-light', wrapperClassName: 'draggable-header' })">
+					View visual theme &raquo;
+				</a>
+				<div class="highslide-maincontent">
+					<pre>/**
+ * Grid-light theme for Highcharts JS
+ * @author Torstein Honsi
+ */
+
+// Load the fonts
+Highcharts.createElement('link', {
+   href: 'http://fonts.googleapis.com/css?family=Dosis:400,600',
+   rel: 'stylesheet',
+   type: 'text/css'
+}, null, document.getElementsByTagName('head')[0]);
+
+Highcharts.theme = {
+   colors: ["#7cb5ec", "#f7a35c", "#90ee7e", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+      "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+   chart: {
+      backgroundColor: null,
+      style: {
+         fontFamily: "Dosis, sans-serif"
+      }
+   },
+   title: {
+      style: {
+         fontSize: '16px',
+         fontWeight: 'bold',
+         textTransform: 'uppercase'
+      }
+   },
+   tooltip: {
+      borderWidth: 0,
+      backgroundColor: 'rgba(219,219,216,0.8)',
+      shadow: false
+   },
+   legend: {
+      itemStyle: {
+         fontWeight: 'bold',
+         fontSize: '13px'
+      }
+   },
+   xAxis: {
+      gridLineWidth: 1,
+      labels: {
+         style: {
+            fontSize: '12px'
+         }
+      }
+   },
+   yAxis: {
+      minorTickInterval: 'auto',
+      title: {
+         style: {
+            textTransform: 'uppercase'
+         }
+      },
+      labels: {
+         style: {
+            fontSize: '12px'
+         }
+      }
+   },
+   plotOptions: {
+      candlestick: {
+         lineColor: '#404048'
+      }
+   },
+
+
+   // General
+   background2: '#F0F0EA'
+   
+};
+
+// Apply the theme
+Highcharts.setOptions(Highcharts.theme);</pre>
+				</div>
+								<a class="button" href="http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-gradient/">Edit in jsFiddle &raquo;</a>
+			</div>
+			<div class="clearfix"></div>
+		</div>		
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<script src="/components/com_demo/assets/js/scripts.js"></script>
+<script src="/media/com_demo/highslide-full.min.js"></script>
+<script src="/media/com_demo/highslide.config.js"></script>
+<script src="http://code.highcharts.com/themes/grid-light.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/components/com_demo/assets/css/highslide.css" />
+
+
+
+									</div>
+								</div>
+																							</div>
+							
+														<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--#main-->
+			            <!-- ZT Userwrap6 -->
+			            <!-- #ZT Userwrap6 -->
+            <!-- ZT Userwrap7 -->
+			            <!-- #ZT Userwrap7 -->
+			<!--Footer-->
+			<div id="zt-footer" class="clearfix ">
+				<div class="container">
+					<div id="zt-footer-inner" class="row-fluid">
+						<div id="zt-footer-left" class="span6">
+															
+							<div id="zt-footer-copy">
+							© 2014 Highcharts. All rights reserved.							</div>
+						</div>
+												<div id="zt-social" class="span4">
+							<div>
+<a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon"><i class="fa fa-twitter"></i></a>
+<a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon"><i class="fa fa-linkedin"></i></a>
+<a href="https://github.com/highslide-software/highcharts.com" title="Github" class="social-icon"><i class="fa fa-github"></i></a>
+</div>
+						</div>
+												<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+            <!--#Footer-->
+		</div>
+	</div>
+	
+	    <!-- Echo Footer Script -->
+        	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-2995052-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/7-docs/export-module</id>
+	<updated>2014-08-11T00:43:09+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/7-docs/export-module?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Privacy disclaimer export server</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/export-module/privacy-disclaimer"/>
+		<published>2013-12-02T11:49:30+00:00</published>
+		<updated>2013-12-02T11:49:30+00:00</updated>
+		<id>http://www.highcharts.com/docs/export-module/privacy-disclaimer</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;This disclaimer is about the export server running at &lt;a href=&quot;http://export.highcharts.com&quot;&gt;http://export.highcharts.com&lt;/a&gt;. This server is used to export charts and convert them to images or PDF files.&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;It's not our intention to gather any information which is send to the export server and use it for commercial purposes. &lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;The HTTP protocol is used for communication between client and the export server and is unsecured. When security and privacy is an issue to you, we recommend &lt;a href=&quot;docs/export-module/setting-up-the-server&quot;&gt;setting up your own export server&lt;/a&gt;which holds the level of security you need. 
+&lt;div&gt; &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;Description of data saved on the export server&lt;/strong&gt;
+&lt;div style=&quot;display: inline !important;&quot;&gt; &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;Almost all requests to the export server are handled and converted in memory where nothing is stored on the server at all.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;The two exceptions are PDF conversion and asynchronous requests. For this we store data on the export server but the storage time is kept to a mimimal period of time. &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;display: inline !important;&quot;&gt;&lt;ol&gt;
+&lt;li&gt;For a conversion to PDF is the resulting file saved to a temporary folder which is emptied every minute. &lt;/li&gt;
+&lt;li&gt;The export server supports asynchron requests. The converted files are stored on the server in a temporary folder and are waiting to get called by the client. This folder is checked every minute and deletes  files older than 30 seconds.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;im&quot; style=&quot;color: #500050; font-family: arial, sans-serif; font-size: 13px; line-height: normal;&quot;&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;color: #222222; font-family: arial, sans-serif; font-size: 13px; line-height: normal;&quot;&gt; &lt;/div&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;This disclaimer is about the export server running at &lt;a href=&quot;http://export.highcharts.com&quot;&gt;http://export.highcharts.com&lt;/a&gt;. This server is used to export charts and convert them to images or PDF files.&lt;/p&gt;
+&lt;div&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;It's not our intention to gather any information which is send to the export server and use it for commercial purposes. &lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;The HTTP protocol is used for communication between client and the export server and is unsecured. When security and privacy is an issue to you, we recommend &lt;a href=&quot;docs/export-module/setting-up-the-server&quot;&gt;setting up your own export server&lt;/a&gt;which holds the level of security you need. 
+&lt;div&gt; &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;&lt;strong&gt;Description of data saved on the export server&lt;/strong&gt;
+&lt;div style=&quot;display: inline !important;&quot;&gt; &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div&gt;Almost all requests to the export server are handled and converted in memory where nothing is stored on the server at all.&lt;/div&gt;
+&lt;div&gt; &lt;/div&gt;
+&lt;div&gt;The two exceptions are PDF conversion and asynchronous requests. For this we store data on the export server but the storage time is kept to a mimimal period of time. &lt;/div&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;div style=&quot;display: inline !important;&quot;&gt;&lt;ol&gt;
+&lt;li&gt;For a conversion to PDF is the resulting file saved to a temporary folder which is emptied every minute. &lt;/li&gt;
+&lt;li&gt;The export server supports asynchron requests. The converted files are stored on the server in a temporary folder and are waiting to get called by the client. This folder is checked every minute and deletes  files older than 30 seconds.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;im&quot; style=&quot;color: #500050; font-family: arial, sans-serif; font-size: 13px; line-height: normal;&quot;&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;/div&gt;
+&lt;div style=&quot;color: #222222; font-family: arial, sans-serif; font-size: 13px; line-height: normal;&quot;&gt; &lt;/div&gt;&lt;/div&gt;</content>
+		<category term="Export module" />
+	</entry>
+	<entry>
+		<title>Render charts serverside</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/export-module/render-charts-serverside"/>
+		<published>2013-08-22T09:29:21+00:00</published>
+		<updated>2013-08-22T09:29:21+00:00</updated>
+		<id>http://www.highcharts.com/docs/export-module/render-charts-serverside</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Render charts on the server&lt;/h1&gt;
+&lt;p&gt;We have released a script which makes it possible to run Highcharts on the server without a client internet browser involved.&lt;/p&gt;
+&lt;p&gt;Why would you care? Possible scenario's are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;you want to include your charts in emails or automated management reports&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;you want to have a consistency between graphs you present on your website and your backend produced reports&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We're using &lt;a href=&quot;http://phantomjs.org&quot;&gt;PhantomJS &lt;/a&gt;for this, which emulates a browser environment (Webkit) on the server. PhantomJS comes with a JavaScript API and we used this for making a script for converting our graphs to another file format. In summary it works like this; the script (&lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/exporting-server/phantomjs/highcharts-convert.js&quot;&gt;highcharts-convert.js&lt;/a&gt;) starts a browser, opens a page with Highcharts loaded in it and produces a chart and saves it as an image, PDF or SVG.&lt;/p&gt;
+&lt;h2&gt;Commandline usage&lt;/h2&gt;
+&lt;p&gt;PhantomJS is started from the command line with our highcharts-convert.js script as first parameter and with the other command line parameters we pass over the Highcharts configuration, the name of the output file and parameters for the graphical layout. Example usage on the commandline:&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;&lt;code&gt;phantomjs highcharts-convert.js -infile options.js -outfile chart.png -scale 2.5 -width 300 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Description of commandline parameters:&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;margin-left: 40px; border: 1px solid silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver; width: 100px;&quot;&gt;-infile&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The file to convert, the script have to find if this is a javascript file with a options object or a svg file.  It checks the input file for beginning with &quot;&amp;lt;svg&quot;, &quot;&amp;lt;?xml&quot; or &quot;&amp;lt;!doctype&quot;. Then it's a svg file, otherwise it's presumed to be an options file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-outfile&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The file to output. Must be a filename with the extension .jpg, .png .pdf or .svg.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-type&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The type can be of jpg, png, pfd or svg. Ignored when 'outfile' is defined. This parameter is usefull when the script runs in servermode and outputs an image as a 64bit string. When not running in servermode the output file is stored in 'tmpdir'.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-scale&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;To set the zoomFactor of the page rendered by PhantomJs. For example, if the chart.width option in the chart configuration is set to 600 and the scale is set to 2, the output raster image will have a pixel width of 1200. So this is a convenient way of increasing the resolution without decreasing the font size and line widths in the chart. This is ignored if the -width parameter is set.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-width&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Set the exact pixel width of the exported image or pdf. This overrides the -scale parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-constr&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The constructor name. Can be one of Chart or StockChart. This depends on whether you want to generate Highstock or basic Highcharts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-callback&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Filename containing a callback JavaScript. The callback is a function which will be called in the constructor of Highcharts to be executed on chart load. All code of the callback must be enclosed by a function. Example of contents of the callback file: function(chart) { chart.renderer.arc(200, 150, 100, 50, -Math.PI, 0).attr({ fill : '#FCFFC5', stroke : 'black', 'stroke-width' : 1 }).add(); }&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-host&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Specify the host for running the script as an lightweight http-server. The server responds to JSON objects send to the server in a POST&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-port&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The portnumber Phantomjs is listening on for POST-requests.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-tmpdir&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Specify where the scipt stores temporary- or output files, when output isn't defined.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Start as a webserver&lt;/h2&gt;
+&lt;p&gt;You can also let the script start a webserver. By doing so, we don't have to start a PhantomJS process over and over again for every conversion job and this results in a better performance. While running the script in webserver mode, the result isn’t saved to a file, but returned as a base64 string, unless when you want to export to SVG or PDF.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;This is how you start a webserver in PhantomJS with the highcharts-convert.js script, change the host and port to your needs. However do not expose the PhantomJS webserver to the outside world, it’s not intended as a general production server.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;&lt;code&gt;phantomjs highcharts-convert.js -host 127.0.0.1 -port 3003&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Note that the webserver listens only to POST-requests. Use the same parameters as for command line usage, but wrap them in a JSON structure. See this example for the content of a POST request. Note these parameters are defined: 'infile', 'callback' and 'constr';&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre class=&quot;computer_code&quot; style=&quot;margin-left: 40px;&quot;&gt;{&quot;infile&quot;:&quot;{xAxis: {categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']},series: [{data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]}]};&quot;,&quot;callback&quot;:&quot;function(chart) {chart.renderer.arc(200, 150, 100, 50, -Math.PI, 0).attr({fill : '#FCFFC5',stroke : 'black','stroke-width' : 1}).add();}&quot;,&quot;constr&quot;:&quot;Chart&quot;}&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;This is how you can send a POST from the commandline with Curl (MAC &amp;amp; Ubuntu);&lt;/p&gt;
+&lt;pre class=&quot;computer_code&quot; style=&quot;margin-left: 40px;&quot;&gt;curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;infile&quot;:&quot;{xAxis: {categories: [\&quot;Jan\&quot;, \&quot;Feb\&quot;, \&quot;Mar\&quot;]},series: [{data: [29.9, 71.5, 106.4]}]}&quot;}' 127.0.0.1:3005&lt;/pre&gt;
+&lt;p&gt;This is how you can send a POST from the commandline with Curl (Windows);&lt;/p&gt;
+&lt;pre class=&quot;computer_code&quot; style=&quot;margin-left: 40px;&quot;&gt;curl -H &quot;Content-Type: application/json&quot; -X POST -d &quot;{\&quot;infile\&quot;:\&quot;{series:[{data:[29.9,71.5,106.4]}]}\&quot;}&quot; 127.0.0.1:3005&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2 id=&quot;setup&quot;&gt;Setting it up&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;For download and installing PhantomJS, see&lt;span style=&quot;font-size: 8pt;&quot;&gt; &lt;a href=&quot;http://phantomjs.org/download.html&quot; style=&quot;margin: 0px; padding: 0px; border: 0px; color: #4183c4; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;&quot;&gt;http://phantomjs.org/download.html&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Save these files all to one location; &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/exporting-server/phantomjs/highcharts-convert.js&quot;&gt;highcharts-convert.js&lt;/a&gt;, &lt;a href=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;highcharts.js&lt;/a&gt; or highstock.js for stockCharts, highcharts-more.js (for bubble, range, polar charts) and last but not least &lt;a href=&quot;http://code.jquery.com/jquery-1.9.1.min.js&quot;&gt;jQuery&lt;/a&gt;. The location of these files can alternatively be configured in the highcharts-convert.js script. See the config property, &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/exporting-server/phantomjs/highcharts-convert.js#L18&quot;&gt;here&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;color: #008000;&quot;&gt;You're good to go!&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Render charts on the server&lt;/h1&gt;
+&lt;p&gt;We have released a script which makes it possible to run Highcharts on the server without a client internet browser involved.&lt;/p&gt;
+&lt;p&gt;Why would you care? Possible scenario's are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;you want to include your charts in emails or automated management reports&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;you want to have a consistency between graphs you present on your website and your backend produced reports&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We're using &lt;a href=&quot;http://phantomjs.org&quot;&gt;PhantomJS &lt;/a&gt;for this, which emulates a browser environment (Webkit) on the server. PhantomJS comes with a JavaScript API and we used this for making a script for converting our graphs to another file format. In summary it works like this; the script (&lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/exporting-server/phantomjs/highcharts-convert.js&quot;&gt;highcharts-convert.js&lt;/a&gt;) starts a browser, opens a page with Highcharts loaded in it and produces a chart and saves it as an image, PDF or SVG.&lt;/p&gt;
+&lt;h2&gt;Commandline usage&lt;/h2&gt;
+&lt;p&gt;PhantomJS is started from the command line with our highcharts-convert.js script as first parameter and with the other command line parameters we pass over the Highcharts configuration, the name of the output file and parameters for the graphical layout. Example usage on the commandline:&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;&lt;code&gt;phantomjs highcharts-convert.js -infile options.js -outfile chart.png -scale 2.5 -width 300 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Description of commandline parameters:&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;margin-left: 40px; border: 1px solid silver; border-collapse: collapse; background-color: #f9f9f9; color: #646464; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver; width: 100px;&quot;&gt;-infile&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The file to convert, the script have to find if this is a javascript file with a options object or a svg file.  It checks the input file for beginning with &quot;&amp;lt;svg&quot;, &quot;&amp;lt;?xml&quot; or &quot;&amp;lt;!doctype&quot;. Then it's a svg file, otherwise it's presumed to be an options file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-outfile&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The file to output. Must be a filename with the extension .jpg, .png .pdf or .svg.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-type&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The type can be of jpg, png, pfd or svg. Ignored when 'outfile' is defined. This parameter is usefull when the script runs in servermode and outputs an image as a 64bit string. When not running in servermode the output file is stored in 'tmpdir'.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-scale&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;To set the zoomFactor of the page rendered by PhantomJs. For example, if the chart.width option in the chart configuration is set to 600 and the scale is set to 2, the output raster image will have a pixel width of 1200. So this is a convenient way of increasing the resolution without decreasing the font size and line widths in the chart. This is ignored if the -width parameter is set.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-width&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Set the exact pixel width of the exported image or pdf. This overrides the -scale parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-constr&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The constructor name. Can be one of Chart or StockChart. This depends on whether you want to generate Highstock or basic Highcharts.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-callback&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Filename containing a callback JavaScript. The callback is a function which will be called in the constructor of Highcharts to be executed on chart load. All code of the callback must be enclosed by a function. Example of contents of the callback file: function(chart) { chart.renderer.arc(200, 150, 100, 50, -Math.PI, 0).attr({ fill : '#FCFFC5', stroke : 'black', 'stroke-width' : 1 }).add(); }&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-host&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Specify the host for running the script as an lightweight http-server. The server responds to JSON objects send to the server in a POST&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-port&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The portnumber Phantomjs is listening on for POST-requests.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;-tmpdir&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Specify where the scipt stores temporary- or output files, when output isn't defined.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;Start as a webserver&lt;/h2&gt;
+&lt;p&gt;You can also let the script start a webserver. By doing so, we don't have to start a PhantomJS process over and over again for every conversion job and this results in a better performance. While running the script in webserver mode, the result isn’t saved to a file, but returned as a base64 string, unless when you want to export to SVG or PDF.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;This is how you start a webserver in PhantomJS with the highcharts-convert.js script, change the host and port to your needs. However do not expose the PhantomJS webserver to the outside world, it’s not intended as a general production server.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;&lt;code&gt;phantomjs highcharts-convert.js -host 127.0.0.1 -port 3003&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Note that the webserver listens only to POST-requests. Use the same parameters as for command line usage, but wrap them in a JSON structure. See this example for the content of a POST request. Note these parameters are defined: 'infile', 'callback' and 'constr';&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;pre class=&quot;computer_code&quot; style=&quot;margin-left: 40px;&quot;&gt;{&quot;infile&quot;:&quot;{xAxis: {categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']},series: [{data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]}]};&quot;,&quot;callback&quot;:&quot;function(chart) {chart.renderer.arc(200, 150, 100, 50, -Math.PI, 0).attr({fill : '#FCFFC5',stroke : 'black','stroke-width' : 1}).add();}&quot;,&quot;constr&quot;:&quot;Chart&quot;}&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;This is how you can send a POST from the commandline with Curl (MAC &amp;amp; Ubuntu);&lt;/p&gt;
+&lt;pre class=&quot;computer_code&quot; style=&quot;margin-left: 40px;&quot;&gt;curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;infile&quot;:&quot;{xAxis: {categories: [\&quot;Jan\&quot;, \&quot;Feb\&quot;, \&quot;Mar\&quot;]},series: [{data: [29.9, 71.5, 106.4]}]}&quot;}' 127.0.0.1:3005&lt;/pre&gt;
+&lt;p&gt;This is how you can send a POST from the commandline with Curl (Windows);&lt;/p&gt;
+&lt;pre class=&quot;computer_code&quot; style=&quot;margin-left: 40px;&quot;&gt;curl -H &quot;Content-Type: application/json&quot; -X POST -d &quot;{\&quot;infile\&quot;:\&quot;{series:[{data:[29.9,71.5,106.4]}]}\&quot;}&quot; 127.0.0.1:3005&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h2 id=&quot;setup&quot;&gt;Setting it up&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;For download and installing PhantomJS, see&lt;span style=&quot;font-size: 8pt;&quot;&gt; &lt;a href=&quot;http://phantomjs.org/download.html&quot; style=&quot;margin: 0px; padding: 0px; border: 0px; color: #4183c4; font-family: Helvetica, arial, freesans, clean, sans-serif; font-size: 15px; line-height: 25px;&quot;&gt;http://phantomjs.org/download.html&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Save these files all to one location; &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/exporting-server/phantomjs/highcharts-convert.js&quot;&gt;highcharts-convert.js&lt;/a&gt;, &lt;a href=&quot;http://code.highcharts.com/highcharts.js&quot;&gt;highcharts.js&lt;/a&gt; or highstock.js for stockCharts, highcharts-more.js (for bubble, range, polar charts) and last but not least &lt;a href=&quot;http://code.jquery.com/jquery-1.9.1.min.js&quot;&gt;jQuery&lt;/a&gt;. The location of these files can alternatively be configured in the highcharts-convert.js script. See the config property, &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/exporting-server/phantomjs/highcharts-convert.js#L18&quot;&gt;here&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;&lt;span style=&quot;color: #008000;&quot;&gt;You're good to go!&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</content>
+		<category term="Export module" />
+	</entry>
+	<entry>
+		<title>Setting up the server</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/export-module/setting-up-the-server"/>
+		<published>2013-08-22T09:29:07+00:00</published>
+		<updated>2013-08-22T09:29:07+00:00</updated>
+		<id>http://www.highcharts.com/docs/export-module/setting-up-the-server</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Setting up the export server&lt;/h1&gt;
+&lt;p&gt;There may be cases where you want to set up your own export server, for instance if you are running a secure website or if you don't want your data to be passed to the Highcharts CDN. &lt;/p&gt;
+&lt;p&gt;We have two flavors of servers to choose from;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The simple export server, based on PHP and Batik.&lt;/li&gt;
+&lt;li&gt;More advanced server, based on Java and PhantomJS, which also support serverside rendering of charts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;1. Export server based on PHP and Batik&lt;/h2&gt;
+&lt;p&gt;Note that this export server omits serverside rendering. It can be used (only) to convert SVG files to images and PDF.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;index.php&lt;/code&gt; file that handles the POST is supplied in the download package inside the &lt;code&gt;/exporting-server&lt;/code&gt; directory. The files can also be downloaded from &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/tree/master/exporting-server/php/php-batik&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make sure that PHP and Java is installed on your server.&lt;/li&gt;
+&lt;li&gt;Upload the &lt;code&gt;index.php&lt;/code&gt; file from the /exporting-server directory in the download package to your server.&lt;/li&gt;
+&lt;li&gt;In your FTP program, create directory called &lt;code&gt;temp&lt;/code&gt; in the same directory as &lt;code&gt;index.php&lt;/code&gt; and chmod this new directory to 777 (Linux/Unix servers only).&lt;/li&gt;
+&lt;li&gt;Download Batik from the &lt;a href=&quot;http://www.apache.org/dyn/closer.cgi/xmlgraphics/batik&quot;&gt;Batik Distribution Mirror&lt;/a&gt;. Find the binary distribution for your java version.&lt;acronym title=&quot;Java Realtime Environment&quot;&gt;&lt;br /&gt;&lt;/acronym&gt;&lt;/li&gt;
+&lt;li&gt;Upload &lt;code&gt;batik-rasterizer.jar&lt;/code&gt; and the entire &lt;code&gt;lib&lt;/code&gt; directory to a location on your web server.&lt;/li&gt;
+&lt;li&gt;In the options in the top of the index.php file, set the path to batik-rasterier.jar.&lt;/li&gt;
+&lt;li&gt;In your chart options, set the &lt;a href=&quot;ref/#exporting&quot;&gt; exporting.url&lt;/a&gt; option to match your PHP file location.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Troubleshooting&lt;/h3&gt;
+&lt;p&gt;If for any reason the export-server fails to export images, then consider pasting this code snippet to output error messages. Paste this before Line 78, beginning with the commenting text: &lt;code&gt;// Do the conversion.&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;// Troubleshoot snippet&lt;br /&gt;$command = &quot;java -jar &quot;. BATIK_PATH .&quot; $typeString -d $outfile $width temp/$tempName.svg 2&amp;gt;&amp;amp;1&quot;; &lt;br /&gt;$output = shell_exec($command);&lt;br /&gt;echo &quot;Command: $command &amp;lt;br&amp;gt;&quot;;&lt;br /&gt;echo &quot;Output: $output&quot;;&lt;br /&gt;die;&lt;/pre&gt;
+&lt;h2 id=&quot;java&quot; style=&quot;margin-left: 30px;&quot;&gt;2. Export server based on Java and PhantomJS&lt;/h2&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt;This solution also includes a standalone solution for creating charts on the server, without a client involved.  Highcharts is using this export &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;server &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;at export.highcharts.com, the default Highcharts export server. &lt;/span&gt;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt; &lt;/span&gt;It's a server which is desgined with a large network load in mind. Requests to this server are concurrently handled by an serverpool.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;It takes either &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;SVG or Highcharts&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; options (&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;in javascript) as input and converts it t&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;o &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;images (PNG, JPEG&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; ), &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;PDF or&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; SVG.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;2.1. Prerequisites for installation&lt;/h3&gt;
+&lt;p&gt;The java based Highcharts export-server has the following prerequisites:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;install an java application server (for example: Apache Tomcat, Jboss, TC server, Resin) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&quot;margin-left: 80px;&quot;&gt;&lt;em&gt;TIP: use  Jetty (application server) during development, requires no installation&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;install Java 1.7&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;install Maven 2 or later&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;install PhantomJS on the server, &lt;a href=&quot;http://phantomjs.org/download.html&quot;&gt;see here&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;download the source for the export-server module from &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/tree/master/exporting-server/java&quot;&gt;Github&lt;/a&gt;. This is a maven module. Save the &lt;em&gt;highcharts-export&lt;/em&gt; folder to a convenient place. &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;span style=&quot;font-weight: bold; line-height: 1.6em;&quot;&gt;2.&lt;/span&gt;&lt;span style=&quot;font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.6em;&quot;&gt;2. Configuration&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;Edit the app-convert.properties file in &lt;code&gt;highcharts-export/highcharts-export-web/src/main/webapp/WEB-INF/spring &lt;/code&gt; and change the properties if necessary. Read the comments in the property file, for deciding what you need to change. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;You can for example change the location of the phantom executable, the name of the convert script, timouts and poolsize.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;2.3. Install the Highcharts-export module in your local Maven repository&lt;/h3&gt;
+&lt;p&gt;Open a Dos/Shell prompt and navigate to the main folder of the export server, &lt;em&gt;highcharts-export &lt;/em&gt;and install it in your local Maven repository. This installs also all dependencies (libraries) for the module. &lt;/p&gt;
+&lt;div class=&quot;computer_code&quot;&gt;$ cd highcharts-export/&lt;br /&gt; $ mvn install &lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;2.4. Building a .war file&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;After you have configured and installed the application, you can compile the project files. Open a commandline in a terminal or DOS and navigate to the &lt;code&gt;highchart-export-web&lt;/code&gt; folder and while standing here, type the following in a terminal: &lt;/span&gt;&lt;span style=&quot;color: #666666; font-family: Consolas, 'Courier New', Courier, mono, serif; line-height: 1.7em;&quot;&gt;mvn clean package&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;computer_code&quot;&gt;$ cd highcharts-export-web/&lt;br /&gt; $ mvn clean package&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;After compiling and the message BUILD SUCCESS, you will find a file: highcharts-export-web.war in the &lt;code&gt;highcharts-export/highcharts-export-web/target&lt;/code&gt; folder. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class=&quot;computer_code&quot;&gt;[INFO] ------------------------------------------------------------------------&lt;br /&gt; [INFO] BUILD SUCCESS&lt;br /&gt; [INFO] ------------------------------------------------------------------------&lt;br /&gt; [INFO] Total time: 2.476s&lt;br /&gt; [INFO] Finished at: Wed Jun 26 14:52:07 CEST 2013&lt;br /&gt; [INFO] Final Memory: 15M/215M&lt;br /&gt; [INFO] ------------------------------------------------------------------------&lt;br /&gt; highcharts-export-web $&amp;gt; ls target/&lt;br /&gt; classes                highcharts-export-web        maven-archiver&lt;br /&gt; generated-sources        &lt;strong&gt;highcharts-export-web.war&lt;/strong&gt;    surefire&lt;br /&gt; Gerts-MacBook-Pro:highcharts-export-web gert$ &lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt;Upload/copy this to the application server. &lt;/span&gt;You're done with setting up the highcharts-export server!&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id=&quot;tips&quot;&gt;2.5. Some Tips&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We added the Jetty Server dependency in pom.xml file for testing convenience. For running the export-server locally, during development, navigate in a DOS/Shell to the highcharts-export/highcharts-export-web folder, and run this command: &lt;code&gt;mvn jetty:run&lt;/code&gt;. This starts the Jetty application server and the application is now accessible at &lt;code&gt;http://localhost:8080/export&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change you url property for the &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.url&quot;&gt;exporting option&lt;/a&gt; in your (javascript) highcharts configuration, and point it to the new installed exporting-server, otherwise it still points at Highcharts export-server at http://export.highcharts.com&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;exporting:{
+    url:'http://new.server.com/highcharts-export'
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remember to install necessary fonts on the server. When characters are missing, they will be displayed as squares on the exported charts. The application will automatically pick the fonts up after installation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When having problems while using the export-server, the first thing you could do is to enable logging Debug messages. This can give you a clue of what's going wrong. To enable Debug messages, uncomment these lines in highcharts-export/highcharts-export-web/src/main/resources/log4j.properties&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;computer_code&quot; style=&quot;margin-top: 15px; margin-bottom: 15px; border: 0px; margin-left: 40px;&quot;&gt;&lt;code&gt;# Debug specific class&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.services=DEBUG&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.converter=DEBUG&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.exporter=DEBUG&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.pool=DEBUG&lt;/code&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;When running on WebLogic&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;By default WebLogic registers its own &lt;code&gt;URLStreamHandler to handle http &lt;/code&gt;URLs. This results in that the Connection silently returns and empty files being returned from the server.  The solution is to get in a reference to Java's default &lt;span style=&quot;font-family: monospace;&quot;&gt;&lt;code&gt;URLStreamHandler&lt;/code&gt; instead of the one from WebLogic.&lt;/span&gt; Follow these steps&lt;/p&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;1. Alter this file: highcharts-export\highcharts-export-convert/src/main/java/com/highcharts/export/server.Server.java&lt;/p&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;Change line 94,95 from &lt;/p&gt;
+&lt;pre style=&quot;margin-left: 30px;&quot;&gt;&lt;span class=&quot;o&quot; style=&quot;font-weight: bold; color: #333333; font-family: Consolas, 'Liberation Mono', Courier, monospace; white-space: pre;&quot;&gt;URL url = new URL(&quot;http://&quot; + host + &quot;:&quot;&lt;br /&gt; + port + &quot;/&quot;);&lt;/span&gt;&lt;/pre&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;to &lt;/p&gt;
+&lt;pre style=&quot;margin-left: 30px;&quot;&gt;sun.net.www.protocol.http.Handler handler = new sun.net.www.protocol.http.Handler();&lt;br /&gt;URL url = new URL(null, &quot;http://&quot; + host + &quot;:&quot; + port + &quot;/&quot;, handler);&lt;/pre&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;2. Goto the folder java/highcharts-export&lt;br /&gt;3. Update your local maven repository, Run: &lt;code&gt;mvn install&lt;/code&gt;&lt;br /&gt;4. Goto the folder java/highcharts-export/highcharts-export-web&lt;br /&gt;5. Create the .war file, Run: &lt;code&gt;mvn clean package&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #5c7990; font-size: 24px; line-height: 24px;&quot;&gt;3. Other solutions&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As an ASP.NET alternative to our Java/PHP based server module, Clément Agarini has kindly shared his &lt;a href=&quot;https://github.com/imclem/Highcharts-export-module-asp.net&quot;&gt;export module for ASP.NET&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Setting up the export server&lt;/h1&gt;
+&lt;p&gt;There may be cases where you want to set up your own export server, for instance if you are running a secure website or if you don't want your data to be passed to the Highcharts CDN. &lt;/p&gt;
+&lt;p&gt;We have two flavors of servers to choose from;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The simple export server, based on PHP and Batik.&lt;/li&gt;
+&lt;li&gt;More advanced server, based on Java and PhantomJS, which also support serverside rendering of charts.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;1. Export server based on PHP and Batik&lt;/h2&gt;
+&lt;p&gt;Note that this export server omits serverside rendering. It can be used (only) to convert SVG files to images and PDF.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;index.php&lt;/code&gt; file that handles the POST is supplied in the download package inside the &lt;code&gt;/exporting-server&lt;/code&gt; directory. The files can also be downloaded from &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/tree/master/exporting-server/php/php-batik&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Make sure that PHP and Java is installed on your server.&lt;/li&gt;
+&lt;li&gt;Upload the &lt;code&gt;index.php&lt;/code&gt; file from the /exporting-server directory in the download package to your server.&lt;/li&gt;
+&lt;li&gt;In your FTP program, create directory called &lt;code&gt;temp&lt;/code&gt; in the same directory as &lt;code&gt;index.php&lt;/code&gt; and chmod this new directory to 777 (Linux/Unix servers only).&lt;/li&gt;
+&lt;li&gt;Download Batik from the &lt;a href=&quot;http://www.apache.org/dyn/closer.cgi/xmlgraphics/batik&quot;&gt;Batik Distribution Mirror&lt;/a&gt;. Find the binary distribution for your java version.&lt;acronym title=&quot;Java Realtime Environment&quot;&gt;&lt;br /&gt;&lt;/acronym&gt;&lt;/li&gt;
+&lt;li&gt;Upload &lt;code&gt;batik-rasterizer.jar&lt;/code&gt; and the entire &lt;code&gt;lib&lt;/code&gt; directory to a location on your web server.&lt;/li&gt;
+&lt;li&gt;In the options in the top of the index.php file, set the path to batik-rasterier.jar.&lt;/li&gt;
+&lt;li&gt;In your chart options, set the &lt;a href=&quot;ref/#exporting&quot;&gt; exporting.url&lt;/a&gt; option to match your PHP file location.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Troubleshooting&lt;/h3&gt;
+&lt;p&gt;If for any reason the export-server fails to export images, then consider pasting this code snippet to output error messages. Paste this before Line 78, beginning with the commenting text: &lt;code&gt;// Do the conversion.&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;// Troubleshoot snippet&lt;br /&gt;$command = &quot;java -jar &quot;. BATIK_PATH .&quot; $typeString -d $outfile $width temp/$tempName.svg 2&amp;gt;&amp;amp;1&quot;; &lt;br /&gt;$output = shell_exec($command);&lt;br /&gt;echo &quot;Command: $command &amp;lt;br&amp;gt;&quot;;&lt;br /&gt;echo &quot;Output: $output&quot;;&lt;br /&gt;die;&lt;/pre&gt;
+&lt;h2 id=&quot;java&quot; style=&quot;margin-left: 30px;&quot;&gt;2. Export server based on Java and PhantomJS&lt;/h2&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt;This solution also includes a standalone solution for creating charts on the server, without a client involved.  Highcharts is using this export &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;server &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;at export.highcharts.com, the default Highcharts export server. &lt;/span&gt;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt; &lt;/span&gt;It's a server which is desgined with a large network load in mind. Requests to this server are concurrently handled by an serverpool.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;It takes either &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;SVG or Highcharts&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; options (&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;in javascript) as input and converts it t&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;o &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;images (PNG, JPEG&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; ), &lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;PDF or&lt;/span&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt; SVG.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;2.1. Prerequisites for installation&lt;/h3&gt;
+&lt;p&gt;The java based Highcharts export-server has the following prerequisites:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;install an java application server (for example: Apache Tomcat, Jboss, TC server, Resin) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&quot;margin-left: 80px;&quot;&gt;&lt;em&gt;TIP: use  Jetty (application server) during development, requires no installation&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;install Java 1.7&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;install Maven 2 or later&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;install PhantomJS on the server, &lt;a href=&quot;http://phantomjs.org/download.html&quot;&gt;see here&lt;/a&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li style=&quot;margin-left: 40px;&quot;&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;download the source for the export-server module from &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/tree/master/exporting-server/java&quot;&gt;Github&lt;/a&gt;. This is a maven module. Save the &lt;em&gt;highcharts-export&lt;/em&gt; folder to a convenient place. &lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;span style=&quot;font-weight: bold; line-height: 1.6em;&quot;&gt;2.&lt;/span&gt;&lt;span style=&quot;font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; line-height: 1.6em;&quot;&gt;2. Configuration&lt;/span&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;Edit the app-convert.properties file in &lt;code&gt;highcharts-export/highcharts-export-web/src/main/webapp/WEB-INF/spring &lt;/code&gt; and change the properties if necessary. Read the comments in the property file, for deciding what you need to change. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;You can for example change the location of the phantom executable, the name of the convert script, timouts and poolsize.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;2.3. Install the Highcharts-export module in your local Maven repository&lt;/h3&gt;
+&lt;p&gt;Open a Dos/Shell prompt and navigate to the main folder of the export server, &lt;em&gt;highcharts-export &lt;/em&gt;and install it in your local Maven repository. This installs also all dependencies (libraries) for the module. &lt;/p&gt;
+&lt;div class=&quot;computer_code&quot;&gt;$ cd highcharts-export/&lt;br /&gt; $ mvn install &lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;2.4. Building a .war file&lt;/h3&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;After you have configured and installed the application, you can compile the project files. Open a commandline in a terminal or DOS and navigate to the &lt;code&gt;highchart-export-web&lt;/code&gt; folder and while standing here, type the following in a terminal: &lt;/span&gt;&lt;span style=&quot;color: #666666; font-family: Consolas, 'Courier New', Courier, mono, serif; line-height: 1.7em;&quot;&gt;mvn clean package&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;computer_code&quot;&gt;$ cd highcharts-export-web/&lt;br /&gt; $ mvn clean package&lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.6em;&quot;&gt;After compiling and the message BUILD SUCCESS, you will find a file: highcharts-export-web.war in the &lt;code&gt;highcharts-export/highcharts-export-web/target&lt;/code&gt; folder. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;div class=&quot;computer_code&quot;&gt;[INFO] ------------------------------------------------------------------------&lt;br /&gt; [INFO] BUILD SUCCESS&lt;br /&gt; [INFO] ------------------------------------------------------------------------&lt;br /&gt; [INFO] Total time: 2.476s&lt;br /&gt; [INFO] Finished at: Wed Jun 26 14:52:07 CEST 2013&lt;br /&gt; [INFO] Final Memory: 15M/215M&lt;br /&gt; [INFO] ------------------------------------------------------------------------&lt;br /&gt; highcharts-export-web $&amp;gt; ls target/&lt;br /&gt; classes                highcharts-export-web        maven-archiver&lt;br /&gt; generated-sources        &lt;strong&gt;highcharts-export-web.war&lt;/strong&gt;    surefire&lt;br /&gt; Gerts-MacBook-Pro:highcharts-export-web gert$ &lt;/div&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 19.1875px;&quot;&gt;Upload/copy this to the application server. &lt;/span&gt;You're done with setting up the highcharts-export server!&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3 id=&quot;tips&quot;&gt;2.5. Some Tips&lt;/h3&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;We added the Jetty Server dependency in pom.xml file for testing convenience. For running the export-server locally, during development, navigate in a DOS/Shell to the highcharts-export/highcharts-export-web folder, and run this command: &lt;code&gt;mvn jetty:run&lt;/code&gt;. This starts the Jetty application server and the application is now accessible at &lt;code&gt;http://localhost:8080/export&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Change you url property for the &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.url&quot;&gt;exporting option&lt;/a&gt; in your (javascript) highcharts configuration, and point it to the new installed exporting-server, otherwise it still points at Highcharts export-server at http://export.highcharts.com&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;exporting:{
+    url:'http://new.server.com/highcharts-export'
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Remember to install necessary fonts on the server. When characters are missing, they will be displayed as squares on the exported charts. The application will automatically pick the fonts up after installation.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;When having problems while using the export-server, the first thing you could do is to enable logging Debug messages. This can give you a clue of what's going wrong. To enable Debug messages, uncomment these lines in highcharts-export/highcharts-export-web/src/main/resources/log4j.properties&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;computer_code&quot; style=&quot;margin-top: 15px; margin-bottom: 15px; border: 0px; margin-left: 40px;&quot;&gt;&lt;code&gt;# Debug specific class&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.services=DEBUG&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.converter=DEBUG&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.exporter=DEBUG&lt;/code&gt;&lt;br /&gt;&lt;code&gt; log4j.logger.pool=DEBUG&lt;/code&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;When running on WebLogic&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;By default WebLogic registers its own &lt;code&gt;URLStreamHandler to handle http &lt;/code&gt;URLs. This results in that the Connection silently returns and empty files being returned from the server.  The solution is to get in a reference to Java's default &lt;span style=&quot;font-family: monospace;&quot;&gt;&lt;code&gt;URLStreamHandler&lt;/code&gt; instead of the one from WebLogic.&lt;/span&gt; Follow these steps&lt;/p&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;1. Alter this file: highcharts-export\highcharts-export-convert/src/main/java/com/highcharts/export/server.Server.java&lt;/p&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;Change line 94,95 from &lt;/p&gt;
+&lt;pre style=&quot;margin-left: 30px;&quot;&gt;&lt;span class=&quot;o&quot; style=&quot;font-weight: bold; color: #333333; font-family: Consolas, 'Liberation Mono', Courier, monospace; white-space: pre;&quot;&gt;URL url = new URL(&quot;http://&quot; + host + &quot;:&quot;&lt;br /&gt; + port + &quot;/&quot;);&lt;/span&gt;&lt;/pre&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;to &lt;/p&gt;
+&lt;pre style=&quot;margin-left: 30px;&quot;&gt;sun.net.www.protocol.http.Handler handler = new sun.net.www.protocol.http.Handler();&lt;br /&gt;URL url = new URL(null, &quot;http://&quot; + host + &quot;:&quot; + port + &quot;/&quot;, handler);&lt;/pre&gt;
+&lt;p style=&quot;margin-left: 30px;&quot;&gt;2. Goto the folder java/highcharts-export&lt;br /&gt;3. Update your local maven repository, Run: &lt;code&gt;mvn install&lt;/code&gt;&lt;br /&gt;4. Goto the folder java/highcharts-export/highcharts-export-web&lt;br /&gt;5. Create the .war file, Run: &lt;code&gt;mvn clean package&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #5c7990; font-size: 24px; line-height: 24px;&quot;&gt;3. Other solutions&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;As an ASP.NET alternative to our Java/PHP based server module, Clément Agarini has kindly shared his &lt;a href=&quot;https://github.com/imclem/Highcharts-export-module-asp.net&quot;&gt;export module for ASP.NET&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Export module" />
+	</entry>
+	<entry>
+		<title>Export module overview</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/export-module/export-module-overview"/>
+		<published>2013-08-22T09:28:48+00:00</published>
+		<updated>2013-08-22T09:28:48+00:00</updated>
+		<id>http://www.highcharts.com/docs/export-module/export-module-overview</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Export module&lt;/h1&gt;
+&lt;p&gt;The exporting module allows users to download the chart as pdf, png, jpeg or a svg vector image. It also allows printing the chart directly without distracting elements from the web page.&lt;/p&gt;
+&lt;p&gt;To enable exporting, the module needs to be included, it can be downloaded from &lt;a href=&quot;http://code.highcharts.com/&quot;&gt;http://code.highcharts.com/&lt;/a&gt; and included after highcharts.js or highstock.js. The module can also be included directly from &lt;a href=&quot;http://code.highcharts.com/&quot;&gt;http://code.highcharts.com/&lt;/a&gt; like this:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/modules/exporting.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;The button&lt;/h3&gt;
+&lt;p&gt;When enabled, a context button with a menu appears in the top right corner of the chart. In Highcharts 2.0, there were two buttons. For your convenience, we have built a compatibility pack that brings the old look back to Highcharts 3. It can be downloaded from &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/js/modules/exporting-old-look.src.js&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The position of the button as well as various styling can be edited using &lt;a href=&quot;http://api.highcharts.com/highcharts#navigation.buttonOptions&quot;&gt;navigation.buttonOptions&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.buttons.contextButton&quot;&gt;exporting.buttons.contextButton&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To unleash the full power of HTML5, it is also possible to fully &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.buttons.contextButton.enabled&quot;&gt;disregard&lt;/a&gt; our built-in button and menu, and build your own buttons or links that call &lt;a href=&quot;http://api.highcharts.com/highcharts#Chart.print()&quot;&gt;Chart.print()&lt;/a&gt; or &lt;a href=&quot;http://api.highcharts.com/highcharts#Chart.exportChart()&quot;&gt;Chart.exportChart()&lt;/a&gt; with parameters.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Controling the size of the exported image&lt;/h3&gt;
+&lt;p&gt;Since Highcharts 3.0 and Highstock 1.3, the size of the exported image is computed based on a few rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the &lt;a href=&quot;http://api.highcharts.com#exporting.sourceWidth&quot;&gt;exporting.sourceWidth&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#exporting.sourceHeight&quot;&gt;exporting.sourceHeight&lt;/a&gt; options are set, they take predence. This provides a convenient way of having separate sizes of the on-screen chart and the exported one.&lt;/li&gt;
+&lt;li&gt;If not, and the &lt;a href=&quot;http://api.highcharts.com#chart.width&quot;&gt;chart.width&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#chart.height&quot;&gt;chart.height&lt;/a&gt; options are set, those are used for the exported chart.&lt;/li&gt;
+&lt;li&gt;If a size hasn't been found yet, and the &lt;a href=&quot;http://api.highcharts.com#chart.renderTo&quot;&gt;containing div&lt;/a&gt; has an explicit pixel width or height, that width or height is used. Percentage and other non-pixel widths will not take effect. This prevents a common pitfall in Highcharts 2, where charts with the typical 100% width would look out of proportion in export. &lt;/li&gt;
+&lt;li&gt;If a size still hasn't been found, it defaults to 600 by 400 pixels.&lt;/li&gt;
+&lt;li&gt;After rendering the chart width the above size, and all text sizes in relation to that, the actual image &lt;em&gt;resolution&lt;/em&gt; is determined by &lt;a href=&quot;http://api.highcharts.com#exporting.scale&quot;&gt;exporting.scale&lt;/a&gt; which defaults to 2. In practice this means that a 600x400 chart will return an image of 1200x800 pixels by default. The rationale behind this is quite simple - if we used a scale of 1 and just set the sourceWidth to 1200 and sourceHeight to 800, all the text would become too small. And if we didn't scale it up, the resolution would be too small for print. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;See also &lt;a href=&quot;docs/export-module/setting-up-the-server&quot;&gt;Setting up the export server&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Description of POST parameters for the Highcharts Export Server&lt;/h3&gt;
+&lt;p&gt;Normally Highcharts sends data to the export server for saving a graph as an image or PDF. Use the following POST parameters, if you want to request the export server yourself.&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border: 1px solid silver; border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver; width: 100px;&quot;&gt;svg&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The string representation of a SVG file you want to export. Can be ignored when you provide the &lt;strong&gt;options&lt;/strong&gt; parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;options&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Use this parameter if you want to create a graph out of a Highcharts configuration. The options are sent as a JSON string. This parameter overrides the &lt;strong&gt;svg&lt;/strong&gt; option. Example of content:
+&lt;pre&gt;{ xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] }, series: [{ data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4] }] };&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;type&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The content-type of the file to output. Can be one of 'image/png', 'image/jpeg', 'application/pdf', or 'image/svg+xml'.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;filename&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The name of the exported file. Defaults to 'Chart'.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;scale&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;To scale the original SVG. For example, if the chart.width option in the chart configuration is set to 600 and the scale is set to 2, the output raster image will have a pixel width of 1200. So this is a convenient way of increasing the resolution without decreasing the font size and line widths in the chart. This is ignored if the -width parameter is set. For now we allow a maximum scaling of &lt;strong&gt;4&lt;/strong&gt;. This is for ensuring a good repsonse time. Scaling is a bit resource intensive.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;width&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Set the exact pixel width of the exported image or pdf. This overrides the -scale parameter. The maximum allowed width is 2000px&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;constr&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The constructor name. Can be one of 'Chart' or 'StockChart'. This depends on whether you want to generate Highstock or basic Highcharts. Only applicable when using this in combination with the &lt;strong&gt;options&lt;/strong&gt; parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;callback&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;String containing a callback JavaScript. The callback is a function which will be called in the constructor of Highcharts to be executed on chart load. All code of the callback must be enclosed by a function. Only applicable when using this in combination with the&lt;strong&gt;options&lt;/strong&gt; parameter. Example of contents of the callback file:
+&lt;p&gt;&lt;code&gt;function(chart) { chart.renderer.arc(200, 150, 100, 50, -Math.PI, 0).attr({ fill : '#FCFFC5', stroke : 'black', 'stroke-width' : 1 }).add(); }&lt;/code&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;async&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;
+&lt;p&gt;Can be of true or false. Default is false. When setting async to true a download link is returned to the client, instead of an image. This download link can be reused for 30 seconds. After that, the file will be deleted from the server. &lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;http://jsfiddle.net/highcharts/R6j9F/&quot;&gt;here&lt;/a&gt; for an example on how to perform an Ajax Post and return an image. &lt;a href=&quot;http://jsfiddle.net/highcharts/R6j9F/&quot;&gt;http://jsfiddle.net/highcharts/R6j9F/&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Saving images without using the export server&lt;/h3&gt;
+&lt;p&gt;Modern browsers also support saving content from HTML5 canvas directly. This can be used as a way of exporting charts without involving any server side conversion. Since Highcharts is drawn in SVG, we need a way to convert it to a HTML5 canvas. A library called &lt;a href=&quot;https://code.google.com/p/canvg/&quot;&gt;canvg&lt;/a&gt; does a great job here. Though this is still experimental, you may find it useful, so we set up a demo on &lt;a href=&quot;http://jsfiddle.net/highcharts/PDnmQ/&quot;&gt;jsFiddle&lt;/a&gt;. Note that it only works in canvas enabled browsers, so IE 8 is exluded here.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Export module&lt;/h1&gt;
+&lt;p&gt;The exporting module allows users to download the chart as pdf, png, jpeg or a svg vector image. It also allows printing the chart directly without distracting elements from the web page.&lt;/p&gt;
+&lt;p&gt;To enable exporting, the module needs to be included, it can be downloaded from &lt;a href=&quot;http://code.highcharts.com/&quot;&gt;http://code.highcharts.com/&lt;/a&gt; and included after highcharts.js or highstock.js. The module can also be included directly from &lt;a href=&quot;http://code.highcharts.com/&quot;&gt;http://code.highcharts.com/&lt;/a&gt; like this:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/modules/exporting.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;The button&lt;/h3&gt;
+&lt;p&gt;When enabled, a context button with a menu appears in the top right corner of the chart. In Highcharts 2.0, there were two buttons. For your convenience, we have built a compatibility pack that brings the old look back to Highcharts 3. It can be downloaded from &lt;a href=&quot;https://github.com/highslide-software/highcharts.com/blob/master/js/modules/exporting-old-look.src.js&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The position of the button as well as various styling can be edited using &lt;a href=&quot;http://api.highcharts.com/highcharts#navigation.buttonOptions&quot;&gt;navigation.buttonOptions&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.buttons.contextButton&quot;&gt;exporting.buttons.contextButton&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;To unleash the full power of HTML5, it is also possible to fully &lt;a href=&quot;http://api.highcharts.com/highcharts#exporting.buttons.contextButton.enabled&quot;&gt;disregard&lt;/a&gt; our built-in button and menu, and build your own buttons or links that call &lt;a href=&quot;http://api.highcharts.com/highcharts#Chart.print()&quot;&gt;Chart.print()&lt;/a&gt; or &lt;a href=&quot;http://api.highcharts.com/highcharts#Chart.exportChart()&quot;&gt;Chart.exportChart()&lt;/a&gt; with parameters.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Controling the size of the exported image&lt;/h3&gt;
+&lt;p&gt;Since Highcharts 3.0 and Highstock 1.3, the size of the exported image is computed based on a few rules:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If the &lt;a href=&quot;http://api.highcharts.com#exporting.sourceWidth&quot;&gt;exporting.sourceWidth&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#exporting.sourceHeight&quot;&gt;exporting.sourceHeight&lt;/a&gt; options are set, they take predence. This provides a convenient way of having separate sizes of the on-screen chart and the exported one.&lt;/li&gt;
+&lt;li&gt;If not, and the &lt;a href=&quot;http://api.highcharts.com#chart.width&quot;&gt;chart.width&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com#chart.height&quot;&gt;chart.height&lt;/a&gt; options are set, those are used for the exported chart.&lt;/li&gt;
+&lt;li&gt;If a size hasn't been found yet, and the &lt;a href=&quot;http://api.highcharts.com#chart.renderTo&quot;&gt;containing div&lt;/a&gt; has an explicit pixel width or height, that width or height is used. Percentage and other non-pixel widths will not take effect. This prevents a common pitfall in Highcharts 2, where charts with the typical 100% width would look out of proportion in export. &lt;/li&gt;
+&lt;li&gt;If a size still hasn't been found, it defaults to 600 by 400 pixels.&lt;/li&gt;
+&lt;li&gt;After rendering the chart width the above size, and all text sizes in relation to that, the actual image &lt;em&gt;resolution&lt;/em&gt; is determined by &lt;a href=&quot;http://api.highcharts.com#exporting.scale&quot;&gt;exporting.scale&lt;/a&gt; which defaults to 2. In practice this means that a 600x400 chart will return an image of 1200x800 pixels by default. The rationale behind this is quite simple - if we used a scale of 1 and just set the sourceWidth to 1200 and sourceHeight to 800, all the text would become too small. And if we didn't scale it up, the resolution would be too small for print. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;See also &lt;a href=&quot;docs/export-module/setting-up-the-server&quot;&gt;Setting up the export server&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;h3&gt;Description of POST parameters for the Highcharts Export Server&lt;/h3&gt;
+&lt;p&gt;Normally Highcharts sends data to the export server for saving a graph as an image or PDF. Use the following POST parameters, if you want to request the export server yourself.&lt;/p&gt;
+&lt;table class=&quot;datatable&quot; style=&quot;border: 1px solid silver; border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; line-height: 18px;&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver; width: 100px;&quot;&gt;svg&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The string representation of a SVG file you want to export. Can be ignored when you provide the &lt;strong&gt;options&lt;/strong&gt; parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;options&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Use this parameter if you want to create a graph out of a Highcharts configuration. The options are sent as a JSON string. This parameter overrides the &lt;strong&gt;svg&lt;/strong&gt; option. Example of content:
+&lt;pre&gt;{ xAxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] }, series: [{ data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4] }] };&lt;/pre&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;type&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The content-type of the file to output. Can be one of 'image/png', 'image/jpeg', 'application/pdf', or 'image/svg+xml'.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;filename&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The name of the exported file. Defaults to 'Chart'.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;scale&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;To scale the original SVG. For example, if the chart.width option in the chart configuration is set to 600 and the scale is set to 2, the output raster image will have a pixel width of 1200. So this is a convenient way of increasing the resolution without decreasing the font size and line widths in the chart. This is ignored if the -width parameter is set. For now we allow a maximum scaling of &lt;strong&gt;4&lt;/strong&gt;. This is for ensuring a good repsonse time. Scaling is a bit resource intensive.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;width&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;Set the exact pixel width of the exported image or pdf. This overrides the -scale parameter. The maximum allowed width is 2000px&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;constr&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;The constructor name. Can be one of 'Chart' or 'StockChart'. This depends on whether you want to generate Highstock or basic Highcharts. Only applicable when using this in combination with the &lt;strong&gt;options&lt;/strong&gt; parameter.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;callback&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;String containing a callback JavaScript. The callback is a function which will be called in the constructor of Highcharts to be executed on chart load. All code of the callback must be enclosed by a function. Only applicable when using this in combination with the&lt;strong&gt;options&lt;/strong&gt; parameter. Example of contents of the callback file:
+&lt;p&gt;&lt;code&gt;function(chart) { chart.renderer.arc(200, 150, 100, 50, -Math.PI, 0).attr({ fill : '#FCFFC5', stroke : 'black', 'stroke-width' : 1 }).add(); }&lt;/code&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;async&lt;/td&gt;
+&lt;td style=&quot;padding: 2px 5px; border: 1px solid silver;&quot;&gt;
+&lt;p&gt;Can be of true or false. Default is false. When setting async to true a download link is returned to the client, instead of an image. This download link can be reused for 30 seconds. After that, the file will be deleted from the server. &lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;http://jsfiddle.net/highcharts/R6j9F/&quot;&gt;here&lt;/a&gt; for an example on how to perform an Ajax Post and return an image. &lt;a href=&quot;http://jsfiddle.net/highcharts/R6j9F/&quot;&gt;http://jsfiddle.net/highcharts/R6j9F/&lt;/a&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Saving images without using the export server&lt;/h3&gt;
+&lt;p&gt;Modern browsers also support saving content from HTML5 canvas directly. This can be used as a way of exporting charts without involving any server side conversion. Since Highcharts is drawn in SVG, we need a way to convert it to a HTML5 canvas. A library called &lt;a href=&quot;https://code.google.com/p/canvg/&quot;&gt;canvg&lt;/a&gt; does a great job here. Though this is still experimental, you may find it useful, so we set up a demo on &lt;a href=&quot;http://jsfiddle.net/highcharts/PDnmQ/&quot;&gt;jsFiddle&lt;/a&gt;. Note that it only works in canvas enabled browsers, so IE 8 is exluded here.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Export module" />
+	</entry>
+</feed>

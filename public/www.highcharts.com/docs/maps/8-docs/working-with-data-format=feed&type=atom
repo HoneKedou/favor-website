@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/8-docs/working-with-data</id>
+	<updated>2014-08-11T00:43:09+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/8-docs/working-with-data?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Getting data across domains (JSONP)</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/working-with-data/getting-data-across-domains-jsonp"/>
+		<published>2013-08-22T09:31:34+00:00</published>
+		<updated>2013-08-22T09:31:34+00:00</updated>
+		<id>http://www.highcharts.com/docs/working-with-data/getting-data-across-domains-jsonp</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Cross domain data&lt;/h1&gt;
+&lt;p&gt;It is not possible to use the jQuery .getJSON() function on JSON files outside of your own domain. It is however possible to use JSONP.&lt;/p&gt;
+&lt;p&gt;The difference between JSON and JSONP is that in a regular JSON file you would just use the ordinary JSON syntax. This can not be returned cross domain. With JSONP what is done is wrapping the JSON content with a callback function in PHP which returns a json object. This can come in handy if the data you wish to display is on another domain than your own. A great number of data providers have JSONP services, for example Google and Twitter.&lt;/p&gt;
+&lt;p&gt;Here is an example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The serverside php file:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&amp;lt;?php
+header(&quot;content-type: application/json&quot;); 
+
+$array = array(7,4,2,8,4,1,9,3,2,16,7,12);
+
+echo $_GET['callback']. '('. json_encode($array) . ')';    
+
+?&amp;gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;The JavaScript calling the callback function using jQuery.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;$(document).ready(function() {
+    var options = {
+        chart: {
+            renderTo: 'container',
+            type: 'spline'
+        },
+        series: [{}]
+    };
+    
+    var url =  &quot;http://url-to-your-remote-server/jsonp.php?callback=?&quot;;
+    $.getJSON(url,  function(data) {
+        options.series[0].data = data;
+        var chart = new Highcharts.Chart(options);
+    });
+});
+&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Cross domain data&lt;/h1&gt;
+&lt;p&gt;It is not possible to use the jQuery .getJSON() function on JSON files outside of your own domain. It is however possible to use JSONP.&lt;/p&gt;
+&lt;p&gt;The difference between JSON and JSONP is that in a regular JSON file you would just use the ordinary JSON syntax. This can not be returned cross domain. With JSONP what is done is wrapping the JSON content with a callback function in PHP which returns a json object. This can come in handy if the data you wish to display is on another domain than your own. A great number of data providers have JSONP services, for example Google and Twitter.&lt;/p&gt;
+&lt;p&gt;Here is an example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The serverside php file:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&amp;lt;?php
+header(&quot;content-type: application/json&quot;); 
+
+$array = array(7,4,2,8,4,1,9,3,2,16,7,12);
+
+echo $_GET['callback']. '('. json_encode($array) . ')';    
+
+?&amp;gt;
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;The JavaScript calling the callback function using jQuery.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;$(document).ready(function() {
+    var options = {
+        chart: {
+            renderTo: 'container',
+            type: 'spline'
+        },
+        series: [{}]
+    };
+    
+    var url =  &quot;http://url-to-your-remote-server/jsonp.php?callback=?&quot;;
+    $.getJSON(url,  function(data) {
+        options.series[0].data = data;
+        var chart = new Highcharts.Chart(options);
+    });
+});
+&lt;/pre&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Working with data" />
+	</entry>
+	<entry>
+		<title>Preprocessing data from a database</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/working-with-data/preprocessing-data-from-a-database"/>
+		<published>2013-08-22T09:31:14+00:00</published>
+		<updated>2013-08-22T09:31:14+00:00</updated>
+		<id>http://www.highcharts.com/docs/working-with-data/preprocessing-data-from-a-database</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Preprocessing data from a database&lt;/h1&gt;
+&lt;p&gt;
+    Highcharts runs on the client side only, and is completely ignorant of how your server is set up. This means that if your server is running PHP and MySQL, or any other type of server technology coupled with any SQL engine, you can dynamically produce the HTML and JavaScript required by Highcharts.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+    There are a number of ways to do this. One way is to make a specific PHP file that only contains the data, call this dynamically from jQuery using Ajax, and add it to the configuration object before the chart is generated. Or you can have one PHP file that returns the entire JavaScript setup of your chart. Or, in the most basic way, just add some PHP code within your parent HTML page that handles the data from the chart. Below is a basic, low level example of how to pull data from a MySQL table and add it to your chart.&lt;/p&gt;
+&lt;div&gt;
+    &amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+    &lt;strong&gt;Simple data with regular x intervals&lt;/strong&gt;&lt;/div&gt;
+&lt;pre&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;lt;?php
+while ($row = mysql_fetch_array($result)) {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;$data[] = $row[&amp;#39;value&amp;#39;];&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;var chart = new Highcharts.Chart({&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; chart: {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;renderTo: &amp;#39;container&amp;#39;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; },&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; series: [{&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;data: [&amp;lt;?php echo join($data, &amp;#39;,&amp;#39;) ?&amp;gt;],&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;pointStart: 0,&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;pointInterval&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }]&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;});&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;
+    &lt;strong&gt;Including x values&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+    Say you have a datetime x axis and irregular intervals between the points. Then you can&amp;#39;t use the pointInterval approach like above, but you need to get the datetime for each point. Your code may now look like this:&lt;/p&gt;
+&lt;pre&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;lt;?php
+while ($row = mysql_fetch_array($result)) {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;extract $row;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;$datetime *= 1000; // convert from Unix timestamp to JavaScript time&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;$data[] = &amp;quot;[$datetime, $value]&amp;quot;;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;var chart = new Highcharts.Chart({&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; chart: {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;renderTo: &amp;#39;container&amp;#39;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; },&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; series: [{&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;data: [&amp;lt;?php echo join($data, &amp;#39;,&amp;#39;) ?&amp;gt;]&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }]&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;});&lt;/span&gt;&lt;/pre&gt;
+&lt;div&gt;
+    As an alternative to this low-level approach, also consider &lt;a href=&quot;http://php.net/manual/en/function.json-encode.php&quot;&gt;json_encode&lt;/a&gt; for writing the entire options structure in PHP.&lt;/div&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Preprocessing data from a database&lt;/h1&gt;
+&lt;p&gt;
+    Highcharts runs on the client side only, and is completely ignorant of how your server is set up. This means that if your server is running PHP and MySQL, or any other type of server technology coupled with any SQL engine, you can dynamically produce the HTML and JavaScript required by Highcharts.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+    There are a number of ways to do this. One way is to make a specific PHP file that only contains the data, call this dynamically from jQuery using Ajax, and add it to the configuration object before the chart is generated. Or you can have one PHP file that returns the entire JavaScript setup of your chart. Or, in the most basic way, just add some PHP code within your parent HTML page that handles the data from the chart. Below is a basic, low level example of how to pull data from a MySQL table and add it to your chart.&lt;/p&gt;
+&lt;div&gt;
+    &amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+    &lt;strong&gt;Simple data with regular x intervals&lt;/strong&gt;&lt;/div&gt;
+&lt;pre&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;lt;?php
+while ($row = mysql_fetch_array($result)) {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;$data[] = $row[&amp;#39;value&amp;#39;];&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;var chart = new Highcharts.Chart({&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; chart: {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;renderTo: &amp;#39;container&amp;#39;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; },&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; series: [{&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;data: [&amp;lt;?php echo join($data, &amp;#39;,&amp;#39;) ?&amp;gt;],&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;pointStart: 0,&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;pointInterval&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }]&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;});&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;
+    &lt;strong&gt;Including x values&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;
+    Say you have a datetime x axis and irregular intervals between the points. Then you can&amp;#39;t use the pointInterval approach like above, but you need to get the datetime for each point. Your code may now look like this:&lt;/p&gt;
+&lt;pre&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;lt;?php
+while ($row = mysql_fetch_array($result)) {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;extract $row;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;$datetime *= 1000; // convert from Unix timestamp to JavaScript time&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp;$data[] = &amp;quot;[$datetime, $value]&amp;quot;;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;}&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;?&amp;gt;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;var chart = new Highcharts.Chart({&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; chart: {&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;renderTo: &amp;#39;container&amp;#39;&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; },&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; series: [{&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;data: [&amp;lt;?php echo join($data, &amp;#39;,&amp;#39;) ?&amp;gt;]&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; }]&lt;/span&gt;
+&lt;span style=&quot;font-family: Monaco, 'Andale Mono', 'Courier New', Courier, mono; line-height: 15px; &quot;&gt;});&lt;/span&gt;&lt;/pre&gt;
+&lt;div&gt;
+    As an alternative to this low-level approach, also consider &lt;a href=&quot;http://php.net/manual/en/function.json-encode.php&quot;&gt;json_encode&lt;/a&gt; for writing the entire options structure in PHP.&lt;/div&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Working with data" />
+	</entry>
+	<entry>
+		<title>Preprocessing live data</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/working-with-data/preprocessing-live-data"/>
+		<published>2013-08-22T09:30:58+00:00</published>
+		<updated>2013-08-22T09:30:58+00:00</updated>
+		<id>http://www.highcharts.com/docs/working-with-data/preprocessing-live-data</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Preprocessing live data&lt;/h1&gt;
+&lt;p&gt;After a chart has been defined by the configuration object, optionally preprocessed and finally initialized and rendered using new Highcharts.Chart(), we have the opportunity to alter the chart using a toolbox of API methods. The chart, axis, series and point objects have a range of methods like update, remove, addSeries, addPoints and so on. The complete list can be seen in the &lt;a href=&quot;ref/&quot;&gt;API Reference&lt;/a&gt; under &quot;Methods and Properties&quot; at the left.&lt;/p&gt;
+&lt;h2&gt;Setting up a live chart&lt;/h2&gt;
+&lt;p&gt;The following example shows how to run a live chart with data retrieved from the server each second, or more precisely, one second after the server's last reply. It is done by setting up a custom function, requestData, that initially is called from the chart's load event, and subsequently from its own Ajax success callback function. You can see the results live at &lt;a href=&quot;studies/live-server.htm&quot;&gt;live-server.htm&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Set up the server.&lt;/strong&gt; In this case, we have a simple PHP script returning a JavaScript array with the JavaScript time and a random y value. This is the contents of the &lt;a href=&quot;studies/live-server-data.php&quot;&gt;live-server-data.php&lt;/a&gt; file:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;&amp;lt;?php
+// Set the JSON header
+header(&quot;Content-type: text/json&quot;);
+
+// The x value is the current JavaScript time, which is the Unix time multiplied &lt;br /&gt;// by 1000.
+$x = time() * 1000;
+// The y value is a random number
+$y = rand(0, 100);
+
+// Create a PHP array and echo it as JSON
+$ret = array($x, $y);
+echo json_encode($ret);
+?&amp;gt;
+&lt;/pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Define the chart variable globally&lt;/strong&gt;, as we want to access it both from the document ready function and our requestData funcion. If the chart variable is defined inside the document ready callback function, it will not be available in the global scope later.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;var chart; // global
+&lt;/pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Set up the requestData function.&lt;/strong&gt; In this case it uses jQuery's $.ajax method to handle the Ajax stuff, but it could just as well use any other Ajax framework. When the data is successfully received from the server, the string is eval'd and added to the chart's first series using the Highcharts addPoint method. If the series length is greater than 20, we shift off the first point so that the series will move to the left rather than just cram the points tighter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;/**
+&amp;nbsp;* Request data from the server, add it to the graph and set a timeout &lt;br /&gt; * to request again
+&amp;nbsp;*/
+function requestData() {
+&amp;nbsp; &amp;nbsp; $.ajax({
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; url: 'live-server-data.php',
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; success: function(point) {
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; var series = chart.series[0],
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; shift = series.data.length &amp;gt; 20; // shift if the series is &lt;br /&gt;                                                 // longer than 20&lt;br /&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // add the point
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; chart.series[0].addPoint(point, true, shift);
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // call it again after one second
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; setTimeout(requestData, 1000); &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; },
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cache: false
+&amp;nbsp; &amp;nbsp; });
+}
+&lt;/pre&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Create the chart. Notice how our requestData function is initially called from the chart's load event. The initial data is an empty array.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;$(document).ready(function() {
+    chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',
+            defaultSeriesType: 'spline',
+            events: {
+                load: requestData
+            }
+        },
+        title: {
+            text: 'Live random data'
+        },
+        xAxis: {
+            type: 'datetime',
+            tickPixelInterval: 150,
+            maxZoom: 20 * 1000
+        },
+        yAxis: {
+            minPadding: 0.2,
+            maxPadding: 0.2,
+            title: {
+                text: 'Value',
+                margin: 80
+            }
+        },
+        series: [{
+            name: 'Random data',
+            data: []
+        }]
+    });        
+});
+&lt;/pre&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Preprocessing live data&lt;/h1&gt;
+&lt;p&gt;After a chart has been defined by the configuration object, optionally preprocessed and finally initialized and rendered using new Highcharts.Chart(), we have the opportunity to alter the chart using a toolbox of API methods. The chart, axis, series and point objects have a range of methods like update, remove, addSeries, addPoints and so on. The complete list can be seen in the &lt;a href=&quot;ref/&quot;&gt;API Reference&lt;/a&gt; under &quot;Methods and Properties&quot; at the left.&lt;/p&gt;
+&lt;h2&gt;Setting up a live chart&lt;/h2&gt;
+&lt;p&gt;The following example shows how to run a live chart with data retrieved from the server each second, or more precisely, one second after the server's last reply. It is done by setting up a custom function, requestData, that initially is called from the chart's load event, and subsequently from its own Ajax success callback function. You can see the results live at &lt;a href=&quot;studies/live-server.htm&quot;&gt;live-server.htm&lt;/a&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Set up the server.&lt;/strong&gt; In this case, we have a simple PHP script returning a JavaScript array with the JavaScript time and a random y value. This is the contents of the &lt;a href=&quot;studies/live-server-data.php&quot;&gt;live-server-data.php&lt;/a&gt; file:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;&amp;lt;?php
+// Set the JSON header
+header(&quot;Content-type: text/json&quot;);
+
+// The x value is the current JavaScript time, which is the Unix time multiplied &lt;br /&gt;// by 1000.
+$x = time() * 1000;
+// The y value is a random number
+$y = rand(0, 100);
+
+// Create a PHP array and echo it as JSON
+$ret = array($x, $y);
+echo json_encode($ret);
+?&amp;gt;
+&lt;/pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Define the chart variable globally&lt;/strong&gt;, as we want to access it both from the document ready function and our requestData funcion. If the chart variable is defined inside the document ready callback function, it will not be available in the global scope later.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;var chart; // global
+&lt;/pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Set up the requestData function.&lt;/strong&gt; In this case it uses jQuery's $.ajax method to handle the Ajax stuff, but it could just as well use any other Ajax framework. When the data is successfully received from the server, the string is eval'd and added to the chart's first series using the Highcharts addPoint method. If the series length is greater than 20, we shift off the first point so that the series will move to the left rather than just cram the points tighter.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;/**
+&amp;nbsp;* Request data from the server, add it to the graph and set a timeout &lt;br /&gt; * to request again
+&amp;nbsp;*/
+function requestData() {
+&amp;nbsp; &amp;nbsp; $.ajax({
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; url: 'live-server-data.php',
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; success: function(point) {
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; var series = chart.series[0],
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; shift = series.data.length &amp;gt; 20; // shift if the series is &lt;br /&gt;                                                 // longer than 20&lt;br /&gt;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // add the point
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; chart.series[0].addPoint(point, true, shift);
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // call it again after one second
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; setTimeout(requestData, 1000); &amp;nbsp; &amp;nbsp;
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; },
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; cache: false
+&amp;nbsp; &amp;nbsp; });
+}
+&lt;/pre&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;Create the chart. Notice how our requestData function is initially called from the chart's load event. The initial data is an empty array.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;$(document).ready(function() {
+    chart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'container',
+            defaultSeriesType: 'spline',
+            events: {
+                load: requestData
+            }
+        },
+        title: {
+            text: 'Live random data'
+        },
+        xAxis: {
+            type: 'datetime',
+            tickPixelInterval: 150,
+            maxZoom: 20 * 1000
+        },
+        yAxis: {
+            minPadding: 0.2,
+            maxPadding: 0.2,
+            title: {
+                text: 'Value',
+                margin: 80
+            }
+        },
+        series: [{
+            name: 'Random data',
+            data: []
+        }]
+    });        
+});
+&lt;/pre&gt;&lt;/div&gt;</content>
+		<category term="Working with data" />
+	</entry>
+	<entry>
+		<title>Preprocessing data from a file (CSV, XML, JSON)</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/working-with-data/preprocessing-data-from-a-file-csv-xml-json"/>
+		<published>2013-08-22T09:30:23+00:00</published>
+		<updated>2013-08-22T09:30:23+00:00</updated>
+		<id>http://www.highcharts.com/docs/working-with-data/preprocessing-data-from-a-file-csv-xml-json</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Preprocesssing data from a file&lt;/h1&gt;
+&lt;p&gt;When working with large amounts of data it is more convenient to store it somewhere else than in a JavaScript. Highcharts does not come with any predefined stucture for storing data other than directly in the options object, so the data needs to be parsed by a function to be plotted correctly. Below are examples on how to preprocess data from CSV, XML and JSON. Another option is to use databases, see&amp;nbsp;&lt;a href=&quot;/docs/working-with-data/preprocessing-data-from-a-database&quot;&gt;Database connection&lt;/a&gt;&amp;nbsp;for a tutorial.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Preprocess data using CSV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2&quot;&gt;Preprocess data using XML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3&quot;&gt;Preprocess data using JSON&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a name=&quot;1&quot;&gt;&lt;/a&gt;Preprocess data using CSV&lt;/h2&gt;
+&lt;p&gt;This example shows how to set up the basic chart options first, then do an Ajax call for the data, parse the data and add them in the proper format to the options. In this example, jQuery is used for handling Ajax, but you could just as well use MooTools' or Prototype's similar functions. All of the code runs in the $(document).ready event handler. The example can be seen live at &lt;a href=&quot;http://highcharts.com/studies/data-from-csv.htm&quot;&gt;data-from-csv.htm&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Create an external CSV file&lt;/strong&gt; containing only the data. In this example, the file looks like below. The first line lists the categories with a dummy name in the first position. The subsequent lines list the data series name in the first position and values in the subsequent positions. In real life, you will often create the contents of this file using PHP or other server side programming languages. Or you may choose to use other markup formats like XML or JSON. In those cases, jQuery can also parse the data for you natively.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;Categories,Apples,Pears,Oranges,Bananas
+John,8,4,6,5
+Jane,3,4,2,3
+Joe,86,76,79,77
+Janet,3,16,13,15
+&lt;/pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Define the initial, basic options. &lt;/strong&gt;Note that we create empty arrays for the categories and series objects, so that we can just push values to them later.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;var options = {
+    chart: {
+        renderTo: 'container',
+        defaultSeriesType: 'column'
+    },
+    title: {
+        text: 'Fruit Consumption'
+    },
+    xAxis: {
+        categories: []
+    },
+    yAxis: {
+        title: {
+            text: 'Units'
+        }
+    },
+    series: []
+};
+&lt;/pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Put it all together.&lt;/strong&gt; We use the jQuery.get method to get the contents of the data.csv file. In the success callback function, we parse the returned string, add the results to the categories and series members of the options object, and create the chart. Note that we can't create the chart outside the Ajax callback, as we have to wait for the data to be returned from the server.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;$.get('data.csv', function(data) {
+    // Split the lines
+    var lines = data.split('\n');
+    
+    // Iterate over the lines and add categories or series
+    $.each(lines, function(lineNo, line) {
+        var items = line.split(',');
+        
+        // header line containes categories
+        if (lineNo == 0) {
+            $.each(items, function(itemNo, item) {
+                if (itemNo &amp;gt; 0) options.xAxis.categories.push(item);
+            });
+        }
+        
+        // the rest of the lines contain data with their name in the first &lt;br /&gt;        // position
+        else {
+            var series = {
+                data: []
+            };
+            $.each(items, function(itemNo, item) {
+                if (itemNo == 0) {
+                    series.name = item;
+                } else {
+                    series.data.push(parseFloat(item));
+                }
+            });
+            
+            options.series.push(series);
+    
+        }
+        
+    });
+    
+    // Create the chart
+    var chart = new Highcharts.Chart(options);
+});
+&lt;/pre&gt;
+&lt;h2&gt;&lt;a name=&quot;2&quot;&gt;&lt;/a&gt;Preprocess data using XML&lt;/h2&gt;
+&lt;p&gt;Loading data from an XML file is similar to the CSV approach. Since Highcharts does not come with a predefined XML data syntax, it is entirely up to you to write the XML and to define a parsing function for it. The downside of using XML over CSV is that it adds some markup to the data, leaving a larger footprint. How large the extra footprint is depends on how you mark up your data. For example, if you wrap each point with a &amp;lt;point&amp;gt; tag and load 1000 points, it will add some weight. If however you add a comma separated list of point values, it doesn't. The upside to using XML, at least for small data sets, is that you don't have to manually parse the incoming data. You can utilize jQuery's existing DOM parsing abilities to access the XML tree. We set up a live example for this at &lt;a href=&quot;http://highcharts.com/studies/data-from-xml.htm&quot;&gt;data-from-xml.htm&lt;/a&gt;. The data can be viewed at &lt;a href=&quot;http://highcharts.com/studies/data.xml&quot;&gt;data.xml&lt;/a&gt;. Below is the function used to parse the XML data and adding it to the options object.&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;// Load the data from the XML file 
+$.get('data.xml', function(xml) {
+    
+    // Split the lines
+    var $xml = $(xml);
+
+    // push categories
+    $xml.find('categories item').each(function(i, category) {
+        options.xAxis.categories.push($(category).text());
+    });
+
+    // push series
+    $xml.find('series').each(function(i, series) {
+
+        var seriesOptions = {
+            name: $(series).find('name').text(),
+            data: []
+        };
+
+        // push data points
+        $(series).find('data point').each(function(i, point) {
+            seriesOptions.data.push(
+                parseInt($(point).text())
+            );
+        });
+
+        // add it to the options
+        options.series.push(seriesOptions);
+    });
+
+    var chart = new Highcharts.Chart(options);
+});&lt;/pre&gt;
+&lt;h2&gt;&lt;a name=&quot;3&quot;&gt;&lt;/a&gt;Preprocess data using JSON&lt;/h2&gt;
+&lt;p&gt;JSON has the advantage of already being JavaScript, meaning that in many cases no preprocessing is needed. Another advantage to using JSON is that PHP has a built in function called json_encode(); which returns a JavaScript array that can be used directly in Highcharts.&lt;/p&gt;
+&lt;p&gt;Here is a basic example with a JSON file containing the data shown and using the jQuery .getJSON function to load it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The JSON file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;[
+[1,12],
+[2,5],
+[3,18],
+[4,13],
+[5,7],
+[6,4],
+[7,9],
+[8,10],
+[9,15],
+[10,22]
+]
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Using getJSON to preprocess the options and then create the chart.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;$(document).ready(function() {
+
+    var options = {
+        chart: {
+            renderTo: 'container',
+            type: 'spline'
+        },
+        series: [{}]
+    };
+
+    $.getJSON('data.json', function(data) {
+        options.series[0].data = data;
+        var chart = new Highcharts.Chart(options);
+    });
+
+});
+&lt;/pre&gt;
+&lt;p&gt;There are two things to note here:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The data from the external JSON file should be loaded into the chart options before the chart is created. This is a best practice suggestion, since creating the chart and then loading the data into it requires means drawing the chart twice.&lt;/li&gt;
+&lt;li&gt;The data.json file in the example is on the same domain as the chart itself, the .getJSON function does not work cross domains. To load JSON files cross domain, JSONP needs to be used, see&amp;nbsp;&lt;a href=&quot;/docs/working-with-data/getting-data-across-domains-jsonp&quot;&gt;Cross domain data&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;Preprocesssing data from a file&lt;/h1&gt;
+&lt;p&gt;When working with large amounts of data it is more convenient to store it somewhere else than in a JavaScript. Highcharts does not come with any predefined stucture for storing data other than directly in the options object, so the data needs to be parsed by a function to be plotted correctly. Below are examples on how to preprocess data from CSV, XML and JSON. Another option is to use databases, see&amp;nbsp;&lt;a href=&quot;/docs/working-with-data/preprocessing-data-from-a-database&quot;&gt;Database connection&lt;/a&gt;&amp;nbsp;for a tutorial.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#1&quot;&gt;Preprocess data using CSV&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#2&quot;&gt;Preprocess data using XML&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#3&quot;&gt;Preprocess data using JSON&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;a name=&quot;1&quot;&gt;&lt;/a&gt;Preprocess data using CSV&lt;/h2&gt;
+&lt;p&gt;This example shows how to set up the basic chart options first, then do an Ajax call for the data, parse the data and add them in the proper format to the options. In this example, jQuery is used for handling Ajax, but you could just as well use MooTools' or Prototype's similar functions. All of the code runs in the $(document).ready event handler. The example can be seen live at &lt;a href=&quot;http://highcharts.com/studies/data-from-csv.htm&quot;&gt;data-from-csv.htm&lt;/a&gt;.&lt;/p&gt;
+&lt;div&gt;&amp;nbsp;&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Create an external CSV file&lt;/strong&gt; containing only the data. In this example, the file looks like below. The first line lists the categories with a dummy name in the first position. The subsequent lines list the data series name in the first position and values in the subsequent positions. In real life, you will often create the contents of this file using PHP or other server side programming languages. Or you may choose to use other markup formats like XML or JSON. In those cases, jQuery can also parse the data for you natively.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;Categories,Apples,Pears,Oranges,Bananas
+John,8,4,6,5
+Jane,3,4,2,3
+Joe,86,76,79,77
+Janet,3,16,13,15
+&lt;/pre&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Define the initial, basic options. &lt;/strong&gt;Note that we create empty arrays for the categories and series objects, so that we can just push values to them later.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;var options = {
+    chart: {
+        renderTo: 'container',
+        defaultSeriesType: 'column'
+    },
+    title: {
+        text: 'Fruit Consumption'
+    },
+    xAxis: {
+        categories: []
+    },
+    yAxis: {
+        title: {
+            text: 'Units'
+        }
+    },
+    series: []
+};
+&lt;/pre&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Put it all together.&lt;/strong&gt; We use the jQuery.get method to get the contents of the data.csv file. In the success callback function, we parse the returned string, add the results to the categories and series members of the options object, and create the chart. Note that we can't create the chart outside the Ajax callback, as we have to wait for the data to be returned from the server.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;$.get('data.csv', function(data) {
+    // Split the lines
+    var lines = data.split('\n');
+    
+    // Iterate over the lines and add categories or series
+    $.each(lines, function(lineNo, line) {
+        var items = line.split(',');
+        
+        // header line containes categories
+        if (lineNo == 0) {
+            $.each(items, function(itemNo, item) {
+                if (itemNo &amp;gt; 0) options.xAxis.categories.push(item);
+            });
+        }
+        
+        // the rest of the lines contain data with their name in the first &lt;br /&gt;        // position
+        else {
+            var series = {
+                data: []
+            };
+            $.each(items, function(itemNo, item) {
+                if (itemNo == 0) {
+                    series.name = item;
+                } else {
+                    series.data.push(parseFloat(item));
+                }
+            });
+            
+            options.series.push(series);
+    
+        }
+        
+    });
+    
+    // Create the chart
+    var chart = new Highcharts.Chart(options);
+});
+&lt;/pre&gt;
+&lt;h2&gt;&lt;a name=&quot;2&quot;&gt;&lt;/a&gt;Preprocess data using XML&lt;/h2&gt;
+&lt;p&gt;Loading data from an XML file is similar to the CSV approach. Since Highcharts does not come with a predefined XML data syntax, it is entirely up to you to write the XML and to define a parsing function for it. The downside of using XML over CSV is that it adds some markup to the data, leaving a larger footprint. How large the extra footprint is depends on how you mark up your data. For example, if you wrap each point with a &amp;lt;point&amp;gt; tag and load 1000 points, it will add some weight. If however you add a comma separated list of point values, it doesn't. The upside to using XML, at least for small data sets, is that you don't have to manually parse the incoming data. You can utilize jQuery's existing DOM parsing abilities to access the XML tree. We set up a live example for this at &lt;a href=&quot;http://highcharts.com/studies/data-from-xml.htm&quot;&gt;data-from-xml.htm&lt;/a&gt;. The data can be viewed at &lt;a href=&quot;http://highcharts.com/studies/data.xml&quot;&gt;data.xml&lt;/a&gt;. Below is the function used to parse the XML data and adding it to the options object.&lt;/p&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;// Load the data from the XML file 
+$.get('data.xml', function(xml) {
+    
+    // Split the lines
+    var $xml = $(xml);
+
+    // push categories
+    $xml.find('categories item').each(function(i, category) {
+        options.xAxis.categories.push($(category).text());
+    });
+
+    // push series
+    $xml.find('series').each(function(i, series) {
+
+        var seriesOptions = {
+            name: $(series).find('name').text(),
+            data: []
+        };
+
+        // push data points
+        $(series).find('data point').each(function(i, point) {
+            seriesOptions.data.push(
+                parseInt($(point).text())
+            );
+        });
+
+        // add it to the options
+        options.series.push(seriesOptions);
+    });
+
+    var chart = new Highcharts.Chart(options);
+});&lt;/pre&gt;
+&lt;h2&gt;&lt;a name=&quot;3&quot;&gt;&lt;/a&gt;Preprocess data using JSON&lt;/h2&gt;
+&lt;p&gt;JSON has the advantage of already being JavaScript, meaning that in many cases no preprocessing is needed. Another advantage to using JSON is that PHP has a built in function called json_encode(); which returns a JavaScript array that can be used directly in Highcharts.&lt;/p&gt;
+&lt;p&gt;Here is a basic example with a JSON file containing the data shown and using the jQuery .getJSON function to load it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The JSON file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;[
+[1,12],
+[2,5],
+[3,18],
+[4,13],
+[5,7],
+[6,4],
+[7,9],
+[8,10],
+[9,15],
+[10,22]
+]
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Using getJSON to preprocess the options and then create the chart.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre style=&quot;margin-left: 40px;&quot;&gt;$(document).ready(function() {
+
+    var options = {
+        chart: {
+            renderTo: 'container',
+            type: 'spline'
+        },
+        series: [{}]
+    };
+
+    $.getJSON('data.json', function(data) {
+        options.series[0].data = data;
+        var chart = new Highcharts.Chart(options);
+    });
+
+});
+&lt;/pre&gt;
+&lt;p&gt;There are two things to note here:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The data from the external JSON file should be loaded into the chart options before the chart is created. This is a best practice suggestion, since creating the chart and then loading the data into it requires means drawing the chart twice.&lt;/li&gt;
+&lt;li&gt;The data.json file in the example is on the same domain as the chart itself, the .getJSON function does not work cross domains. To load JSON files cross domain, JSONP needs to be used, see&amp;nbsp;&lt;a href=&quot;/docs/working-with-data/getting-data-across-domains-jsonp&quot;&gt;Cross domain data&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</content>
+		<category term="Working with data" />
+	</entry>
+	<entry>
+		<title>Preprocessing</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/working-with-data/preprocessing"/>
+		<published>2013-08-22T09:30:08+00:00</published>
+		<updated>2013-08-22T09:30:08+00:00</updated>
+		<id>http://www.highcharts.com/docs/working-with-data/preprocessing</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Preprocessing&lt;/h1&gt;
+&lt;p&gt;
+    If working with dynamic data from say a database or the data presented in the chart is large, it is not a viable option to store the code static in the chart configuration. It is here preprocessing comes in.&amp;nbsp;What we mean by preprocessing is having data stored somewhere, fetch it, formatting it to a readable format for Highcharts, and apply it to the chart before the chart is drawn. This is done both for convenience and performance.&lt;/p&gt;
+&lt;p&gt;
+    We will cover the following topics:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/preprocessing-data-from-a-file-csv-xml-json&quot;&gt;Preprocesssing data from a file&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/preprocessing-live-data&quot;&gt;Preprocessing live data&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/preprocessing-data-from-a-database&quot;&gt;Preprocessing data from a database&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/getting-data-across-domains-jsonp&quot;&gt;Getting data across domains (JSONP)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;h1&gt;
+    Preprocessing&lt;/h1&gt;
+&lt;p&gt;
+    If working with dynamic data from say a database or the data presented in the chart is large, it is not a viable option to store the code static in the chart configuration. It is here preprocessing comes in.&amp;nbsp;What we mean by preprocessing is having data stored somewhere, fetch it, formatting it to a readable format for Highcharts, and apply it to the chart before the chart is drawn. This is done both for convenience and performance.&lt;/p&gt;
+&lt;p&gt;
+    We will cover the following topics:&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/preprocessing-data-from-a-file-csv-xml-json&quot;&gt;Preprocesssing data from a file&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/preprocessing-live-data&quot;&gt;Preprocessing live data&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/preprocessing-data-from-a-database&quot;&gt;Preprocessing data from a database&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;/docs/working-with-data/getting-data-across-domains-jsonp&quot;&gt;Getting data across domains (JSONP)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+    &amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Working with data" />
+	</entry>
+</feed>

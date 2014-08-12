@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Maps</title>
+		<description><![CDATA[Highcharts - Interactive JavaScript charts for your web pages.]]></description>
+		<link>http://www.highcharts.com/docs/maps/6-docs/advanced-chart-features</link>
+		<lastBuildDate>Mon, 11 Aug 2014 00:43:06 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://www.highcharts.com/docs/maps/6-docs/advanced-chart-features?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<item>
+			<title>Internationalization</title>
+			<link>http://www.highcharts.com/docs/advanced-chart-features/internationalization</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/advanced-chart-features/internationalization</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Internationalization</h1>
+<p>Highcharts allows charts to be presented in any language.</p>
+<h2>Translation language strings</h2>
+<p>All GUI elements with strings as well as number specifics can be translated. See the <a href="http://api.highcharts.com#lang">lang</a> options set.</p>
+<h2>Reversed and bidi text (arabic, hebrew)</h2>
+<p>All modern browsers reliably support bidirectional text in SVG, though there might be problems writing complex HTML strings that are parsed and displayed using SVG. As a workaround for this, in Highcharts all text options are accompanied by an additional option, <code>useHTML</code>. When using HTML, all browsers handle bidirectional text without a problem. For an overview over the different settings, go to <a href="http://api.highcharts.com">api.highcharts.com</a> and search for useHTML.</p>
+<p>In Firefox &lt; 4 there is a bug that completely breaks bidi text in SVG. As a convenient workaround&nbsp;for this, we have added a boolean constant, <em>Highcharts.hasBidiBug</em>, that can be used to determine when to use HTML in labels:</p>
+<pre><span style="line-height: 1.6em;">labels: {
+    useHTML: Highcharts.hasBidiBug
+}</span></pre>
+<h2>Reversing the geometry of the chart</h2>
+<p>In RTL languages you may want to put the Y axis on the right side and reverse the X axis so that it flows from right to left.&nbsp;</p>
+<ul>
+<li>To move the Y axis to the right side, set <a href="http://api.highcharts.com#yAxis.opposite">yAxis.opposite</a> to true.</li>
+<li>To reverse the X axis, set <a href="http://api.highcharts.com#xAxis.reversed">xAxis.reversed</a> to true.</li>
+</ul>
+<h2>Live demo</h2>
+<p>See a <a href="http://jsfiddle.net/highcharts/buYCZ/">live Arabic chart</a> demo.</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Advanced chart features</category>
+			<pubDate>Thu, 22 Aug 2013 09:27:59 +0000</pubDate>
+		</item>
+		<item>
+			<title>Freeform drawing</title>
+			<link>http://www.highcharts.com/docs/advanced-chart-features/freeform-drawing</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/advanced-chart-features/freeform-drawing</guid>
+			<description><![CDATA[<div class="feed-description"><h1>
+    Freeform drawing</h1>
+<p>
+    Internally, Highcharts is equipped with a rendering module that acts as a wrapper for JavaScript access to SVG in modern browsers and VML in IE &lt; 9. It has much in common with drawing tools like Rapha&euml;l or SVG jQuery. This drawing module can be used either to draw shapes or text on the chart, or even as a standalone drawing tool for HTML pages.</p>
+<p>
+    Inside a chart, the chart&#39;s renderer object is available as <em>chart.renderer</em>. To instanciate a new SVG drawing outside Highcharts, you call new <em>Highcharts.Renderer(parentNode, width, height)</em>, where parentNode is the div or container element where you want the drawing to be placed.</p>
+<p>
+    The drawing API is documented in detail at <a href="http://api.highcharts.com#Renderer">api.highcharts.com#Renderer</a> and <a href="http://api.highcharts.com#Element">api.highcharts.com#Element</a></p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Advanced chart features</category>
+			<pubDate>Thu, 22 Aug 2013 09:27:43 +0000</pubDate>
+		</item>
+		<item>
+			<title>Data grouping</title>
+			<link>http://www.highcharts.com/docs/advanced-chart-features/data-grouping</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/advanced-chart-features/data-grouping</guid>
+			<description><![CDATA[<div class="feed-description"><h1>
+    Data grouping (Highstock)</h1>
+<p>
+    Data grouping replaces a sequence of data points in a series with one grouped point. The values of each grouped point is calculated from the original values of every point used. The groupPixelWidth option defines how large the groups should be.</p>
+<p>
+    <span style="line-height: 1.6em;">By default, the grouping <a href="http://api.highcharts.com/highstock#plotOptions.series.dataGrouping.approximation">approximation</a> depends on the type of series:</span></p>
+<ul>
+    <li>
+        Line type series use an <em>average</em> approximation.</li>
+    <li>
+        Column type series compute the <em>sum</em>.</li>
+    <li>
+        Range type series compute the union&#39;s&nbsp;<em>range</em>.</li>
+    <li>
+        OHLC type series compute the union&#39;s open, high, low and close (OHLC) values.</li>
+</ul>
+<p>
+    Grouping is activated there are many data points in the chart. As well as increasing performance it makes it easier to spot trends in a chart.</p>
+<p>
+    Data grouping is a Highstock feature and is enabled by default. To see dataGrouping options see the <a href="http://api.highcharts.com/highstock/plotOptions.series.dataGrouping">API reference</a>.&nbsp;</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Advanced chart features</category>
+			<pubDate>Thu, 22 Aug 2013 09:27:30 +0000</pubDate>
+		</item>
+		<item>
+			<title>Stacking charts</title>
+			<link>http://www.highcharts.com/docs/advanced-chart-features/stacking-charts</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/advanced-chart-features/stacking-charts</guid>
+			<description><![CDATA[<div class="feed-description"><h1>
+    Stacking charts</h1>
+<p>
+    Column and area type series can be set to stack on top of each other instead of overlapping. There are two available options, &quot;normal&quot; stacking and &quot;percentage&quot; stacking.&nbsp;Normal stacking stacks the data series on top of each other in order. Percent stacking fills the plot area and draws each point of data with a relative percentage to all the points in the same category.</p>
+<p>
+    Here is an example of normal stacking:</p>
+<p>
+    <img alt="" src="http://www.highcharts.com//images/docs/stacking_normal.png" style="width: 600px; height: 350px; " /></p>
+<p>
+    Here is an example of percent stacking:</p>
+<p>
+    <img alt="" src="http://www.highcharts.com//images/docs/stacking_percent.png" style="width: 600px; height: 350px; " /></p>
+<p>
+    &nbsp;</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Advanced chart features</category>
+			<pubDate>Thu, 22 Aug 2013 09:27:15 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Maps</title>
+		<description><![CDATA[Highcharts - Interactive JavaScript charts for your web pages.]]></description>
+		<link>http://www.highcharts.com/docs/maps/5-docs/chart-and-series-types</link>
+		<lastBuildDate>Mon, 11 Aug 2014 00:43:08 +0000</lastBuildDate>
+		<generator>Joomla! - Open Source Content Management</generator>
+		<atom:link rel="self" type="application/rss+xml" href="http://www.highcharts.com/docs/maps/5-docs/chart-and-series-types?format=feed&amp;type=rss"/>
+		<language>en-gb</language>
+		<item>
+			<title>Heat map series</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/heatmap</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/heatmap</guid>
+			<description><![CDATA[<div class="feed-description"><p>A heat map is a graphical representation of data where the individual values contained in a matrix are represented as colors.</p>
+<p><iframe style="width: 100%; border: none; height: 500px;" src="http://jsfiddle.net/highcharts/4aqhB/embedded/result%2Cjs%2Chtml%2Ccss/"></iframe></p>
+<h3>Setting up the heat map series</h3>
+<p>Heat maps require the <a href="http://code.highcharts.com/modules/heatmap.js">modules/heatmap.js</a> file to be loaded.</p>
+<p>The heat map series is defined by setting the type to <code>heatmap</code>. A heat map has an X and Y axis like any cartesian series. The point definitions however, take three values, <code>x</code>, <code>y</code> as well as <code>value</code>, which serves as the value for color coding the point. These values can also be given as an array of three numbers.</p>
+<h3>The color axis</h3>
+<p>Heat maps borrow a central concept from Highmaps, the color axis. See the docs article on <a href="http://www.highcharts.com/docs/maps/color-axis/">color axis</a> for details</p>
+<h3>Resources</h3>
+<p>See the featured demos at <a href="http://www.highcharts.com/demo/heatmap/">Heat map</a> and <a href="http://www.highcharts.com/demo/heatmap-canvas/">Large heatmap</a>. The latter demonstrates how a HTML5 canvas can be plugged in to optimize rendering times.</p>
+<p>See <a href="http://api.highcharts.com/highmaps#plotOptions.heatmap">heatmap</a> in the Highmaps docs.</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Tue, 22 Apr 2014 13:32:10 +0000</pubDate>
+		</item>
+		<item>
+			<title>Waterfall series</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/waterfall-series</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/waterfall-series</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Waterfall series</h1>
+
+<p>&nbsp;</p>
+
+<p>A waterfall chart is a form of data visualization that helps in determining the cumulative effect of sequentially introduced positive or negative values. The waterfall chart is also known as a flying bricks chart or Mario chart due to the apparent suspension of columns (bricks) in mid-air. Often in finance, it will be referred to as a bridge. (Quote from Wikipedia).</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://www.highcharts.com//images/docs/waterfall.png" style="width: 599px; height: 416px;" /></p>
+
+<p>&nbsp;</p>
+
+<h3>Defining the points</h3>
+
+<p>Defining the points in a waterfall is pretty straight forward. Each point is accumulated on top of the next, or substracted from the sum if it is negative. The most intuitive way of defining a series is to give each point a name and an Y value, and set <a href="http://api.highcharts.com#xAxis.type">xAxis.type</a> to <em>&quot;category&quot;</em>. A live demo can be seen at <a href="http://www.highcharts.com/demo/waterfall">www.highcharts.com/demo/waterfall</a>.</p>
+
+<p>Furthermore, a waterfall series has two kinds of automatically computed columns. These points don&#39;t have an Y value, only a flag that specifies their type:</p>
+
+<ul>
+    <li><code>isIntermediateSum</code><span style="line-height: 1.6em;">&nbsp;<br />
+    When this property is true, the points acts as a summary column for the values added or substracted since the last intermediate sum.</span></li>
+    <li><code><span style="line-height: 1.6em;">isSum</span></code><br />
+    <span style="line-height: 1.6em;">When this preperty is true, the point display the total sum across the entire series.</span></li>
+</ul>
+
+<p><span style="line-height: 1.6em;">Sample code:</span></p>
+
+<pre>
+data: [{
+    name: &#39;Start&#39;,
+    y: 120000
+}, {
+    name: &#39;Product Revenue&#39;,
+    y: 569000
+}, {
+    name: &#39;Service Revenue&#39;,
+    y: 231000
+}, {
+    name: &#39;Positive Balance&#39;,
+    isIntermediateSum: true,
+    color: &#39;#0066FF&#39;
+}, {
+    name: &#39;Fixed Costs&#39;,
+    y: -342000
+}, {
+    name: &#39;Variable Costs&#39;,
+    y: -233000
+}, {
+    name: &#39;Balance&#39;,
+    isSum: true,
+    color: &#39;#0066FF&#39;
+}]</pre>
+
+<h3>&nbsp;</h3>
+
+<h3>Colors</h3>
+
+<p>The up and down points can be colored separately through the <a href="http://api.highcharts.com#plotOptions.waterfall.color">color</a> and <a href="http://api.highcharts.com#plotOptions.waterfall.upColor">upColor</a> properties. Sums and intermediate sums have no specific colors, but these columns - as any column - can be colored by individual color settings.</p>
+
+<p>&nbsp;</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:26:32 +0000</pubDate>
+		</item>
+		<item>
+			<title>Funnel series</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/funnel-series</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/funnel-series</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Funnel series</h1>
+
+<p><a href="http://www.highcharts.com/demo/funnel">See live demo</a>.</p>
+
+<p>Funnel charts are a type of chart often used to visualize stages in a sales project, where the top are the initial stages with the most clients. The funnel narrows as more clients drop off.&nbsp;</p>
+
+<p><img alt="" src="http://www.highcharts.com//images/docs/funnel.png" style="width: 610px; height: 404px;" /></p>
+
+<p>&nbsp;</p>
+
+<h3>Requirements</h3>
+
+<p>In order for funnel series to run, the <code>modules/funnel.js</code> file must be loaded after <code>highcharts.js</code>.</p>
+
+<p>&nbsp;</p>
+
+<h3>Setting the funnel size</h3>
+
+<p>Each element of the funnel has a height that relates to the value. The size of the funnel by default fills the plot area, and can be overridden by width and height settings. In addition, the neck&#39;s size can be set by the <a href="http://api.highcharts.com#plotOptions.funnel.neckWidth">neckWidth</a> and <a href="http://api.highcharts.com#plotOptions.funnel.neckHeight">neckHeight</a> options. For the full set of options related to the funnel chart type, see <a href="http://api.highcharts.com#plotOptions.funnel">plotOptions.funnel</a> in the API reference.</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:26:18 +0000</pubDate>
+		</item>
+		<item>
+			<title>Error bar series</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/error-bar-series</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/error-bar-series</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Error bar series</h1>
+
+<p>Error bars are a graphical representation of the variability of data and are used on graphs to indicate the error, or uncertainty in a reported measurement.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" src="http://www.highcharts.com//images/docs/error-bar.png" style="width: 588px; height: 404px;" /></p>
+
+<p>&nbsp;</p>
+
+<h3>Setting up the error bar series</h3>
+
+<p>In Highcharts, an error bar series is defined by setting the type to <code>errorbar</code>. An error bar series relates to a parent series through the option <a href="http://api.highcharts.com#plotOptions.errorbar.linkedTo">linkedTo</a>. By default, the linkedTo option is &quot;:previous&quot;, which means that the error bar series by default relates to the series defined before it in the source code. To use another series, the <code>linkedTo</code> option relates to the <code>id</code> option of the parent series.</p>
+
+<pre>
+series: [{
+    name: &#39;Rainfall&#39;,
+    color: &#39;#4572A7&#39;,
+    type: &#39;column&#39;,
+    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+}, { 
+    name: &#39;Rainfall error&#39;,
+    type: &#39;errorbar&#39;,
+    data: [[48, 51], [68, 73], [92, 110], [128, 136], [140, 150], [171, 179], [135, 143], [142, 149], [204, 220], [189, 199], [95, 110], [52, 56]]
+}]</pre>
+
+<h3>&nbsp;</h3>
+
+<h3>Styling the error bars</h3>
+
+<p>The different parts of the error bar anatomy can be styled individually. In a non-inverted chart, the <em>stem</em> is the vertical bar in the center, while the <em>whiskers</em> are the top and bottom lines marking the values. The <a href="http://api.highcharts.com#plotOptions.errorbar.lineWidth">lineWidth</a> option sets the line thickness globally. The <a href="http://api.highcharts.com#plotOptions.errorbar.whiskerWidth">whiskerWidth</a> and <a href="http://api.highcharts.com#plotOptions.errorbar.stemWidth">stemWidth</a> options sets the width of the whiskers and the stem individually. For the full set of options, see <a href="http://api.highcharts.com#plotOptions.errorbar">plotOptions.errorbar</a>.</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:26:00 +0000</pubDate>
+		</item>
+		<item>
+			<title>Box plot series</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/box-plot-series</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/box-plot-series</guid>
+			<description><![CDATA[<div class="feed-description"><h2>Box plot series</h2>
+
+<p>A box plot is a convenient way of depicting groups of data through their five-number summaries: the smallest observation (sample minimum), lower quartile (Q1), median (Q2), upper quartile (Q3), and largest observation (sample maximum). Combined with a scatter series, the box plot may also indicate which observations, if any, might be considered outliers.</p>
+
+<p> </p>
+
+<p><img alt="Highcharts Box Plot" src="http://www.highcharts.com//images/docs/box-plot.png" style="width: 603px; height: 413px;" /></p>
+
+<p> </p>
+
+<p> </p>
+
+<h3>Data format</h3>
+
+<p>Each point in a box plot has five values: low, q1, median, q3 and high. Highcharts recognizes three ways of defining a point:</p>
+
+<ul>
+    <li>Object literal. The X value is optional.<br />
+    <code>{ x: Date.UTC(2013, 1, 7), low: 0, q1: 1, median: 2, q3: 3, high: 4 }</code></li>
+    <li>Array of 5 values. The X value is inferred.<br />
+    <code>[0, 1, 2, 3, 4]</code></li>
+    <li>Array of 6 values. The X value is the first position.<br />
+    <code>[Date.UTC(2013, 1, 7), 0, 1, 2, 3, 4]</code></li>
+</ul>
+
+<p> </p>
+
+<h3>Styling the boxes</h3>
+
+<p>The different parts of the box anatomy can be styled individually. The stem, whiskers and median have their own options for line width, color and dash style, while the box itself is subject to the color, lineWidth and fillColor options. See <a href="http://api.highcharts.com#plotOptions.boxplot">plotOptions.boxplot</a> for a full reference, and <a href="http://www.highcharts.com/sample/highcharts/plotoptions/box-plot-styling">the box plot styling</a> sample for a demonstration.</p>
+
+<p> </p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:25:43 +0000</pubDate>
+		</item>
+		<item>
+			<title>Flag series</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/flag-series</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/flag-series</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Flag series (Highstock only)</h1>
+<p>A flag series consists of flags marking events or points of interests. Used alone flag series will make no sense. <span style="line-height: 1.6em;">Flags can be placed on either the serie of the chart or on the axis. </span></p>
+<p><span style="line-height: 1.6em;">Flag series belong to Highstock, but they can also be applied to a regular Highcharts chart created with the Highcharts.Chart() constructor as long as the highstock.js file is loaded in the page. See the <a href="http://www.highcharts.com//docs/frequently-asked-questions#highstock-features-in-highcharts">FAQ item</a> on the matter.&nbsp;</span></p>
+<p><img style="width: 800px; height: 267px;" src="http://www.highcharts.com//images/docs/flagseries.png" alt="" /></p>
+<p>Every flag consists of x, title and text.&nbsp;<span style="line-height: 1.6em;">The attribute "x" must be set to the point where the flag should appear. The attribute "title" is the text which is displayed inside the flag on the chart. The attribute "text" contains the text which will appear when the mouse hover above the flag.</span></p>
+<p><span style="line-height: 1.6em;">To create a flag series, add the following configuration in the series option:</span></p>
+<pre>{
+    type : 'flags',
+    data : [{
+        x : 0,      // Point where the flag appears
+        title : '', // Title of flag displayed on the chart 
+        text : ''   // Text displayed when the flag are highlighted.
+    }],
+    onSeries : '',  // Id of which series it should be placed on. If not defined 
+                    // the flag series will be put on the X axis
+    shape : 'flag'  // Defines the shape of the flags.
+}</pre>
+<h2>Options related to flag series</h2>
+<table style="width: 622px; height: 126px;" border="1" cellspacing="1" cellpadding="1">
+<tbody>
+<tr>
+<td><a href="http://api.highcharts.com/highstock#plotOptions.flags.onSeries">plotOptions.flags.onSeries</a></td>
+<td><span style="line-height: 19.1875px;">Decides if the flags will be put on the series of the chart or on the axis. To put the flags on a serie, the onSeries must be defined and contain the id to the featured serie</span></td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highstock#plotOptions.flags.shape">plotOptions.flags.shape</a></td>
+<td><span style="line-height: 19.1875px;">Define the shape of the flag marker.</span></td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highstock#plotOptions.flags.stackDistance">plotOptions.flags.stackDistance</a></td>
+<td><span style="line-height: 19.1875px;">Define the distance between flags that appears on the chart with equal value.</span></td>
+</tr>
+</tbody>
+</table>
+<h2>Flagseries examples</h2>
+<ul>
+<li><a href="http://highcharts.com/stock/demo/flags-general">Flags marking events</a></li>
+<li><a href="http://highcharts.com/stock/demo/flags-placement">Flags placement</a></li>
+<li><a href="http://highcharts.com/stock/demo/flags-shapes">Flags shapes and colors</a></li>
+</ul></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:25:30 +0000</pubDate>
+		</item>
+		<item>
+			<title>Range series</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/range-series</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/range-series</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Range series</h1>
+<p>Using range series requires that the <span style="font-family: courier new,courier,monospace;">highcharts-more.js</span> file is loaded.</p>
+<p>Highcharts includes range series in three different flavours, namely "arearange", "areasplinerange" and "columnrange". Instead of cluttering up the API with a "barrange" series type, we let you achieve this by setting <a href="http://api.highcharts.com#chart.inverted">chart.inverted</a> to true with a column range series. Data points for range series can be defined either as objects ({ x: 0, low: 1, high: 9 }) or as arrays ([0, 1, 9]). In either case, the x value can be skipped.</p>
+<p><img style="width: 600px; height: 295px;" src="http://www.highcharts.com//images/docs/range_serie.png" alt="" /></p>
+<p><span style="line-height: 1.6em;">To create a range series set chart.type or series.type to "columnrange":</span></p>
+<pre>chart: {
+    type: 'columnrange'
+}</pre>
+<h2>Options related to Range series</h2>
+<table style="width: 601px; height: 45px;" border="1" cellspacing="1" cellpadding="1">
+<tbody>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#plotOptions.arearange.dataLabels">dataLabels</a></td>
+<td>
+<div>Since both the low values and high values for a series need a separate data label, we added a new set of options, "xLow", "xHigh", "yLow" and "yHigh". With these options, the relative position can be altered.</div>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>Range series examples</h2>
+<ul>
+<li><a href="http://jsfiddle.net/highcharts/XjzFH/">View horizontal column range example with data labels</a></li>
+</ul></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:25:09 +0000</pubDate>
+		</item>
+		<item>
+			<title>Angular gauges</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/angular-gauges</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/angular-gauges</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Angular gauges</h1>
+<p>Angular gauges are also known as dials or speedometer-like widgets, and provide a great visualisation for dashboards. Like with polar charts, we extended the already existing series/points/axis model, and implemented the gauges as a new series type with one value axis, the yAxis. Which means that everything you learned about working dynamically and statically with other Highcharts series types, also applies to the angular gauges. </p>
+<p><img src="http://www.highcharts.com/images/docs/gauge.png" border="0" alt="" style="width: 400px; height: 300px;" /></p>
+<p>One thing that is important to notice is that gauges have no x-axis. The x-axis in a gauge is completely stripped for functionality and operations on this axis, it will not be drawn on the chart.</p>
+<p>To create an Angular gauge set chart.type to "gauge":</p>
+<pre>chart: {
+    type: 'gauge'            
+}</pre>
+<p>Normally there is only one point in a gauge series, but it also handles multiple point, like in our clock example with three dials. You can add as many background elements as you like to the gauge, allowing you to style it all the way from the minimal default design to heavy, 3D like works of art with shadows and reflections created with linear and radial gradients.</p>
+<h2>Solid gauges</h2>
+<p>Since Highcharts 4, we also provide a second type of gauges, the <code>solidgauge</code>. It is similar to the gauge series, but has a solid color displaying the value, and responds to color setting on the Y axis, similar to the colorAxis of a map. Read more in the <a href="http://api.highcharts.com/highcharts#plotOptions.solidgauge">API</a>.</p>
+<h2>Options related to gauges</h2>
+<table style="width: 1000px;" border="1" cellspacing="1" cellpadding="1">
+<tbody>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#pane">pane</a></td>
+<td>
+<div>This configuration object holds general options for the combined X and Y axes set. Each xAxis or yAxis can reference the pane by index.</div>
+</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#plotOptions.gauge">plotOptions.gauge</a></td>
+<td>The new series type is called "gauge".</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#plotOptions.gauge.dataLabels">plotOptions.gauge.dataLabels</a></td>
+<td>For gauges, the dataLabels are enabled by default and shown in a bordered box below the pivot.</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#plotOptions.gauge.dial">plotOptions.gauge.dial</a></td>
+<td>The "dial" configuration object holds the setup for the pointer of the gauge. Available sub-options are "backgroundColor", "baseLength", "baseWidth", "borderColor", "borderWidth", "radius" and "rearLength".</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#plotOptions.gauge.pivot">plotOptions.gauge.pivot</a></td>
+<td>The "pivot" configuration object holds the setup for the center of rotation of the gauge. Available sub-options are "backgroundColor", "borderColor", "borderWidth" and "radius".</td>
+</tr>
+</tbody>
+</table>
+<h2>Gauge examples</h2>
+<ul>
+<li><a href="http://jsfiddle.net/highcharts/EjRLw/">Spedometer with dual axes</a></li>
+<li><a href="http://jsfiddle.net/highcharts/3CUgG/">The Highcharts Clock</a></li>
+<li><a href="http://jsfiddle.net/highcharts/wCJjE/">VU meter</a></li>
+</ul></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:24:52 +0000</pubDate>
+		</item>
+		<item>
+			<title>Polar chart</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/polar-chart</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/polar-chart</guid>
+			<description><![CDATA[<div class="feed-description"><h1>Polar Chart</h1>
+<p>Polar charts require the <span style="font-family: courier new,courier,monospace;">highcharts-more.js</span> file.</p>
+<p>We took great care to reuse existing options and patterns when designing the option set of polar charts. The result is one single switch to turn a regular X-Y chart into a polar chart. Add the chart.polar option, and the X axis is wrapped around the perimeter while the Y axis extends from the center to the top.</p>
+<p><img style="width: 600px; height: 400px;" src="http://www.highcharts.com//images/docs/polar.png" alt="Image of a Polar chart" /></p>
+<p>To create a polar chart set chart.polar to be true:</p>
+<pre>chart: {
+    polar: true
+}</pre>
+<p>Every aspect of the chart anatomy, including series types like lines, areas, splines and columns as well as features like plot bands, data labels, tooltips, click events, stacking and axis setup, are transformed to the polar coordinate system.</p>
+<h2>Options related to polar charts</h2>
+<table style="width: 601px; height: 331px;" border="1" cellspacing="1" cellpadding="1">
+<tbody>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#chart.polar">chart.polar</a></td>
+<td>When true, cartesian charts are transformed into the polar coordinate system.</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#pane">pane</a></td>
+<td>This configuration object holds general options for the combined X and Y axes set. Each xAxis or yAxis can reference the pane by index.</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#pane.background">pane.background</a></td>
+<td>An object, or array of objects, for backgrounds. Sub options include backgroundColor (which can be solid or gradient),innerWidth, outerWidth, borderWidth, borderColor.</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#pane.center">pane.center</a></td>
+<td>The center of the polar chart, given as an array of [x, y] positions. Positions can be given as integers that transform to pixels, or as percentages of the plot area size. Defaults to ['50%', '50%']</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#pane.endAngle">pane.endAngle</a></td>
+<td>The end angle of the polar X axis, given in degrees where 0 is north. Defaults to startAngle + 360.</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#pane.startAngle">pane.startAngle</a></td>
+<td>
+<div>The start angle of the polar X axis, given in degrees where 0 is north. Defaults to 0.</div>
+</td>
+</tr>
+<tr>
+<td><a href="http://api.highcharts.com/highcharts#plotOptions.series.pointPlacement">plotOptions.series.pointPlacement</a></td>
+<td>This option applies to cartesian charts as well. In a column chart, when the pointPlacement is "on", the point will not create any padding of the X axis, and thus the first column will point directly north in a polar chart. If the pointPlacement is "between", the columns will be laid out between ticks. This is useful for example for visualising an amount between two points in time or in a certain sector of a polar chart.</td>
+</tr>
+</tbody>
+</table>
+<h2>Polar chart examples</h2>
+<ul>
+<li><a href="http://jsfiddle.net/highcharts/z9nyR/">A polar chart with different series types</a></li>
+<li><a href="http://jsfiddle.net/highcharts/xEAxK/">A spider web</a></li>
+</ul></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:24:39 +0000</pubDate>
+		</item>
+		<item>
+			<title>OHLC chart</title>
+			<link>http://www.highcharts.com/docs/chart-and-series-types/ohlc-chart</link>
+			<guid isPermaLink="true">http://www.highcharts.com/docs/chart-and-series-types/ohlc-chart</guid>
+			<description><![CDATA[<div class="feed-description"><h1>
+    OHLC chart (Highstock only)</h1>
+<p>
+    The Open-High-Low-Close chart is typically used to show the change in price over a period of time. A vertical line shows the range of the price change where the top of the line is the highest and the bottom is the lowest. A tickmark on the left side of the chart indicates the opening price and a tickmark on the rightside indicates the closing price.</p>
+<p>
+    <img alt="" src="http://www.highcharts.com//images/docs/ohlc.png" style="width: 700px; height: 400px; " /></p>
+<p>
+    For more information on the&nbsp;candlestick chart, see the&nbsp;<a href="http://api.highcharts.com/highstock#plotOptions.ohlc">API reference</a>.</p></div>]]></description>
+			<author>torstein@highsoft.com (Super User)</author>
+			<category>Chart and series types</category>
+			<pubDate>Thu, 22 Aug 2013 09:24:23 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

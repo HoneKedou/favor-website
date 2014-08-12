@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! - Open Source Content Management" -->
+<feed xmlns="http://www.w3.org/2005/Atom"  xml:lang="en-gb">
+	<title type="text">Maps</title>
+	<subtitle type="text">Highcharts - Interactive JavaScript charts for your web pages.</subtitle>
+	<link rel="alternate" type="text/html" href="http://www.highcharts.com"/>
+	<id>http://www.highcharts.com/docs/maps/13-docs/maps</id>
+	<updated>2014-08-11T00:43:13+00:00</updated>
+	<generator uri="http://joomla.org" version="2.5">Joomla! - Open Source Content Management</generator>
+	<link rel="self" type="application/atom+xml" href="http://www.highcharts.com/docs/maps/13-docs/maps?format=feed&amp;type=atom"/>
+	<entry>
+		<title>Map collection</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/maps/map-collection"/>
+		<published>2014-06-11T12:13:11+00:00</published>
+		<updated>2014-06-11T12:13:11+00:00</updated>
+		<id>http://www.highcharts.com/docs/maps/map-collection</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;For your convenience, Highmaps offers a free &lt;a href=&quot;http://code.highcharts.com/mapdata/&quot;&gt;collection of maps&lt;/a&gt;, optimized for use with Highmaps. For common maps, it saves you the trouble of finding or drawing suitable SVG maps. Instead, you can choose between hundres of pre-generated maps of countries, regions and other administration levels.&lt;/p&gt;
+&lt;h2&gt;License&lt;/h2&gt;
+&lt;p&gt;The Highmaps Map Collection comes with the license of the source data. For Admin0 (countries) and Admin1 (US states, German Bundesländer, Dutch regions etc), the source data is &lt;a href=&quot;http://www.naturalearthdata.com/&quot;&gt;Natural Earth&lt;/a&gt;, which is &lt;a href=&quot;http://en.wikipedia.org/wiki/Public_domain&quot;&gt;Public Domain&lt;/a&gt;. For Admin2, we have only compiled selected countries, and these maps are created from national files with their own license which is specified on the SVG map and in the other format files as meta data. If you miss your country, please contact us and we'll try to find a suitable shapefile and generate more maps. &lt;/p&gt;
+&lt;p&gt;For maps loaded using the default GeoJSON input into the mapData option, a short version of the copyright will be printed in the chart's credits label.&lt;/p&gt;
+&lt;h2&gt;Using the map collection&lt;/h2&gt;
+&lt;p&gt;In the &lt;a href=&quot;http://code.highcharts.com/mapdata/&quot;&gt;map collection reference&lt;/a&gt;, each map name is followed by a link to an example. View the source of this example to get started. In short, the GeoJSON version of the map is loaded in a script tag in the page. This GeoJSON object is then registered to the Highcharts.maps object, and applied to the mapData option in the chart setup.&lt;/p&gt;
+&lt;p&gt;1. Add the map as a JavaScript element:&lt;/p&gt;
+&lt;pre&gt;&lt;span class=&quot;webkit-html-tag&quot; style=&quot;font-family: monospace; font-size: medium; white-space: pre-wrap;&quot;&gt;&amp;lt;script &lt;span class=&quot;webkit-html-attribute-name&quot;&gt;src&lt;/span&gt;=&quot;&lt;a class=&quot;webkit-html-attribute-value webkit-html-resource-link&quot; href=&quot;http://code.highcharts.com/mapdata/1.0.0/custom/world.js&quot; target=&quot;_blank&quot;&gt;http://code.highcharts.com/mapdata/custom/world.js&lt;/a&gt;&quot;&amp;gt;&lt;/span&gt;&lt;span class=&quot;webkit-html-tag&quot; style=&quot;font-family: monospace; font-size: medium; white-space: pre-wrap;&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;2. Load it in the mapData:&lt;/p&gt;
+&lt;pre&gt;&lt;span style=&quot;color: #000000; font-family: monospace; font-size: medium; white-space: pre-wrap;&quot;&gt;mapData: Highcharts.maps['custom/world'],&lt;/span&gt;&lt;/pre&gt;
+&lt;h2&gt;Using parts of a map&lt;/h2&gt;
+&lt;p&gt;If you can't find the exact map that you want in the collection, it is easy to use only selected parts of a larger area. Say you want a comparative map of Canada, USA and Mexico. Since we don't have that exact combination in the collection (as of now), you can use the map called &quot;North America without Central&quot;. This map also contains Greenland as well as Caribbean islands. So we apply a data set only for the three countries we want, and set the &lt;a href=&quot;http://api.highcharts.com/highmaps#plotOptions.map.allAreas&quot;&gt;allAreas&lt;/a&gt; option to false. This option makes sure all null points (the countries that don't have data), are hidden. See &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-allareas-false/&quot;&gt;demo on jsFiddle&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Modify our maps&lt;/h2&gt;
+&lt;p&gt;Our maps are also a good starting points for your own modified maps. Borders can be moved, areas joined etc. and labels modified by loading the SVG map in Incscape, the free SVG editor. Our article on &lt;a href=&quot;docs/maps/custom-maps&quot;&gt;Custom maps&lt;/a&gt; explains in detail how to draw your maps from scratch. Modifying existing maps is easier - instead of drawing shapes use the existing ones and perform the same operations as described in the article.&lt;/p&gt;
+&lt;h2&gt;Disclaimer&lt;/h2&gt;
+&lt;p&gt;We offer the map collection for free to use with Highmaps, for your convenience. We will not be held responsible for errors in the maps, although we will strive to respond to bug reports and keep the maps correct.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;For your convenience, Highmaps offers a free &lt;a href=&quot;http://code.highcharts.com/mapdata/&quot;&gt;collection of maps&lt;/a&gt;, optimized for use with Highmaps. For common maps, it saves you the trouble of finding or drawing suitable SVG maps. Instead, you can choose between hundres of pre-generated maps of countries, regions and other administration levels.&lt;/p&gt;
+&lt;h2&gt;License&lt;/h2&gt;
+&lt;p&gt;The Highmaps Map Collection comes with the license of the source data. For Admin0 (countries) and Admin1 (US states, German Bundesländer, Dutch regions etc), the source data is &lt;a href=&quot;http://www.naturalearthdata.com/&quot;&gt;Natural Earth&lt;/a&gt;, which is &lt;a href=&quot;http://en.wikipedia.org/wiki/Public_domain&quot;&gt;Public Domain&lt;/a&gt;. For Admin2, we have only compiled selected countries, and these maps are created from national files with their own license which is specified on the SVG map and in the other format files as meta data. If you miss your country, please contact us and we'll try to find a suitable shapefile and generate more maps. &lt;/p&gt;
+&lt;p&gt;For maps loaded using the default GeoJSON input into the mapData option, a short version of the copyright will be printed in the chart's credits label.&lt;/p&gt;
+&lt;h2&gt;Using the map collection&lt;/h2&gt;
+&lt;p&gt;In the &lt;a href=&quot;http://code.highcharts.com/mapdata/&quot;&gt;map collection reference&lt;/a&gt;, each map name is followed by a link to an example. View the source of this example to get started. In short, the GeoJSON version of the map is loaded in a script tag in the page. This GeoJSON object is then registered to the Highcharts.maps object, and applied to the mapData option in the chart setup.&lt;/p&gt;
+&lt;p&gt;1. Add the map as a JavaScript element:&lt;/p&gt;
+&lt;pre&gt;&lt;span class=&quot;webkit-html-tag&quot; style=&quot;font-family: monospace; font-size: medium; white-space: pre-wrap;&quot;&gt;&amp;lt;script &lt;span class=&quot;webkit-html-attribute-name&quot;&gt;src&lt;/span&gt;=&quot;&lt;a class=&quot;webkit-html-attribute-value webkit-html-resource-link&quot; href=&quot;http://code.highcharts.com/mapdata/1.0.0/custom/world.js&quot; target=&quot;_blank&quot;&gt;http://code.highcharts.com/mapdata/custom/world.js&lt;/a&gt;&quot;&amp;gt;&lt;/span&gt;&lt;span class=&quot;webkit-html-tag&quot; style=&quot;font-family: monospace; font-size: medium; white-space: pre-wrap;&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;2. Load it in the mapData:&lt;/p&gt;
+&lt;pre&gt;&lt;span style=&quot;color: #000000; font-family: monospace; font-size: medium; white-space: pre-wrap;&quot;&gt;mapData: Highcharts.maps['custom/world'],&lt;/span&gt;&lt;/pre&gt;
+&lt;h2&gt;Using parts of a map&lt;/h2&gt;
+&lt;p&gt;If you can't find the exact map that you want in the collection, it is easy to use only selected parts of a larger area. Say you want a comparative map of Canada, USA and Mexico. Since we don't have that exact combination in the collection (as of now), you can use the map called &quot;North America without Central&quot;. This map also contains Greenland as well as Caribbean islands. So we apply a data set only for the three countries we want, and set the &lt;a href=&quot;http://api.highcharts.com/highmaps#plotOptions.map.allAreas&quot;&gt;allAreas&lt;/a&gt; option to false. This option makes sure all null points (the countries that don't have data), are hidden. See &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/plotoptions/series-allareas-false/&quot;&gt;demo on jsFiddle&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Modify our maps&lt;/h2&gt;
+&lt;p&gt;Our maps are also a good starting points for your own modified maps. Borders can be moved, areas joined etc. and labels modified by loading the SVG map in Incscape, the free SVG editor. Our article on &lt;a href=&quot;docs/maps/custom-maps&quot;&gt;Custom maps&lt;/a&gt; explains in detail how to draw your maps from scratch. Modifying existing maps is easier - instead of drawing shapes use the existing ones and perform the same operations as described in the article.&lt;/p&gt;
+&lt;h2&gt;Disclaimer&lt;/h2&gt;
+&lt;p&gt;We offer the map collection for free to use with Highmaps, for your convenience. We will not be held responsible for errors in the maps, although we will strive to respond to bug reports and keep the maps correct.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Maps" />
+	</entry>
+	<entry>
+		<title>Create custom maps for Highmaps</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/maps/custom-maps"/>
+		<published>2014-05-20T12:28:32+00:00</published>
+		<updated>2014-05-20T12:28:32+00:00</updated>
+		<id>http://www.highcharts.com/docs/maps/custom-maps</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;Highmaps can be used for more than geographic data, and more than the featured maps provided in the demos. This article goes through the process of drawing your own map in Inkscape, and using our online map converter tool to construct an interactive map with data values. We use a map of Australia for demo purposes. (Do not use that in production, we have a better one in our mapdata collection).&lt;/p&gt;
+&lt;p&gt;1. The first step is to install &lt;a href=&quot;http://www.inkscape.org/en/&quot;&gt;Inkscape&lt;/a&gt; on your system. This is the only tool you need to install, and it's free. Open up Inkscape, it opens a new document by default.&lt;/p&gt;
+&lt;p&gt;2. We will use a PNG image in the background and draw actual SVG shapes on top of it. Open the PNG image in Inkscape. Inkscape ask if you want to link or embed the image, choose either of the two.&lt;/p&gt;
+&lt;p&gt;3. In the left toolbar, select the tool called &quot;Draw bezier curves and straight lines (Shift + F6)&quot;.&lt;/p&gt;
+&lt;p&gt;4. Start drawing around a territory by clicking repeatedly around the perimeter. Nodes can be moved and added if you do mistakes. To start over again with a shape, select it using the &quot;Select and transform objects (F1)&quot; tool, and hit Delete. In the image below we have drawn the shape for Western Australia.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-3.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;5. The Highmaps converter tool expects fills for areas in order to distinguish it from separators and other lines. In the lower left corner of Inkscape, it says &lt;em&gt;Fill: None&lt;/em&gt;. Click the text None to bring up the Fill and Stroke dialog. Next to the cross depicting no fill, select the solid fill button. Pick a color.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-4.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;6. Next, we want to give the territory a name that Highmaps can use for labels and identification. In the Object menu, select &lt;em&gt;Object Properties (Shift + Ctrl + O)&lt;/em&gt;. Set an &lt;em&gt;id&lt;/em&gt; and a &lt;em&gt;label&lt;/em&gt;. The label is used by Highmaps. Remember to click the &lt;em&gt;Set&lt;/em&gt; button, otherwise Inkscape won't apply the information.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-5.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;7. For the second territory we want to do exactly the same, but there is also another thing to consider. We want the border between the two shapes to align, so that when we zoom in we don't see borders lying close but not on top of each other. We ensure this by selecting the &lt;em&gt;Snap to path&lt;/em&gt; button in the right toolbar. Now when we're drawing the second shape, we will get a small cross and a label saying &lt;em&gt;Handle to path&lt;/em&gt; when we're getting close to the first shape.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-6.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;8. Continue like this for the other simple shapes. The next items, #10-#12, will be about special cases; islands, enclaves and separator lines. If you don't have those, jump to #13.&lt;/p&gt;
+&lt;p&gt;9. &lt;strong&gt;Islands&lt;/strong&gt;. Start by drawing one of the islands or associated mainland like any other shape. Give it a fill. Then draw the island and give it a fill. Now select both (or all) shapes by using the Select tool and holding down the Shift key while clicking. In the Object menu, select &lt;em&gt;Group (Ctrl + G)&lt;/em&gt;. Now you can give the new group an id and a label like in #7.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-7.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;10. &lt;strong&gt;Enclaves&lt;/strong&gt; are territories within another territory. Start by drawing the outer territory like any other shape. Give it a fill and label. Now in the fill and stroke dialog, set the opacity to 50% so that you can see the underlying enclave. Now you are able to draw the enclave on top.&lt;/p&gt;
+&lt;p&gt;11. &lt;strong&gt;Separator lines&lt;/strong&gt; are typically used when an offshore territory is drawn close to the mainland, and the distance is not to scale. In our sample we will move Tasmania to the west and draw a separator. Use the Bezier tool again, and draw the separator where you want it. Double click to close it. That's it. As long as you don't add a fill, the map parser will treat it as a line object.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-8.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;12. After you're finished drawing, save the file. Inkscape saves as SVG by default. Open the file in a text editor so that you see the SVG/XML markup. Select all and copy. &lt;/p&gt;
+&lt;p&gt;13. Using a modern browser (tested with Chrome), go to &lt;a href=&quot;studies/map-from-svg.htm&quot;&gt;www.highcharts.com/studies/map-from-svg.htm&lt;/a&gt;. In the textarea labeled &quot;Online SVG URL or SVG markup&quot;, paste your SVG markup. Hit the Load button. Now an interactive map should display on the right.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-9.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;14. The actual map shape data is available under the &quot;View data&quot; link. Click it and copy the whole contents of the text area to the right. This is a JSON object containing the template for the entire &lt;a href=&quot;http://api.highcharts.com/highmaps/#series&quot;&gt;series&lt;/a&gt; options of a new map chart, combining real area data and separator lines.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-10.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;15. Go to &lt;a href=&quot;http://jsfiddle.net/highcharts/TUy7x/&quot;&gt;jsfiddle.net/highcharts/TUy7x/&lt;/a&gt;, an empty boilerplate for Highmaps. Add a series configuration object and paste your data. It should now look like &lt;a href=&quot;http://jsfiddle.net/highcharts/TUy7x/1/&quot;&gt;jsfiddle.net/highcharts/TUy7x/1/&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;$(function () {
+    // Initiate the chart
+    $('#container').highcharts('Map', {
+        series: /* paste your content here */
+    });
+});&lt;/pre&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.3em;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.3em;&quot;&gt;16. Now all you have to do is add values to the points to make a useful chart. Alternatively, use the paths in the &lt;/span&gt;&lt;a href=&quot;http://api.highcharts.com/highmaps/#series.mapData&quot; style=&quot;line-height: 1.3em;&quot;&gt;mapData&lt;/a&gt;&lt;span style=&quot;line-height: 1.3em;&quot;&gt; option and add data separately. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Good luck, and don't hesitate to contact us via our &lt;a href=&quot;support&quot;&gt;Support Page&lt;/a&gt; if you have any problems or corrections to this article.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;Highmaps can be used for more than geographic data, and more than the featured maps provided in the demos. This article goes through the process of drawing your own map in Inkscape, and using our online map converter tool to construct an interactive map with data values. We use a map of Australia for demo purposes. (Do not use that in production, we have a better one in our mapdata collection).&lt;/p&gt;
+&lt;p&gt;1. The first step is to install &lt;a href=&quot;http://www.inkscape.org/en/&quot;&gt;Inkscape&lt;/a&gt; on your system. This is the only tool you need to install, and it's free. Open up Inkscape, it opens a new document by default.&lt;/p&gt;
+&lt;p&gt;2. We will use a PNG image in the background and draw actual SVG shapes on top of it. Open the PNG image in Inkscape. Inkscape ask if you want to link or embed the image, choose either of the two.&lt;/p&gt;
+&lt;p&gt;3. In the left toolbar, select the tool called &quot;Draw bezier curves and straight lines (Shift + F6)&quot;.&lt;/p&gt;
+&lt;p&gt;4. Start drawing around a territory by clicking repeatedly around the perimeter. Nodes can be moved and added if you do mistakes. To start over again with a shape, select it using the &quot;Select and transform objects (F1)&quot; tool, and hit Delete. In the image below we have drawn the shape for Western Australia.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-3.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;5. The Highmaps converter tool expects fills for areas in order to distinguish it from separators and other lines. In the lower left corner of Inkscape, it says &lt;em&gt;Fill: None&lt;/em&gt;. Click the text None to bring up the Fill and Stroke dialog. Next to the cross depicting no fill, select the solid fill button. Pick a color.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-4.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;6. Next, we want to give the territory a name that Highmaps can use for labels and identification. In the Object menu, select &lt;em&gt;Object Properties (Shift + Ctrl + O)&lt;/em&gt;. Set an &lt;em&gt;id&lt;/em&gt; and a &lt;em&gt;label&lt;/em&gt;. The label is used by Highmaps. Remember to click the &lt;em&gt;Set&lt;/em&gt; button, otherwise Inkscape won't apply the information.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-5.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;7. For the second territory we want to do exactly the same, but there is also another thing to consider. We want the border between the two shapes to align, so that when we zoom in we don't see borders lying close but not on top of each other. We ensure this by selecting the &lt;em&gt;Snap to path&lt;/em&gt; button in the right toolbar. Now when we're drawing the second shape, we will get a small cross and a label saying &lt;em&gt;Handle to path&lt;/em&gt; when we're getting close to the first shape.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-6.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;8. Continue like this for the other simple shapes. The next items, #10-#12, will be about special cases; islands, enclaves and separator lines. If you don't have those, jump to #13.&lt;/p&gt;
+&lt;p&gt;9. &lt;strong&gt;Islands&lt;/strong&gt;. Start by drawing one of the islands or associated mainland like any other shape. Give it a fill. Then draw the island and give it a fill. Now select both (or all) shapes by using the Select tool and holding down the Shift key while clicking. In the Object menu, select &lt;em&gt;Group (Ctrl + G)&lt;/em&gt;. Now you can give the new group an id and a label like in #7.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-7.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;10. &lt;strong&gt;Enclaves&lt;/strong&gt; are territories within another territory. Start by drawing the outer territory like any other shape. Give it a fill and label. Now in the fill and stroke dialog, set the opacity to 50% so that you can see the underlying enclave. Now you are able to draw the enclave on top.&lt;/p&gt;
+&lt;p&gt;11. &lt;strong&gt;Separator lines&lt;/strong&gt; are typically used when an offshore territory is drawn close to the mainland, and the distance is not to scale. In our sample we will move Tasmania to the west and draw a separator. Use the Bezier tool again, and draw the separator where you want it. Double click to close it. That's it. As long as you don't add a fill, the map parser will treat it as a line object.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-8.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;12. After you're finished drawing, save the file. Inkscape saves as SVG by default. Open the file in a text editor so that you see the SVG/XML markup. Select all and copy. &lt;/p&gt;
+&lt;p&gt;13. Using a modern browser (tested with Chrome), go to &lt;a href=&quot;studies/map-from-svg.htm&quot;&gt;www.highcharts.com/studies/map-from-svg.htm&lt;/a&gt;. In the textarea labeled &quot;Online SVG URL or SVG markup&quot;, paste your SVG markup. Hit the Load button. Now an interactive map should display on the right.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-9.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;14. The actual map shape data is available under the &quot;View data&quot; link. Click it and copy the whole contents of the text area to the right. This is a JSON object containing the template for the entire &lt;a href=&quot;http://api.highcharts.com/highmaps/#series&quot;&gt;series&lt;/a&gt; options of a new map chart, combining real area data and separator lines.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;images/stories/custom-maps/map-from-svg-10.png&quot; border=&quot;0&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;15. Go to &lt;a href=&quot;http://jsfiddle.net/highcharts/TUy7x/&quot;&gt;jsfiddle.net/highcharts/TUy7x/&lt;/a&gt;, an empty boilerplate for Highmaps. Add a series configuration object and paste your data. It should now look like &lt;a href=&quot;http://jsfiddle.net/highcharts/TUy7x/1/&quot;&gt;jsfiddle.net/highcharts/TUy7x/1/&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;$(function () {
+    // Initiate the chart
+    $('#container').highcharts('Map', {
+        series: /* paste your content here */
+    });
+});&lt;/pre&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.3em;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;line-height: 1.3em;&quot;&gt;16. Now all you have to do is add values to the points to make a useful chart. Alternatively, use the paths in the &lt;/span&gt;&lt;a href=&quot;http://api.highcharts.com/highmaps/#series.mapData&quot; style=&quot;line-height: 1.3em;&quot;&gt;mapData&lt;/a&gt;&lt;span style=&quot;line-height: 1.3em;&quot;&gt; option and add data separately. &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Good luck, and don't hesitate to contact us via our &lt;a href=&quot;support&quot;&gt;Support Page&lt;/a&gt; if you have any problems or corrections to this article.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Maps" />
+	</entry>
+	<entry>
+		<title>Color axis</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/maps/color-axis"/>
+		<published>2014-02-03T13:42:26+00:00</published>
+		<updated>2014-02-03T13:42:26+00:00</updated>
+		<id>http://www.highcharts.com/docs/maps/color-axis</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;The values on a &lt;a href=&quot;http://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;choropleth&lt;/a&gt; geo map or heat map are plotted against a color axis. The Highmaps color axis is a special case of an axis that is drawn inside the legend, displaying a gradient or single items depending on whether the axis is scalar or has data classes. See detailed reference and live examples in the &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis&quot;&gt;API&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Scalar axis&lt;/h2&gt;
+&lt;p&gt;A scalar color axis is represented by a gradient. The colors either range between the &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.minColor&quot;&gt;minColor&lt;/a&gt; and the &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.maxColor&quot;&gt;maxColor&lt;/a&gt;, or for more fine grained control the colors can be defined in &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.stops&quot;&gt;stops&lt;/a&gt;. Often times, the color axis needs to be adjusted to get the right color spread for the data. In addition to stops, consider using a logarithmic &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.type&quot;&gt;axis type&lt;/a&gt;, or setting &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.min&quot;&gt;min&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.max&quot;&gt;max&lt;/a&gt; to avoid the colors being determined by outliers.&lt;/p&gt;
+
+&lt;h2&gt;Data classes&lt;/h2&gt;
+&lt;p&gt;When &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.dataClasses&quot;&gt;dataClasses&lt;/a&gt; are used, the ranges are subdivided into separate classes like categories based on their values. This can be used for ranges between two values, but also for a true category. However, when your data is categorized, it may be as convenient to add each category to a separate series.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;The values on a &lt;a href=&quot;http://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;choropleth&lt;/a&gt; geo map or heat map are plotted against a color axis. The Highmaps color axis is a special case of an axis that is drawn inside the legend, displaying a gradient or single items depending on whether the axis is scalar or has data classes. See detailed reference and live examples in the &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis&quot;&gt;API&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Scalar axis&lt;/h2&gt;
+&lt;p&gt;A scalar color axis is represented by a gradient. The colors either range between the &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.minColor&quot;&gt;minColor&lt;/a&gt; and the &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.maxColor&quot;&gt;maxColor&lt;/a&gt;, or for more fine grained control the colors can be defined in &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.stops&quot;&gt;stops&lt;/a&gt;. Often times, the color axis needs to be adjusted to get the right color spread for the data. In addition to stops, consider using a logarithmic &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.type&quot;&gt;axis type&lt;/a&gt;, or setting &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.min&quot;&gt;min&lt;/a&gt; and &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.max&quot;&gt;max&lt;/a&gt; to avoid the colors being determined by outliers.&lt;/p&gt;
+
+&lt;h2&gt;Data classes&lt;/h2&gt;
+&lt;p&gt;When &lt;a href=&quot;http://api.highcharts.com/highmaps#colorAxis.dataClasses&quot;&gt;dataClasses&lt;/a&gt; are used, the ranges are subdivided into separate classes like categories based on their values. This can be used for ranges between two values, but also for a true category. However, when your data is categorized, it may be as convenient to add each category to a separate series.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Maps" />
+	</entry>
+	<entry>
+		<title>Map navigation</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/maps/map-navigation"/>
+		<published>2014-02-03T13:42:03+00:00</published>
+		<updated>2014-02-03T13:42:03+00:00</updated>
+		<id>http://www.highcharts.com/docs/maps/map-navigation</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;Highmaps supports different ways of navigating around the map - zooming, panning, zooming to an area etc. The API options related to this can be viewed at &lt;a href=&quot;http://api.highcharts.com/highmaps#mapNavigation&quot;&gt;mapNavigation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Please note that mapNavigation is disabled by default because the implementer should be concious that it may interfere with the navigation of the web page in general. When scrolling the mouse wheel over a map, the user may expect the web page to scroll, while Highmaps will capture the mousewheel event and zoom the map. The same goes for touch devices, where unless used right, the map may trap the user unable to zoom out to the page outside the map. So zooming should only be enabled in cases where the map actually needs it.&lt;/p&gt;
+
+&lt;h3&gt;Buttons&lt;/h3&gt;
+&lt;p&gt;Two buttons, [+] and [-], are by default shown on each map when navigation is enabled. These provide zooming in and zooming out.&lt;/p&gt;
+
+&lt;h3&gt;Multitouch&lt;/h3&gt;
+&lt;p&gt;On touch devices, zooming and panning may be performed by pinch and touch-drag gestures.&lt;/p&gt;
+
+&lt;h3&gt;Mousewheel&lt;/h3&gt;
+&lt;p&gt;Mousewheeling zooms in and out the map around the point under the mouse.&lt;/p&gt;
+
+&lt;h3&gt;Doubleclick&lt;/h3&gt;
+&lt;p&gt;Doubleclick by default zooms in, focused on the point under the mouse. Following the &lt;a href=&quot;http://api.highcharts.com/highmaps#mapNavigation.enableDoubleClickZoomTo&quot;&gt;enableDoubleClickZoomTo&lt;/a&gt; option, double clicking may zoom fully in to a specific point.&lt;/p&gt;
+
+&lt;h3&gt;Programmatic&lt;/h3&gt;
+&lt;p&gt;The map may be zoomed programmatically through the &lt;a href=&quot;http://api.highcharts.com/highmaps#Chart.mapZoom&quot;&gt;Chart.mapZoom&lt;/a&gt; or &lt;a href=&quot;http://api.highcharts.com/highmaps#Point.zoomTo&quot;&gt;Point.zoomTo&lt;/a&gt; methods.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;Highmaps supports different ways of navigating around the map - zooming, panning, zooming to an area etc. The API options related to this can be viewed at &lt;a href=&quot;http://api.highcharts.com/highmaps#mapNavigation&quot;&gt;mapNavigation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Please note that mapNavigation is disabled by default because the implementer should be concious that it may interfere with the navigation of the web page in general. When scrolling the mouse wheel over a map, the user may expect the web page to scroll, while Highmaps will capture the mousewheel event and zoom the map. The same goes for touch devices, where unless used right, the map may trap the user unable to zoom out to the page outside the map. So zooming should only be enabled in cases where the map actually needs it.&lt;/p&gt;
+
+&lt;h3&gt;Buttons&lt;/h3&gt;
+&lt;p&gt;Two buttons, [+] and [-], are by default shown on each map when navigation is enabled. These provide zooming in and zooming out.&lt;/p&gt;
+
+&lt;h3&gt;Multitouch&lt;/h3&gt;
+&lt;p&gt;On touch devices, zooming and panning may be performed by pinch and touch-drag gestures.&lt;/p&gt;
+
+&lt;h3&gt;Mousewheel&lt;/h3&gt;
+&lt;p&gt;Mousewheeling zooms in and out the map around the point under the mouse.&lt;/p&gt;
+
+&lt;h3&gt;Doubleclick&lt;/h3&gt;
+&lt;p&gt;Doubleclick by default zooms in, focused on the point under the mouse. Following the &lt;a href=&quot;http://api.highcharts.com/highmaps#mapNavigation.enableDoubleClickZoomTo&quot;&gt;enableDoubleClickZoomTo&lt;/a&gt; option, double clicking may zoom fully in to a specific point.&lt;/p&gt;
+
+&lt;h3&gt;Programmatic&lt;/h3&gt;
+&lt;p&gt;The map may be zoomed programmatically through the &lt;a href=&quot;http://api.highcharts.com/highmaps#Chart.mapZoom&quot;&gt;Chart.mapZoom&lt;/a&gt; or &lt;a href=&quot;http://api.highcharts.com/highmaps#Point.zoomTo&quot;&gt;Point.zoomTo&lt;/a&gt; methods.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Maps" />
+	</entry>
+	<entry>
+		<title>Getting started with Highmaps (Beta)</title>
+		<link rel="alternate" type="text/html" href="http://www.highcharts.com/docs/maps/getting-started"/>
+		<published>2014-02-03T13:31:57+00:00</published>
+		<updated>2014-02-03T13:31:57+00:00</updated>
+		<id>http://www.highcharts.com/docs/maps/getting-started</id>
+		<author>
+			<name>Super User</name>
+			<email>torstein@highsoft.com</email>
+		</author>
+		<summary type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;Highmaps is Highcharts for geo maps. Mainly &lt;a href=&quot;http://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;choropleth maps&lt;/a&gt; where the color intensity relates to some value of a geographic area, but Highmaps also supports different features like lines (roads, rivers etc.) and points (cities, points of interest) and more. Highmaps comes in two flavors, either as a standalone JavaScript file, or as a plugin for Highcharts.&lt;/p&gt;
+&lt;h2&gt;Load the required files&lt;/h2&gt;
+&lt;p&gt;For basics, see &lt;a href=&quot;docs/getting-started/installation&quot;&gt;Highcharts installation&lt;/a&gt;. The framework requirements and installation is the same for Highmaps as for Highcharts. To load Highmaps as a standalone product (if you don't have a license for Highcharts), include this script tag:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/maps/highmaps.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;If you already have Highcharts installed in the web page and want to run Highmaps as a plugin, include this script tag &lt;em&gt;after&lt;/em&gt; &lt;code&gt;highcharts.js&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/maps/modules/map.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;h2&gt;Load the map&lt;/h2&gt;
+&lt;p&gt;Highmaps loads its maps from &lt;a href=&quot;http://en.wikipedia.org/wiki/GeoJSON&quot;&gt;GeoJSON&lt;/a&gt;, an open standard for description of geographic features. Most GIS software supports this format as export from for instance Shapefile or KML export. Read more in the &lt;a href=&quot;http://api.highcharts.com/highmaps#Highcharts.geojson&quot;&gt;API reference&lt;/a&gt; and &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/geojson-multiple-types/&quot;&gt;see the live demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are three basic sources for your map:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use our &lt;a href=&quot;http://code.highcharts.com/mapdata/&quot;&gt;Map collection&lt;/a&gt;. Read the &lt;a href=&quot;docs/maps/map-collection&quot;&gt;tutorial article&lt;/a&gt; on the map collection to get started.&lt;/li&gt;
+&lt;li&gt;Find an SVG map online and convert it using our (experimental) &lt;a href=&quot;studies/map-from-svg.htm&quot;&gt;online converter&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;Create your own map from scratch using an SVG editor, then convert them online. Read our tutorial on &lt;a href=&quot;docs/maps/custom-maps&quot;&gt;Custom maps for Highmaps&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 1em;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Add and join data&lt;/h2&gt;
+&lt;p&gt;Once the empty map is in place, we're ready to add the data to the &lt;a href=&quot;http://api.highcharts.com/highmaps#series.data&quot;&gt;series.data&lt;/a&gt; option. For the joining to work, each data point must have some identifier that relates to the same identifier in the map data set. This or these identifiers are then specified in the &lt;a href=&quot;http://api.highcharts.com/highmaps#plotOptions.series.joinBy&quot;&gt;joinBy&lt;/a&gt; option. See detailed documentation and examples there.&lt;/p&gt;
+&lt;p&gt;Another way to join the data is to simply skip the mapData and set the &lt;a href=&quot;http://api.highcharts.com/highmaps#series.data.path&quot;&gt;path&lt;/a&gt; directly on the data point. This mixes the data and the structure and is not generally recommended, but it performs faster, and may be considered in situations where you have static data and a backed to perform the joining.&lt;/p&gt;&lt;/div&gt;</summary>
+		<content type="html">&lt;div class=&quot;feed-description&quot;&gt;&lt;p&gt;Highmaps is Highcharts for geo maps. Mainly &lt;a href=&quot;http://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;choropleth maps&lt;/a&gt; where the color intensity relates to some value of a geographic area, but Highmaps also supports different features like lines (roads, rivers etc.) and points (cities, points of interest) and more. Highmaps comes in two flavors, either as a standalone JavaScript file, or as a plugin for Highcharts.&lt;/p&gt;
+&lt;h2&gt;Load the required files&lt;/h2&gt;
+&lt;p&gt;For basics, see &lt;a href=&quot;docs/getting-started/installation&quot;&gt;Highcharts installation&lt;/a&gt;. The framework requirements and installation is the same for Highmaps as for Highcharts. To load Highmaps as a standalone product (if you don't have a license for Highcharts), include this script tag:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/maps/highmaps.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;p&gt;If you already have Highcharts installed in the web page and want to run Highmaps as a plugin, include this script tag &lt;em&gt;after&lt;/em&gt; &lt;code&gt;highcharts.js&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&amp;lt;script src=&quot;http://code.highcharts.com/maps/modules/map.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/pre&gt;
+&lt;h2&gt;Load the map&lt;/h2&gt;
+&lt;p&gt;Highmaps loads its maps from &lt;a href=&quot;http://en.wikipedia.org/wiki/GeoJSON&quot;&gt;GeoJSON&lt;/a&gt;, an open standard for description of geographic features. Most GIS software supports this format as export from for instance Shapefile or KML export. Read more in the &lt;a href=&quot;http://api.highcharts.com/highmaps#Highcharts.geojson&quot;&gt;API reference&lt;/a&gt; and &lt;a href=&quot;http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/maps/demo/geojson-multiple-types/&quot;&gt;see the live demo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are three basic sources for your map:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use our &lt;a href=&quot;http://code.highcharts.com/mapdata/&quot;&gt;Map collection&lt;/a&gt;. Read the &lt;a href=&quot;docs/maps/map-collection&quot;&gt;tutorial article&lt;/a&gt; on the map collection to get started.&lt;/li&gt;
+&lt;li&gt;Find an SVG map online and convert it using our (experimental) &lt;a href=&quot;studies/map-from-svg.htm&quot;&gt;online converter&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;Create your own map from scratch using an SVG editor, then convert them online. Read our tutorial on &lt;a href=&quot;docs/maps/custom-maps&quot;&gt;Custom maps for Highmaps&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span style=&quot;font-size: 1em;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Add and join data&lt;/h2&gt;
+&lt;p&gt;Once the empty map is in place, we're ready to add the data to the &lt;a href=&quot;http://api.highcharts.com/highmaps#series.data&quot;&gt;series.data&lt;/a&gt; option. For the joining to work, each data point must have some identifier that relates to the same identifier in the map data set. This or these identifiers are then specified in the &lt;a href=&quot;http://api.highcharts.com/highmaps#plotOptions.series.joinBy&quot;&gt;joinBy&lt;/a&gt; option. See detailed documentation and examples there.&lt;/p&gt;
+&lt;p&gt;Another way to join the data is to simply skip the mapData and set the &lt;a href=&quot;http://api.highcharts.com/highmaps#series.data.path&quot;&gt;path&lt;/a&gt; directly on the data point. This mixes the data and the structure and is not generally recommended, but it performs faster, and may be considered in situations where you have static data and a backed to perform the joining.&lt;/p&gt;&lt;/div&gt;</content>
+		<category term="Maps" />
+	</entry>
+</feed>

@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8" lang="en-gb"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en-gb"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en-gb"><!--<![endif]-->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<head>
+  <!--<base href="http://www.highcharts.com/docs/chart-design-and-style/design-and-style" />-->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="highcharts, charts, javascript charts, ajax charts, plots, line charts, bar charts, pie charts, javascript plots, ajax plots" />
+  <meta name="author" content="Super User" />
+  <meta name="og:title" content="Design and style" />
+  <meta name="og:type" content="article" />
+  <meta name="og:url" content="http://www.highcharts.com/docs/chart-design-and-style/design-and-style" />
+  <meta name="og:site_name" content="Highcharts" />
+  <meta name="description" content="Highcharts - Interactive JavaScript charts for your web pages." />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>Highcharts - Design and style</title>
+  <link rel="stylesheet" href="/media/system/css/modal.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700,400italic" type="text/css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="../../joomla/templates/highsoft_colorful/css/template.css" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/media/system/js/modal.js" type="text/javascript"></script>
+  <script src="../../lib/jquery-1.7.2.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/jquery.cookies.2.2.0.js" type="text/javascript"></script>
+  <script src="/templates/highsoft_colorful/js/slide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+			SqueezeBox.assign($$('a.modal'), {
+				parse: 'rel'
+			});
+		});
+  </script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"><link href="/templates/highsoft_colorful/images/favicon.ico" rel="shortcut icon"/><!-- Echo Header Script -->
+
+</head>
+<body id="bd" class="clearfix">
+	<div id="zt-wrapper">
+		<div id="zt-wrapper-inner">
+						<!--Header-->
+			<div id="zt-header" class="clearfix">
+				<div class="container">
+			        					<div id="zt-header-inner" class="row-fluid">
+			            <!-- Logo -->
+													<a  id="zt-logo-image"  class="span3" href="../../index.html" title="Highcharts"><img src="/templates/highsoft_colorful/images/logo.svg" alt="Highcharts" /></a>
+									            <!-- #Logo -->
+			            <!--Mainmenu-->
+			            <div id="zt-mainmenu" class="span9 pull-right" >
+			                <div id="zt-mainmenu-inner" class="row-fluid">
+			                    <div class="smallmenu"><div class="menusys_mega"><ul><li class="first "><a href="../../about.html"  ><span>About Us</span></a></li><li class="hasChild"><a><span>Our Products</span></a><ul class="submenu"><li class="first"><a href="../../products/highcharts.html"  ><span>Highcharts</span></a></li><li><a href="../../products/highstock.html"  ><span>Highstock</span></a></li><li><a href="../../products/highmaps.html"  ><span>Highmaps</span></a></li><li class="last"><a href="http://highslide.com/"  ><span>Highslide JS</span></a></li></ul></li><li class="last "><a href="../../contact-email.html"  ><span>Contact</span></a></li></ul></div></div><div class="largemenu"><div class="menusys_mega"><ul><li class="first "><a href="../../index.html"  ><span>Home</span></a></li><li class="hasChild"><a><span>Demo</span></a><ul class="submenu"><li class="first"><a href="../../demo.html"  ><span>Highcharts demos</span></a></li><li><a href="../../stock/demo.html"  ><span>Highstock demos</span></a></li><li class="last"><a href="../../maps/demo.html"  ><span>Highmaps demo</span></a></li></ul></li><li class="hasChild"><a><span>Docs</span></a><ul class="submenu"><li class="first"><a href="../../docs.html"  ><span>General Documentation</span></a></li><li><a href="http://api.highcharts.com/highcharts"  ><span>Highcharts API Reference</span></a></li><li><a href="http://api.highcharts.com/highstock"  ><span>Highstock API Reference</span></a></li><li><a href="http://api.highcharts.com/highmaps"  ><span>Highmaps API Reference</span></a></li><li><a href="../../documentation/compatibility.html"  ><span>Compatibility</span></a></li><li class="last"><a href="../../documentation/changelog.html"  ><span>Changelog</span></a></li></ul></li><li class="hasChild"><a><span>Support</span></a><ul class="submenu"><li class="first"><a href="../../support.html"  ><span>Support</span></a></li><li><a href="../../support/roadmap.html"  ><span>Roadmap</span></a></li><li><a href="../../download.html"  ><span>Download</span></a></li><li class="last"><a href="http://forum.highcharts.com/"  ><span>Forum</span></a></li></ul></li><li><a href="../../plugin-registry.html"  ><span>Plugins</span></a></li><li class="last "><a href="http://shop.highsoft.com/"  ><span>Shop</span></a></li></ul></div></div>			                </div>
+			            </div>
+			            <!--#Mainmenu-->
+						<!--Drill Menu-->
+						<div class="zt-drillmenu-inner">
+							<div class="navbar">
+								<a class="btn-navbar collapsed" id="mobile-button" data-toggle="collapse" data-target=".menusys_drill"></a>
+								<div class="menusys_drill collapse"><ul id="zo2-drilldown-menu" class="nav-drilldown"><li class="first item"><a href="../../index.html"  id="menusys101_drill" title="Home"><span class="menusys_name">Home</span></a></li><li class="item hasChild"><a id="menusys103_drill" title="Demo"><span class="menusys_name">Demo</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../demo.html"  id="menusys106_drill" title="Highcharts demos"><span class="menusys_name">Highcharts demos</span></a></li><li class="item"><a href="../../stock/demo.html"  id="menusys107_drill" title="Highstock demos"><span class="menusys_name">Highstock demos</span></a></li><li class="last item"><a href="../../maps/demo.html"  id="menusys205_drill" title="Highmaps demo"><span class="menusys_name">Highmaps demo</span></a></li></ul></li><li class="item hasChild"><a id="menusys108_drill" title="Docs"><span class="menusys_name">Docs</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../docs.html"  id="menusys128_drill" title="General Documentation"><span class="menusys_name">General Documentation</span></a></li><li class="item"><a href="http://api.highcharts.com/highcharts"  id="menusys124_drill" title="Highcharts API Reference"><span class="menusys_name">Highcharts API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highstock"  id="menusys125_drill" title="Highstock API Reference"><span class="menusys_name">Highstock API Reference</span></a></li><li class="item"><a href="http://api.highcharts.com/highmaps"  id="menusys211_drill" title="Highmaps API Reference"><span class="menusys_name">Highmaps API Reference</span></a></li><li class="item"><a href="../../documentation/compatibility.html"  id="menusys126_drill" title="Compatibility"><span class="menusys_name">Compatibility</span></a></li><li class="last item"><a href="../../documentation/changelog.html"  id="menusys127_drill" title="Changelog"><span class="menusys_name">Changelog</span></a></li></ul></li><li class="item hasChild"><a id="menusys109_drill" title="Support"><span class="menusys_name">Support</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../support.html"  id="menusys110_drill" title="Support"><span class="menusys_name">Support</span></a></li><li class="item"><a href="../../support/roadmap.html"  id="menusys129_drill" title="Roadmap"><span class="menusys_name">Roadmap</span></a></li><li class="item"><a href="../../download.html"  id="menusys201_drill" title="Download"><span class="menusys_name">Download</span></a></li><li class="last item"><a href="http://forum.highcharts.com/"  id="menusys208_drill" title="Forum"><span class="menusys_name">Forum</span></a></li></ul></li><li class="item"><a href="../../plugin-registry.html"  id="menusys111_drill" title="Plugins"><span class="menusys_name">Plugins</span></a></li><li class="item"><a href="http://shop.highsoft.com/"  id="menusys115_drill" title="Shop"><span class="menusys_name">Shop</span></a></li><li class="item"><a href="../../about.html"  id="menusys112_drill" title="About Us"><span class="menusys_name">About Us</span></a></li><li class="item hasChild"><a id="menusys113_drill" title="Our Products"><span class="menusys_name">Our Products</span></a><a class="toggle-icon" data-target-relative=".siblings('ul')"></a><ul class="detail-parent"><li class="first item"><a href="../../products/highcharts.html"  id="menusys121_drill" title="Highcharts"><span class="menusys_name">Highcharts</span></a></li><li class="item"><a href="../../products/highstock.html"  id="menusys122_drill" title="Highstock"><span class="menusys_name">Highstock</span></a></li><li class="item"><a href="../../products/highmaps.html"  id="menusys210_drill" title="Highmaps"><span class="menusys_name">Highmaps</span></a></li><li class="last item"><a href="http://highslide.com/"  id="menusys123_drill" title="Highslide JS"><span class="menusys_name">Highslide JS</span></a></li></ul></li><li class="last item"><a href="../../contact-email.html"  id="menusys114_drill" title="Contact"><span class="menusys_name">Contact</span></a></li></ul></div>							</div>
+							<div class="clearfix"></div>
+						</div>
+						<!--#Drill Menu-->
+					</div>
+				</div>
+			</div>
+			<!--#Header-->
+            <!--Slideshow-->
+                        <!--#Slideshow-->
+            			            <!-- ZT Userwrap2 -->
+			            <!-- #ZT Userwrap2 -->
+            <!-- ZT Userwrap3 -->
+			            <!-- #ZT Userwrap3 -->
+                        			<!--Main-->
+						<div id="zt-mainframe" class="clearfix">
+				<div class="container">
+					<div id="zt-mainframe-inner" class="row-fluid clearfix">
+						<div id="zt-mainframe-inner2" class="zt-container">
+															<div id="zt-left" class="hidden-phone span3">
+									<div id="zt-left-inner">
+												<div class="moduletable -docs">
+			<div class="omodule">
+				<div class="cmodule">
+										<div class="modulecontent">
+						
+<ul class="menu-docs">
+<li id="item-133" class="first parent"><span class="separator">Getting Started</span>
+<ul><li id="item-134"><a href="../getting-started/system-requirements.html" ><span>System requirements</span></a></li><li id="item-135"><a href="../getting-started/installation.html" ><span>Installation</span></a></li><li id="item-136"><a href="../getting-started/your-first-chart.html" ><span>Your first chart</span></a></li><li id="item-137"><a href="../getting-started/how-to-set-options.html" ><span>How to set options</span></a></li><li id="item-199"><a href="../getting-started/frequently-asked-questions.html" ><span>Frequently asked questions</span></a></li></ul></li><li id="item-138" class="parent"><span class="separator">Chart concepts</span>
+<ul><li id="item-139"><a href="../chart-concepts/understanding-highcharts.html" ><span>Understanding Highcharts</span></a></li><li id="item-140"><a href="../chart-concepts/understanding-highstock.html" ><span>Understanding Highstock</span></a></li><li id="item-141"><a href="../chart-concepts/title-and-subtitle.html" ><span>Title and subtitle</span></a></li><li id="item-142"><a href="../chart-concepts/axes.html" ><span>Axes</span></a></li><li id="item-143"><a href="../chart-concepts/series.html" ><span>Series</span></a></li><li id="item-144"><a href="../chart-concepts/tooltip.html" ><span>Tooltip</span></a></li><li id="item-145"><a href="../chart-concepts/legend.html" ><span>Legend</span></a></li><li id="item-146"><a href="../chart-concepts/range-selector.html" ><span>Range selector</span></a></li><li id="item-147"><a href="../chart-concepts/navigator.html" ><span>Navigator</span></a></li><li id="item-148"><a href="../chart-concepts/scrollbar.html" ><span>Scrollbar</span></a></li><li id="item-149"><a href="../chart-concepts/plot-bands-and-plot-lines.html" ><span>Plot bands and plot lines</span></a></li><li id="item-150"><a href="../chart-concepts/zooming.html" ><span>Zooming</span></a></li><li id="item-151"><a href="../chart-concepts/labels-and-string-formatting.html" ><span>Labels and string formatting</span></a></li><li id="item-152"><a href="../chart-concepts/drilldown.html" ><span>Drilldown</span></a></li><li id="item-204"><a href="../chart-concepts/3d-charts.html" ><span>3D charts</span></a></li></ul></li><li id="item-153" class="parent"><span class="separator">Maps</span>
+<ul><li id="item-154"><a href="../maps/getting-started.html" ><span>Getting started</span></a></li><li id="item-155"><a href="../maps/map-navigation.html" ><span>Map navigation</span></a></li><li id="item-156"><a href="../maps/color-axis.html" ><span>Color axis</span></a></li><li id="item-209"><a href="../maps/map-collection.html" ><span>Map collection</span></a></li><li id="item-207"><a href="../maps/custom-maps.html" ><span>Custom maps</span></a></li></ul></li><li id="item-157" class="parent"><span class="separator">Chart and series types</span>
+<ul><li id="item-158"><a href="../chart-and-series-types/chart-types.html" ><span>Chart types</span></a></li><li id="item-159"><a href="../chart-and-series-types/combining-chart-types.html" ><span>Combining chart types</span></a></li><li id="item-160"><a href="../chart-and-series-types/line-chart.html" ><span>Line chart</span></a></li><li id="item-161"><a href="../chart-and-series-types/spline-chart.html" ><span>Spline chart</span></a></li><li id="item-162"><a href="../chart-and-series-types/scatter-chart.html" ><span>Scatter chart</span></a></li><li id="item-163"><a href="../chart-and-series-types/area-chart.html" ><span>Area chart</span></a></li><li id="item-164"><a href="../chart-and-series-types/areaspline-chart.html" ><span>Areaspline chart</span></a></li><li id="item-165"><a href="../chart-and-series-types/column-chart.html" ><span>Column chart</span></a></li><li id="item-166"><a href="../chart-and-series-types/bar-chart.html" ><span>Bar chart</span></a></li><li id="item-167"><a href="../chart-and-series-types/pie-chart.html" ><span>Pie chart</span></a></li><li id="item-168"><a href="../chart-and-series-types/candlestick-chart.html" ><span>Candlestick chart</span></a></li><li id="item-169"><a href="../chart-and-series-types/ohlc-chart.html" ><span>OHLC chart</span></a></li><li id="item-170"><a href="../chart-and-series-types/polar-chart.html" ><span>Polar chart</span></a></li><li id="item-171"><a href="../chart-and-series-types/angular-gauges.html" ><span>Angular gauges</span></a></li><li id="item-172"><a href="../chart-and-series-types/range-series.html" ><span>Range series</span></a></li><li id="item-173"><a href="../chart-and-series-types/flag-series.html" ><span>Flag series</span></a></li><li id="item-174"><a href="../chart-and-series-types/box-plot-series.html" ><span>Box plot series</span></a></li><li id="item-175"><a href="../chart-and-series-types/error-bar-series.html" ><span>Error bar series</span></a></li><li id="item-176"><a href="../chart-and-series-types/funnel-series.html" ><span>Funnel series</span></a></li><li id="item-177"><a href="../chart-and-series-types/waterfall-series.html" ><span>Waterfall series</span></a></li><li id="item-203"><a href="../chart-and-series-types/heatmap.html" ><span>Heat map series</span></a></li></ul></li><li id="item-178" class="parent"><span class="separator">Advanced chart features</span>
+<ul><li id="item-179"><a href="../advanced-chart-features/stacking-charts.html" ><span>Stacking charts</span></a></li><li id="item-180"><a href="../advanced-chart-features/data-grouping.html" ><span>Data grouping</span></a></li><li id="item-181"><a href="../advanced-chart-features/freeform-drawing.html" ><span>Freeform drawing</span></a></li><li id="item-182"><a href="../advanced-chart-features/internationalization.html" ><span>Internationalization</span></a></li></ul></li><li id="item-183" class="parent"><span class="separator">Export module</span>
+<ul><li id="item-184"><a href="../export-module/export-module-overview.html" ><span>Export module overview</span></a></li><li id="item-185"><a href="../export-module/setting-up-the-server.html" ><span>Setting up the server</span></a></li><li id="item-186"><a href="../export-module/render-charts-serverside.html" ><span>Render charts serverside</span></a></li><li id="item-187"><a href="../export-module/privacy-disclaimer.html" ><span>Privacy disclaimer</span></a></li></ul></li><li id="item-188" class="parent"><span class="separator">Working with data</span>
+<ul><li id="item-189"><a href="../working-with-data/preprocessing.html" ><span>Preprocessing</span></a></li><li id="item-190"><a href="../working-with-data/preprocessing-data-from-a-file-csv-xml-json.html" ><span>Preprocessing data from a file (CSV, XML, JSON)</span></a></li><li id="item-191"><a href="../working-with-data/preprocessing-live-data.html" ><span>Preprocessing live data</span></a></li><li id="item-192"><a href="../working-with-data/preprocessing-data-from-a-database.html" ><span>Preprocessing data from a database</span></a></li><li id="item-193"><a href="../working-with-data/getting-data-across-domains-jsonp.html" ><span>Getting data across domains (JSONP)</span></a></li></ul></li><li id="item-194" class="active parent"><span class="separator">Chart design and style</span>
+<ul><li id="item-195" class="current active"><a href="design-and-style.html" ><span>Design and style</span></a></li><li id="item-196"><a href="colors.html" ><span>Colors</span></a></li><li id="item-197"><a href="themes.html" ><span>Themes</span></a></li></ul></li><li id="item-200" class="parent"><span class="separator">Extending Highcharts</span>
+<ul><li id="item-198" class="last"><a href="../extending-highcharts/extending-highcharts.html" ><span>Extending Highcharts</span></a></li></ul></li></ul>					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+	
+									</div>
+								</div>
+														<div id="zt-content" class="span9">
+																<div id="zt-component" class="clearfix">
+									<div id="zt-component-inner">
+										
+<div id="system-message-container">
+</div>
+										
+<article class="item-page">
+	
+	<header class="clearfix">
+		
+		
+			</header>
+
+	
+
+
+
+
+
+
+<h1>Design and style</h1>
+<p>All Highcharts elements are customizable through options. </p>
+<h2>Layout and positioning</h2>
+<p>Most Highcharts elements displayed on a chart can be positioned using x and y values relative to the top left corner and using the "align" and "verticalAlign" options. The "align" option can have the values 'left', 'right' and 'center'. The "verticalAlign" align option can have the values 'top', 'bottom' and 'middle'.</p>
+<p> </p>
+<h3>Chart</h3>
+<p>The chart's position in the HTML page is defined by the position of the container div. Height and width is set either by setting a height and width of the container div, or by setting the <a href="http://api.highcharts.com#chart.height">chart.height</a> and <a href="http://api.highcharts.com#chart.width">chart.width</a> Highcharts options.</p>
+<p>The <em>plot area</em> is the square area within the axes, where the series are drawn. There are two sets of options that decide where the plot area is placed within the chart. The <em>margin</em> options (marginLeft, marginTop etc) give the margin to the actual plot area and does not apply to other elements on the chart (labels, legend etc). The <em>spacing</em> options (spacingLeft, spacingTop etc) decide the padding between the outer area and all elements inside a chart. In this mode, the chart is adjusted to make room for title and legend, axis labels etc. By default, the margins are null. Margins are only used in legacy charts as well as in situations where you want to make sure plot areas are align between multiple charts. Margins override their counterpart spacing options.</p>
+<p><img src="http://www.highcharts.com/images/docs/chartPosition.png" border="0" alt="" style="width: 671px; height: 398px;" /></p>
+<pre>chart: {
+        // Edit chart spacing
+        spacingBottom: 15,
+        spacingTop: 10,
+        spacingLeft: 10,
+        spacingRight: 10,
+
+        // Explicitly tell the width and height of a chart
+        width: null,
+        height: null
+}</pre>
+<h3>Credits</h3>
+<p>Credits can be moved around using the "position" option:</p>
+<pre>credits: {
+    position: {
+        align: 'left',
+        verticalAlign: 'bottom',
+        x: 10,
+        y: -10
+    }
+}</pre>
+<p>See <a href="http://api.highcharts.com#credits">api.highcharts.com#credits</a> for full option set.</p>
+<h3> </h3>
+<h3>Axis labels</h3>
+<p>Axis labels can be placed relative to the plot area using the "align" option, "x" and "y" options.</p>
+<pre>labels: {
+    align: 'right',
+    x: -10,
+    y: 0
+}
+</pre>
+<p>They can also be rotated using the "rotate" option. Font styling for the axis labels are given through the xAxis.labels.style options. See <a href="http://api.highcharts.com#xAxis.labels">xAxis.labels</a> for full option set.</p>
+<p> </p>
+<h3>Legend</h3>
+<p>The legend is by default placed at the bottom of the chart in the center. This can be changed by the "align" and "verticalAlign" options. The legend can also be positioned anywhere in the chart area using the "floating" option. This will cause the legend to float freely over the plot area.</p>
+<pre>legend:{
+     align: 'left',
+     verticalAlign: 'top',
+     floating: true        
+}
+</pre>
+<p>The legend can also be positioned using the "x" and "y" options.</p>
+<p>See <a href="http://api.highcharts.com#legend">api.highcharts.com#legend</a> for full option set.</p>
+<p> </p>
+<h3>Title and subtitle</h3>
+<p>The title and subtitle can be positioned using the "align", "verticalAlign", "x" and "y" options. They can also float setting the "floating" option to true.</p>
+<p>General text styling is set in the <em>style</em> option. The text can also be styled inline using spans and CSS.</p>
+<pre>title: {
+    text: 'Example with <strong>bold</strong> text',
+    floating: true,
+    align: 'right',
+    x: -30,
+    y: 30
+}
+</pre>
+<h3>Export</h3>
+<p>The export buttons can be styled through options given in the <a href="http://api.highcharts.com/highcharts#navigation">navigation</a> and <a href="http://api.highcharts.com/highcharts#exporting.buttons">exporting.buttons</a>.</p>
+<h2>Borders</h2>
+<p>A chart can have two borders that are both disabled by default.</p>
+<ul>
+<li>The <em>outer border</em> is enabled by giving <a href="http://api.highcharts.com#chart.borderWidth">chart.borderWidth</a> a pixel value. It can be further styled by other options like chart.borderRadius, chart.borderColor. These borders will also be part of the exported chart. If you want a border that is not visible in the export, using a CSS border on the container div may be a good alternative.</li>
+</ul>
+<ul>
+<li>The <em>plot border</em> is the inner border around the plot area, marked with orange in the figure above. This border is enabled by giving <a href="http://api.highcharts.com#chart.plotBorderWidth">chart.plotBorderWidth</a> a pixel value. Its color is set by chart.plotBorderColor.</li>
+</ul>
+<p>Both these borders can be complemented by a shadow through the <a href="http://api.highcharts.com#chart.shadow">chart.shadow</a> or <a href="http://api.highcharts.com#chart.plotShadow">chart.plotShadow</a> options.</p>
+<h2>Backgrounds</h2>
+<p>The <em>chart area</em> accepts a background color through the <a href="http://api.highcharts.com#chart.backgroundColor">chart.backgroundColor</a> option. Advanced backgrounds and background images may also be applied to the HTML container, but won't be visible until the chart.backgroundColor is set to <span style="font-family: courier new,courier,monospace;">null</span>. </p>
+<p>The <em>plot area</em> accepts a background color through the <a href="http://api.highcharts.com#plotBackgroundColor">chart.plotBackgroundColor</a> option. It also has a <a href="http://api.highcharts.com#chart.plotBackgroundImage">chart.plotBackgroundImage</a> option to allow setting image backgrounds. </p>
+<h2>Fonts</h2>
+<p><span style="line-height: 1.6em;">A global font family can be set using the </span><a href="http://api.highcharts.com#chart.style" style="line-height: 1.6em;">chart.style</a><span style="line-height: 1.6em;"> option:</span></p>
+<p> </p>
+<pre>Highcharts.setOptions({
+    chart: {
+        style: {
+            fontFamily: 'serif'
+        }
+    }
+});</pre>
+<p> </p>
+<p>All layout elements of the chart that include text, have a style option that allow setting text related CSS properties. There are options like <a href="http://api.highcharts.com#xAxis.labels.style">xAxis.labels.style</a>, <a href="http://api.highcharts.com#title.style">title.style</a>, <a href="http://api.highcharts.com#legend.itemStyle">legend.itemStyle</a> to mention a few. If you go to <a href="http://api.highcharts.com">api.highcharts.com</a> and search for "style" you'll get the full list.</p>
+<p>Style properties are given in camel case like in JavaScript. So <code>fontFamily</code> will work, but <code>"font-family"</code> will not.</p>
+<p>Common for all these is that all CSS is set to the related SVG/HTML/VML element, but not all have any effect. These configurations are meant for styling text, so properties like <span style="font-family: courier new,courier,monospace;">color</span>, <span style="font-family: courier new,courier,monospace;">textUnderline</span>, <span style="font-family: courier new,courier,monospace;">fontSize</span>, <span style="font-family: courier new,courier,monospace;">fontFamily</span>, <span style="font-family: courier new,courier,monospace;">textShadow</span> etc. will make good sense. Other properties, like <span style="font-family: courier new,courier,monospace;">margin</span>, <span style="font-family: courier new,courier,monospace;">padding</span> and other layout related properties will not have an effect (or even an unintended effect) and should not be used. Layout is instead handled by specific Highcharts layout options.</p>
+<p> </p>
+<h2>Shadows</h2>
+<p>Many layout elements including series types in Highcharts have <span style="font-family: courier new,courier,monospace;">shadow</span> options. Go to <a href="http://api.highcharts.com">api.highcharts.com</a> and search for "shadow" to see the full list. The shadow can be <span style="font-family: courier new,courier,monospace;">false</span>, or <span style="font-family: courier new,courier,monospace;">true</span> to display the shadow. In addition to that, the shadow can be an object configuration containing <span style="font-family: courier new,courier,monospace;">color</span>, <span style="font-family: courier new,courier,monospace;">offsetX</span>, <span style="font-family: courier new,courier,monospace;">offsetY</span>, <span style="font-family: courier new,courier,monospace;">opacity</span> and <span style="font-family: courier new,courier,monospace;">width</span>. For instance, the options can be used to add a glow to the graphs: </p>
+<p> </p>
+<pre>shadow: {
+    color: 'yellow',
+    width: 10,
+    offsetX: 0,
+    offsetY: 0
+}</pre>
+<p>See it <a href="http://jsfiddle.net/highcharts/jYLXN/">demonstrated at jsFiddle</a>.</p>
+<h2>Styling axes</h2>
+<p>Several graphic elements are associated with axes.</p>
+<ul>
+<li>The <em>axis line</em> extends along the axis. It is styled by the <a href="http://api.highcharts.com#xAxis.lineWidth">lineWidth</a> and <a href="http://api.highcharts.com#xAxis.lineColor">lineColor</a> options. </li>
+<li>The <em>tick markers</em> are styled by the <a href="http://api.highcharts.com#xAxis.tickColor">tickColor</a>, <a href="http://api.highcharts.com#xAxis.tickLength">tickLength</a>, <a href="http://api.highcharts.com#xAxis.tickPosition">tickPosition</a> and <a href="http://api.highcharts.com#xAxis.tickWidth">tickWidth</a> options.</li>
+<li>If <em>minor ticks</em> are enabled, they have similar options in <span style="font-family: courier new,courier,monospace;">minorTickColor</span>, <span style="font-family: courier new,courier,monospace;">minorTickLength</span>, <span style="font-family: courier new,courier,monospace;">minorTickPosition</span> and <span style="font-family: courier new,courier,monospace;">minorTickWidth</span>.</li>
+<li>The <em>axis labels</em> are styled according to font styling above.</li>
+<li>The <em>grid lines</em> and minor grid lines have options like <a href="http://api.highcharts.com#xAxis.gridLineWidth">gridLineWidth</a>, <a href="http://api.highcharts.com#xAxis.gridLineColor">gridLineColor</a> and <a href="http://api.highcharts.com#xAxis.gridLineDashStyle">gridLineDashStyle</a>.</li>
+<li>In between grid lines, every other interval can be colored according to the <a href="http://api.highcharts.com#xAxis.alternateGridColor">alternateGridColor</a> option.</li>
+</ul>
+<h2>Tooltip</h2>
+<p>See the <a href="../chart-concepts/tooltip.html">Tooltip concept page</a> for styling tooltips. </p>
+<h2>Animation</h2>
+<p>In Highcharts, animation is enabled or disabled in two separate places.</p>
+<ul>
+<li>The <a href="http://api.highcharts.com#chart.animation">chart.animation</a> option applies to animation when anything is changed dynamically in the chart. This change can be that a series is hidden and the plot area needs to animate to update to new axis scales, the chart is altered dynamically, or any other redraw operation. When the chart is altered dynamically, the animation can be overridden in each individual method. For example, the <a href="http://api.highcharts.com#Series.addPoint()">Series.addPoint</a> method takes animation as an argument.</li>
+<li>The <a href="http://api.highcharts.com#plotOptions.series.animation">plotOptions.series.animation</a> option - and similar for any series type - applies only to the initial animation for this series or series type. Once the animation has run, it never runs again. </li>
+</ul>
+<p> </p>
+<div>The animation can either be set as a boolean or a configuration object. If true, it will use the 'swing' jQuery easing and a duration of 500 ms. If used as a configuration object, the following properties are supported:</div>
+<ul>
+<li><span style="font-family: courier new,courier,monospace;">duration - </span><span style="line-height: 1.6em;">The duration of the animation in milliseconds.</span></li>
+<li><span style="font-family: courier new,courier,monospace;"><span style="line-height: 1.6em;">easing - </span></span><span style="line-height: 1.6em;">When using jQuery as the general framework, the easing can be set to linear or swing. More easing functions are available with the use of jQuery plug-ins, most notably the jQuery UI suite. See the <a href="http://api.jquery.com/animate/">jQuery docs</a>. When using MooTools as the general framework, use the property name <span style="font-family: courier new,courier,monospace;">transition</span> instead of <span style="font-family: courier new,courier,monospace;">easing</span>.</span></li>
+</ul>
+<p> </p> 
+
+
+
+		
+</article>
+									</div>
+								</div>
+																							</div>
+							
+														<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--#main-->
+			            <!-- ZT Userwrap6 -->
+			            <!-- #ZT Userwrap6 -->
+            <!-- ZT Userwrap7 -->
+			            <!-- #ZT Userwrap7 -->
+			<!--Footer-->
+			<div id="zt-footer" class="clearfix ">
+				<div class="container">
+					<div id="zt-footer-inner" class="row-fluid">
+						<div id="zt-footer-left" class="span6">
+															
+							<div id="zt-footer-copy">
+							© 2014 Highcharts. All rights reserved.							</div>
+						</div>
+												<div id="zt-social" class="span4">
+							<div>
+<a href="https://www.facebook.com/Highcharts" title="Facebook" class="social-icon"><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/Highcharts" title="Twitter" class="social-icon"><i class="fa fa-twitter"></i></a>
+<a href="http://www.linkedin.com/company/highsoft-solutions-as" title="LinkedIn" class="social-icon"><i class="fa fa-linkedin"></i></a>
+<a href="https://github.com/highslide-software/highcharts.com" title="Github" class="social-icon"><i class="fa fa-github"></i></a>
+</div>
+						</div>
+												<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+            <!--#Footer-->
+		</div>
+	</div>
+	
+	    <!-- Echo Footer Script -->
+        	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-2995052-3");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>
